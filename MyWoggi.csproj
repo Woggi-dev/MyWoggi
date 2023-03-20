@@ -82,6 +82,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\background.png" />
+    <None Include="images\main.png" />
+    <None Include="images\background_2 %281%29.png" />
+    <None Include="images\background_3.png" />
     <Content Include="images\user.png" />
     <Content Include="images\lock.png" />
     <Content Include="images\Moose_United-Earth.ico" />

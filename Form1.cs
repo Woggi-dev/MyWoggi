@@ -21,5 +21,7 @@ namespace MyWoggi
         {
             Authorization_Panel.BorderStyle = BorderStyle.FixedSingle;
         }
+
+        
     }
 }
