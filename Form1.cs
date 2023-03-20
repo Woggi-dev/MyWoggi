@@ -16,5 +16,10 @@ namespace MyWoggi
         {
             InitializeComponent();
         }
+
+        private void Authorization_Load(object sender, EventArgs e)
+        {
+            Authorization_Panel.BorderStyle = BorderStyle.FixedSingle;
+        }
     }
 }
