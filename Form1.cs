@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace MyWoggi
 {
-    public partial class Form1 : Form
+    public partial class Authorization : Form
     {
-        public Form1()
+        public Authorization()
         {
             InitializeComponent();
+        }
+
+        private void Authorization_Load(object sender, EventArgs e)
+        {
+            Authorization_Panel.BorderStyle = BorderStyle.FixedSingle;
         }
     }
 }
