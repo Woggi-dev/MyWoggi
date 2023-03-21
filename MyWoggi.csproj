@@ -46,16 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Form_Authorization.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Form_Authorization.Designer.cs">
+      <DependentUpon>Form_Authorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Registration.Designer.cs">
+      <DependentUpon>Form_Registration.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Form_Authorization.resx">
+      <DependentUpon>Form_Authorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Registration.resx">
+      <DependentUpon>Form_Registration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -85,6 +94,7 @@
     <None Include="images\main.png" />
     <None Include="images\background_2 %281%29.png" />
     <None Include="images\background_3.png" />
+    <None Include="images\surname_name.png" />
     <Content Include="images\user.png" />
     <Content Include="images\lock.png" />
     <Content Include="images\Moose_United-Earth.ico" />
