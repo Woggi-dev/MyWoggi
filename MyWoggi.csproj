@@ -52,6 +52,12 @@
     <Compile Include="Form_Authorization.Designer.cs">
       <DependentUpon>Form_Authorization.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_ForgotPwd_Email.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ForgotPwd_Email.Designer.cs">
+      <DependentUpon>Form_ForgotPwd_Email.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Registration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_Authorization.resx">
       <DependentUpon>Form_Authorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ForgotPwd_Email.resx">
+      <DependentUpon>Form_ForgotPwd_Email.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Registration.resx">
       <DependentUpon>Form_Registration.cs</DependentUpon>
