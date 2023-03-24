@@ -86,16 +86,16 @@ namespace MyWoggi
             this.Registration_Panel.Controls.Add(this.label1);
             this.Registration_Panel.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Registration_Panel.ForeColor = System.Drawing.Color.White;
-            this.Registration_Panel.Location = new System.Drawing.Point(82, 27);
+            this.Registration_Panel.Location = new System.Drawing.Point(119, 27);
             this.Registration_Panel.Name = "Registration_Panel";
-            this.Registration_Panel.Size = new System.Drawing.Size(549, 672);
+            this.Registration_Panel.Size = new System.Drawing.Size(503, 657);
             this.Registration_Panel.TabIndex = 1;
             // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.BackgroundImage = global::MyWoggi.Properties.Resources.surname_name;
-            this.pictureBox5.Location = new System.Drawing.Point(60, 100);
+            this.pictureBox5.Location = new System.Drawing.Point(19, 98);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(37, 37);
             this.pictureBox5.TabIndex = 47;
@@ -105,7 +105,7 @@ namespace MyWoggi
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.BackgroundImage = global::MyWoggi.Properties.Resources._lock;
-            this.pictureBox4.Location = new System.Drawing.Point(60, 468);
+            this.pictureBox4.Location = new System.Drawing.Point(19, 466);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(37, 37);
             this.pictureBox4.TabIndex = 46;
@@ -115,7 +115,7 @@ namespace MyWoggi
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = global::MyWoggi.Properties.Resources._lock;
-            this.pictureBox3.Location = new System.Drawing.Point(60, 373);
+            this.pictureBox3.Location = new System.Drawing.Point(19, 371);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(37, 37);
             this.pictureBox3.TabIndex = 45;
@@ -125,7 +125,7 @@ namespace MyWoggi
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::MyWoggi.Properties.Resources.user;
-            this.pictureBox2.Location = new System.Drawing.Point(60, 190);
+            this.pictureBox2.Location = new System.Drawing.Point(19, 188);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(37, 37);
             this.pictureBox2.TabIndex = 44;
@@ -135,7 +135,7 @@ namespace MyWoggi
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::MyWoggi.Properties.Resources.email;
-            this.pictureBox1.Location = new System.Drawing.Point(60, 279);
+            this.pictureBox1.Location = new System.Drawing.Point(19, 277);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(37, 37);
             this.pictureBox1.TabIndex = 43;
@@ -144,7 +144,7 @@ namespace MyWoggi
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(107, 190);
+            this.textBox6.Location = new System.Drawing.Point(66, 188);
             this.textBox6.MaxLength = 14;
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
@@ -154,7 +154,7 @@ namespace MyWoggi
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(109, 470);
+            this.textBox5.Location = new System.Drawing.Point(68, 468);
             this.textBox5.MaxLength = 14;
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
@@ -165,7 +165,7 @@ namespace MyWoggi
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(107, 375);
+            this.textBox1.Location = new System.Drawing.Point(66, 373);
             this.textBox1.MaxLength = 14;
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -176,7 +176,7 @@ namespace MyWoggi
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(330, 102);
+            this.textBox2.Location = new System.Drawing.Point(289, 100);
             this.textBox2.MaxLength = 14;
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
@@ -186,8 +186,8 @@ namespace MyWoggi
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(107, 281);
-            this.textBox4.MaxLength = 14;
+            this.textBox4.Location = new System.Drawing.Point(66, 279);
+            this.textBox4.MaxLength = 100;
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(296, 35);
@@ -202,7 +202,7 @@ namespace MyWoggi
             this.Login_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Login_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Login_Button.ForeColor = System.Drawing.Color.White;
-            this.Login_Button.Location = new System.Drawing.Point(118, 611);
+            this.Login_Button.Location = new System.Drawing.Point(99, 588);
             this.Login_Button.Name = "Login_Button";
             this.Login_Button.Size = new System.Drawing.Size(311, 37);
             this.Login_Button.TabIndex = 37;
@@ -219,9 +219,9 @@ namespace MyWoggi
             this.Register_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Register_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Register_Button.ForeColor = System.Drawing.Color.White;
-            this.Register_Button.Location = new System.Drawing.Point(60, 548);
+            this.Register_Button.Location = new System.Drawing.Point(19, 525);
             this.Register_Button.Name = "Register_Button";
-            this.Register_Button.Size = new System.Drawing.Size(431, 57);
+            this.Register_Button.Size = new System.Drawing.Size(471, 57);
             this.Register_Button.TabIndex = 36;
             this.Register_Button.Text = "Зарегистрироваться";
             this.Register_Button.UseVisualStyleBackColor = false;
@@ -231,7 +231,7 @@ namespace MyWoggi
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(103, 433);
+            this.label8.Location = new System.Drawing.Point(62, 431);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(255, 34);
             this.label8.TabIndex = 34;
@@ -242,7 +242,7 @@ namespace MyWoggi
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(101, 338);
+            this.label7.Location = new System.Drawing.Point(60, 336);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(111, 34);
             this.label7.TabIndex = 31;
@@ -253,7 +253,7 @@ namespace MyWoggi
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(103, 244);
+            this.label5.Location = new System.Drawing.Point(62, 242);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 34);
             this.label5.TabIndex = 25;
@@ -264,7 +264,7 @@ namespace MyWoggi
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(103, 53);
+            this.label4.Location = new System.Drawing.Point(62, 63);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 34);
             this.label4.TabIndex = 22;
@@ -273,7 +273,7 @@ namespace MyWoggi
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(107, 102);
+            this.textBox3.Location = new System.Drawing.Point(66, 100);
             this.textBox3.MaxLength = 14;
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
@@ -285,7 +285,7 @@ namespace MyWoggi
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(324, 53);
+            this.label3.Location = new System.Drawing.Point(283, 63);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(127, 34);
             this.label3.TabIndex = 19;
@@ -296,7 +296,7 @@ namespace MyWoggi
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(103, 150);
+            this.label2.Location = new System.Drawing.Point(62, 148);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 34);
             this.label2.TabIndex = 14;
@@ -308,7 +308,7 @@ namespace MyWoggi
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Consolas", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(164, 0);
+            this.label1.Location = new System.Drawing.Point(137, -1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(239, 43);
             this.label1.TabIndex = 0;

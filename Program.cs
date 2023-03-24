@@ -16,7 +16,7 @@ namespace MyWoggi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Registration());
+            Application.Run(new Authorization());
         }
     }
 }
