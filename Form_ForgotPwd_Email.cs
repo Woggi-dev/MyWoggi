@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace MyWoggi
 {
-    public partial class Registration : Form
+    public partial class Form_ForgotPwd_Email : Form
     {
-        public Registration()
+        public Form_ForgotPwd_Email()
         {
             InitializeComponent();
         }
-
-        
     }
 }

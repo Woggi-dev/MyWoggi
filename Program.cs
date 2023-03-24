@@ -16,7 +16,7 @@ namespace MyWoggi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Authorization());
+            Application.Run(new Form_ForgotPwd_Email());
         }
     }
 }
