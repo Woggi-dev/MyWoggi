@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,11 +17,28 @@ namespace MyWoggi
         public Authorization()
         {
             InitializeComponent();
+            LoadCustomFont();
         }
 
         // Заполнители для текстовых полей
         string login_placeholder = "Ваш никнейм";
         string pwd_placeholder = "Ваш пароль";
+
+        private void LoadCustomFont()
+        {
+            PrivateFontCollection privateFonts = new PrivateFontCollection();
+            privateFonts.AddFontFile("fonts/Minecraft_Rus.ttf");
+
+            // Use the font in your controls
+            Authorization_Title_label.Font = new Font(privateFonts.Families[0], 40);
+            Authorization_Subtitle_label.Font = new Font(privateFonts.Families[0], 24);
+            Authorization_Login_label.Font = new Font(privateFonts.Families[0], 18);
+            Authorization_Pwd_label.Font = new Font(privateFonts.Families[0], 18);
+            Authorization_Rememberme_checkbox.Font = new Font(privateFonts.Families[0], 12);
+            Authorization_Forgotpwd_button.Font = new Font(privateFonts.Families[0], 12);
+            Authorization_Login_button.Font = new Font(privateFonts.Families[0], 22);
+            Authorization_Register_button.Font = new Font(privateFonts.Families[0], 14);
+        }
 
         private void Authorization_Load(object sender, EventArgs e)
         {
@@ -30,8 +49,10 @@ namespace MyWoggi
             // Когда форма загружена, pwd_placeholder назначается pwd_textbox и изменяется цвет
             Authorization_Pwd_textbox.Text = pwd_placeholder;
             Authorization_Pwd_textbox.ForeColor = Color.Gray;
-
         }
+
+
+
         private void Authorization_FormClosed(object sender, FormClosedEventArgs e)
         {
             // Когда пользователь нажимает X в какой-то форме, приложение закрывается
