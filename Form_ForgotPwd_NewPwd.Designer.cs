@@ -125,9 +125,9 @@ namespace MyWoggi
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(11, 369);
+            this.button2.Location = new System.Drawing.Point(99, 369);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(458, 37);
+            this.button2.Size = new System.Drawing.Size(267, 37);
             this.button2.TabIndex = 48;
             this.button2.Text = "Войти в личный кабинет";
             this.button2.UseVisualStyleBackColor = false;
