@@ -33,7 +33,9 @@ namespace MyWoggi
             Authorization_Title_label.Font = new Font(privateFonts.Families[0], 40);
             Authorization_Subtitle_label.Font = new Font(privateFonts.Families[0], 24);
             Authorization_Login_label.Font = new Font(privateFonts.Families[0], 18);
+            Authorization_Login_textbox.Font = new Font(privateFonts.Families[0], 17);
             Authorization_Pwd_label.Font = new Font(privateFonts.Families[0], 18);
+            Authorization_Pwd_textbox.Font = new Font(privateFonts.Families[0], 17);
             Authorization_Rememberme_checkbox.Font = new Font(privateFonts.Families[0], 12);
             Authorization_Forgotpwd_button.Font = new Font(privateFonts.Families[0], 12);
             Authorization_Login_button.Font = new Font(privateFonts.Families[0], 22);
