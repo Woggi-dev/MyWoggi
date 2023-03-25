@@ -97,18 +97,19 @@ namespace MyWoggi
             this.Authorization_Pwd_textbox.MaxLength = 14;
             this.Authorization_Pwd_textbox.Multiline = true;
             this.Authorization_Pwd_textbox.Name = "Authorization_Pwd_textbox";
-            this.Authorization_Pwd_textbox.PasswordChar = '•';
             this.Authorization_Pwd_textbox.Size = new System.Drawing.Size(413, 35);
             this.Authorization_Pwd_textbox.TabIndex = 52;
+            this.Authorization_Pwd_textbox.Enter += new System.EventHandler(this.Authorization_Pwd_textbox_Enter);
+            this.Authorization_Pwd_textbox.Leave += new System.EventHandler(this.Authorization_Pwd_textbox_Leave);
             // 
             // Authorization_Login_label
             // 
             this.Authorization_Login_label.AutoSize = true;
             this.Authorization_Login_label.BackColor = System.Drawing.Color.Transparent;
-            this.Authorization_Login_label.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Authorization_Login_label.Font = new System.Drawing.Font("Minecraft Rus", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Authorization_Login_label.Location = new System.Drawing.Point(54, 68);
             this.Authorization_Login_label.Name = "Authorization_Login_label";
-            this.Authorization_Login_label.Size = new System.Drawing.Size(95, 34);
+            this.Authorization_Login_label.Size = new System.Drawing.Size(100, 24);
             this.Authorization_Login_label.TabIndex = 50;
             this.Authorization_Login_label.Text = "Логин";
             // 
@@ -121,15 +122,17 @@ namespace MyWoggi
             this.Authorization_Login_textbox.Name = "Authorization_Login_textbox";
             this.Authorization_Login_textbox.Size = new System.Drawing.Size(413, 35);
             this.Authorization_Login_textbox.TabIndex = 49;
+            this.Authorization_Login_textbox.Enter += new System.EventHandler(this.Authorization_Login_textbox_Enter);
+            this.Authorization_Login_textbox.Leave += new System.EventHandler(this.Authorization_Login_textbox_Leave);
             // 
             // Authorization_Pwd_label
             // 
             this.Authorization_Pwd_label.AutoSize = true;
             this.Authorization_Pwd_label.BackColor = System.Drawing.Color.Transparent;
-            this.Authorization_Pwd_label.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Authorization_Pwd_label.Location = new System.Drawing.Point(54, 160);
+            this.Authorization_Pwd_label.Font = new System.Drawing.Font("Minecraft Rus", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Authorization_Pwd_label.Location = new System.Drawing.Point(54, 161);
             this.Authorization_Pwd_label.Name = "Authorization_Pwd_label";
-            this.Authorization_Pwd_label.Size = new System.Drawing.Size(111, 34);
+            this.Authorization_Pwd_label.Size = new System.Drawing.Size(118, 24);
             this.Authorization_Pwd_label.TabIndex = 48;
             this.Authorization_Pwd_label.Text = "Пароль";
             // 
@@ -141,7 +144,7 @@ namespace MyWoggi
             this.Authorization_Login_button.FlatAppearance.BorderSize = 2;
             this.Authorization_Login_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(79)))), ((int)(((byte)(100)))));
             this.Authorization_Login_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Authorization_Login_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Authorization_Login_button.Font = new System.Drawing.Font("Minecraft Rus", 21.75F);
             this.Authorization_Login_button.ForeColor = System.Drawing.Color.White;
             this.Authorization_Login_button.Location = new System.Drawing.Point(11, 288);
             this.Authorization_Login_button.Name = "Authorization_Login_button";
@@ -155,10 +158,10 @@ namespace MyWoggi
             this.Authorization_Rememberme_checkbox.AutoSize = true;
             this.Authorization_Rememberme_checkbox.BackColor = System.Drawing.Color.Transparent;
             this.Authorization_Rememberme_checkbox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Authorization_Rememberme_checkbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Authorization_Rememberme_checkbox.Font = new System.Drawing.Font("Minecraft Rus", 12F);
             this.Authorization_Rememberme_checkbox.Location = new System.Drawing.Point(58, 249);
             this.Authorization_Rememberme_checkbox.Name = "Authorization_Rememberme_checkbox";
-            this.Authorization_Rememberme_checkbox.Size = new System.Drawing.Size(155, 24);
+            this.Authorization_Rememberme_checkbox.Size = new System.Drawing.Size(187, 20);
             this.Authorization_Rememberme_checkbox.TabIndex = 14;
             this.Authorization_Rememberme_checkbox.Text = "Запомнить меня";
             this.Authorization_Rememberme_checkbox.UseVisualStyleBackColor = false;
@@ -170,13 +173,13 @@ namespace MyWoggi
             this.Authorization_Register_button.FlatAppearance.BorderSize = 0;
             this.Authorization_Register_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
             this.Authorization_Register_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Authorization_Register_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Authorization_Register_button.Font = new System.Drawing.Font("Minecraft Rus", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Authorization_Register_button.ForeColor = System.Drawing.Color.White;
-            this.Authorization_Register_button.Location = new System.Drawing.Point(115, 351);
+            this.Authorization_Register_button.Location = new System.Drawing.Point(31, 351);
             this.Authorization_Register_button.Name = "Authorization_Register_button";
-            this.Authorization_Register_button.Size = new System.Drawing.Size(262, 37);
+            this.Authorization_Register_button.Size = new System.Drawing.Size(420, 37);
             this.Authorization_Register_button.TabIndex = 9;
-            this.Authorization_Register_button.Text = "Зарегистрироваться";
+            this.Authorization_Register_button.Text = "Или зарегистрироваться";
             this.Authorization_Register_button.UseVisualStyleBackColor = false;
             this.Authorization_Register_button.Click += new System.EventHandler(this.Register_Button_Click);
             // 
@@ -188,25 +191,25 @@ namespace MyWoggi
             this.Authorization_Forgotpwd_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.Authorization_Forgotpwd_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
             this.Authorization_Forgotpwd_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Authorization_Forgotpwd_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Authorization_Forgotpwd_button.Font = new System.Drawing.Font("Minecraft Rus", 12F);
             this.Authorization_Forgotpwd_button.ForeColor = System.Drawing.Color.White;
-            this.Authorization_Forgotpwd_button.Location = new System.Drawing.Point(331, 241);
+            this.Authorization_Forgotpwd_button.Location = new System.Drawing.Point(289, 238);
             this.Authorization_Forgotpwd_button.Name = "Authorization_Forgotpwd_button";
-            this.Authorization_Forgotpwd_button.Size = new System.Drawing.Size(140, 32);
+            this.Authorization_Forgotpwd_button.Size = new System.Drawing.Size(182, 35);
             this.Authorization_Forgotpwd_button.TabIndex = 6;
-            this.Authorization_Forgotpwd_button.Text = "Забыл пароль?";
+            this.Authorization_Forgotpwd_button.Text = "Забыли пароль?";
             this.Authorization_Forgotpwd_button.UseVisualStyleBackColor = false;
             this.Authorization_Forgotpwd_button.Click += new System.EventHandler(this.ForgotPwd_Button_Click);
             // 
             // Authorization_Subtitle_label
             // 
             this.Authorization_Subtitle_label.BackColor = System.Drawing.Color.Transparent;
-            this.Authorization_Subtitle_label.Font = new System.Drawing.Font("Consolas", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Authorization_Subtitle_label.Location = new System.Drawing.Point(11, 11);
+            this.Authorization_Subtitle_label.Font = new System.Drawing.Font("Minecraft Rus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Authorization_Subtitle_label.Location = new System.Drawing.Point(11, 15);
             this.Authorization_Subtitle_label.Name = "Authorization_Subtitle_label";
             this.Authorization_Subtitle_label.Size = new System.Drawing.Size(460, 43);
             this.Authorization_Subtitle_label.TabIndex = 0;
-            this.Authorization_Subtitle_label.Text = "Войти в личный кабинет";
+            this.Authorization_Subtitle_label.Text = "Вход";
             this.Authorization_Subtitle_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Authorization_Title_label
@@ -214,11 +217,11 @@ namespace MyWoggi
             this.Authorization_Title_label.AutoSize = true;
             this.Authorization_Title_label.BackColor = System.Drawing.Color.Transparent;
             this.Authorization_Title_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Authorization_Title_label.Font = new System.Drawing.Font("Consolas", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Authorization_Title_label.Font = new System.Drawing.Font("Minecraft Rus", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Authorization_Title_label.ForeColor = System.Drawing.Color.White;
-            this.Authorization_Title_label.Location = new System.Drawing.Point(233, 62);
+            this.Authorization_Title_label.Location = new System.Drawing.Point(234, 95);
             this.Authorization_Title_label.Name = "Authorization_Title_label";
-            this.Authorization_Title_label.Size = new System.Drawing.Size(277, 75);
+            this.Authorization_Title_label.Size = new System.Drawing.Size(276, 53);
             this.Authorization_Title_label.TabIndex = 1;
             this.Authorization_Title_label.Text = "MyWoggi";
             // 
@@ -230,6 +233,7 @@ namespace MyWoggi
             this.ClientSize = new System.Drawing.Size(734, 711);
             this.Controls.Add(this.Authorization_Title_label);
             this.Controls.Add(this.Authorization_panel);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ForeColor = System.Drawing.Color.Transparent;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(750, 750);
