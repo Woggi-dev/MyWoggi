@@ -21,5 +21,25 @@ namespace MyWoggi
         {
             Authorization_Panel.BorderStyle = BorderStyle.FixedSingle;
         }
+
+        private void Register_Button_Click(object sender, EventArgs e)
+        {
+            Registration registration = new Registration();
+            registration.Show();
+            this.Hide();
+
+        }
+
+        private void ForgotPwd_Button_Click(object sender, EventArgs e)
+        {
+            ForgotPwd_Email forgotpwd_email = new ForgotPwd_Email();
+            forgotpwd_email.Show();
+            this.Hide();
+        }
+
+        private void Authorization_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

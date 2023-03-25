@@ -40,7 +40,7 @@ namespace MyWoggi
             this.button1 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.Register_Button = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ForgotPwd_Button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Authorization_Panel.SuspendLayout();
@@ -62,7 +62,7 @@ namespace MyWoggi
             this.Authorization_Panel.Controls.Add(this.button1);
             this.Authorization_Panel.Controls.Add(this.checkBox1);
             this.Authorization_Panel.Controls.Add(this.Register_Button);
-            this.Authorization_Panel.Controls.Add(this.button2);
+            this.Authorization_Panel.Controls.Add(this.ForgotPwd_Button);
             this.Authorization_Panel.Controls.Add(this.label1);
             this.Authorization_Panel.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Authorization_Panel.Location = new System.Drawing.Point(130, 201);
@@ -116,7 +116,7 @@ namespace MyWoggi
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(58, 105);
-            this.textBox3.MaxLength = 14;
+            this.textBox3.MaxLength = 33;
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(413, 35);
@@ -172,29 +172,31 @@ namespace MyWoggi
             this.Register_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Register_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Register_Button.ForeColor = System.Drawing.Color.White;
-            this.Register_Button.Location = new System.Drawing.Point(11, 351);
+            this.Register_Button.Location = new System.Drawing.Point(115, 351);
             this.Register_Button.Name = "Register_Button";
-            this.Register_Button.Size = new System.Drawing.Size(460, 37);
+            this.Register_Button.Size = new System.Drawing.Size(262, 37);
             this.Register_Button.TabIndex = 9;
             this.Register_Button.Text = "Зарегистрироваться";
             this.Register_Button.UseVisualStyleBackColor = false;
+            this.Register_Button.Click += new System.EventHandler(this.Register_Button_Click);
             // 
-            // button2
+            // ForgotPwd_Button
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(331, 241);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 32);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Забыл пароль?";
-            this.button2.UseVisualStyleBackColor = false;
+            this.ForgotPwd_Button.BackColor = System.Drawing.Color.Transparent;
+            this.ForgotPwd_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ForgotPwd_Button.FlatAppearance.BorderSize = 0;
+            this.ForgotPwd_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ForgotPwd_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
+            this.ForgotPwd_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ForgotPwd_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ForgotPwd_Button.ForeColor = System.Drawing.Color.White;
+            this.ForgotPwd_Button.Location = new System.Drawing.Point(331, 241);
+            this.ForgotPwd_Button.Name = "ForgotPwd_Button";
+            this.ForgotPwd_Button.Size = new System.Drawing.Size(140, 32);
+            this.ForgotPwd_Button.TabIndex = 6;
+            this.ForgotPwd_Button.Text = "Забыл пароль?";
+            this.ForgotPwd_Button.UseVisualStyleBackColor = false;
+            this.ForgotPwd_Button.Click += new System.EventHandler(this.ForgotPwd_Button_Click);
             // 
             // label1
             // 
@@ -230,8 +232,12 @@ namespace MyWoggi
             this.Controls.Add(this.Authorization_Panel);
             this.ForeColor = System.Drawing.Color.Transparent;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(750, 750);
+            this.MinimumSize = new System.Drawing.Size(750, 750);
             this.Name = "Authorization";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyWoggi";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Authorization_FormClosed);
             this.Load += new System.EventHandler(this.Authorization_Load);
             this.Authorization_Panel.ResumeLayout(false);
             this.Authorization_Panel.PerformLayout();
@@ -245,18 +251,18 @@ namespace MyWoggi
         #endregion
 
         private System.Windows.Forms.Panel Authorization_Panel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button Register_Button;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button Register_Button;
+        private System.Windows.Forms.Button ForgotPwd_Button;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label5;
     }
 }
 

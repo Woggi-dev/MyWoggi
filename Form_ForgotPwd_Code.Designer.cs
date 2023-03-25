@@ -93,6 +93,7 @@ namespace MyWoggi
             this.button2.TabIndex = 48;
             this.button2.Text = "Войти в личный кабинет";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Enter_Account_Button);
             // 
             // button1
             // 
@@ -110,6 +111,7 @@ namespace MyWoggi
             this.button1.TabIndex = 47;
             this.button1.Text = "Ввести код";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Enter_Code_Button);
             // 
             // label5
             // 
@@ -195,8 +197,12 @@ namespace MyWoggi
             this.ClientSize = new System.Drawing.Size(734, 711);
             this.Controls.Add(this.Registration_Panel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(750, 750);
+            this.MinimumSize = new System.Drawing.Size(750, 750);
             this.Name = "ForgotPwd_Code";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyWoggi";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ForgotPwd_Code_FormClosed);
             this.Registration_Panel.ResumeLayout(false);
             this.Registration_Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

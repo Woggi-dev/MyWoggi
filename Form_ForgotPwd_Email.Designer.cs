@@ -1,7 +1,7 @@
 ﻿
 namespace MyWoggi
 {
-    partial class Form_ForgotPwd_Email
+    partial class ForgotPwd_Email
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace MyWoggi
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ForgotPwd_Email));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForgotPwd_Email));
             this.Registration_Panel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -37,9 +37,9 @@ namespace MyWoggi
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Register_Button = new System.Windows.Forms.Button();
             this.Login_Button = new System.Windows.Forms.Button();
+            this.Register_Button = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.Registration_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -93,6 +93,7 @@ namespace MyWoggi
             this.button2.TabIndex = 48;
             this.button2.Text = "Войти в личный кабинет";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Enter_Account_Button);
             // 
             // button1
             // 
@@ -110,6 +111,7 @@ namespace MyWoggi
             this.button1.TabIndex = 47;
             this.button1.Text = "Получить код";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Receive_Code_Button);
             // 
             // label5
             // 
@@ -142,17 +144,21 @@ namespace MyWoggi
             this.textBox4.Size = new System.Drawing.Size(410, 35);
             this.textBox4.TabIndex = 38;
             // 
-            // label1
+            // Login_Button
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Consolas", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(14, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(457, 43);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Восстановление пароля";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Login_Button.BackColor = System.Drawing.Color.Transparent;
+            this.Login_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Login_Button.FlatAppearance.BorderSize = 0;
+            this.Login_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
+            this.Login_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Login_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Login_Button.ForeColor = System.Drawing.Color.White;
+            this.Login_Button.Location = new System.Drawing.Point(99, 588);
+            this.Login_Button.Name = "Login_Button";
+            this.Login_Button.Size = new System.Drawing.Size(311, 37);
+            this.Login_Button.TabIndex = 37;
+            this.Login_Button.Text = "Войти в личный кабинет";
+            this.Login_Button.UseVisualStyleBackColor = false;
             // 
             // Register_Button
             // 
@@ -171,23 +177,19 @@ namespace MyWoggi
             this.Register_Button.Text = "Зарегистрироваться";
             this.Register_Button.UseVisualStyleBackColor = false;
             // 
-            // Login_Button
+            // label1
             // 
-            this.Login_Button.BackColor = System.Drawing.Color.Transparent;
-            this.Login_Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Login_Button.FlatAppearance.BorderSize = 0;
-            this.Login_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
-            this.Login_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Login_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Login_Button.ForeColor = System.Drawing.Color.White;
-            this.Login_Button.Location = new System.Drawing.Point(99, 588);
-            this.Login_Button.Name = "Login_Button";
-            this.Login_Button.Size = new System.Drawing.Size(311, 37);
-            this.Login_Button.TabIndex = 37;
-            this.Login_Button.Text = "Войти в личный кабинет";
-            this.Login_Button.UseVisualStyleBackColor = false;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Consolas", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(14, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(457, 43);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Восстановление пароля";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Form_ForgotPwd_Email
+            // ForgotPwd_Email
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -196,8 +198,12 @@ namespace MyWoggi
             this.ClientSize = new System.Drawing.Size(734, 711);
             this.Controls.Add(this.Registration_Panel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form_ForgotPwd_Email";
+            this.MaximumSize = new System.Drawing.Size(750, 750);
+            this.MinimumSize = new System.Drawing.Size(750, 750);
+            this.Name = "ForgotPwd_Email";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyWoggi";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ForgotPwd_Email_FormClosed);
             this.Registration_Panel.ResumeLayout(false);
             this.Registration_Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
