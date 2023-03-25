@@ -19,7 +19,7 @@ namespace MyWoggi
 
         private void Authorization_Load(object sender, EventArgs e)
         {
-            Authorization_Panel.BorderStyle = BorderStyle.FixedSingle;
+            Authorization_panel.BorderStyle = BorderStyle.FixedSingle;
         }
 
         private void Register_Button_Click(object sender, EventArgs e)
@@ -32,7 +32,7 @@ namespace MyWoggi
 
         private void ForgotPwd_Button_Click(object sender, EventArgs e)
         {
-            ForgotPwd_Email forgotpwd_email = new ForgotPwd_Email();
+            UserEmail forgotpwd_email = new UserEmail();
             forgotpwd_email.Show();
             this.Hide();
         }
