@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MyWoggi
 {
-    public partial class ForgotPwd_NewPwd : Form
+    public partial class NewPwd : Form
     {
-        public ForgotPwd_NewPwd()
+        public NewPwd()
         {
             InitializeComponent();
         }

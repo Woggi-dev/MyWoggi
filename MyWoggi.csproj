@@ -46,52 +46,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form_Authorization.cs">
+    <Compile Include="forms\authorization.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Authorization.Designer.cs">
-      <DependentUpon>Form_Authorization.cs</DependentUpon>
+    <Compile Include="forms\authorization.Designer.cs">
+      <DependentUpon>authorization.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_ForgotPwd_Code.cs">
+    <Compile Include="forms\forgot_pwd\2_recovery_code.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_ForgotPwd_Code.Designer.cs">
-      <DependentUpon>Form_ForgotPwd_Code.cs</DependentUpon>
+    <Compile Include="forms\forgot_pwd\2_recovery_code.Designer.cs">
+      <DependentUpon>2_recovery_code.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_ForgotPwd_Email.cs">
+    <Compile Include="forms\forgot_pwd\1_user_email.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_ForgotPwd_Email.Designer.cs">
-      <DependentUpon>Form_ForgotPwd_Email.cs</DependentUpon>
+    <Compile Include="forms\forgot_pwd\1_user_email.Designer.cs">
+      <DependentUpon>1_user_email.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_ForgotPwd_NewPwd.cs">
+    <Compile Include="forms\forgot_pwd\3_new_pwd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_ForgotPwd_NewPwd.Designer.cs">
-      <DependentUpon>Form_ForgotPwd_NewPwd.cs</DependentUpon>
+    <Compile Include="forms\forgot_pwd\3_new_pwd.Designer.cs">
+      <DependentUpon>3_new_pwd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Registration.cs">
+    <Compile Include="forms\registration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Registration.Designer.cs">
-      <DependentUpon>Form_Registration.cs</DependentUpon>
+    <Compile Include="forms\registration.Designer.cs">
+      <DependentUpon>registration.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form_Authorization.resx">
-      <DependentUpon>Form_Authorization.cs</DependentUpon>
+    <EmbeddedResource Include="forms\authorization.resx">
+      <DependentUpon>authorization.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_ForgotPwd_Code.resx">
-      <DependentUpon>Form_ForgotPwd_Code.cs</DependentUpon>
+    <EmbeddedResource Include="forms\forgot_pwd\2_recovery_code.resx">
+      <DependentUpon>2_recovery_code.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_ForgotPwd_Email.resx">
-      <DependentUpon>Form_ForgotPwd_Email.cs</DependentUpon>
+    <EmbeddedResource Include="forms\forgot_pwd\1_user_email.resx">
+      <DependentUpon>1_user_email.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_ForgotPwd_NewPwd.resx">
-      <DependentUpon>Form_ForgotPwd_NewPwd.cs</DependentUpon>
+    <EmbeddedResource Include="forms\forgot_pwd\3_new_pwd.resx">
+      <DependentUpon>3_new_pwd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Registration.resx">
-      <DependentUpon>Form_Registration.cs</DependentUpon>
+    <EmbeddedResource Include="forms\registration.resx">
+      <DependentUpon>registration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

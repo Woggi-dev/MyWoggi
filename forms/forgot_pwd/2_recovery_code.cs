@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MyWoggi
 {
-    public partial class ForgotPwd_Code : Form
+    public partial class RecoveryCode : Form
     {
-        public ForgotPwd_Code()
+        public RecoveryCode()
         {
             InitializeComponent();
         }
@@ -25,7 +25,7 @@ namespace MyWoggi
 
         private void Enter_Code_Button(object sender, EventArgs e)
         {
-            ForgotPwd_NewPwd forgotpwd_newpwd = new ForgotPwd_NewPwd();
+            NewPwd forgotpwd_newpwd = new NewPwd();
             forgotpwd_newpwd.Show();
             this.Hide();
         }

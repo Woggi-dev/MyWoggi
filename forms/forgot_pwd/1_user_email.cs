@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MyWoggi
 {
-    public partial class ForgotPwd_Email : Form
+    public partial class UserEmail : Form
     {
-        public ForgotPwd_Email()
+        public UserEmail()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace MyWoggi
 
         private void Receive_Code_Button(object sender, EventArgs e)
         {
-            ForgotPwd_Code forgotpwd_code = new ForgotPwd_Code();
+            RecoveryCode forgotpwd_code = new RecoveryCode();
             forgotpwd_code.Show();
             this.Hide();
         }
