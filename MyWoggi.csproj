@@ -104,9 +104,9 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="App.config" />
-    <Content Include="fonts\Minecraft_Rus.ttf">
+    <EmbeddedResource Include="fonts\Minecraft_Rus.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
