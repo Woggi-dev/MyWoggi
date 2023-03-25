@@ -103,6 +103,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -114,9 +115,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="images\view.png" />
     <None Include="images\background.png" />
     <None Include="images\main.png" />
@@ -124,9 +122,10 @@
     <None Include="images\email.png" />
     <None Include="images\hide.png" />
     <None Include="images\recovery_code.png" />
+    <None Include="images\background_panel.png" />
     <Content Include="images\user.png" />
     <Content Include="images\lock.png" />
-    <Content Include="images\Moose_United-Earth.ico" />
+    <Content Include="images\window_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
