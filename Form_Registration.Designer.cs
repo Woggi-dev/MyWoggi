@@ -202,12 +202,13 @@ namespace MyWoggi
             this.Login_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Login_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Login_Button.ForeColor = System.Drawing.Color.White;
-            this.Login_Button.Location = new System.Drawing.Point(19, 577);
+            this.Login_Button.Location = new System.Drawing.Point(121, 574);
             this.Login_Button.Name = "Login_Button";
-            this.Login_Button.Size = new System.Drawing.Size(471, 37);
+            this.Login_Button.Size = new System.Drawing.Size(267, 37);
             this.Login_Button.TabIndex = 37;
             this.Login_Button.Text = "Войти в личный кабинет";
             this.Login_Button.UseVisualStyleBackColor = false;
+            this.Login_Button.Click += new System.EventHandler(this.Enter_Account_Button);
             // 
             // Register_Button
             // 
@@ -322,8 +323,12 @@ namespace MyWoggi
             this.ClientSize = new System.Drawing.Size(734, 711);
             this.Controls.Add(this.Registration_Panel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(750, 750);
+            this.MinimumSize = new System.Drawing.Size(750, 750);
             this.Name = "Registration";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyWoggi";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Registration_FormClosed);
             this.Registration_Panel.ResumeLayout(false);
             this.Registration_Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();

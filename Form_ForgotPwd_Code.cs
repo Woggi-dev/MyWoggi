@@ -17,5 +17,24 @@ namespace MyWoggi
             InitializeComponent();
         }
 
+        private void ForgotPwd_Code_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+
+        private void Enter_Code_Button(object sender, EventArgs e)
+        {
+            ForgotPwd_NewPwd forgotpwd_newpwd = new ForgotPwd_NewPwd();
+            forgotpwd_newpwd.Show();
+            this.Hide();
+        }
+
+        private void Enter_Account_Button(object sender, EventArgs e)
+        {
+            Authorization authorization = new Authorization();
+            authorization.Show();
+            this.Hide();
+        }
     }
 }

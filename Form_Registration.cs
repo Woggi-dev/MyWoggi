@@ -17,6 +17,16 @@ namespace MyWoggi
             InitializeComponent();
         }
 
-        
+        private void Registration_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Enter_Account_Button(object sender, EventArgs e)
+        {
+            Authorization authorization = new Authorization();
+            authorization.Show();
+            this.Hide();
+        }
     }
 }
