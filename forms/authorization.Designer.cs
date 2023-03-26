@@ -31,6 +31,8 @@ namespace MyWoggi
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Authorization));
             this.Authorization_panel = new System.Windows.Forms.Panel();
+            this.Authorization_Showpwd_picturebox = new System.Windows.Forms.PictureBox();
+            this.Authorization_Hidepwd_picturebox = new System.Windows.Forms.PictureBox();
             this.Authorization_Pwd_picturebox = new System.Windows.Forms.PictureBox();
             this.Authorization_Login_picturebox = new System.Windows.Forms.PictureBox();
             this.Authorization_Pwd_textbox = new System.Windows.Forms.TextBox();
@@ -44,6 +46,8 @@ namespace MyWoggi
             this.Authorization_Subtitle_label = new System.Windows.Forms.Label();
             this.Authorization_Title_label = new System.Windows.Forms.Label();
             this.Authorization_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Authorization_Showpwd_picturebox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Authorization_Hidepwd_picturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Authorization_Pwd_picturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Authorization_Login_picturebox)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +57,8 @@ namespace MyWoggi
             this.Authorization_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(50)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.Authorization_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Authorization_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Authorization_panel.Controls.Add(this.Authorization_Showpwd_picturebox);
+            this.Authorization_panel.Controls.Add(this.Authorization_Hidepwd_picturebox);
             this.Authorization_panel.Controls.Add(this.Authorization_Pwd_picturebox);
             this.Authorization_panel.Controls.Add(this.Authorization_Login_picturebox);
             this.Authorization_panel.Controls.Add(this.Authorization_Pwd_textbox);
@@ -69,6 +75,31 @@ namespace MyWoggi
             this.Authorization_panel.Name = "Authorization_panel";
             this.Authorization_panel.Size = new System.Drawing.Size(486, 375);
             this.Authorization_panel.TabIndex = 0;
+            // 
+            // Authorization_Showpwd_picturebox
+            // 
+            this.Authorization_Showpwd_picturebox.BackColor = System.Drawing.Color.Transparent;
+            this.Authorization_Showpwd_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.view;
+            this.Authorization_Showpwd_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Authorization_Showpwd_picturebox.Location = new System.Drawing.Point(443, 182);
+            this.Authorization_Showpwd_picturebox.Name = "Authorization_Showpwd_picturebox";
+            this.Authorization_Showpwd_picturebox.Size = new System.Drawing.Size(38, 37);
+            this.Authorization_Showpwd_picturebox.TabIndex = 57;
+            this.Authorization_Showpwd_picturebox.TabStop = false;
+            this.Authorization_Showpwd_picturebox.Visible = false;
+            this.Authorization_Showpwd_picturebox.Click += new System.EventHandler(this.Authorization_Showpwd_picturebox_Click);
+            // 
+            // Authorization_Hidepwd_picturebox
+            // 
+            this.Authorization_Hidepwd_picturebox.BackColor = System.Drawing.Color.Transparent;
+            this.Authorization_Hidepwd_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.hide;
+            this.Authorization_Hidepwd_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Authorization_Hidepwd_picturebox.Location = new System.Drawing.Point(443, 182);
+            this.Authorization_Hidepwd_picturebox.Name = "Authorization_Hidepwd_picturebox";
+            this.Authorization_Hidepwd_picturebox.Size = new System.Drawing.Size(37, 37);
+            this.Authorization_Hidepwd_picturebox.TabIndex = 56;
+            this.Authorization_Hidepwd_picturebox.TabStop = false;
+            this.Authorization_Hidepwd_picturebox.Click += new System.EventHandler(this.Authorization_Hidepwd_picturebox_Click);
             // 
             // Authorization_Pwd_picturebox
             // 
@@ -97,7 +128,7 @@ namespace MyWoggi
             this.Authorization_Pwd_textbox.MaxLength = 14;
             this.Authorization_Pwd_textbox.Multiline = true;
             this.Authorization_Pwd_textbox.Name = "Authorization_Pwd_textbox";
-            this.Authorization_Pwd_textbox.Size = new System.Drawing.Size(413, 35);
+            this.Authorization_Pwd_textbox.Size = new System.Drawing.Size(382, 35);
             this.Authorization_Pwd_textbox.TabIndex = 52;
             this.Authorization_Pwd_textbox.Enter += new System.EventHandler(this.Authorization_Pwd_textbox_Enter);
             this.Authorization_Pwd_textbox.Leave += new System.EventHandler(this.Authorization_Pwd_textbox_Leave);
@@ -120,7 +151,7 @@ namespace MyWoggi
             this.Authorization_Login_textbox.MaxLength = 33;
             this.Authorization_Login_textbox.Multiline = true;
             this.Authorization_Login_textbox.Name = "Authorization_Login_textbox";
-            this.Authorization_Login_textbox.Size = new System.Drawing.Size(413, 35);
+            this.Authorization_Login_textbox.Size = new System.Drawing.Size(382, 35);
             this.Authorization_Login_textbox.TabIndex = 49;
             this.Authorization_Login_textbox.Enter += new System.EventHandler(this.Authorization_Login_textbox_Enter);
             this.Authorization_Login_textbox.Leave += new System.EventHandler(this.Authorization_Login_textbox_Leave);
@@ -246,6 +277,8 @@ namespace MyWoggi
             this.Load += new System.EventHandler(this.Authorization_Load);
             this.Authorization_panel.ResumeLayout(false);
             this.Authorization_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Authorization_Showpwd_picturebox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Authorization_Hidepwd_picturebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Authorization_Pwd_picturebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Authorization_Login_picturebox)).EndInit();
             this.ResumeLayout(false);
@@ -268,6 +301,8 @@ namespace MyWoggi
         private System.Windows.Forms.Button Authorization_Forgotpwd_button;
         private System.Windows.Forms.Label Authorization_Subtitle_label;
         private System.Windows.Forms.Label Authorization_Title_label;
+        private System.Windows.Forms.PictureBox Authorization_Hidepwd_picturebox;
+        private System.Windows.Forms.PictureBox Authorization_Showpwd_picturebox;
     }
 }
 

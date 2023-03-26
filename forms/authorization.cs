@@ -95,5 +95,18 @@ namespace MyWoggi
             this.Hide();
         }
 
+        
+
+        private void Authorization_Showpwd_picturebox_Click(object sender, EventArgs e)
+        {
+            Authorization_Showpwd_picturebox.Visible = false;
+            Authorization_Pwd_textbox.PasswordChar = '\0';
+        }
+
+        private void Authorization_Hidepwd_picturebox_Click(object sender, EventArgs e)
+        {
+            Authorization_Showpwd_picturebox.Visible = true;
+            Authorization_Pwd_textbox.PasswordChar = '•';
+        }
     }
 }
