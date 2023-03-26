@@ -102,6 +102,8 @@ namespace MyWoggi
             this.NewPwd_Newpwdretry_textbox.Name = "NewPwd_Newpwdretry_textbox";
             this.NewPwd_Newpwdretry_textbox.Size = new System.Drawing.Size(411, 35);
             this.NewPwd_Newpwdretry_textbox.TabIndex = 50;
+            this.NewPwd_Newpwdretry_textbox.Enter += new System.EventHandler(this.NewPwd_Newpwdretry_textbox_Enter);
+            this.NewPwd_Newpwdretry_textbox.Leave += new System.EventHandler(this.NewPwd_Newpwdretry_textbox_Leave);
             // 
             // NewPwd_Caption_label
             // 
@@ -181,6 +183,8 @@ namespace MyWoggi
             this.NewPwd_Newpwd_textbox.Name = "NewPwd_Newpwd_textbox";
             this.NewPwd_Newpwd_textbox.Size = new System.Drawing.Size(411, 35);
             this.NewPwd_Newpwd_textbox.TabIndex = 38;
+            this.NewPwd_Newpwd_textbox.Enter += new System.EventHandler(this.NewPwd_Newpwd_textbox_Enter);
+            this.NewPwd_Newpwd_textbox.Leave += new System.EventHandler(this.NewPwd_Newpwd_textbox_Leave);
             // 
             // Login_Button
             // 
@@ -241,6 +245,7 @@ namespace MyWoggi
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyWoggi";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ForgotPwd_NewPwd_FormClosed);
+            this.Load += new System.EventHandler(this.NewPwd_Load);
             this.NewPwd_panel.ResumeLayout(false);
             this.NewPwd_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NewPwd_Newpwdretry_picturebox)).EndInit();

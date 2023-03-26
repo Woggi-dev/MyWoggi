@@ -150,6 +150,8 @@ namespace MyWoggi
             this.Registration_Login_textbox.Name = "Registration_Login_textbox";
             this.Registration_Login_textbox.Size = new System.Drawing.Size(424, 35);
             this.Registration_Login_textbox.TabIndex = 42;
+            this.Registration_Login_textbox.Enter += new System.EventHandler(this.Registration_Login_textbox_Enter);
+            this.Registration_Login_textbox.Leave += new System.EventHandler(this.Registration_Login_textbox_Leave);
             // 
             // Registration_Pwdretry_textbox
             // 
@@ -158,9 +160,10 @@ namespace MyWoggi
             this.Registration_Pwdretry_textbox.MaxLength = 14;
             this.Registration_Pwdretry_textbox.Multiline = true;
             this.Registration_Pwdretry_textbox.Name = "Registration_Pwdretry_textbox";
-            this.Registration_Pwdretry_textbox.PasswordChar = '•';
             this.Registration_Pwdretry_textbox.Size = new System.Drawing.Size(422, 35);
             this.Registration_Pwdretry_textbox.TabIndex = 41;
+            this.Registration_Pwdretry_textbox.Enter += new System.EventHandler(this.Registration_Pwdretry_textbox_Enter);
+            this.Registration_Pwdretry_textbox.Leave += new System.EventHandler(this.Registration_Pwdretry_textbox_Leave);
             // 
             // Registration_Pwd_textbox
             // 
@@ -169,9 +172,10 @@ namespace MyWoggi
             this.Registration_Pwd_textbox.MaxLength = 14;
             this.Registration_Pwd_textbox.Multiline = true;
             this.Registration_Pwd_textbox.Name = "Registration_Pwd_textbox";
-            this.Registration_Pwd_textbox.PasswordChar = '•';
             this.Registration_Pwd_textbox.Size = new System.Drawing.Size(424, 35);
             this.Registration_Pwd_textbox.TabIndex = 40;
+            this.Registration_Pwd_textbox.Enter += new System.EventHandler(this.Registration_Pwd_textbox_Enter);
+            this.Registration_Pwd_textbox.Leave += new System.EventHandler(this.Registration_Pwd_textbox_Leave);
             // 
             // Registration_Surname_textbox
             // 
@@ -182,6 +186,8 @@ namespace MyWoggi
             this.Registration_Surname_textbox.Name = "Registration_Surname_textbox";
             this.Registration_Surname_textbox.Size = new System.Drawing.Size(201, 35);
             this.Registration_Surname_textbox.TabIndex = 39;
+            this.Registration_Surname_textbox.Enter += new System.EventHandler(this.Registration_Surname_textbox_Enter);
+            this.Registration_Surname_textbox.Leave += new System.EventHandler(this.Registration_Surname_textbox_Leave);
             // 
             // Registration_Email_textbox
             // 
@@ -192,6 +198,8 @@ namespace MyWoggi
             this.Registration_Email_textbox.Name = "Registration_Email_textbox";
             this.Registration_Email_textbox.Size = new System.Drawing.Size(424, 35);
             this.Registration_Email_textbox.TabIndex = 38;
+            this.Registration_Email_textbox.Enter += new System.EventHandler(this.Registration_Email_textbox_Enter);
+            this.Registration_Email_textbox.Leave += new System.EventHandler(this.Registration_Email_textbox_Leave);
             // 
             // Registration_Login_button
             // 
@@ -273,6 +281,7 @@ namespace MyWoggi
             // 
             // Registration_Name_textbox
             // 
+            this.Registration_Name_textbox.AcceptsTab = true;
             this.Registration_Name_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Registration_Name_textbox.Location = new System.Drawing.Point(66, 89);
             this.Registration_Name_textbox.MaxLength = 14;
@@ -280,6 +289,8 @@ namespace MyWoggi
             this.Registration_Name_textbox.Name = "Registration_Name_textbox";
             this.Registration_Name_textbox.Size = new System.Drawing.Size(201, 35);
             this.Registration_Name_textbox.TabIndex = 21;
+            this.Registration_Name_textbox.Enter += new System.EventHandler(this.Registration_Name_textbox_Enter);
+            this.Registration_Name_textbox.Leave += new System.EventHandler(this.Registration_Name_textbox_Leave);
             // 
             // Registration_Surname_label
             // 
@@ -329,6 +340,7 @@ namespace MyWoggi
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyWoggi";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Registration_FormClosed);
+            this.Load += new System.EventHandler(this.Registration_Load);
             this.Registration_panel.ResumeLayout(false);
             this.Registration_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Registration_SN_picturebox)).EndInit();

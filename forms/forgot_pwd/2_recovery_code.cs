@@ -12,9 +12,25 @@ namespace MyWoggi
 {
     public partial class RecoveryCode : Form
     {
+        string recoverycode_placeholder = "Ваш код восстановления";
+
+        private void Set_Placeholder(TextBox textBox, string placeholder)
+        {
+            if (textBox.Text == placeholder)
+            {
+                textBox.Text = "";
+                textBox.ForeColor = Color.Black;
+            }
+        }
         public RecoveryCode()
         {
             InitializeComponent();
+        }
+
+        private void RecoveryCode_Load(object sender, EventArgs e)
+        {
+            RecoveryCode_Recoverycode_textbox.Text = recoverycode_placeholder;
+            RecoveryCode_Recoverycode_textbox.ForeColor = Color.Gray;
         }
 
         private void ForgotPwd_Code_FormClosed(object sender, FormClosedEventArgs e)
@@ -22,6 +38,15 @@ namespace MyWoggi
             Application.Exit();
         }
 
+        private void RecoveryCode_Recoverycode_textbox_Enter(object sender, EventArgs e)
+        {
+            Set_Placeholder(RecoveryCode_Recoverycode_textbox, recoverycode_placeholder);
+        }
+
+        private void RecoveryCode_Recoverycode_textbox_Leave(object sender, EventArgs e)
+        {
+            Set_Placeholder(RecoveryCode_Recoverycode_textbox, recoverycode_placeholder);
+        }
 
         private void Enter_Code_Button(object sender, EventArgs e)
         {
@@ -36,5 +61,6 @@ namespace MyWoggi
             authorization.Show();
             this.Hide();
         }
+
     }
 }
