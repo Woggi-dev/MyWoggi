@@ -68,7 +68,10 @@ namespace MyWoggi
         private void Authorization_Pwd_textbox_Enter(object sender, EventArgs e)
         {
             // Когда пользователь наводит курсор на pwd_textbox, pwd_textbox очищается, и изменяется цвет
-            Authorization_Pwd_textbox.PasswordChar = '•';
+            if (Authorization_Showpwd_picturebox.Visible == false)
+                Authorization_Pwd_textbox.PasswordChar = '•';
+
+            
             Set_Placeholder(Authorization_Pwd_textbox, pwd_placeholder);
 
         }
