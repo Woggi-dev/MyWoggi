@@ -21,6 +21,21 @@ namespace MyWoggi
         string login_placeholder = "Ваш никнейм";
         string pwd_placeholder = "Ваш пароль";
 
+        private void Set_Placeholder(TextBox textBox, string placeholder)
+        {
+            if (textBox.Text == placeholder)
+            {
+                textBox.Text = "";
+                textBox.ForeColor = Color.Black;
+            }
+            else if (textBox.Text == "")
+            {
+                textBox.PasswordChar = '\0';
+                textBox.Text = placeholder;
+                textBox.ForeColor = Color.Gray;
+            }
+        }
+
         private void Authorization_Load(object sender, EventArgs e)
         {
             // Когда форма загружена, login_placeholder назначается login_textbox и изменяется цвет
@@ -41,41 +56,27 @@ namespace MyWoggi
         private void Authorization_Login_textbox_Enter(object sender, EventArgs e)
         {
             // Когда пользователь наводит курсор на login_textbox, login_textbox очищается, и изменяется цвет
-            if (Authorization_Login_textbox.Text == login_placeholder)
-            {
-                Authorization_Login_textbox.Text = "";
-                Authorization_Login_textbox.ForeColor = Color.Black;
-
-            }
+            Set_Placeholder(Authorization_Login_textbox, login_placeholder);
         }
         private void Authorization_Login_textbox_Leave(object sender, EventArgs e)
         {
             // Когда пользователь переключается на другое текстовое поле, а login_textbox пустое, login_placeholder назначается login_textbox
-            if (Authorization_Login_textbox.Text == "")
-            {
-                Authorization_Login_textbox.Text = login_placeholder;
-                Authorization_Login_textbox.ForeColor = Color.Gray;
-            }
+            Set_Placeholder(Authorization_Login_textbox, login_placeholder);
+
         }
 
         private void Authorization_Pwd_textbox_Enter(object sender, EventArgs e)
         {
             // Когда пользователь наводит курсор на pwd_textbox, pwd_textbox очищается, и изменяется цвет
-            if (Authorization_Pwd_textbox.Text == pwd_placeholder)
-            {
-                Authorization_Pwd_textbox.Text = "";
-                Authorization_Pwd_textbox.ForeColor = Color.Black;
-            }
+            Authorization_Pwd_textbox.PasswordChar = '•';
+            Set_Placeholder(Authorization_Pwd_textbox, pwd_placeholder);
+
         }
 
         private void Authorization_Pwd_textbox_Leave(object sender, EventArgs e)
         {
             // Когда пользователь переключается на другое текстовое поле, а pwd_textbox пустое, pwd_placeholder назначается pwd_textbox
-            if (Authorization_Pwd_textbox.Text == "")
-            {
-                Authorization_Pwd_textbox.Text = pwd_placeholder;
-                Authorization_Pwd_textbox.ForeColor = Color.Gray;
-            }
+            Set_Placeholder(Authorization_Pwd_textbox, pwd_placeholder);
         }
 
         private void ForgotPwd_Button_Click(object sender, EventArgs e)
