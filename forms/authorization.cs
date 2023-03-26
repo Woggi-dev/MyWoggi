@@ -30,7 +30,7 @@ namespace MyWoggi
             }
             else if (textBox.Text == "")
             {
-                textBox.PasswordChar = '\0';
+                Authorization_Pwd_textbox.PasswordChar = '\0';
                 textBox.Text = placeholder;
                 textBox.ForeColor = Color.Gray;
             }
@@ -95,18 +95,24 @@ namespace MyWoggi
             this.Hide();
         }
 
-        
-
         private void Authorization_Showpwd_picturebox_Click(object sender, EventArgs e)
         {
+            Authorization_Hidepwd_picturebox.Visible = true;
             Authorization_Showpwd_picturebox.Visible = false;
-            Authorization_Pwd_textbox.PasswordChar = '\0';
+            Authorization_Pwd_textbox.PasswordChar = '•';
+            if (Authorization_Pwd_textbox.Text == pwd_placeholder)
+                Authorization_Pwd_textbox.PasswordChar = '\0';
         }
 
         private void Authorization_Hidepwd_picturebox_Click(object sender, EventArgs e)
         {
+            Authorization_Hidepwd_picturebox.Visible = false;
             Authorization_Showpwd_picturebox.Visible = true;
-            Authorization_Pwd_textbox.PasswordChar = '•';
+            Authorization_Pwd_textbox.PasswordChar = '\0';
+            if (Authorization_Pwd_textbox.Text == pwd_placeholder)
+                Authorization_Pwd_textbox.PasswordChar = '•';
+
+
         }
     }
 }

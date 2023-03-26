@@ -143,5 +143,41 @@ namespace MyWoggi
             Set_Placeholder(Registration_Pwdretry_textbox, pwdretry_placeholder);
 
         }
+
+        private void Authorization_Showpwd_picturebox_Click(object sender, EventArgs e)
+        {
+            Registration_Hidepwd_picturebox.Visible = true;
+            Registration_Showpwd_picturebox.Visible = false;
+            Registration_Pwd_textbox.PasswordChar = '•';
+            if (Registration_Pwd_textbox.Text == pwd_placeholder)
+                Registration_Pwd_textbox.PasswordChar = '\0';
+        }
+
+        private void Authorization_Hidepwd_picturebox_Click(object sender, EventArgs e)
+        {
+            Registration_Hidepwd_picturebox.Visible = false;
+            Registration_Showpwd_picturebox.Visible = true;
+            Registration_Pwd_textbox.PasswordChar = '\0';
+            if (Registration_Pwd_textbox.Text == pwd_placeholder)
+                Registration_Pwd_textbox.PasswordChar = '•';
+        }
+
+        private void Registration_Showpwdretry_picturebox_Click(object sender, EventArgs e)
+        {
+            Registration_Hidepwdretry_picturebox.Visible = true;
+            Registration_Showpwdretry_picturebox.Visible = false;
+            Registration_Pwdretry_textbox.PasswordChar = '•';
+            if (Registration_Pwdretry_textbox.Text == pwdretry_placeholder)
+                Registration_Pwdretry_textbox.PasswordChar = '\0';
+        }
+
+        private void Registration_Hidepwdretry_picturebox_Click(object sender, EventArgs e)
+        {
+            Registration_Hidepwdretry_picturebox.Visible = false;
+            Registration_Showpwdretry_picturebox.Visible = true;
+            Registration_Pwdretry_textbox.PasswordChar = '\0';
+            if (Registration_Pwdretry_textbox.Text == pwdretry_placeholder)
+                Registration_Pwdretry_textbox.PasswordChar = '•';
+        }
     }
 }

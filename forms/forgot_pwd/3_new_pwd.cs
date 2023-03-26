@@ -86,5 +86,40 @@ namespace MyWoggi
             this.Hide();
         }
 
+        private void NewPwd_Showpwd_picturebox_Click(object sender, EventArgs e)
+        {
+            NewPwd_Hidepwd_picturebox.Visible = true;
+            NewPwd_Showpwd_picturebox.Visible = false;
+            NewPwd_Newpwd_textbox.PasswordChar = '•';
+            if (NewPwd_Newpwd_textbox.Text == newpwd_placeholder)
+                NewPwd_Newpwd_textbox.PasswordChar = '\0';
+        }
+
+        private void NewPwd_Hidepwd_picturebox_Click(object sender, EventArgs e)
+        {
+            NewPwd_Hidepwd_picturebox.Visible = false;
+            NewPwd_Showpwd_picturebox.Visible = true;
+            NewPwd_Newpwd_textbox.PasswordChar = '\0';
+            if (NewPwd_Newpwd_textbox.Text == newpwd_placeholder)
+                NewPwd_Newpwd_textbox.PasswordChar = '•';
+        }
+
+        private void NewPwd_Showpwdretry_picturebox_Click(object sender, EventArgs e)
+        {
+            NewPwd_Hidepwdretry_picturebox.Visible = true;
+            NewPwd_Showpwdretry_picturebox.Visible = false;
+            NewPwd_Newpwdretry_textbox.PasswordChar = '•';
+            if (NewPwd_Newpwdretry_textbox.Text == newpwdretry_placeholder)
+                NewPwd_Newpwdretry_textbox.PasswordChar = '\0';
+        }
+
+        private void NewPwd_Hidepwdretry_picturebox_Click(object sender, EventArgs e)
+        {
+            NewPwd_Hidepwdretry_picturebox.Visible = false;
+            NewPwd_Showpwdretry_picturebox.Visible = true;
+            NewPwd_Newpwdretry_textbox.PasswordChar = '\0';
+            if (NewPwd_Newpwdretry_textbox.Text == newpwdretry_placeholder)
+                NewPwd_Newpwdretry_textbox.PasswordChar = '•';
+        }
     }
 }
