@@ -138,7 +138,7 @@ namespace MyWoggi
             // 
             this.UserEmail_Email_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserEmail_Email_textbox.Location = new System.Drawing.Point(59, 164);
-            this.UserEmail_Email_textbox.MaxLength = 100;
+            this.UserEmail_Email_textbox.MaxLength = 320;
             this.UserEmail_Email_textbox.Multiline = true;
             this.UserEmail_Email_textbox.Name = "UserEmail_Email_textbox";
             this.UserEmail_Email_textbox.Size = new System.Drawing.Size(410, 35);

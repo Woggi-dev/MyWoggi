@@ -6,12 +6,15 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MyWoggi.forms;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace MyWoggi
 {
     public partial class Authorization : Form
     {
+        Database MyWoggi = new Database();
         public Authorization()
         {
             InitializeComponent();
@@ -90,14 +93,6 @@ namespace MyWoggi
             this.Hide();
         }
 
-        private void Register_Button_Click(object sender, EventArgs e)
-        {
-            // Переключение на форму регистрации
-            Registration registration = new Registration();
-            registration.Show();
-            this.Hide();
-        }
-
         private void Authorization_Showpwd_picturebox_Click(object sender, EventArgs e)
         {
             Authorization_Hidepwd_picturebox.Visible = true;
@@ -117,5 +112,43 @@ namespace MyWoggi
 
 
         }
+
+        private void Authorization_Login_button_Click(object sender, EventArgs e)
+        {
+            var loginUser = Authorization_Login_textbox.Text;
+            var pwdUser = Authorization_Pwd_textbox.Text;
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataTable table = new DataTable();
+
+            string querystring = $"select id, login, password from user_data where login = '{loginUser}' and password = '{pwdUser}'";
+
+            SqlCommand command = new SqlCommand(querystring, MyWoggi.getConnection());
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            if (table.Rows.Count == 1)
+            {
+                MessageBox.Show("Вы успешно вошли!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Main main = new Main();
+                this.Hide();
+                main.Show();
+            }
+            else
+                MessageBox.Show("Такого аккаунта нет", "Провал", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+
+
+        }
+
+        private void Authorization_Register_button_Click(object sender, EventArgs e)
+        {
+            // Переключение на форму регистрации
+            Registration registration = new Registration();
+            registration.Show();
+            this.Hide();
+        }
+
     }
 }
