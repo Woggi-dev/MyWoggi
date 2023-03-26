@@ -51,12 +51,20 @@ namespace MyWoggi
             this.Registration_Surname_label = new System.Windows.Forms.Label();
             this.Registration_Login_label = new System.Windows.Forms.Label();
             this.Registration_Title_label = new System.Windows.Forms.Label();
+            this.Registration_Hidepwd_picturebox = new System.Windows.Forms.PictureBox();
+            this.Registration_Showpwd_picturebox = new System.Windows.Forms.PictureBox();
+            this.Registration_Hidepwdretry_picturebox = new System.Windows.Forms.PictureBox();
+            this.Registration_Showpwdretry_picturebox = new System.Windows.Forms.PictureBox();
             this.Registration_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Registration_SN_picturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registration_Pwdretry_picturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registration_Pwd_picturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registration_Login_picturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registration_Email_picturebox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Registration_Hidepwd_picturebox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Registration_Showpwd_picturebox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Registration_Hidepwdretry_picturebox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Registration_Showpwdretry_picturebox)).BeginInit();
             this.SuspendLayout();
             // 
             // Registration_panel
@@ -64,6 +72,10 @@ namespace MyWoggi
             this.Registration_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(50)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.Registration_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Registration_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Registration_panel.Controls.Add(this.Registration_Showpwdretry_picturebox);
+            this.Registration_panel.Controls.Add(this.Registration_Hidepwdretry_picturebox);
+            this.Registration_panel.Controls.Add(this.Registration_Showpwd_picturebox);
+            this.Registration_panel.Controls.Add(this.Registration_Hidepwd_picturebox);
             this.Registration_panel.Controls.Add(this.Registration_SN_picturebox);
             this.Registration_panel.Controls.Add(this.Registration_Pwdretry_picturebox);
             this.Registration_panel.Controls.Add(this.Registration_Pwd_picturebox);
@@ -86,16 +98,16 @@ namespace MyWoggi
             this.Registration_panel.Controls.Add(this.Registration_Title_label);
             this.Registration_panel.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Registration_panel.ForeColor = System.Drawing.Color.White;
-            this.Registration_panel.Location = new System.Drawing.Point(119, 44);
+            this.Registration_panel.Location = new System.Drawing.Point(99, 44);
             this.Registration_panel.Name = "Registration_panel";
-            this.Registration_panel.Size = new System.Drawing.Size(503, 616);
+            this.Registration_panel.Size = new System.Drawing.Size(546, 616);
             this.Registration_panel.TabIndex = 1;
             // 
             // Registration_SN_picturebox
             // 
             this.Registration_SN_picturebox.BackColor = System.Drawing.Color.Transparent;
             this.Registration_SN_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.surname_name;
-            this.Registration_SN_picturebox.Location = new System.Drawing.Point(19, 87);
+            this.Registration_SN_picturebox.Location = new System.Drawing.Point(16, 87);
             this.Registration_SN_picturebox.Name = "Registration_SN_picturebox";
             this.Registration_SN_picturebox.Size = new System.Drawing.Size(37, 37);
             this.Registration_SN_picturebox.TabIndex = 47;
@@ -105,7 +117,7 @@ namespace MyWoggi
             // 
             this.Registration_Pwdretry_picturebox.BackColor = System.Drawing.Color.Transparent;
             this.Registration_Pwdretry_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources._lock;
-            this.Registration_Pwdretry_picturebox.Location = new System.Drawing.Point(19, 455);
+            this.Registration_Pwdretry_picturebox.Location = new System.Drawing.Point(16, 455);
             this.Registration_Pwdretry_picturebox.Name = "Registration_Pwdretry_picturebox";
             this.Registration_Pwdretry_picturebox.Size = new System.Drawing.Size(37, 37);
             this.Registration_Pwdretry_picturebox.TabIndex = 46;
@@ -115,7 +127,7 @@ namespace MyWoggi
             // 
             this.Registration_Pwd_picturebox.BackColor = System.Drawing.Color.Transparent;
             this.Registration_Pwd_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources._lock;
-            this.Registration_Pwd_picturebox.Location = new System.Drawing.Point(19, 360);
+            this.Registration_Pwd_picturebox.Location = new System.Drawing.Point(16, 360);
             this.Registration_Pwd_picturebox.Name = "Registration_Pwd_picturebox";
             this.Registration_Pwd_picturebox.Size = new System.Drawing.Size(37, 37);
             this.Registration_Pwd_picturebox.TabIndex = 45;
@@ -125,7 +137,7 @@ namespace MyWoggi
             // 
             this.Registration_Login_picturebox.BackColor = System.Drawing.Color.Transparent;
             this.Registration_Login_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.user;
-            this.Registration_Login_picturebox.Location = new System.Drawing.Point(19, 177);
+            this.Registration_Login_picturebox.Location = new System.Drawing.Point(16, 177);
             this.Registration_Login_picturebox.Name = "Registration_Login_picturebox";
             this.Registration_Login_picturebox.Size = new System.Drawing.Size(37, 37);
             this.Registration_Login_picturebox.TabIndex = 44;
@@ -135,7 +147,7 @@ namespace MyWoggi
             // 
             this.Registration_Email_picturebox.BackColor = System.Drawing.Color.Transparent;
             this.Registration_Email_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.email;
-            this.Registration_Email_picturebox.Location = new System.Drawing.Point(19, 266);
+            this.Registration_Email_picturebox.Location = new System.Drawing.Point(16, 266);
             this.Registration_Email_picturebox.Name = "Registration_Email_picturebox";
             this.Registration_Email_picturebox.Size = new System.Drawing.Size(37, 37);
             this.Registration_Email_picturebox.TabIndex = 43;
@@ -144,7 +156,7 @@ namespace MyWoggi
             // Registration_Login_textbox
             // 
             this.Registration_Login_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Registration_Login_textbox.Location = new System.Drawing.Point(66, 177);
+            this.Registration_Login_textbox.Location = new System.Drawing.Point(63, 177);
             this.Registration_Login_textbox.MaxLength = 14;
             this.Registration_Login_textbox.Multiline = true;
             this.Registration_Login_textbox.Name = "Registration_Login_textbox";
@@ -156,7 +168,7 @@ namespace MyWoggi
             // Registration_Pwdretry_textbox
             // 
             this.Registration_Pwdretry_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Registration_Pwdretry_textbox.Location = new System.Drawing.Point(68, 457);
+            this.Registration_Pwdretry_textbox.Location = new System.Drawing.Point(65, 457);
             this.Registration_Pwdretry_textbox.MaxLength = 14;
             this.Registration_Pwdretry_textbox.Multiline = true;
             this.Registration_Pwdretry_textbox.Name = "Registration_Pwdretry_textbox";
@@ -168,7 +180,7 @@ namespace MyWoggi
             // Registration_Pwd_textbox
             // 
             this.Registration_Pwd_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Registration_Pwd_textbox.Location = new System.Drawing.Point(66, 362);
+            this.Registration_Pwd_textbox.Location = new System.Drawing.Point(63, 362);
             this.Registration_Pwd_textbox.MaxLength = 14;
             this.Registration_Pwd_textbox.Multiline = true;
             this.Registration_Pwd_textbox.Name = "Registration_Pwd_textbox";
@@ -180,7 +192,7 @@ namespace MyWoggi
             // Registration_Surname_textbox
             // 
             this.Registration_Surname_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Registration_Surname_textbox.Location = new System.Drawing.Point(289, 89);
+            this.Registration_Surname_textbox.Location = new System.Drawing.Point(286, 89);
             this.Registration_Surname_textbox.MaxLength = 14;
             this.Registration_Surname_textbox.Multiline = true;
             this.Registration_Surname_textbox.Name = "Registration_Surname_textbox";
@@ -192,7 +204,7 @@ namespace MyWoggi
             // Registration_Email_textbox
             // 
             this.Registration_Email_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Registration_Email_textbox.Location = new System.Drawing.Point(66, 268);
+            this.Registration_Email_textbox.Location = new System.Drawing.Point(63, 268);
             this.Registration_Email_textbox.MaxLength = 100;
             this.Registration_Email_textbox.Multiline = true;
             this.Registration_Email_textbox.Name = "Registration_Email_textbox";
@@ -210,7 +222,7 @@ namespace MyWoggi
             this.Registration_Login_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Registration_Login_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Registration_Login_button.ForeColor = System.Drawing.Color.White;
-            this.Registration_Login_button.Location = new System.Drawing.Point(121, 574);
+            this.Registration_Login_button.Location = new System.Drawing.Point(140, 574);
             this.Registration_Login_button.Name = "Registration_Login_button";
             this.Registration_Login_button.Size = new System.Drawing.Size(267, 37);
             this.Registration_Login_button.TabIndex = 37;
@@ -228,9 +240,9 @@ namespace MyWoggi
             this.Registration_Register_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Registration_Register_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Registration_Register_button.ForeColor = System.Drawing.Color.White;
-            this.Registration_Register_button.Location = new System.Drawing.Point(19, 514);
+            this.Registration_Register_button.Location = new System.Drawing.Point(16, 514);
             this.Registration_Register_button.Name = "Registration_Register_button";
-            this.Registration_Register_button.Size = new System.Drawing.Size(471, 57);
+            this.Registration_Register_button.Size = new System.Drawing.Size(514, 57);
             this.Registration_Register_button.TabIndex = 36;
             this.Registration_Register_button.Text = "Зарегистрироваться";
             this.Registration_Register_button.UseVisualStyleBackColor = false;
@@ -240,7 +252,7 @@ namespace MyWoggi
             this.Registration_Pwdretry_label.AutoSize = true;
             this.Registration_Pwdretry_label.BackColor = System.Drawing.Color.Transparent;
             this.Registration_Pwdretry_label.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Registration_Pwdretry_label.Location = new System.Drawing.Point(62, 420);
+            this.Registration_Pwdretry_label.Location = new System.Drawing.Point(59, 420);
             this.Registration_Pwdretry_label.Name = "Registration_Pwdretry_label";
             this.Registration_Pwdretry_label.Size = new System.Drawing.Size(255, 34);
             this.Registration_Pwdretry_label.TabIndex = 34;
@@ -251,7 +263,7 @@ namespace MyWoggi
             this.Registration_Pwd_label.AutoSize = true;
             this.Registration_Pwd_label.BackColor = System.Drawing.Color.Transparent;
             this.Registration_Pwd_label.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Registration_Pwd_label.Location = new System.Drawing.Point(60, 325);
+            this.Registration_Pwd_label.Location = new System.Drawing.Point(57, 325);
             this.Registration_Pwd_label.Name = "Registration_Pwd_label";
             this.Registration_Pwd_label.Size = new System.Drawing.Size(111, 34);
             this.Registration_Pwd_label.TabIndex = 31;
@@ -262,7 +274,7 @@ namespace MyWoggi
             this.Registration_Email_label.AutoSize = true;
             this.Registration_Email_label.BackColor = System.Drawing.Color.Transparent;
             this.Registration_Email_label.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Registration_Email_label.Location = new System.Drawing.Point(62, 231);
+            this.Registration_Email_label.Location = new System.Drawing.Point(59, 231);
             this.Registration_Email_label.Name = "Registration_Email_label";
             this.Registration_Email_label.Size = new System.Drawing.Size(95, 34);
             this.Registration_Email_label.TabIndex = 25;
@@ -273,7 +285,7 @@ namespace MyWoggi
             this.Registration_Name_label.AutoSize = true;
             this.Registration_Name_label.BackColor = System.Drawing.Color.Transparent;
             this.Registration_Name_label.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Registration_Name_label.Location = new System.Drawing.Point(62, 52);
+            this.Registration_Name_label.Location = new System.Drawing.Point(59, 52);
             this.Registration_Name_label.Name = "Registration_Name_label";
             this.Registration_Name_label.Size = new System.Drawing.Size(63, 34);
             this.Registration_Name_label.TabIndex = 22;
@@ -283,7 +295,7 @@ namespace MyWoggi
             // 
             this.Registration_Name_textbox.AcceptsTab = true;
             this.Registration_Name_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Registration_Name_textbox.Location = new System.Drawing.Point(66, 89);
+            this.Registration_Name_textbox.Location = new System.Drawing.Point(63, 89);
             this.Registration_Name_textbox.MaxLength = 14;
             this.Registration_Name_textbox.Multiline = true;
             this.Registration_Name_textbox.Name = "Registration_Name_textbox";
@@ -297,7 +309,7 @@ namespace MyWoggi
             this.Registration_Surname_label.AutoSize = true;
             this.Registration_Surname_label.BackColor = System.Drawing.Color.Transparent;
             this.Registration_Surname_label.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Registration_Surname_label.Location = new System.Drawing.Point(283, 52);
+            this.Registration_Surname_label.Location = new System.Drawing.Point(280, 52);
             this.Registration_Surname_label.Name = "Registration_Surname_label";
             this.Registration_Surname_label.Size = new System.Drawing.Size(127, 34);
             this.Registration_Surname_label.TabIndex = 19;
@@ -308,7 +320,7 @@ namespace MyWoggi
             this.Registration_Login_label.AutoSize = true;
             this.Registration_Login_label.BackColor = System.Drawing.Color.Transparent;
             this.Registration_Login_label.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Registration_Login_label.Location = new System.Drawing.Point(62, 137);
+            this.Registration_Login_label.Location = new System.Drawing.Point(59, 137);
             this.Registration_Login_label.Name = "Registration_Login_label";
             this.Registration_Login_label.Size = new System.Drawing.Size(95, 34);
             this.Registration_Login_label.TabIndex = 14;
@@ -319,12 +331,62 @@ namespace MyWoggi
             this.Registration_Title_label.BackColor = System.Drawing.Color.Transparent;
             this.Registration_Title_label.Font = new System.Drawing.Font("Consolas", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Registration_Title_label.ForeColor = System.Drawing.Color.White;
-            this.Registration_Title_label.Location = new System.Drawing.Point(19, 0);
+            this.Registration_Title_label.Location = new System.Drawing.Point(40, 0);
             this.Registration_Title_label.Name = "Registration_Title_label";
             this.Registration_Title_label.Size = new System.Drawing.Size(471, 43);
             this.Registration_Title_label.TabIndex = 0;
             this.Registration_Title_label.Text = "Регистрация";
             this.Registration_Title_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // Registration_Hidepwd_picturebox
+            // 
+            this.Registration_Hidepwd_picturebox.BackColor = System.Drawing.Color.Transparent;
+            this.Registration_Hidepwd_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.hide;
+            this.Registration_Hidepwd_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Registration_Hidepwd_picturebox.Location = new System.Drawing.Point(493, 360);
+            this.Registration_Hidepwd_picturebox.Name = "Registration_Hidepwd_picturebox";
+            this.Registration_Hidepwd_picturebox.Size = new System.Drawing.Size(37, 37);
+            this.Registration_Hidepwd_picturebox.TabIndex = 57;
+            this.Registration_Hidepwd_picturebox.TabStop = false;
+            this.Registration_Hidepwd_picturebox.Click += new System.EventHandler(this.Authorization_Hidepwd_picturebox_Click);
+            // 
+            // Registration_Showpwd_picturebox
+            // 
+            this.Registration_Showpwd_picturebox.BackColor = System.Drawing.Color.Transparent;
+            this.Registration_Showpwd_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.view;
+            this.Registration_Showpwd_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Registration_Showpwd_picturebox.Location = new System.Drawing.Point(493, 325);
+            this.Registration_Showpwd_picturebox.Name = "Registration_Showpwd_picturebox";
+            this.Registration_Showpwd_picturebox.Size = new System.Drawing.Size(37, 37);
+            this.Registration_Showpwd_picturebox.TabIndex = 58;
+            this.Registration_Showpwd_picturebox.TabStop = false;
+            this.Registration_Showpwd_picturebox.Visible = false;
+            this.Registration_Showpwd_picturebox.Click += new System.EventHandler(this.Authorization_Showpwd_picturebox_Click);
+            // 
+            // Registration_Hidepwdretry_picturebox
+            // 
+            this.Registration_Hidepwdretry_picturebox.BackColor = System.Drawing.Color.Transparent;
+            this.Registration_Hidepwdretry_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.hide;
+            this.Registration_Hidepwdretry_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Registration_Hidepwdretry_picturebox.Location = new System.Drawing.Point(493, 457);
+            this.Registration_Hidepwdretry_picturebox.Name = "Registration_Hidepwdretry_picturebox";
+            this.Registration_Hidepwdretry_picturebox.Size = new System.Drawing.Size(37, 37);
+            this.Registration_Hidepwdretry_picturebox.TabIndex = 59;
+            this.Registration_Hidepwdretry_picturebox.TabStop = false;
+            this.Registration_Hidepwdretry_picturebox.Click += new System.EventHandler(this.Registration_Hidepwdretry_picturebox_Click);
+            // 
+            // Registration_Showpwdretry_picturebox
+            // 
+            this.Registration_Showpwdretry_picturebox.BackColor = System.Drawing.Color.Transparent;
+            this.Registration_Showpwdretry_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.view;
+            this.Registration_Showpwdretry_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Registration_Showpwdretry_picturebox.Location = new System.Drawing.Point(493, 457);
+            this.Registration_Showpwdretry_picturebox.Name = "Registration_Showpwdretry_picturebox";
+            this.Registration_Showpwdretry_picturebox.Size = new System.Drawing.Size(37, 37);
+            this.Registration_Showpwdretry_picturebox.TabIndex = 60;
+            this.Registration_Showpwdretry_picturebox.TabStop = false;
+            this.Registration_Showpwdretry_picturebox.Visible = false;
+            this.Registration_Showpwdretry_picturebox.Click += new System.EventHandler(this.Registration_Showpwdretry_picturebox_Click);
             // 
             // Registration
             // 
@@ -348,6 +410,10 @@ namespace MyWoggi
             ((System.ComponentModel.ISupportInitialize)(this.Registration_Pwd_picturebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registration_Login_picturebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registration_Email_picturebox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Registration_Hidepwd_picturebox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Registration_Showpwd_picturebox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Registration_Hidepwdretry_picturebox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Registration_Showpwdretry_picturebox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -375,5 +441,9 @@ namespace MyWoggi
         private System.Windows.Forms.TextBox Registration_Name_textbox;
         private System.Windows.Forms.Label Registration_Surname_label;
         private System.Windows.Forms.Label Registration_Login_label;
+        private System.Windows.Forms.PictureBox Registration_Hidepwd_picturebox;
+        private System.Windows.Forms.PictureBox Registration_Showpwd_picturebox;
+        private System.Windows.Forms.PictureBox Registration_Showpwdretry_picturebox;
+        private System.Windows.Forms.PictureBox Registration_Hidepwdretry_picturebox;
     }
 }

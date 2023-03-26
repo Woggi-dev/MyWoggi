@@ -83,7 +83,7 @@ namespace MyWoggi
             this.Authorization_Showpwd_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Authorization_Showpwd_picturebox.Location = new System.Drawing.Point(443, 182);
             this.Authorization_Showpwd_picturebox.Name = "Authorization_Showpwd_picturebox";
-            this.Authorization_Showpwd_picturebox.Size = new System.Drawing.Size(38, 37);
+            this.Authorization_Showpwd_picturebox.Size = new System.Drawing.Size(37, 37);
             this.Authorization_Showpwd_picturebox.TabIndex = 57;
             this.Authorization_Showpwd_picturebox.TabStop = false;
             this.Authorization_Showpwd_picturebox.Visible = false;

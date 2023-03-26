@@ -31,6 +31,10 @@ namespace MyWoggi
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewPwd));
             this.NewPwd_panel = new System.Windows.Forms.Panel();
+            this.NewPwd_Showpwdretry_picturebox = new System.Windows.Forms.PictureBox();
+            this.NewPwd_Hidepwdretry_picturebox = new System.Windows.Forms.PictureBox();
+            this.NewPwd_Showpwd_picturebox = new System.Windows.Forms.PictureBox();
+            this.NewPwd_Hidepwd_picturebox = new System.Windows.Forms.PictureBox();
             this.NewPwd_Newpwdretry_label = new System.Windows.Forms.Label();
             this.NewPwd_Newpwdretry_picturebox = new System.Windows.Forms.PictureBox();
             this.NewPwd_Newpwdretry_textbox = new System.Windows.Forms.TextBox();
@@ -44,6 +48,10 @@ namespace MyWoggi
             this.Register_Button = new System.Windows.Forms.Button();
             this.NewPwd_Title_label = new System.Windows.Forms.Label();
             this.NewPwd_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NewPwd_Showpwdretry_picturebox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NewPwd_Hidepwdretry_picturebox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NewPwd_Showpwd_picturebox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NewPwd_Hidepwd_picturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NewPwd_Newpwdretry_picturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NewPwd_Newpwd_picturebox)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +61,10 @@ namespace MyWoggi
             this.NewPwd_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(50)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.NewPwd_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.NewPwd_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NewPwd_panel.Controls.Add(this.NewPwd_Showpwdretry_picturebox);
+            this.NewPwd_panel.Controls.Add(this.NewPwd_Hidepwdretry_picturebox);
+            this.NewPwd_panel.Controls.Add(this.NewPwd_Showpwd_picturebox);
+            this.NewPwd_panel.Controls.Add(this.NewPwd_Hidepwd_picturebox);
             this.NewPwd_panel.Controls.Add(this.NewPwd_Newpwdretry_label);
             this.NewPwd_panel.Controls.Add(this.NewPwd_Newpwdretry_picturebox);
             this.NewPwd_panel.Controls.Add(this.NewPwd_Newpwdretry_textbox);
@@ -67,17 +79,67 @@ namespace MyWoggi
             this.NewPwd_panel.Controls.Add(this.NewPwd_Title_label);
             this.NewPwd_panel.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NewPwd_panel.ForeColor = System.Drawing.Color.White;
-            this.NewPwd_panel.Location = new System.Drawing.Point(119, 149);
+            this.NewPwd_panel.Location = new System.Drawing.Point(101, 149);
             this.NewPwd_panel.Name = "NewPwd_panel";
-            this.NewPwd_panel.Size = new System.Drawing.Size(485, 421);
+            this.NewPwd_panel.Size = new System.Drawing.Size(544, 435);
             this.NewPwd_panel.TabIndex = 4;
+            // 
+            // NewPwd_Showpwdretry_picturebox
+            // 
+            this.NewPwd_Showpwdretry_picturebox.BackColor = System.Drawing.Color.Transparent;
+            this.NewPwd_Showpwdretry_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.view;
+            this.NewPwd_Showpwdretry_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NewPwd_Showpwdretry_picturebox.Location = new System.Drawing.Point(496, 245);
+            this.NewPwd_Showpwdretry_picturebox.Name = "NewPwd_Showpwdretry_picturebox";
+            this.NewPwd_Showpwdretry_picturebox.Size = new System.Drawing.Size(37, 37);
+            this.NewPwd_Showpwdretry_picturebox.TabIndex = 61;
+            this.NewPwd_Showpwdretry_picturebox.TabStop = false;
+            this.NewPwd_Showpwdretry_picturebox.Visible = false;
+            this.NewPwd_Showpwdretry_picturebox.Click += new System.EventHandler(this.NewPwd_Showpwdretry_picturebox_Click);
+            // 
+            // NewPwd_Hidepwdretry_picturebox
+            // 
+            this.NewPwd_Hidepwdretry_picturebox.BackColor = System.Drawing.Color.Transparent;
+            this.NewPwd_Hidepwdretry_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.hide;
+            this.NewPwd_Hidepwdretry_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NewPwd_Hidepwdretry_picturebox.Location = new System.Drawing.Point(496, 245);
+            this.NewPwd_Hidepwdretry_picturebox.Name = "NewPwd_Hidepwdretry_picturebox";
+            this.NewPwd_Hidepwdretry_picturebox.Size = new System.Drawing.Size(37, 37);
+            this.NewPwd_Hidepwdretry_picturebox.TabIndex = 60;
+            this.NewPwd_Hidepwdretry_picturebox.TabStop = false;
+            this.NewPwd_Hidepwdretry_picturebox.Click += new System.EventHandler(this.NewPwd_Hidepwdretry_picturebox_Click);
+            // 
+            // NewPwd_Showpwd_picturebox
+            // 
+            this.NewPwd_Showpwd_picturebox.BackColor = System.Drawing.Color.Transparent;
+            this.NewPwd_Showpwd_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.view;
+            this.NewPwd_Showpwd_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NewPwd_Showpwd_picturebox.Location = new System.Drawing.Point(496, 160);
+            this.NewPwd_Showpwd_picturebox.Name = "NewPwd_Showpwd_picturebox";
+            this.NewPwd_Showpwd_picturebox.Size = new System.Drawing.Size(37, 37);
+            this.NewPwd_Showpwd_picturebox.TabIndex = 59;
+            this.NewPwd_Showpwd_picturebox.TabStop = false;
+            this.NewPwd_Showpwd_picturebox.Visible = false;
+            this.NewPwd_Showpwd_picturebox.Click += new System.EventHandler(this.NewPwd_Showpwd_picturebox_Click);
+            // 
+            // NewPwd_Hidepwd_picturebox
+            // 
+            this.NewPwd_Hidepwd_picturebox.BackColor = System.Drawing.Color.Transparent;
+            this.NewPwd_Hidepwd_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.hide;
+            this.NewPwd_Hidepwd_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NewPwd_Hidepwd_picturebox.Location = new System.Drawing.Point(496, 160);
+            this.NewPwd_Hidepwd_picturebox.Name = "NewPwd_Hidepwd_picturebox";
+            this.NewPwd_Hidepwd_picturebox.Size = new System.Drawing.Size(37, 37);
+            this.NewPwd_Hidepwd_picturebox.TabIndex = 58;
+            this.NewPwd_Hidepwd_picturebox.TabStop = false;
+            this.NewPwd_Hidepwd_picturebox.Click += new System.EventHandler(this.NewPwd_Hidepwd_picturebox_Click);
             // 
             // NewPwd_Newpwdretry_label
             // 
             this.NewPwd_Newpwdretry_label.AutoSize = true;
             this.NewPwd_Newpwdretry_label.BackColor = System.Drawing.Color.Transparent;
             this.NewPwd_Newpwdretry_label.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NewPwd_Newpwdretry_label.Location = new System.Drawing.Point(52, 208);
+            this.NewPwd_Newpwdretry_label.Location = new System.Drawing.Point(73, 208);
             this.NewPwd_Newpwdretry_label.Name = "NewPwd_Newpwdretry_label";
             this.NewPwd_Newpwdretry_label.Size = new System.Drawing.Size(351, 34);
             this.NewPwd_Newpwdretry_label.TabIndex = 52;
@@ -87,7 +149,7 @@ namespace MyWoggi
             // 
             this.NewPwd_Newpwdretry_picturebox.BackColor = System.Drawing.Color.Transparent;
             this.NewPwd_Newpwdretry_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources._lock;
-            this.NewPwd_Newpwdretry_picturebox.Location = new System.Drawing.Point(11, 245);
+            this.NewPwd_Newpwdretry_picturebox.Location = new System.Drawing.Point(32, 245);
             this.NewPwd_Newpwdretry_picturebox.Name = "NewPwd_Newpwdretry_picturebox";
             this.NewPwd_Newpwdretry_picturebox.Size = new System.Drawing.Size(37, 37);
             this.NewPwd_Newpwdretry_picturebox.TabIndex = 51;
@@ -96,7 +158,7 @@ namespace MyWoggi
             // NewPwd_Newpwdretry_textbox
             // 
             this.NewPwd_Newpwdretry_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewPwd_Newpwdretry_textbox.Location = new System.Drawing.Point(58, 245);
+            this.NewPwd_Newpwdretry_textbox.Location = new System.Drawing.Point(79, 245);
             this.NewPwd_Newpwdretry_textbox.MaxLength = 100;
             this.NewPwd_Newpwdretry_textbox.Multiline = true;
             this.NewPwd_Newpwdretry_textbox.Name = "NewPwd_Newpwdretry_textbox";
@@ -110,7 +172,7 @@ namespace MyWoggi
             this.NewPwd_Caption_label.BackColor = System.Drawing.Color.Transparent;
             this.NewPwd_Caption_label.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NewPwd_Caption_label.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.NewPwd_Caption_label.Location = new System.Drawing.Point(11, 67);
+            this.NewPwd_Caption_label.Location = new System.Drawing.Point(32, 67);
             this.NewPwd_Caption_label.Name = "NewPwd_Caption_label";
             this.NewPwd_Caption_label.Size = new System.Drawing.Size(458, 49);
             this.NewPwd_Caption_label.TabIndex = 49;
@@ -127,7 +189,7 @@ namespace MyWoggi
             this.NewPwd_Login_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NewPwd_Login_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NewPwd_Login_button.ForeColor = System.Drawing.Color.White;
-            this.NewPwd_Login_button.Location = new System.Drawing.Point(99, 369);
+            this.NewPwd_Login_button.Location = new System.Drawing.Point(120, 369);
             this.NewPwd_Login_button.Name = "NewPwd_Login_button";
             this.NewPwd_Login_button.Size = new System.Drawing.Size(267, 37);
             this.NewPwd_Login_button.TabIndex = 48;
@@ -145,7 +207,7 @@ namespace MyWoggi
             this.NewPwd_Restorepwd_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NewPwd_Restorepwd_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NewPwd_Restorepwd_button.ForeColor = System.Drawing.Color.White;
-            this.NewPwd_Restorepwd_button.Location = new System.Drawing.Point(11, 306);
+            this.NewPwd_Restorepwd_button.Location = new System.Drawing.Point(32, 306);
             this.NewPwd_Restorepwd_button.Name = "NewPwd_Restorepwd_button";
             this.NewPwd_Restorepwd_button.Size = new System.Drawing.Size(458, 57);
             this.NewPwd_Restorepwd_button.TabIndex = 47;
@@ -158,7 +220,7 @@ namespace MyWoggi
             this.NewPwd_Newpwd_label.AutoSize = true;
             this.NewPwd_Newpwd_label.BackColor = System.Drawing.Color.Transparent;
             this.NewPwd_Newpwd_label.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NewPwd_Newpwd_label.Location = new System.Drawing.Point(52, 123);
+            this.NewPwd_Newpwd_label.Location = new System.Drawing.Point(73, 123);
             this.NewPwd_Newpwd_label.Name = "NewPwd_Newpwd_label";
             this.NewPwd_Newpwd_label.Size = new System.Drawing.Size(207, 34);
             this.NewPwd_Newpwd_label.TabIndex = 45;
@@ -168,7 +230,7 @@ namespace MyWoggi
             // 
             this.NewPwd_Newpwd_picturebox.BackColor = System.Drawing.Color.Transparent;
             this.NewPwd_Newpwd_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources._lock;
-            this.NewPwd_Newpwd_picturebox.Location = new System.Drawing.Point(11, 160);
+            this.NewPwd_Newpwd_picturebox.Location = new System.Drawing.Point(32, 160);
             this.NewPwd_Newpwd_picturebox.Name = "NewPwd_Newpwd_picturebox";
             this.NewPwd_Newpwd_picturebox.Size = new System.Drawing.Size(37, 37);
             this.NewPwd_Newpwd_picturebox.TabIndex = 43;
@@ -177,7 +239,7 @@ namespace MyWoggi
             // NewPwd_Newpwd_textbox
             // 
             this.NewPwd_Newpwd_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewPwd_Newpwd_textbox.Location = new System.Drawing.Point(58, 160);
+            this.NewPwd_Newpwd_textbox.Location = new System.Drawing.Point(79, 160);
             this.NewPwd_Newpwd_textbox.MaxLength = 100;
             this.NewPwd_Newpwd_textbox.Multiline = true;
             this.NewPwd_Newpwd_textbox.Name = "NewPwd_Newpwd_textbox";
@@ -224,7 +286,7 @@ namespace MyWoggi
             this.NewPwd_Title_label.BackColor = System.Drawing.Color.Transparent;
             this.NewPwd_Title_label.Font = new System.Drawing.Font("Consolas", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NewPwd_Title_label.ForeColor = System.Drawing.Color.White;
-            this.NewPwd_Title_label.Location = new System.Drawing.Point(11, 11);
+            this.NewPwd_Title_label.Location = new System.Drawing.Point(32, 11);
             this.NewPwd_Title_label.Name = "NewPwd_Title_label";
             this.NewPwd_Title_label.Size = new System.Drawing.Size(458, 43);
             this.NewPwd_Title_label.TabIndex = 0;
@@ -248,6 +310,10 @@ namespace MyWoggi
             this.Load += new System.EventHandler(this.NewPwd_Load);
             this.NewPwd_panel.ResumeLayout(false);
             this.NewPwd_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NewPwd_Showpwdretry_picturebox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NewPwd_Hidepwdretry_picturebox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NewPwd_Showpwd_picturebox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NewPwd_Hidepwd_picturebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NewPwd_Newpwdretry_picturebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NewPwd_Newpwd_picturebox)).EndInit();
             this.ResumeLayout(false);
@@ -269,5 +335,9 @@ namespace MyWoggi
         private System.Windows.Forms.Button Login_Button;
         private System.Windows.Forms.Button Register_Button;
         private System.Windows.Forms.Label NewPwd_Title_label;
+        private System.Windows.Forms.PictureBox NewPwd_Hidepwd_picturebox;
+        private System.Windows.Forms.PictureBox NewPwd_Showpwdretry_picturebox;
+        private System.Windows.Forms.PictureBox NewPwd_Hidepwdretry_picturebox;
+        private System.Windows.Forms.PictureBox NewPwd_Showpwd_picturebox;
     }
 }
