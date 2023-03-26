@@ -143,6 +143,8 @@ namespace MyWoggi
             this.UserEmail_Email_textbox.Name = "UserEmail_Email_textbox";
             this.UserEmail_Email_textbox.Size = new System.Drawing.Size(410, 35);
             this.UserEmail_Email_textbox.TabIndex = 38;
+            this.UserEmail_Email_textbox.Enter += new System.EventHandler(this.UserEmail_Email_textbox_Enter);
+            this.UserEmail_Email_textbox.Leave += new System.EventHandler(this.UserEmail_Email_textbox_Leave);
             // 
             // Login_Button
             // 
@@ -204,6 +206,7 @@ namespace MyWoggi
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyWoggi";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ForgotPwd_Email_FormClosed);
+            this.Load += new System.EventHandler(this.UserEmail_Load);
             this.UserEmail_panel.ResumeLayout(false);
             this.UserEmail_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserEmail_Email_picturebox)).EndInit();

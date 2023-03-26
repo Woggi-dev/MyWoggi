@@ -143,6 +143,8 @@ namespace MyWoggi
             this.RecoveryCode_Recoverycode_textbox.Name = "RecoveryCode_Recoverycode_textbox";
             this.RecoveryCode_Recoverycode_textbox.Size = new System.Drawing.Size(463, 35);
             this.RecoveryCode_Recoverycode_textbox.TabIndex = 38;
+            this.RecoveryCode_Recoverycode_textbox.Enter += new System.EventHandler(this.RecoveryCode_Recoverycode_textbox_Enter);
+            this.RecoveryCode_Recoverycode_textbox.Leave += new System.EventHandler(this.RecoveryCode_Recoverycode_textbox_Leave);
             // 
             // Login_Button
             // 
@@ -203,6 +205,7 @@ namespace MyWoggi
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyWoggi";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ForgotPwd_Code_FormClosed);
+            this.Load += new System.EventHandler(this.RecoveryCode_Load);
             this.RecoveryCode_Panel.ResumeLayout(false);
             this.RecoveryCode_Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RecoveryCode_Recoverycode_picturebox)).EndInit();
