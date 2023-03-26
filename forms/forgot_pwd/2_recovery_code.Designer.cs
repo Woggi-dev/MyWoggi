@@ -138,7 +138,7 @@ namespace MyWoggi
             // 
             this.RecoveryCode_Recoverycode_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RecoveryCode_Recoverycode_textbox.Location = new System.Drawing.Point(54, 165);
-            this.RecoveryCode_Recoverycode_textbox.MaxLength = 100;
+            this.RecoveryCode_Recoverycode_textbox.MaxLength = 6;
             this.RecoveryCode_Recoverycode_textbox.Multiline = true;
             this.RecoveryCode_Recoverycode_textbox.Name = "RecoveryCode_Recoverycode_textbox";
             this.RecoveryCode_Recoverycode_textbox.Size = new System.Drawing.Size(463, 35);

@@ -125,7 +125,7 @@ namespace MyWoggi
             // 
             this.Authorization_Pwd_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Authorization_Pwd_textbox.Location = new System.Drawing.Point(55, 182);
-            this.Authorization_Pwd_textbox.MaxLength = 14;
+            this.Authorization_Pwd_textbox.MaxLength = 50;
             this.Authorization_Pwd_textbox.Multiline = true;
             this.Authorization_Pwd_textbox.Name = "Authorization_Pwd_textbox";
             this.Authorization_Pwd_textbox.Size = new System.Drawing.Size(382, 35);
@@ -148,7 +148,7 @@ namespace MyWoggi
             // 
             this.Authorization_Login_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Authorization_Login_textbox.Location = new System.Drawing.Point(55, 90);
-            this.Authorization_Login_textbox.MaxLength = 33;
+            this.Authorization_Login_textbox.MaxLength = 20;
             this.Authorization_Login_textbox.Multiline = true;
             this.Authorization_Login_textbox.Name = "Authorization_Login_textbox";
             this.Authorization_Login_textbox.Size = new System.Drawing.Size(382, 35);
@@ -183,6 +183,7 @@ namespace MyWoggi
             this.Authorization_Login_button.TabIndex = 37;
             this.Authorization_Login_button.Text = "Войти";
             this.Authorization_Login_button.UseVisualStyleBackColor = false;
+            this.Authorization_Login_button.Click += new System.EventHandler(this.Authorization_Login_button_Click);
             // 
             // Authorization_Rememberme_checkbox
             // 
@@ -213,7 +214,7 @@ namespace MyWoggi
             this.Authorization_Register_button.TabIndex = 9;
             this.Authorization_Register_button.Text = "Или зарегистрироваться";
             this.Authorization_Register_button.UseVisualStyleBackColor = false;
-            this.Authorization_Register_button.Click += new System.EventHandler(this.Register_Button_Click);
+            this.Authorization_Register_button.Click += new System.EventHandler(this.Authorization_Register_button_Click);
             // 
             // Authorization_Forgotpwd_button
             // 

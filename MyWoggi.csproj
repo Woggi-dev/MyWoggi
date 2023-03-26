@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database.cs" />
     <Compile Include="forms\authorization.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +70,12 @@
     </Compile>
     <Compile Include="forms\forgot_pwd\3_new_pwd.Designer.cs">
       <DependentUpon>3_new_pwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\registration.cs">
       <SubType>Form</SubType>

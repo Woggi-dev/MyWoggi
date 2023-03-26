@@ -31,6 +31,10 @@ namespace MyWoggi
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
             this.Registration_panel = new System.Windows.Forms.Panel();
+            this.Registration_Showpwdretry_picturebox = new System.Windows.Forms.PictureBox();
+            this.Registration_Hidepwdretry_picturebox = new System.Windows.Forms.PictureBox();
+            this.Registration_Showpwd_picturebox = new System.Windows.Forms.PictureBox();
+            this.Registration_Hidepwd_picturebox = new System.Windows.Forms.PictureBox();
             this.Registration_SN_picturebox = new System.Windows.Forms.PictureBox();
             this.Registration_Pwdretry_picturebox = new System.Windows.Forms.PictureBox();
             this.Registration_Pwd_picturebox = new System.Windows.Forms.PictureBox();
@@ -51,20 +55,16 @@ namespace MyWoggi
             this.Registration_Surname_label = new System.Windows.Forms.Label();
             this.Registration_Login_label = new System.Windows.Forms.Label();
             this.Registration_Title_label = new System.Windows.Forms.Label();
-            this.Registration_Hidepwd_picturebox = new System.Windows.Forms.PictureBox();
-            this.Registration_Showpwd_picturebox = new System.Windows.Forms.PictureBox();
-            this.Registration_Hidepwdretry_picturebox = new System.Windows.Forms.PictureBox();
-            this.Registration_Showpwdretry_picturebox = new System.Windows.Forms.PictureBox();
             this.Registration_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Registration_Showpwdretry_picturebox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Registration_Hidepwdretry_picturebox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Registration_Showpwd_picturebox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Registration_Hidepwd_picturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registration_SN_picturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registration_Pwdretry_picturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registration_Pwd_picturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registration_Login_picturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registration_Email_picturebox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Registration_Hidepwd_picturebox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Registration_Showpwd_picturebox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Registration_Hidepwdretry_picturebox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Registration_Showpwdretry_picturebox)).BeginInit();
             this.SuspendLayout();
             // 
             // Registration_panel
@@ -102,6 +102,56 @@ namespace MyWoggi
             this.Registration_panel.Name = "Registration_panel";
             this.Registration_panel.Size = new System.Drawing.Size(546, 616);
             this.Registration_panel.TabIndex = 1;
+            // 
+            // Registration_Showpwdretry_picturebox
+            // 
+            this.Registration_Showpwdretry_picturebox.BackColor = System.Drawing.Color.Transparent;
+            this.Registration_Showpwdretry_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.view;
+            this.Registration_Showpwdretry_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Registration_Showpwdretry_picturebox.Location = new System.Drawing.Point(493, 457);
+            this.Registration_Showpwdretry_picturebox.Name = "Registration_Showpwdretry_picturebox";
+            this.Registration_Showpwdretry_picturebox.Size = new System.Drawing.Size(37, 37);
+            this.Registration_Showpwdretry_picturebox.TabIndex = 60;
+            this.Registration_Showpwdretry_picturebox.TabStop = false;
+            this.Registration_Showpwdretry_picturebox.Visible = false;
+            this.Registration_Showpwdretry_picturebox.Click += new System.EventHandler(this.Registration_Showpwdretry_picturebox_Click);
+            // 
+            // Registration_Hidepwdretry_picturebox
+            // 
+            this.Registration_Hidepwdretry_picturebox.BackColor = System.Drawing.Color.Transparent;
+            this.Registration_Hidepwdretry_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.hide;
+            this.Registration_Hidepwdretry_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Registration_Hidepwdretry_picturebox.Location = new System.Drawing.Point(493, 457);
+            this.Registration_Hidepwdretry_picturebox.Name = "Registration_Hidepwdretry_picturebox";
+            this.Registration_Hidepwdretry_picturebox.Size = new System.Drawing.Size(37, 37);
+            this.Registration_Hidepwdretry_picturebox.TabIndex = 59;
+            this.Registration_Hidepwdretry_picturebox.TabStop = false;
+            this.Registration_Hidepwdretry_picturebox.Click += new System.EventHandler(this.Registration_Hidepwdretry_picturebox_Click);
+            // 
+            // Registration_Showpwd_picturebox
+            // 
+            this.Registration_Showpwd_picturebox.BackColor = System.Drawing.Color.Transparent;
+            this.Registration_Showpwd_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.view;
+            this.Registration_Showpwd_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Registration_Showpwd_picturebox.Location = new System.Drawing.Point(493, 360);
+            this.Registration_Showpwd_picturebox.Name = "Registration_Showpwd_picturebox";
+            this.Registration_Showpwd_picturebox.Size = new System.Drawing.Size(37, 37);
+            this.Registration_Showpwd_picturebox.TabIndex = 58;
+            this.Registration_Showpwd_picturebox.TabStop = false;
+            this.Registration_Showpwd_picturebox.Visible = false;
+            this.Registration_Showpwd_picturebox.Click += new System.EventHandler(this.Authorization_Showpwd_picturebox_Click);
+            // 
+            // Registration_Hidepwd_picturebox
+            // 
+            this.Registration_Hidepwd_picturebox.BackColor = System.Drawing.Color.Transparent;
+            this.Registration_Hidepwd_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.hide;
+            this.Registration_Hidepwd_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Registration_Hidepwd_picturebox.Location = new System.Drawing.Point(493, 360);
+            this.Registration_Hidepwd_picturebox.Name = "Registration_Hidepwd_picturebox";
+            this.Registration_Hidepwd_picturebox.Size = new System.Drawing.Size(37, 37);
+            this.Registration_Hidepwd_picturebox.TabIndex = 57;
+            this.Registration_Hidepwd_picturebox.TabStop = false;
+            this.Registration_Hidepwd_picturebox.Click += new System.EventHandler(this.Authorization_Hidepwd_picturebox_Click);
             // 
             // Registration_SN_picturebox
             // 
@@ -157,7 +207,7 @@ namespace MyWoggi
             // 
             this.Registration_Login_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Registration_Login_textbox.Location = new System.Drawing.Point(63, 177);
-            this.Registration_Login_textbox.MaxLength = 14;
+            this.Registration_Login_textbox.MaxLength = 30;
             this.Registration_Login_textbox.Multiline = true;
             this.Registration_Login_textbox.Name = "Registration_Login_textbox";
             this.Registration_Login_textbox.Size = new System.Drawing.Size(424, 35);
@@ -169,7 +219,7 @@ namespace MyWoggi
             // 
             this.Registration_Pwdretry_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Registration_Pwdretry_textbox.Location = new System.Drawing.Point(65, 457);
-            this.Registration_Pwdretry_textbox.MaxLength = 14;
+            this.Registration_Pwdretry_textbox.MaxLength = 50;
             this.Registration_Pwdretry_textbox.Multiline = true;
             this.Registration_Pwdretry_textbox.Name = "Registration_Pwdretry_textbox";
             this.Registration_Pwdretry_textbox.Size = new System.Drawing.Size(422, 35);
@@ -181,7 +231,7 @@ namespace MyWoggi
             // 
             this.Registration_Pwd_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Registration_Pwd_textbox.Location = new System.Drawing.Point(63, 362);
-            this.Registration_Pwd_textbox.MaxLength = 14;
+            this.Registration_Pwd_textbox.MaxLength = 50;
             this.Registration_Pwd_textbox.Multiline = true;
             this.Registration_Pwd_textbox.Name = "Registration_Pwd_textbox";
             this.Registration_Pwd_textbox.Size = new System.Drawing.Size(424, 35);
@@ -193,7 +243,7 @@ namespace MyWoggi
             // 
             this.Registration_Surname_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Registration_Surname_textbox.Location = new System.Drawing.Point(286, 89);
-            this.Registration_Surname_textbox.MaxLength = 14;
+            this.Registration_Surname_textbox.MaxLength = 50;
             this.Registration_Surname_textbox.Multiline = true;
             this.Registration_Surname_textbox.Name = "Registration_Surname_textbox";
             this.Registration_Surname_textbox.Size = new System.Drawing.Size(201, 35);
@@ -205,7 +255,7 @@ namespace MyWoggi
             // 
             this.Registration_Email_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Registration_Email_textbox.Location = new System.Drawing.Point(63, 268);
-            this.Registration_Email_textbox.MaxLength = 100;
+            this.Registration_Email_textbox.MaxLength = 320;
             this.Registration_Email_textbox.Multiline = true;
             this.Registration_Email_textbox.Name = "Registration_Email_textbox";
             this.Registration_Email_textbox.Size = new System.Drawing.Size(424, 35);
@@ -296,7 +346,7 @@ namespace MyWoggi
             this.Registration_Name_textbox.AcceptsTab = true;
             this.Registration_Name_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Registration_Name_textbox.Location = new System.Drawing.Point(63, 89);
-            this.Registration_Name_textbox.MaxLength = 14;
+            this.Registration_Name_textbox.MaxLength = 50;
             this.Registration_Name_textbox.Multiline = true;
             this.Registration_Name_textbox.Name = "Registration_Name_textbox";
             this.Registration_Name_textbox.Size = new System.Drawing.Size(201, 35);
@@ -338,56 +388,6 @@ namespace MyWoggi
             this.Registration_Title_label.Text = "Регистрация";
             this.Registration_Title_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Registration_Hidepwd_picturebox
-            // 
-            this.Registration_Hidepwd_picturebox.BackColor = System.Drawing.Color.Transparent;
-            this.Registration_Hidepwd_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.hide;
-            this.Registration_Hidepwd_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Registration_Hidepwd_picturebox.Location = new System.Drawing.Point(493, 360);
-            this.Registration_Hidepwd_picturebox.Name = "Registration_Hidepwd_picturebox";
-            this.Registration_Hidepwd_picturebox.Size = new System.Drawing.Size(37, 37);
-            this.Registration_Hidepwd_picturebox.TabIndex = 57;
-            this.Registration_Hidepwd_picturebox.TabStop = false;
-            this.Registration_Hidepwd_picturebox.Click += new System.EventHandler(this.Authorization_Hidepwd_picturebox_Click);
-            // 
-            // Registration_Showpwd_picturebox
-            // 
-            this.Registration_Showpwd_picturebox.BackColor = System.Drawing.Color.Transparent;
-            this.Registration_Showpwd_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.view;
-            this.Registration_Showpwd_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Registration_Showpwd_picturebox.Location = new System.Drawing.Point(493, 325);
-            this.Registration_Showpwd_picturebox.Name = "Registration_Showpwd_picturebox";
-            this.Registration_Showpwd_picturebox.Size = new System.Drawing.Size(37, 37);
-            this.Registration_Showpwd_picturebox.TabIndex = 58;
-            this.Registration_Showpwd_picturebox.TabStop = false;
-            this.Registration_Showpwd_picturebox.Visible = false;
-            this.Registration_Showpwd_picturebox.Click += new System.EventHandler(this.Authorization_Showpwd_picturebox_Click);
-            // 
-            // Registration_Hidepwdretry_picturebox
-            // 
-            this.Registration_Hidepwdretry_picturebox.BackColor = System.Drawing.Color.Transparent;
-            this.Registration_Hidepwdretry_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.hide;
-            this.Registration_Hidepwdretry_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Registration_Hidepwdretry_picturebox.Location = new System.Drawing.Point(493, 457);
-            this.Registration_Hidepwdretry_picturebox.Name = "Registration_Hidepwdretry_picturebox";
-            this.Registration_Hidepwdretry_picturebox.Size = new System.Drawing.Size(37, 37);
-            this.Registration_Hidepwdretry_picturebox.TabIndex = 59;
-            this.Registration_Hidepwdretry_picturebox.TabStop = false;
-            this.Registration_Hidepwdretry_picturebox.Click += new System.EventHandler(this.Registration_Hidepwdretry_picturebox_Click);
-            // 
-            // Registration_Showpwdretry_picturebox
-            // 
-            this.Registration_Showpwdretry_picturebox.BackColor = System.Drawing.Color.Transparent;
-            this.Registration_Showpwdretry_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.view;
-            this.Registration_Showpwdretry_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Registration_Showpwdretry_picturebox.Location = new System.Drawing.Point(493, 457);
-            this.Registration_Showpwdretry_picturebox.Name = "Registration_Showpwdretry_picturebox";
-            this.Registration_Showpwdretry_picturebox.Size = new System.Drawing.Size(37, 37);
-            this.Registration_Showpwdretry_picturebox.TabIndex = 60;
-            this.Registration_Showpwdretry_picturebox.TabStop = false;
-            this.Registration_Showpwdretry_picturebox.Visible = false;
-            this.Registration_Showpwdretry_picturebox.Click += new System.EventHandler(this.Registration_Showpwdretry_picturebox_Click);
-            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -405,15 +405,15 @@ namespace MyWoggi
             this.Load += new System.EventHandler(this.Registration_Load);
             this.Registration_panel.ResumeLayout(false);
             this.Registration_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Registration_Showpwdretry_picturebox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Registration_Hidepwdretry_picturebox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Registration_Showpwd_picturebox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Registration_Hidepwd_picturebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registration_SN_picturebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registration_Pwdretry_picturebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registration_Pwd_picturebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registration_Login_picturebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registration_Email_picturebox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Registration_Hidepwd_picturebox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Registration_Showpwd_picturebox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Registration_Hidepwdretry_picturebox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Registration_Showpwdretry_picturebox)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -12,11 +12,6 @@ namespace MyWoggi
 {
     public partial class Registration : Form
     {
-        public Registration()
-        {
-            InitializeComponent();
-        }
-
         string name_placeholder = "Ваше имя";
         string surname_placeholder = "Ваша фамилия";
         string login_placeholder = "Ваш логин";
@@ -38,7 +33,10 @@ namespace MyWoggi
                 textBox.ForeColor = Color.Gray;
             }
         }
-
+        public Registration()
+        {
+            InitializeComponent();
+        }
 
         private void Registration_Load(object sender, EventArgs e)
         {

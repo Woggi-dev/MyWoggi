@@ -159,7 +159,7 @@ namespace MyWoggi
             // 
             this.NewPwd_Newpwdretry_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewPwd_Newpwdretry_textbox.Location = new System.Drawing.Point(79, 245);
-            this.NewPwd_Newpwdretry_textbox.MaxLength = 100;
+            this.NewPwd_Newpwdretry_textbox.MaxLength = 50;
             this.NewPwd_Newpwdretry_textbox.Multiline = true;
             this.NewPwd_Newpwdretry_textbox.Name = "NewPwd_Newpwdretry_textbox";
             this.NewPwd_Newpwdretry_textbox.Size = new System.Drawing.Size(411, 35);
@@ -189,7 +189,7 @@ namespace MyWoggi
             this.NewPwd_Login_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NewPwd_Login_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NewPwd_Login_button.ForeColor = System.Drawing.Color.White;
-            this.NewPwd_Login_button.Location = new System.Drawing.Point(120, 369);
+            this.NewPwd_Login_button.Location = new System.Drawing.Point(133, 369);
             this.NewPwd_Login_button.Name = "NewPwd_Login_button";
             this.NewPwd_Login_button.Size = new System.Drawing.Size(267, 37);
             this.NewPwd_Login_button.TabIndex = 48;
@@ -240,7 +240,7 @@ namespace MyWoggi
             // 
             this.NewPwd_Newpwd_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewPwd_Newpwd_textbox.Location = new System.Drawing.Point(79, 160);
-            this.NewPwd_Newpwd_textbox.MaxLength = 100;
+            this.NewPwd_Newpwd_textbox.MaxLength = 50;
             this.NewPwd_Newpwd_textbox.Multiline = true;
             this.NewPwd_Newpwd_textbox.Name = "NewPwd_Newpwd_textbox";
             this.NewPwd_Newpwd_textbox.Size = new System.Drawing.Size(411, 35);
