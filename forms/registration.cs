@@ -121,7 +121,8 @@ namespace MyWoggi
 
         private void Registration_Pwd_textbox_Enter(object sender, EventArgs e)
         {
-            Registration_Pwd_textbox.PasswordChar = '•';
+            if (Registration_Showpwd_picturebox.Visible == false)
+                Registration_Pwd_textbox.PasswordChar = '•';
             Set_Placeholder(Registration_Pwd_textbox, pwd_placeholder);
 
 
@@ -134,7 +135,8 @@ namespace MyWoggi
 
         private void Registration_Pwdretry_textbox_Enter(object sender, EventArgs e)
         {
-            Registration_Pwdretry_textbox.PasswordChar = '•';
+            if (Registration_Showpwdretry_picturebox.Visible == false)
+                Registration_Pwdretry_textbox.PasswordChar = '•';
             Set_Placeholder(Registration_Pwdretry_textbox, pwdretry_placeholder);        
         }
 

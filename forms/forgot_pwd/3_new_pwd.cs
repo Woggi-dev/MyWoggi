@@ -50,7 +50,8 @@ namespace MyWoggi
 
         private void NewPwd_Newpwd_textbox_Enter(object sender, EventArgs e)
         {
-            NewPwd_Newpwd_textbox.PasswordChar = '•';
+            if (NewPwd_Showpwd_picturebox.Visible == false)
+                NewPwd_Newpwd_textbox.PasswordChar = '•';
             Set_Placeholder(NewPwd_Newpwd_textbox, newpwd_placeholder);
         }
 
@@ -62,7 +63,8 @@ namespace MyWoggi
 
         private void NewPwd_Newpwdretry_textbox_Enter(object sender, EventArgs e)
         {
-            NewPwd_Newpwdretry_textbox.PasswordChar = '•';
+            if (NewPwd_Showpwdretry_picturebox.Visible == false)
+                NewPwd_Newpwdretry_textbox.PasswordChar = '•';
             Set_Placeholder(NewPwd_Newpwdretry_textbox, newpwdretry_placeholder);
         }
 
