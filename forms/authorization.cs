@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MyWoggi.forms;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace MyWoggi
 {
@@ -118,12 +118,12 @@ namespace MyWoggi
             var loginUser = Authorization_Login_textbox.Text;
             var pwdUser = Authorization_Pwd_textbox.Text;
 
-            SqlDataAdapter adapter = new SqlDataAdapter();
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
             DataTable table = new DataTable();
 
-            string querystring = $"select id, login, password from user_data where login = '{loginUser}' and password = '{pwdUser}'";
+            string querystring = $"select id_user, login_user, password_user from Userdata where login_user = '{loginUser}' and password_user = '{pwdUser}'";
 
-            SqlCommand command = new SqlCommand(querystring, MyWoggi.getConnection());
+            MySqlCommand command = new MySqlCommand(querystring, MyWoggi.getConnection());
 
             adapter.SelectCommand = command;
             adapter.Fill(table);
