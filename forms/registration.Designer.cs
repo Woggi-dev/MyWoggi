@@ -296,6 +296,7 @@ namespace MyWoggi
             this.Registration_Register_button.TabIndex = 36;
             this.Registration_Register_button.Text = "Зарегистрироваться";
             this.Registration_Register_button.UseVisualStyleBackColor = false;
+            this.Registration_Register_button.Click += new System.EventHandler(this.Registration_Register_button_Click);
             // 
             // Registration_Pwdretry_label
             // 

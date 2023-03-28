@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace MyWoggi
 {
     class Database
     {
-        SqlConnection sqlConnection = new SqlConnection(@"Data Source=WOGGI-PC\SQLEXPRESS; Initial Catalog=MyWoggi; Integrated Security=True");
+        MySqlConnection sqlConnection = new MySqlConnection("Server=sql7.freemysqlhosting.net;Port=3306;Database=sql7609259;Uid=sql7609259;Pwd=em89xPl4pT;");
 
         public void openConnection()
         {
@@ -27,7 +27,7 @@ namespace MyWoggi
             }
         }
 
-        public SqlConnection getConnection()
+        public MySqlConnection getConnection()
         {
             return sqlConnection;
         }

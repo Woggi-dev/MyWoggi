@@ -5,13 +5,17 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Data.SqlClient;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
 
 namespace MyWoggi
 {
     public partial class Registration : Form
     {
+        Database MyWoggi = new Database();
         string name_placeholder = "Ваше имя";
         string surname_placeholder = "Ваша фамилия";
         string login_placeholder = "Ваш логин";
@@ -178,6 +182,47 @@ namespace MyWoggi
             Registration_Pwdretry_textbox.PasswordChar = '\0';
             if (Registration_Pwdretry_textbox.Text == pwdretry_placeholder)
                 Registration_Pwdretry_textbox.PasswordChar = '•';
+        }
+
+        private void Registration_Register_button_Click(object sender, EventArgs e)
+        {
+            var newNameUser = Registration_Name_textbox.Text;
+            var newSurnameUser = Registration_Surname_textbox.Text;
+            var newLoginUser = Registration_Login_textbox.Text;
+            var newEmailUser = Registration_Email_textbox.Text;
+            var newPwdUser = Registration_Pwd_textbox.Text;
+            
+            string register_querystring = $"insert into Userdata(login_user, name_user, surname_user, email_user, password_user) VALUES('{newLoginUser}', '{newNameUser}', '{newSurnameUser}', '{newEmailUser}', '{newPwdUser}')";
+            string checkuser_querystring = $"select id_user, login_user, password_user from Userdata where login_user = '{newLoginUser}' and password_user = '{newPwdUser}'";
+            
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            DataTable table = new DataTable();
+
+
+            MySqlCommand checkuser_command = new MySqlCommand(checkuser_querystring, MyWoggi.getConnection());
+            adapter.SelectCommand = checkuser_command;
+            adapter.Fill(table);
+
+            if (table.Rows.Count > 0)
+            {
+                MessageBox.Show("Пользователь уже существует!");
+                return;
+            }
+            
+            MySqlCommand register_command = new MySqlCommand(register_querystring, MyWoggi.getConnection());
+            MyWoggi.openConnection();
+
+
+            if (register_command.ExecuteNonQuery() == 1)
+            {
+                MessageBox.Show("Аккаунт успешно создан!", "Успех!");
+            }
+            else
+            {
+                MessageBox.Show("Аккаунт не создан", "Провал");
+            }
+
+            MyWoggi.closeConnection();
         }
     }
 }
