@@ -30,222 +30,222 @@ namespace MyWoggi
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Authorization));
-            this.Authorization_panel = new System.Windows.Forms.Panel();
-            this.loginpasswordError_label = new System.Windows.Forms.Label();
-            this.Authorization_Showpwd_picturebox = new System.Windows.Forms.PictureBox();
-            this.Authorization_Hidepwd_picturebox = new System.Windows.Forms.PictureBox();
-            this.Authorization_Pwd_picturebox = new System.Windows.Forms.PictureBox();
-            this.Authorization_Login_picturebox = new System.Windows.Forms.PictureBox();
-            this.Authorization_Pwd_textbox = new System.Windows.Forms.TextBox();
-            this.Authorization_Login_textbox = new System.Windows.Forms.TextBox();
-            this.Authorization_Login_button = new System.Windows.Forms.Button();
-            this.Authorization_Rememberme_checkbox = new System.Windows.Forms.CheckBox();
-            this.Authorization_Register_button = new System.Windows.Forms.Button();
-            this.Authorization_Forgotpwd_button = new System.Windows.Forms.Button();
-            this.Authorization_Subtitle_label = new System.Windows.Forms.Label();
-            this.Authorization_Title_label = new System.Windows.Forms.Label();
-            this.Authorization_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Authorization_Showpwd_picturebox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Authorization_Hidepwd_picturebox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Authorization_Pwd_picturebox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Authorization_Login_picturebox)).BeginInit();
+            this.panel_panel = new System.Windows.Forms.Panel();
+            this.loginpwdError_label = new System.Windows.Forms.Label();
+            this.showPwd_picturebox = new System.Windows.Forms.PictureBox();
+            this.hidePwd_picturebox = new System.Windows.Forms.PictureBox();
+            this.pwd_picturebox = new System.Windows.Forms.PictureBox();
+            this.login_picturebox = new System.Windows.Forms.PictureBox();
+            this.pwd_textbox = new System.Windows.Forms.TextBox();
+            this.login_textbox = new System.Windows.Forms.TextBox();
+            this.login_button = new System.Windows.Forms.Button();
+            this.rememberme_checkbox = new System.Windows.Forms.CheckBox();
+            this.register_button = new System.Windows.Forms.Button();
+            this.forgotPwd_button = new System.Windows.Forms.Button();
+            this.subtitle_label = new System.Windows.Forms.Label();
+            this.title_label = new System.Windows.Forms.Label();
+            this.panel_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.showPwd_picturebox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hidePwd_picturebox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pwd_picturebox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.login_picturebox)).BeginInit();
             this.SuspendLayout();
             // 
-            // Authorization_panel
+            // panel_panel
             // 
-            this.Authorization_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(50)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.Authorization_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Authorization_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Authorization_panel.Controls.Add(this.loginpasswordError_label);
-            this.Authorization_panel.Controls.Add(this.Authorization_Showpwd_picturebox);
-            this.Authorization_panel.Controls.Add(this.Authorization_Hidepwd_picturebox);
-            this.Authorization_panel.Controls.Add(this.Authorization_Pwd_picturebox);
-            this.Authorization_panel.Controls.Add(this.Authorization_Login_picturebox);
-            this.Authorization_panel.Controls.Add(this.Authorization_Pwd_textbox);
-            this.Authorization_panel.Controls.Add(this.Authorization_Login_textbox);
-            this.Authorization_panel.Controls.Add(this.Authorization_Login_button);
-            this.Authorization_panel.Controls.Add(this.Authorization_Rememberme_checkbox);
-            this.Authorization_panel.Controls.Add(this.Authorization_Register_button);
-            this.Authorization_panel.Controls.Add(this.Authorization_Forgotpwd_button);
-            this.Authorization_panel.Controls.Add(this.Authorization_Subtitle_label);
-            this.Authorization_panel.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Authorization_panel.Location = new System.Drawing.Point(107, 185);
-            this.Authorization_panel.Name = "Authorization_panel";
-            this.Authorization_panel.Size = new System.Drawing.Size(504, 373);
-            this.Authorization_panel.TabIndex = 0;
+            this.panel_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(50)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.panel_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_panel.Controls.Add(this.loginpwdError_label);
+            this.panel_panel.Controls.Add(this.showPwd_picturebox);
+            this.panel_panel.Controls.Add(this.hidePwd_picturebox);
+            this.panel_panel.Controls.Add(this.pwd_picturebox);
+            this.panel_panel.Controls.Add(this.login_picturebox);
+            this.panel_panel.Controls.Add(this.pwd_textbox);
+            this.panel_panel.Controls.Add(this.login_textbox);
+            this.panel_panel.Controls.Add(this.login_button);
+            this.panel_panel.Controls.Add(this.rememberme_checkbox);
+            this.panel_panel.Controls.Add(this.register_button);
+            this.panel_panel.Controls.Add(this.forgotPwd_button);
+            this.panel_panel.Controls.Add(this.subtitle_label);
+            this.panel_panel.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel_panel.Location = new System.Drawing.Point(107, 185);
+            this.panel_panel.Name = "panel_panel";
+            this.panel_panel.Size = new System.Drawing.Size(504, 373);
+            this.panel_panel.TabIndex = 0;
             // 
-            // loginpasswordError_label
+            // loginpwdError_label
             // 
-            this.loginpasswordError_label.BackColor = System.Drawing.Color.Transparent;
-            this.loginpasswordError_label.Font = new System.Drawing.Font("Consolas", 14.25F);
-            this.loginpasswordError_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(107)))), ((int)(((byte)(93)))));
-            this.loginpasswordError_label.Location = new System.Drawing.Point(-1, 235);
-            this.loginpasswordError_label.Name = "loginpasswordError_label";
-            this.loginpasswordError_label.Size = new System.Drawing.Size(504, 26);
-            this.loginpasswordError_label.TabIndex = 62;
-            this.loginpasswordError_label.Text = "label";
-            this.loginpasswordError_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.loginpasswordError_label.Visible = false;
+            this.loginpwdError_label.BackColor = System.Drawing.Color.Transparent;
+            this.loginpwdError_label.Font = new System.Drawing.Font("Consolas", 14.25F);
+            this.loginpwdError_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(107)))), ((int)(((byte)(93)))));
+            this.loginpwdError_label.Location = new System.Drawing.Point(-1, 235);
+            this.loginpwdError_label.Name = "loginpwdError_label";
+            this.loginpwdError_label.Size = new System.Drawing.Size(504, 26);
+            this.loginpwdError_label.TabIndex = 62;
+            this.loginpwdError_label.Text = "label";
+            this.loginpwdError_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.loginpwdError_label.Visible = false;
             // 
-            // Authorization_Showpwd_picturebox
+            // showPwd_picturebox
             // 
-            this.Authorization_Showpwd_picturebox.BackColor = System.Drawing.Color.Transparent;
-            this.Authorization_Showpwd_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.view;
-            this.Authorization_Showpwd_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Authorization_Showpwd_picturebox.Location = new System.Drawing.Point(450, 161);
-            this.Authorization_Showpwd_picturebox.Name = "Authorization_Showpwd_picturebox";
-            this.Authorization_Showpwd_picturebox.Size = new System.Drawing.Size(37, 37);
-            this.Authorization_Showpwd_picturebox.TabIndex = 57;
-            this.Authorization_Showpwd_picturebox.TabStop = false;
-            this.Authorization_Showpwd_picturebox.Visible = false;
-            this.Authorization_Showpwd_picturebox.Click += new System.EventHandler(this.Authorization_Showpwd_picturebox_Click);
+            this.showPwd_picturebox.BackColor = System.Drawing.Color.Transparent;
+            this.showPwd_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.view;
+            this.showPwd_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showPwd_picturebox.Location = new System.Drawing.Point(450, 161);
+            this.showPwd_picturebox.Name = "showPwd_picturebox";
+            this.showPwd_picturebox.Size = new System.Drawing.Size(37, 37);
+            this.showPwd_picturebox.TabIndex = 57;
+            this.showPwd_picturebox.TabStop = false;
+            this.showPwd_picturebox.Visible = false;
+            this.showPwd_picturebox.Click += new System.EventHandler(this.ShowPwd_picturebox_Click);
             // 
-            // Authorization_Hidepwd_picturebox
+            // hidePwd_picturebox
             // 
-            this.Authorization_Hidepwd_picturebox.BackColor = System.Drawing.Color.Transparent;
-            this.Authorization_Hidepwd_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.hide;
-            this.Authorization_Hidepwd_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Authorization_Hidepwd_picturebox.Location = new System.Drawing.Point(450, 161);
-            this.Authorization_Hidepwd_picturebox.Name = "Authorization_Hidepwd_picturebox";
-            this.Authorization_Hidepwd_picturebox.Size = new System.Drawing.Size(37, 37);
-            this.Authorization_Hidepwd_picturebox.TabIndex = 56;
-            this.Authorization_Hidepwd_picturebox.TabStop = false;
-            this.Authorization_Hidepwd_picturebox.Click += new System.EventHandler(this.Authorization_Hidepwd_picturebox_Click);
+            this.hidePwd_picturebox.BackColor = System.Drawing.Color.Transparent;
+            this.hidePwd_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.hide;
+            this.hidePwd_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.hidePwd_picturebox.Location = new System.Drawing.Point(450, 161);
+            this.hidePwd_picturebox.Name = "hidePwd_picturebox";
+            this.hidePwd_picturebox.Size = new System.Drawing.Size(37, 37);
+            this.hidePwd_picturebox.TabIndex = 56;
+            this.hidePwd_picturebox.TabStop = false;
+            this.hidePwd_picturebox.Click += new System.EventHandler(this.HidePwd_picturebox_Click);
             // 
-            // Authorization_Pwd_picturebox
+            // pwd_picturebox
             // 
-            this.Authorization_Pwd_picturebox.BackColor = System.Drawing.Color.Transparent;
-            this.Authorization_Pwd_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources._lock;
-            this.Authorization_Pwd_picturebox.Location = new System.Drawing.Point(15, 161);
-            this.Authorization_Pwd_picturebox.Name = "Authorization_Pwd_picturebox";
-            this.Authorization_Pwd_picturebox.Size = new System.Drawing.Size(37, 37);
-            this.Authorization_Pwd_picturebox.TabIndex = 55;
-            this.Authorization_Pwd_picturebox.TabStop = false;
+            this.pwd_picturebox.BackColor = System.Drawing.Color.Transparent;
+            this.pwd_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources._lock;
+            this.pwd_picturebox.Location = new System.Drawing.Point(15, 161);
+            this.pwd_picturebox.Name = "pwd_picturebox";
+            this.pwd_picturebox.Size = new System.Drawing.Size(37, 37);
+            this.pwd_picturebox.TabIndex = 55;
+            this.pwd_picturebox.TabStop = false;
             // 
-            // Authorization_Login_picturebox
+            // login_picturebox
             // 
-            this.Authorization_Login_picturebox.BackColor = System.Drawing.Color.Transparent;
-            this.Authorization_Login_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.user;
-            this.Authorization_Login_picturebox.Location = new System.Drawing.Point(15, 76);
-            this.Authorization_Login_picturebox.Name = "Authorization_Login_picturebox";
-            this.Authorization_Login_picturebox.Size = new System.Drawing.Size(37, 37);
-            this.Authorization_Login_picturebox.TabIndex = 54;
-            this.Authorization_Login_picturebox.TabStop = false;
+            this.login_picturebox.BackColor = System.Drawing.Color.Transparent;
+            this.login_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.user;
+            this.login_picturebox.Location = new System.Drawing.Point(15, 76);
+            this.login_picturebox.Name = "login_picturebox";
+            this.login_picturebox.Size = new System.Drawing.Size(37, 37);
+            this.login_picturebox.TabIndex = 54;
+            this.login_picturebox.TabStop = false;
             // 
-            // Authorization_Pwd_textbox
+            // pwd_textbox
             // 
-            this.Authorization_Pwd_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Authorization_Pwd_textbox.Location = new System.Drawing.Point(62, 161);
-            this.Authorization_Pwd_textbox.MaxLength = 50;
-            this.Authorization_Pwd_textbox.Multiline = true;
-            this.Authorization_Pwd_textbox.Name = "Authorization_Pwd_textbox";
-            this.Authorization_Pwd_textbox.Size = new System.Drawing.Size(382, 35);
-            this.Authorization_Pwd_textbox.TabIndex = 52;
-            this.Authorization_Pwd_textbox.Enter += new System.EventHandler(this.Authorization_Pwd_textbox_Enter);
-            this.Authorization_Pwd_textbox.Leave += new System.EventHandler(this.Authorization_Pwd_textbox_Leave);
+            this.pwd_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pwd_textbox.Location = new System.Drawing.Point(62, 161);
+            this.pwd_textbox.MaxLength = 50;
+            this.pwd_textbox.Multiline = true;
+            this.pwd_textbox.Name = "pwd_textbox";
+            this.pwd_textbox.Size = new System.Drawing.Size(382, 35);
+            this.pwd_textbox.TabIndex = 52;
+            this.pwd_textbox.Enter += new System.EventHandler(this.Pwd_textbox_Enter);
+            this.pwd_textbox.Leave += new System.EventHandler(this.Pwd_textbox_Leave);
             // 
-            // Authorization_Login_textbox
+            // login_textbox
             // 
-            this.Authorization_Login_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Authorization_Login_textbox.Location = new System.Drawing.Point(62, 76);
-            this.Authorization_Login_textbox.MaxLength = 20;
-            this.Authorization_Login_textbox.Multiline = true;
-            this.Authorization_Login_textbox.Name = "Authorization_Login_textbox";
-            this.Authorization_Login_textbox.Size = new System.Drawing.Size(382, 35);
-            this.Authorization_Login_textbox.TabIndex = 49;
-            this.Authorization_Login_textbox.Enter += new System.EventHandler(this.Authorization_Login_textbox_Enter);
-            this.Authorization_Login_textbox.Leave += new System.EventHandler(this.Authorization_Login_textbox_Leave);
+            this.login_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_textbox.Location = new System.Drawing.Point(62, 76);
+            this.login_textbox.MaxLength = 20;
+            this.login_textbox.Multiline = true;
+            this.login_textbox.Name = "login_textbox";
+            this.login_textbox.Size = new System.Drawing.Size(382, 35);
+            this.login_textbox.TabIndex = 49;
+            this.login_textbox.Enter += new System.EventHandler(this.Login_textbox_Enter);
+            this.login_textbox.Leave += new System.EventHandler(this.Login_textbox_Leave);
             // 
-            // Authorization_Login_button
+            // login_button
             // 
-            this.Authorization_Login_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.Authorization_Login_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Authorization_Login_button.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.Authorization_Login_button.FlatAppearance.BorderSize = 2;
-            this.Authorization_Login_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(79)))), ((int)(((byte)(100)))));
-            this.Authorization_Login_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Authorization_Login_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F);
-            this.Authorization_Login_button.ForeColor = System.Drawing.Color.White;
-            this.Authorization_Login_button.Location = new System.Drawing.Point(15, 264);
-            this.Authorization_Login_button.Name = "Authorization_Login_button";
-            this.Authorization_Login_button.Size = new System.Drawing.Size(472, 57);
-            this.Authorization_Login_button.TabIndex = 37;
-            this.Authorization_Login_button.Text = "Войти";
-            this.Authorization_Login_button.UseVisualStyleBackColor = false;
-            this.Authorization_Login_button.Click += new System.EventHandler(this.Authorization_Login_button_Click);
+            this.login_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.login_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.login_button.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.login_button.FlatAppearance.BorderSize = 2;
+            this.login_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(79)))), ((int)(((byte)(100)))));
+            this.login_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.login_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F);
+            this.login_button.ForeColor = System.Drawing.Color.White;
+            this.login_button.Location = new System.Drawing.Point(15, 264);
+            this.login_button.Name = "login_button";
+            this.login_button.Size = new System.Drawing.Size(472, 57);
+            this.login_button.TabIndex = 37;
+            this.login_button.Text = "Войти";
+            this.login_button.UseVisualStyleBackColor = false;
+            this.login_button.Click += new System.EventHandler(this.Login_button_Click);
             // 
-            // Authorization_Rememberme_checkbox
+            // rememberme_checkbox
             // 
-            this.Authorization_Rememberme_checkbox.AutoSize = true;
-            this.Authorization_Rememberme_checkbox.BackColor = System.Drawing.Color.Transparent;
-            this.Authorization_Rememberme_checkbox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Authorization_Rememberme_checkbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Authorization_Rememberme_checkbox.Location = new System.Drawing.Point(62, 207);
-            this.Authorization_Rememberme_checkbox.Name = "Authorization_Rememberme_checkbox";
-            this.Authorization_Rememberme_checkbox.Size = new System.Drawing.Size(155, 24);
-            this.Authorization_Rememberme_checkbox.TabIndex = 14;
-            this.Authorization_Rememberme_checkbox.Text = "Запомнить меня";
-            this.Authorization_Rememberme_checkbox.UseVisualStyleBackColor = false;
+            this.rememberme_checkbox.AutoSize = true;
+            this.rememberme_checkbox.BackColor = System.Drawing.Color.Transparent;
+            this.rememberme_checkbox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rememberme_checkbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.rememberme_checkbox.Location = new System.Drawing.Point(62, 207);
+            this.rememberme_checkbox.Name = "rememberme_checkbox";
+            this.rememberme_checkbox.Size = new System.Drawing.Size(155, 24);
+            this.rememberme_checkbox.TabIndex = 14;
+            this.rememberme_checkbox.Text = "Запомнить меня";
+            this.rememberme_checkbox.UseVisualStyleBackColor = false;
             // 
-            // Authorization_Register_button
+            // register_button
             // 
-            this.Authorization_Register_button.AutoSize = true;
-            this.Authorization_Register_button.BackColor = System.Drawing.Color.Transparent;
-            this.Authorization_Register_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Authorization_Register_button.FlatAppearance.BorderSize = 0;
-            this.Authorization_Register_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
-            this.Authorization_Register_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Authorization_Register_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline);
-            this.Authorization_Register_button.ForeColor = System.Drawing.Color.White;
-            this.Authorization_Register_button.Location = new System.Drawing.Point(114, 327);
-            this.Authorization_Register_button.Name = "Authorization_Register_button";
-            this.Authorization_Register_button.Size = new System.Drawing.Size(269, 35);
-            this.Authorization_Register_button.TabIndex = 9;
-            this.Authorization_Register_button.Text = "Или зарегистрироваться";
-            this.Authorization_Register_button.UseVisualStyleBackColor = false;
-            this.Authorization_Register_button.Click += new System.EventHandler(this.Authorization_Register_button_Click);
+            this.register_button.AutoSize = true;
+            this.register_button.BackColor = System.Drawing.Color.Transparent;
+            this.register_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.register_button.FlatAppearance.BorderSize = 0;
+            this.register_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
+            this.register_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.register_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline);
+            this.register_button.ForeColor = System.Drawing.Color.White;
+            this.register_button.Location = new System.Drawing.Point(114, 327);
+            this.register_button.Name = "register_button";
+            this.register_button.Size = new System.Drawing.Size(269, 35);
+            this.register_button.TabIndex = 9;
+            this.register_button.Text = "Или зарегистрироваться";
+            this.register_button.UseVisualStyleBackColor = false;
+            this.register_button.Click += new System.EventHandler(this.Register_button_Click);
             // 
-            // Authorization_Forgotpwd_button
+            // forgotPwd_button
             // 
-            this.Authorization_Forgotpwd_button.AutoSize = true;
-            this.Authorization_Forgotpwd_button.BackColor = System.Drawing.Color.Transparent;
-            this.Authorization_Forgotpwd_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Authorization_Forgotpwd_button.FlatAppearance.BorderSize = 0;
-            this.Authorization_Forgotpwd_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
-            this.Authorization_Forgotpwd_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Authorization_Forgotpwd_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Authorization_Forgotpwd_button.ForeColor = System.Drawing.Color.White;
-            this.Authorization_Forgotpwd_button.Location = new System.Drawing.Point(298, 201);
-            this.Authorization_Forgotpwd_button.Name = "Authorization_Forgotpwd_button";
-            this.Authorization_Forgotpwd_button.Size = new System.Drawing.Size(146, 30);
-            this.Authorization_Forgotpwd_button.TabIndex = 6;
-            this.Authorization_Forgotpwd_button.Text = "Забыли пароль?";
-            this.Authorization_Forgotpwd_button.UseVisualStyleBackColor = false;
-            this.Authorization_Forgotpwd_button.Click += new System.EventHandler(this.ForgotPwd_Button_Click);
+            this.forgotPwd_button.AutoSize = true;
+            this.forgotPwd_button.BackColor = System.Drawing.Color.Transparent;
+            this.forgotPwd_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.forgotPwd_button.FlatAppearance.BorderSize = 0;
+            this.forgotPwd_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
+            this.forgotPwd_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.forgotPwd_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.forgotPwd_button.ForeColor = System.Drawing.Color.White;
+            this.forgotPwd_button.Location = new System.Drawing.Point(298, 201);
+            this.forgotPwd_button.Name = "forgotPwd_button";
+            this.forgotPwd_button.Size = new System.Drawing.Size(146, 30);
+            this.forgotPwd_button.TabIndex = 6;
+            this.forgotPwd_button.Text = "Забыли пароль?";
+            this.forgotPwd_button.UseVisualStyleBackColor = false;
+            this.forgotPwd_button.Click += new System.EventHandler(this.ForgotPwd_button_Click);
             // 
-            // Authorization_Subtitle_label
+            // subtitle_label
             // 
-            this.Authorization_Subtitle_label.BackColor = System.Drawing.Color.Transparent;
-            this.Authorization_Subtitle_label.Font = new System.Drawing.Font("Consolas", 30.25F);
-            this.Authorization_Subtitle_label.Location = new System.Drawing.Point(-1, 11);
-            this.Authorization_Subtitle_label.Name = "Authorization_Subtitle_label";
-            this.Authorization_Subtitle_label.Size = new System.Drawing.Size(504, 47);
-            this.Authorization_Subtitle_label.TabIndex = 0;
-            this.Authorization_Subtitle_label.Text = "Вход";
-            this.Authorization_Subtitle_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.subtitle_label.BackColor = System.Drawing.Color.Transparent;
+            this.subtitle_label.Font = new System.Drawing.Font("Consolas", 30.25F);
+            this.subtitle_label.Location = new System.Drawing.Point(-1, 11);
+            this.subtitle_label.Name = "subtitle_label";
+            this.subtitle_label.Size = new System.Drawing.Size(504, 47);
+            this.subtitle_label.TabIndex = 0;
+            this.subtitle_label.Text = "Вход";
+            this.subtitle_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Authorization_Title_label
+            // title_label
             // 
-            this.Authorization_Title_label.AutoSize = true;
-            this.Authorization_Title_label.BackColor = System.Drawing.Color.Transparent;
-            this.Authorization_Title_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Authorization_Title_label.Font = new System.Drawing.Font("Consolas", 39.75F);
-            this.Authorization_Title_label.ForeColor = System.Drawing.Color.White;
-            this.Authorization_Title_label.Location = new System.Drawing.Point(244, 83);
-            this.Authorization_Title_label.Name = "Authorization_Title_label";
-            this.Authorization_Title_label.Size = new System.Drawing.Size(230, 62);
-            this.Authorization_Title_label.TabIndex = 1;
-            this.Authorization_Title_label.Text = "MyWoggi";
+            this.title_label.AutoSize = true;
+            this.title_label.BackColor = System.Drawing.Color.Transparent;
+            this.title_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.title_label.Font = new System.Drawing.Font("Consolas", 39.75F);
+            this.title_label.ForeColor = System.Drawing.Color.White;
+            this.title_label.Location = new System.Drawing.Point(244, 83);
+            this.title_label.Name = "title_label";
+            this.title_label.Size = new System.Drawing.Size(230, 62);
+            this.title_label.TabIndex = 1;
+            this.title_label.Text = "MyWoggi";
             // 
             // Authorization
             // 
@@ -253,8 +253,8 @@ namespace MyWoggi
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MyWoggi.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(734, 711);
-            this.Controls.Add(this.Authorization_Title_label);
-            this.Controls.Add(this.Authorization_panel);
+            this.Controls.Add(this.title_label);
+            this.Controls.Add(this.panel_panel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ForeColor = System.Drawing.Color.Transparent;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -265,12 +265,12 @@ namespace MyWoggi
             this.Text = "MyWoggi";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Authorization_FormClosed);
             this.Load += new System.EventHandler(this.Authorization_Load);
-            this.Authorization_panel.ResumeLayout(false);
-            this.Authorization_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Authorization_Showpwd_picturebox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Authorization_Hidepwd_picturebox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Authorization_Pwd_picturebox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Authorization_Login_picturebox)).EndInit();
+            this.panel_panel.ResumeLayout(false);
+            this.panel_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.showPwd_picturebox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hidePwd_picturebox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pwd_picturebox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.login_picturebox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,20 +278,20 @@ namespace MyWoggi
 
         #endregion
 
-        private System.Windows.Forms.Panel Authorization_panel;
-        private System.Windows.Forms.PictureBox Authorization_Pwd_picturebox;
-        private System.Windows.Forms.PictureBox Authorization_Login_picturebox;
-        private System.Windows.Forms.TextBox Authorization_Pwd_textbox;
-        private System.Windows.Forms.TextBox Authorization_Login_textbox;
-        private System.Windows.Forms.Button Authorization_Login_button;
-        private System.Windows.Forms.CheckBox Authorization_Rememberme_checkbox;
-        private System.Windows.Forms.Button Authorization_Register_button;
-        private System.Windows.Forms.Button Authorization_Forgotpwd_button;
-        private System.Windows.Forms.Label Authorization_Subtitle_label;
-        private System.Windows.Forms.Label Authorization_Title_label;
-        private System.Windows.Forms.PictureBox Authorization_Hidepwd_picturebox;
-        private System.Windows.Forms.PictureBox Authorization_Showpwd_picturebox;
-        private System.Windows.Forms.Label loginpasswordError_label;
+        private System.Windows.Forms.Panel panel_panel;
+        private System.Windows.Forms.PictureBox pwd_picturebox;
+        private System.Windows.Forms.PictureBox login_picturebox;
+        private System.Windows.Forms.TextBox pwd_textbox;
+        private System.Windows.Forms.TextBox login_textbox;
+        private System.Windows.Forms.Button login_button;
+        private System.Windows.Forms.CheckBox rememberme_checkbox;
+        private System.Windows.Forms.Button register_button;
+        private System.Windows.Forms.Button forgotPwd_button;
+        private System.Windows.Forms.Label subtitle_label;
+        private System.Windows.Forms.Label title_label;
+        private System.Windows.Forms.PictureBox hidePwd_picturebox;
+        private System.Windows.Forms.PictureBox showPwd_picturebox;
+        private System.Windows.Forms.Label loginpwdError_label;
     }
 }
 

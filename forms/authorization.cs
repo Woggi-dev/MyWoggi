@@ -1,148 +1,164 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MyWoggi.forms;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using System.Text.RegularExpressions;
 
 namespace MyWoggi
 {
     public partial class Authorization : Form
     {
+
+        // Подключение базы данных
         Database MyWoggi = new Database();
+
+        // Заполнители для текстовых полей
+        string loginPlaceholder = "Ваш никнейм";
+        string pwdPlaceholder = "Ваш пароль";
+       
         public Authorization()
         {
             InitializeComponent();
         }
-
-        // Заполнители для текстовых полей
-        string login_placeholder = "Ваш никнейм";
-        string pwd_placeholder = "Ваш пароль";
-
-
-        private void Set_Placeholder(TextBox textBox, string placeholder)
+        
+        public void SetPlaceholder(TextBox textBox, string placeholder)
         {
+            // Если текстбокс содержит плейсхолдер
             if (textBox.Text == placeholder)
             {
-                textBox.Text = "";
-                textBox.ForeColor = Color.Black;
+                textBox.Text = ""; // Очистить текстбокс
+                textBox.ForeColor = Color.Black; // Изменить цвет текста на черный
             }
+            // Если текстбокс пуст
             else if (textBox.Text == "")
             {
-                Authorization_Pwd_textbox.PasswordChar = '\0';
-                textBox.Text = placeholder;
-                textBox.ForeColor = Color.Gray;
+                textBox.PasswordChar = '\0'; // Отключить скрытие символов пароля
+                textBox.Text = placeholder; // Вставить плейсхолдер
+                textBox.ForeColor = Color.Gray; // Изменить цвет текста на серый
             }
         }
 
+        // Подгрузка формы
         private void Authorization_Load(object sender, EventArgs e)
         {
             // Когда форма загружена, login_placeholder назначается login_textbox и изменяется цвет
-            Authorization_Login_textbox.Text = login_placeholder;
-            Authorization_Login_textbox.ForeColor = Color.Gray;
+            login_textbox.Text = loginPlaceholder;
+            login_textbox.ForeColor = Color.Gray;
 
             // Когда форма загружена, pwd_placeholder назначается pwd_textbox и изменяется цвет
-            Authorization_Pwd_textbox.Text = pwd_placeholder;
-            Authorization_Pwd_textbox.ForeColor = Color.Gray;
+            pwd_textbox.Text = pwdPlaceholder;
+            pwd_textbox.ForeColor = Color.Gray;
 
         }
+        
+        // Когда пользователь нажимает X в какой-то форме, приложение закрывается
         private void Authorization_FormClosed(object sender, FormClosedEventArgs e)
         {
-            // Когда пользователь нажимает X в какой-то форме, приложение закрывается
             Application.Exit();
         }
-
-        private void Authorization_Login_textbox_Enter(object sender, EventArgs e)
+        
+        // Когда пользователь наводит курсор на login_textbox, login_textbox очищается, и изменяется цвет
+        private void Login_textbox_Enter(object sender, EventArgs e)
         {
-            // Когда пользователь наводит курсор на login_textbox, login_textbox очищается, и изменяется цвет
-            Set_Placeholder(Authorization_Login_textbox, login_placeholder);
-        }
-        private void Authorization_Login_textbox_Leave(object sender, EventArgs e)
-        {
-            // Когда пользователь переключается на другое текстовое поле, а login_textbox пустое, login_placeholder назначается login_textbox
-            Set_Placeholder(Authorization_Login_textbox, login_placeholder);
-
+            SetPlaceholder(login_textbox, loginPlaceholder);
         }
 
-        private void Authorization_Pwd_textbox_Enter(object sender, EventArgs e)
+        // Когда пользователь переключается на другое текстовое поле, а login_textbox пустое, login_placeholder назначается login_textbox
+        private void Login_textbox_Leave(object sender, EventArgs e)
         {
-            // Когда пользователь наводит курсор на pwd_textbox, pwd_textbox очищается, и изменяется цвет
-            if (Authorization_Showpwd_picturebox.Visible == false)
-                Authorization_Pwd_textbox.PasswordChar = '•';
+            SetPlaceholder(login_textbox, loginPlaceholder);
 
+        }
+        
+        // Когда пользователь наводит курсор на pwd_textbox, pwd_textbox очищается, и изменяется цвет
+        private void Pwd_textbox_Enter(object sender, EventArgs e)
+        {
             
-            Set_Placeholder(Authorization_Pwd_textbox, pwd_placeholder);
+            if (showPwd_picturebox.Visible == false)
+                pwd_textbox.PasswordChar = '•';
+
+            SetPlaceholder(pwd_textbox, pwdPlaceholder);
 
         }
-
-        private void Authorization_Pwd_textbox_Leave(object sender, EventArgs e)
+        
+        // Когда пользователь переключается на другое текстовое поле, а pwd_textbox пустое, pwd_placeholder назначается pwd_textbox
+        private void Pwd_textbox_Leave(object sender, EventArgs e)
         {
-            // Когда пользователь переключается на другое текстовое поле, а pwd_textbox пустое, pwd_placeholder назначается pwd_textbox
-            Set_Placeholder(Authorization_Pwd_textbox, pwd_placeholder);
+            
+            SetPlaceholder(pwd_textbox, pwdPlaceholder);
         }
-
-        private void ForgotPwd_Button_Click(object sender, EventArgs e)
+        
+        // Когда пользователь нажимает кнопку "Забыл пароль"
+        private void ForgotPwd_button_Click(object sender, EventArgs e)
         {
             // Переключение на форму forgotpwd_email
-            UserEmail forgotpwd_email = new UserEmail();
+            ForgotPwdEmail forgotpwd_email = new ForgotPwdEmail();
             forgotpwd_email.Show();
             this.Hide();
         }
-
-        private void Authorization_Showpwd_picturebox_Click(object sender, EventArgs e)
+        
+        // Когда пользователь нажимает на картинку "показать пароль"
+        private void ShowPwd_picturebox_Click(object sender, EventArgs e)
         {
-            Authorization_Hidepwd_picturebox.Visible = true;
-            Authorization_Showpwd_picturebox.Visible = false;
-            Authorization_Pwd_textbox.PasswordChar = '•';
-            if (Authorization_Pwd_textbox.Text == pwd_placeholder)
-                Authorization_Pwd_textbox.PasswordChar = '\0';
+            // Показываем картинку для скрытия пароля и скрываем картинку для его отображения
+            hidePwd_picturebox.Visible = true;
+            showPwd_picturebox.Visible = false;
+            
+            // Заменяем символы пароля на символы-заглушки
+            pwd_textbox.PasswordChar = '•';
+            
+            // Если поле ввода пароля содержит плейсхолдер, то заменяем символы-заглушки на обычные символы
+            if (pwd_textbox.Text == pwdPlaceholder)
+                pwd_textbox.PasswordChar = '\0';
         }
 
-        private void Authorization_Hidepwd_picturebox_Click(object sender, EventArgs e)
+        // Когда пользователь нажимает на картинку "скрыть пароль"
+        private void HidePwd_picturebox_Click(object sender, EventArgs e)
         {
-            Authorization_Hidepwd_picturebox.Visible = false;
-            Authorization_Showpwd_picturebox.Visible = true;
-            Authorization_Pwd_textbox.PasswordChar = '\0';
-            if (Authorization_Pwd_textbox.Text == pwd_placeholder)
-                Authorization_Pwd_textbox.PasswordChar = '•';
+            // Показываем картинку для отображения пароля и скрываем картинку для его скрытия
+            hidePwd_picturebox.Visible = false;
+            showPwd_picturebox.Visible = true;
+            
+            // Заменяем символы-заглушки на обычные символы
+            pwd_textbox.PasswordChar = '\0';
+            
+            // Если поле ввода пароля содержит плейсхолдер, то заменяем обычные символы на символы-заглушки
+            if (pwd_textbox.Text == pwdPlaceholder)
+                pwd_textbox.PasswordChar = '•';
 
 
         }
-
-        private void Authorization_Login_button_Click(object sender, EventArgs e)
+        
+        // Когда пользователь нажимает кнопку Войти
+        private void Login_button_Click(object sender, EventArgs e)
         {
-            var loginUser = Authorization_Login_textbox;
-            var pwdUser = Authorization_Pwd_textbox;
+            // Получаем данные из текстовых полей
+            var loginUser = login_textbox;
+            var pwdUser = pwd_textbox;
 
-            bool isSuchUser = MyWoggi.isSuchUser(Authorization_Login_textbox, Authorization_Pwd_textbox);
+            // Проверяем, есть ли такой пользователь в базе данных
+            bool isSuchUser = MyWoggi.IsSuchUser(loginUser.Text, pwdUser.Text);
 
             if (isSuchUser)
             {
+                // Если пользователь найден, открываем главное окно
                 Main main = new Main();
                 main.Show();
                 this.Hide();
             }
             else
             {
-                Authorization_Login_textbox.BackColor = ColorTranslator.FromHtml("#E89696");
-                Authorization_Pwd_textbox.BackColor = ColorTranslator.FromHtml("#E89696");
-                loginpasswordError_label.Visible = true;
-                loginpasswordError_label.Text = "Неверно введен логин или пароль";
+                // Если пользователь не найден, выделяем текстовые поля красным и выводим ошибку
+                login_textbox.BackColor = ColorTranslator.FromHtml("#E89696");
+                pwd_textbox.BackColor = ColorTranslator.FromHtml("#E89696");
+                loginpwdError_label.Visible = true;
+                loginpwdError_label.Text = "Неверно введен логин или пароль";
             }
-
-
-
         }
-
-        private void Authorization_Register_button_Click(object sender, EventArgs e)
+        
+        // Когда пользователь нажимает кнопку Зарегистрироваться
+        private void Register_button_Click(object sender, EventArgs e)
         {
-            // Переключение на форму регистрации
+            // Переключаемся на форму регистрации
             Registration registration = new Registration();
             registration.Show();
             this.Hide();

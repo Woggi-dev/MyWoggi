@@ -1,79 +1,75 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Net;
-using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MyWoggi
 {
-    public partial class RecoveryCode : Form
+    public partial class ForgotPwdCode : Form
     {
-        string recoverycode_placeholder = "Ваш код восстановления";
+        // Создание объекта класса Authorization
+        Authorization authorization = new Authorization();
+
+        // Задание текста-заполнителя для кода восстановления
+        string recoveryCodePlaceholder = "Ваш код восстановления";
+
+        // Переменные для кода восстановления и адреса электронной почты пользователя
         private int recoveryCode;
         private string userEmail;
 
-        private void Set_Placeholder(TextBox textBox, string placeholder)
-        {
-            if (textBox.Text == placeholder)
-            {
-                textBox.Text = "";
-                textBox.ForeColor = Color.Black;
-            }
-        }
-        public RecoveryCode(int recoveryCode, string userEmail)
+        // Конструктор класса ForgotPwdCode с параметрами recoveryCode и userEmail
+        public ForgotPwdCode(int recoveryCode, string userEmail)
         {
             InitializeComponent();
             this.recoveryCode = recoveryCode;
             this.userEmail = userEmail;
-            
-        }
-        private void RecoveryCode_Load(object sender, EventArgs e)
-        {
-            RecoveryCode_Recoverycode_textbox.Text = recoverycode_placeholder;
-            RecoveryCode_Recoverycode_textbox.ForeColor = Color.Gray;
         }
 
-        private void ForgotPwd_Code_FormClosed(object sender, FormClosedEventArgs e)
+        // Обработчик события загрузки формы
+        private void ForgotPwdCode_Load(object sender, EventArgs e)
+        {
+            recoveryCode_textbox.Text = recoveryCodePlaceholder;
+            recoveryCode_textbox.ForeColor = Color.Gray;
+        }
+
+        // Обработчик события закрытия формы
+        private void ForgotPwdCode_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
 
-        private void RecoveryCode_Recoverycode_textbox_Enter(object sender, EventArgs e)
+        // Обработчик события входа в поле кода восстановления
+        private void RecoveryCode_textbox_Enter(object sender, EventArgs e)
         {
-            Set_Placeholder(RecoveryCode_Recoverycode_textbox, recoverycode_placeholder);
+            authorization.SetPlaceholder(recoveryCode_textbox, recoveryCodePlaceholder);
         }
 
-        private void RecoveryCode_Recoverycode_textbox_Leave(object sender, EventArgs e)
+        // Обработчик события выхода из поля кода восстановления
+        private void RecoveryCode_textbox_Leave(object sender, EventArgs e)
         {
-            Set_Placeholder(RecoveryCode_Recoverycode_textbox, recoverycode_placeholder);
+            authorization.SetPlaceholder(recoveryCode_textbox, recoveryCodePlaceholder);
         }
 
-        private void Enter_Code_Button(object sender, EventArgs e)
+        // Обработчик события нажатия кнопки ввода кода восстановления
+        private void EnterCode_Button(object sender, EventArgs e)
         {
-            string userRecoveryCode = RecoveryCode_Recoverycode_textbox.Text;
+            string userRecoveryCode = recoveryCode_textbox.Text;
             if (recoveryCode.ToString() == userRecoveryCode)
             {
-                NewPwd forgotpwd_newpwd = new NewPwd(userEmail);
-                forgotpwd_newpwd.Show();
+                ForgotPwdNewPwd forgotPwdNewPwd = new ForgotPwdNewPwd(userEmail);
+                forgotPwdNewPwd.Show();
                 this.Hide();
             }
             else
             {
                 recoverycodeError_label.Visible = true;
                 recoverycodeError_label.Text = "Неверно введен код восстановления";
-                RecoveryCode_Recoverycode_textbox.BackColor = ColorTranslator.FromHtml("#E89696");
+                recoveryCode_textbox.BackColor = ColorTranslator.FromHtml("#E89696");
             }
         }
 
-        private void Enter_Account_Button(object sender, EventArgs e)
+        // Обработчик события нажатия кнопки входа
+        private void Enter_Button(object sender, EventArgs e)
         {
-            Authorization authorization = new Authorization();
             authorization.Show();
             this.Hide();
         }
