@@ -1,40 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Data.SqlClient;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
 
 namespace MyWoggi
 {
     public partial class Registration : Form
     {
+        Authorization authorization = new Authorization();
         Database MyWoggi = new Database();
-        string name_placeholder = "Ваше имя";
-        string surname_placeholder = "Ваша фамилия";
-        string login_placeholder = "Ваш логин";
-        string email_placeholder = "Ваша почта";
-        string pwd_placeholder = "Ваш пароль";
-        string pwdretry_placeholder = "Ваш пароль повторно";
+        string namePlaceholder = "Ваше имя";
+        string surnamePlaceholder = "Ваша фамилия";
+        string loginPlaceholder = "Ваш логин";
+        string emailPlaceholder = "Ваша почта";
+        string pwdPlaceholder = "Ваш пароль";
+        string pwdRetryPlaceholder = "Ваш пароль повторно";
 
-        private bool Validate_TextBox(TextBox textBox, string fieldName, Label errorLabel, List<TextBox> invalidTextBoxes, string placeHolder)
+        // Проверка текстовых полей на валидность
+        private bool ValidateTextbox(TextBox textBox, string fieldName, Label errorLabel, List<TextBox> invalidTextBoxes, string placeHolder)
         {
-            bool isValid = true;
-            // Check if the textbox is empty or whitespace
-            if (string.IsNullOrEmpty(textBox.Text) || textBox.Text == placeHolder)
+            bool isValid = true; // значение валидность по умолчанию
+            
+            // Когда текстовое поле пустое или содержит наполнитель
+            if (string.IsNullOrEmpty(textBox.Text) || textBox.Text == placeHolder) 
             {
-                isValid = false;
-                invalidTextBoxes.Add(textBox);
-                errorLabel.Visible = true;
-                errorLabel.Text = "Поле пустое";
+                isValid = false; // значение невалидное
+                invalidTextBoxes.Add(textBox); // добавить текстовое поле в невалидный список
+                errorLabel.Visible = true; // показать надпись ошибки
+                errorLabel.Text = "Поле пустое"; // показать текст ошибки
 
             }
+            // Когда текстовое поле содержит пробел
             else if (textBox.Text.Contains(" "))
             {
                 isValid = false;
@@ -42,7 +39,7 @@ namespace MyWoggi
                 errorLabel.Visible = true;
                 errorLabel.Text = "Поле содержит пробелы";
             }
-
+            // Когда текстовое поле "Имя" или "Фамилия" содержат цифры
             else if ((fieldName == "Name" || fieldName == "Surname") && Regex.IsMatch(textBox.Text, @"\d"))
             {
                 isValid = false;
@@ -53,7 +50,7 @@ namespace MyWoggi
                 else
                     errorLabel.Text = "Фамилия содержит цифры";
             }
-            // Check for special characters in name and surname
+            // Когда текстовое поле "Имя" или "Фамилия" содержат спец символы
             else if ((fieldName == "Name" || fieldName == "Surname") && !Regex.IsMatch(textBox.Text, "^[a-zA-Zа-яА-Я]+$"))
             {
                 isValid = false;
@@ -65,7 +62,7 @@ namespace MyWoggi
                     errorLabel.Text = "Фамилия содержит спец символы";
             }
 
-            // Check for special characters in login
+            // Когда текстовое поле "Логин" содержит спец символы
             else if (fieldName == "Login" && !Regex.IsMatch(textBox.Text, "^[a-zA-Z0-9_]+$"))
             {
                 isValid = false;
@@ -74,15 +71,7 @@ namespace MyWoggi
                 errorLabel.Text = "Логин содержит спец символы";
             }
 
-            else if (fieldName == "Login" && textBox.Text.Length < 3)
-            {
-                isValid = false;
-                invalidTextBoxes.Add(textBox);
-                errorLabel.Visible = true;
-                errorLabel.Text = "Логин содержит меньше 3 символов";
-            }
-
-            // Check for valid email format
+            // Когда текстовое поле "Почта" имеет невалидный формат
             else if (fieldName == "Email" && !Regex.IsMatch(textBox.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$") && (!textBox.Text.EndsWith("@gmail.com") && !textBox.Text.EndsWith("@mail.ru") && !textBox.Text.EndsWith("@inbox.ru") && !textBox.Text.EndsWith("@yandex.ru")))
             {
                 isValid = false;
@@ -90,15 +79,17 @@ namespace MyWoggi
                 errorLabel.Visible = true;
                 errorLabel.Text = "Неверно введена почта";
             }
-
-            else if (fieldName == "Pwd" && textBox.Text != Registration_Pwdretry_textbox.Text)
+            
+            // Когда текстовое поле "Пароль" не равно текстовому полю "Повторите пароль"
+            else if (fieldName == "Pwd" && textBox.Text != pwdretry_textbox.Text)
             {
                 isValid = false;
                 invalidTextBoxes.Add(textBox);
-                invalidTextBoxes.Add(Registration_Pwdretry_textbox);
+                invalidTextBoxes.Add(pwdretry_textbox);
                 errorLabel.Visible = true;
                 errorLabel.Text = "Пароли не совпадают";
             }
+            // Иначе скрыть надписи ошибки и вернуть нормальное состояние текстовых полей
             else
             {
                 textBox.BackColor = SystemColors.Window;
@@ -109,20 +100,6 @@ namespace MyWoggi
 
             return isValid;
         }
-        private void Set_Placeholder(TextBox textBox, string placeholder)
-        {
-            if (textBox.Text == placeholder)
-            {
-                textBox.Text = "";
-                textBox.ForeColor = Color.Black;
-            }
-            else if (textBox.Text == "")
-            {
-                textBox.PasswordChar = '\0';
-                textBox.Text = placeholder;
-                textBox.ForeColor = Color.Gray;
-            }
-        }
         public Registration()
         {
             InitializeComponent();
@@ -130,163 +107,182 @@ namespace MyWoggi
 
         private void Registration_Load(object sender, EventArgs e)
         {
-            // Когда форма загружена, login_placeholder назначается login_textbox и изменяется цвет
-            Registration_Name_textbox.Text = name_placeholder;
-            Registration_Surname_textbox.Text = surname_placeholder;
-            Registration_Login_textbox.Text = login_placeholder;
-            Registration_Email_textbox.Text = email_placeholder;
-            Registration_Pwd_textbox.Text = pwd_placeholder;
-            Registration_Pwdretry_textbox.Text = pwdretry_placeholder;
+            name_textbox.Text = namePlaceholder;
+            surname_textbox.Text = surnamePlaceholder;
+            login_textbox.Text = loginPlaceholder;
+            email_textbox.Text = emailPlaceholder;
+            pwd_textbox.Text = pwdPlaceholder;
+            pwdretry_textbox.Text = pwdRetryPlaceholder;
 
-            Registration_Name_textbox.ForeColor = Color.Gray;
-            Registration_Surname_textbox.ForeColor = Color.Gray;
-            Registration_Login_textbox.ForeColor = Color.Gray;
-            Registration_Email_textbox.ForeColor = Color.Gray;
-            Registration_Pwd_textbox.ForeColor = Color.Gray;
-            Registration_Pwdretry_textbox.ForeColor = Color.Gray;
+            name_textbox.ForeColor = Color.Gray;
+            surname_textbox.ForeColor = Color.Gray;
+            login_textbox.ForeColor = Color.Gray;
+            email_textbox.ForeColor = Color.Gray;
+            pwd_textbox.ForeColor = Color.Gray;
+            pwdretry_textbox.ForeColor = Color.Gray;
         }
 
+        // Метод закрытия формы регистрации
         private void Registration_FormClosed(object sender, FormClosedEventArgs e)
         {
+            // Закрытие приложения
             Application.Exit();
         }
 
-        private void Enter_Account_Button(object sender, EventArgs e)
+        // Обработчик нажатия на кнопку логина
+        private void Login_button(object sender, EventArgs e)
         {
+            // Создание объекта авторизации и отображение его на экране
             Authorization authorization = new Authorization();
             authorization.Show();
             this.Hide();
         }
 
-        private void Registration_Name_textbox_Enter(object sender, EventArgs e)
+        // Обработчик события "ввод в текстовое поле" для поля "Имя"
+        private void Name_textbox_Enter(object sender, EventArgs e)
         {
-            Set_Placeholder(Registration_Name_textbox, name_placeholder);
+            // Установка плейсхолдера в текстовое поле "Имя"
+            authorization.SetPlaceholder(name_textbox, namePlaceholder);
+        }
+
+        // Обработчик события "выход из текстового поля" для поля "Имя"
+        private void Name_textbox_Leave(object sender, EventArgs e)
+        {
+            // Если поле для ввода пароля пустое, устанавливается плейсхолдер
+            authorization.SetPlaceholder(name_textbox, namePlaceholder);
+        }
+
+        // Обработчик события "ввод в текстовое поле" для поля "Фамилия"
+        private void Surname_textbox_Enter(object sender, EventArgs e)
+        {
+            // Установка плейсхолдера в текстовое поле "Фамилия"
+            authorization.SetPlaceholder(surname_textbox, surnamePlaceholder);
+        }
+
+        // Обработчик события "выход из текстового поля" для поля "Фамилия"
+        private void Surname_textbox_Leave(object sender, EventArgs e)
+        {
+            // Установка плейсхолдера в текстовое поле "Фамилия"
+            authorization.SetPlaceholder(surname_textbox, surnamePlaceholder);
+        }
+
+        // Обработчик события "ввод в текстовое поле" для поля "Логин"
+        private void Login_textbox_Enter(object sender, EventArgs e)
+        {
+            // Установка плейсхолдера в текстовое поле "Логин"
+            authorization.SetPlaceholder(login_textbox, loginPlaceholder);
+        }
+
+        // Метод, который вызывается при покидании поля ввода логина
+        private void Login_textbox_Leave(object sender, EventArgs e)
+        {
+            // Устанавливаем плейсхолдер для поля ввода логина
+            authorization.SetPlaceholder(login_textbox, loginPlaceholder);
+        }
+
+        // Метод, который вызывается при входе в поле ввода электронной почты
+        private void Email_textbox_Enter(object sender, EventArgs e)
+        {
+            // Устанавливаем плейсхолдер для поля ввода электронной почты
+            authorization.SetPlaceholder(email_textbox, emailPlaceholder);
+        }
+
+        // Метод, который вызывается при покидании поля ввода электронной почты
+        private void Email_textbox_Leave(object sender, EventArgs e)
+        {
+            authorization.SetPlaceholder(email_textbox, emailPlaceholder);
+        }
+
+        // Метод, который вызывается при входе в поле ввода пароля
+        private void Pwd_textbox_Enter(object sender, EventArgs e)
+        {
+            if (ShowPwd_picturebox.Visible == false)
+                pwd_textbox.PasswordChar = '•';
+            authorization.SetPlaceholder(pwd_textbox, pwdPlaceholder);
+
+
+        }
+        // Метод, который вызывается при выходе из поля "Пароль"
+        private void Pwd_textbox_Leave(object sender, EventArgs e)
+        {
+            authorization.SetPlaceholder(pwd_textbox, pwdPlaceholder);
+        }
+
+        // Метод, который вызывается при входе в поле "Пароль повторно"
+        private void PwdRetry_textbox_Enter(object sender, EventArgs e)
+        {
+            if (ShowPwdRetry_picturebox.Visible == false)
+                pwdretry_textbox.PasswordChar = '•';
+            authorization.SetPlaceholder(pwdretry_textbox, pwdRetryPlaceholder);
+        }
+
+        // Метод, который вызывается при выходе из поля "Пароль повторно"
+        private void PwdRetry_textbox_Leave(object sender, EventArgs e)
+        {
+            authorization.SetPlaceholder(pwdretry_textbox, pwdRetryPlaceholder);
 
         }
 
-        private void Registration_Name_textbox_Leave(object sender, EventArgs e)
+        // Метод, который вызывается при клике на картинку "Показать пароль"
+        private void ShowPwd_picturebox_Click(object sender, EventArgs e)
         {
-            // Когда пользователь переключается на другое текстовое поле, а pwd_textbox пустое, pwd_placeholder назначается pwd_textbox
-            Set_Placeholder(Registration_Name_textbox, name_placeholder);
-
-
+            HidePwd_picturebox.Visible = true;
+            ShowPwd_picturebox.Visible = false;
+            pwd_textbox.PasswordChar = '•';
+            if (pwd_textbox.Text == pwdPlaceholder)
+                pwd_textbox.PasswordChar = '\0';
+        }
+        // Метод, который вызывается при клике на картинку "Скрыть пароль"
+        private void HidePwd_picturebox_Click(object sender, EventArgs e)
+        {
+            HidePwd_picturebox.Visible = false;
+            ShowPwd_picturebox.Visible = true;
+            pwd_textbox.PasswordChar = '\0';
+            if (pwd_textbox.Text == pwdPlaceholder)
+                pwd_textbox.PasswordChar = '•';
         }
 
-        private void Registration_Surname_textbox_Enter(object sender, EventArgs e)
+        // Метод, который вызывается при клике на картинку "Показать пароль повторно"
+        private void ShowPwdRetry_picturebox_Click(object sender, EventArgs e)
         {
-            Set_Placeholder(Registration_Surname_textbox, surname_placeholder);
-
+            HidePwdRetry_picturebox.Visible = true;
+            ShowPwdRetry_picturebox.Visible = false;
+            pwdretry_textbox.PasswordChar = '•';
+            if (pwdretry_textbox.Text == pwdRetryPlaceholder)
+                pwdretry_textbox.PasswordChar = '\0';
+        }
+        // Метод, который вызывается при клике на картинку "Скрыть пароль повторно"
+        private void HidePwdRetry_picturebox_Click(object sender, EventArgs e)
+        {
+            HidePwdRetry_picturebox.Visible = false;
+            ShowPwdRetry_picturebox.Visible = true;
+            pwdretry_textbox.PasswordChar = '\0';
+            if (pwdretry_textbox.Text == pwdRetryPlaceholder)
+                pwdretry_textbox.PasswordChar = '•';
         }
 
-        private void Registration_Surname_textbox_Leave(object sender, EventArgs e)
+        // Обработчик события клика по кнопке "Зарегистрироваться"
+        private void Register_button_Click(object sender, EventArgs e)
         {
-            Set_Placeholder(Registration_Surname_textbox, surname_placeholder);
-
-        }
-
-        private void Registration_Login_textbox_Enter(object sender, EventArgs e)
-        {
-            Set_Placeholder(Registration_Login_textbox, login_placeholder);
-
-        }
-
-        private void Registration_Login_textbox_Leave(object sender, EventArgs e)
-        {
-            Set_Placeholder(Registration_Login_textbox, login_placeholder);
-
-        }
-
-        private void Registration_Email_textbox_Enter(object sender, EventArgs e)
-        {
-            Set_Placeholder(Registration_Email_textbox, email_placeholder);
-
-        }
-
-        private void Registration_Email_textbox_Leave(object sender, EventArgs e)
-        {
-            Set_Placeholder(Registration_Email_textbox, email_placeholder);
-        }
-
-        private void Registration_Pwd_textbox_Enter(object sender, EventArgs e)
-        {
-            if (Registration_Showpwd_picturebox.Visible == false)
-                Registration_Pwd_textbox.PasswordChar = '•';
-            Set_Placeholder(Registration_Pwd_textbox, pwd_placeholder);
-
-
-        }
-
-        private void Registration_Pwd_textbox_Leave(object sender, EventArgs e)
-        {
-            Set_Placeholder(Registration_Pwd_textbox, pwd_placeholder);
-        }
-
-        private void Registration_Pwdretry_textbox_Enter(object sender, EventArgs e)
-        {
-            if (Registration_Showpwdretry_picturebox.Visible == false)
-                Registration_Pwdretry_textbox.PasswordChar = '•';
-            Set_Placeholder(Registration_Pwdretry_textbox, pwdretry_placeholder);
-        }
-
-        private void Registration_Pwdretry_textbox_Leave(object sender, EventArgs e)
-        {
-            Set_Placeholder(Registration_Pwdretry_textbox, pwdretry_placeholder);
-
-        }
-
-        private void Authorization_Showpwd_picturebox_Click(object sender, EventArgs e)
-        {
-            Registration_Hidepwd_picturebox.Visible = true;
-            Registration_Showpwd_picturebox.Visible = false;
-            Registration_Pwd_textbox.PasswordChar = '•';
-            if (Registration_Pwd_textbox.Text == pwd_placeholder)
-                Registration_Pwd_textbox.PasswordChar = '\0';
-        }
-
-        private void Authorization_Hidepwd_picturebox_Click(object sender, EventArgs e)
-        {
-            Registration_Hidepwd_picturebox.Visible = false;
-            Registration_Showpwd_picturebox.Visible = true;
-            Registration_Pwd_textbox.PasswordChar = '\0';
-            if (Registration_Pwd_textbox.Text == pwd_placeholder)
-                Registration_Pwd_textbox.PasswordChar = '•';
-        }
-
-        private void Registration_Showpwdretry_picturebox_Click(object sender, EventArgs e)
-        {
-            Registration_Hidepwdretry_picturebox.Visible = true;
-            Registration_Showpwdretry_picturebox.Visible = false;
-            Registration_Pwdretry_textbox.PasswordChar = '•';
-            if (Registration_Pwdretry_textbox.Text == pwdretry_placeholder)
-                Registration_Pwdretry_textbox.PasswordChar = '\0';
-        }
-
-        private void Registration_Hidepwdretry_picturebox_Click(object sender, EventArgs e)
-        {
-            Registration_Hidepwdretry_picturebox.Visible = false;
-            Registration_Showpwdretry_picturebox.Visible = true;
-            Registration_Pwdretry_textbox.PasswordChar = '\0';
-            if (Registration_Pwdretry_textbox.Text == pwdretry_placeholder)
-                Registration_Pwdretry_textbox.PasswordChar = '•';
-        }
-
-        private void Registration_Register_button_Click(object sender, EventArgs e)
-        {
+            // Создание списка невалидных полей
             List<TextBox> invalidTextBoxes = new List<TextBox>();
-            var newNameUser = Registration_Name_textbox;
-            var newSurnameUser = Registration_Surname_textbox;
-            var newLoginUser = Registration_Login_textbox;
-            var newEmailUser = Registration_Email_textbox;
-            var newPwdUser = Registration_Pwd_textbox;
-            var newPwdRetryUser = Registration_Pwdretry_textbox;
-            
-            bool allValid = Validate_TextBox(newNameUser, "Name", nameError_label, invalidTextBoxes, name_placeholder);
-            allValid &= Validate_TextBox(newSurnameUser, "Surname", surnameError_label, invalidTextBoxes, surname_placeholder);
-            allValid &= Validate_TextBox(newLoginUser, "Login", loginError_label, invalidTextBoxes, login_placeholder);
-            allValid &= Validate_TextBox(newEmailUser, "Email", emailError_label, invalidTextBoxes, email_placeholder);
-            allValid &= Validate_TextBox(newPwdUser, "Pwd", pwdError_label, invalidTextBoxes, pwd_placeholder);
-            allValid &= Validate_TextBox(newPwdRetryUser, "Pwdretry", pwdretryError_label, invalidTextBoxes, pwdretry_placeholder);
+            // Получение значений полей ввода
+            var newNameUser = name_textbox;
+            var newSurnameUser = surname_textbox;
+            var newLoginUser = login_textbox;
+            var newEmailUser = email_textbox;
+            var newPwdUser = pwd_textbox;
+            var newPwdRetryUser = pwdretry_textbox;
 
+            // Проверка валидности каждого поля
+            bool allValid = ValidateTextbox(newNameUser, "Name", nameError_label, invalidTextBoxes, namePlaceholder);
+            allValid &= ValidateTextbox(newSurnameUser, "Surname", surnameError_label, invalidTextBoxes, surnamePlaceholder);
+            allValid &= ValidateTextbox(newLoginUser, "Login", loginError_label, invalidTextBoxes, loginPlaceholder);
+            allValid &= ValidateTextbox(newEmailUser, "Email", emailError_label, invalidTextBoxes, emailPlaceholder);
+            allValid &= ValidateTextbox(newPwdUser, "Pwd", pwdError_label, invalidTextBoxes, pwdPlaceholder);
+            allValid &= ValidateTextbox(newPwdRetryUser, "Pwdretry", pwdretryError_label, invalidTextBoxes, pwdRetryPlaceholder);
+
+            // Если есть невалидные поля, то изменить их цвет на красный и выйти из метода
             if (!allValid)
             {
                 foreach (TextBox invalidTextBox in invalidTextBoxes)
@@ -296,25 +292,29 @@ namespace MyWoggi
                 return;
             }
 
-            int isregistered = MyWoggi.registerUser(newNameUser, newSurnameUser, newLoginUser, newEmailUser, newPwdUser);
+            // Регистрация нового пользователя в системе
+            int isregistered = MyWoggi.RegisterUser(newNameUser.Text, newSurnameUser.Text, newLoginUser.Text, newEmailUser.Text, newPwdUser.Text);
 
-
+            // Если пользователь уже зарегистрирован, то вывести сообщение и выйти из метода
             if (isregistered == 0)
             {
                 registrationError_label.Visible = true;
                 registrationError_label.Text = "Пользователь с такими данными уже существует";
                 return;
             }
+            // Если регистрация прошла успешно, то показать форму регистрации и скрыть текущую форму
             else if (isregistered == 1)
             {
                 Registration registration = new Registration();
                 registration.Show();
                 this.Hide();
             }
-            
+            // Если произошла ошибка регистрации, то вывести сообщение об ошибке
             else
-                MessageBox.Show("Произошла ошибка регистрации. Повторите попытку", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+            {
+                registrationError_label.Visible = true;
+                registrationError_label.Text = "Произошла ошибка регистрации";
+            }
 
 
 

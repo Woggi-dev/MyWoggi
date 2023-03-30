@@ -1,7 +1,7 @@
 ﻿
 namespace MyWoggi
 {
-    partial class UserEmail
+    partial class ForgotPwdEmail
     {
         /// <summary>
         /// Required designer variable.
@@ -29,124 +29,124 @@ namespace MyWoggi
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserEmail));
-            this.UserEmail_panel = new System.Windows.Forms.Panel();
-            this.UserEmail_Caption_label = new System.Windows.Forms.Label();
-            this.UserEmail_Login_button = new System.Windows.Forms.Button();
-            this.UserEmail_Receivecode_button = new System.Windows.Forms.Button();
-            this.UserEmail_Email_label = new System.Windows.Forms.Label();
-            this.UserEmail_Email_picturebox = new System.Windows.Forms.PictureBox();
-            this.UserEmail_Email_textbox = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForgotPwdEmail));
+            this.panel_panel = new System.Windows.Forms.Panel();
+            this.emailError_label = new System.Windows.Forms.Label();
+            this.caption_label = new System.Windows.Forms.Label();
+            this.enter_button = new System.Windows.Forms.Button();
+            this.getCode_button = new System.Windows.Forms.Button();
+            this.email_picturebox = new System.Windows.Forms.PictureBox();
+            this.email_textbox = new System.Windows.Forms.TextBox();
             this.Login_Button = new System.Windows.Forms.Button();
             this.Register_Button = new System.Windows.Forms.Button();
-            this.UserEmail_Title_label = new System.Windows.Forms.Label();
-            this.emailError_label = new System.Windows.Forms.Label();
-            this.UserEmail_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UserEmail_Email_picturebox)).BeginInit();
+            this.title_label = new System.Windows.Forms.Label();
+            this.panel_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.email_picturebox)).BeginInit();
             this.SuspendLayout();
             // 
-            // UserEmail_panel
+            // panel_panel
             // 
-            this.UserEmail_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(50)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.UserEmail_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.UserEmail_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.UserEmail_panel.Controls.Add(this.emailError_label);
-            this.UserEmail_panel.Controls.Add(this.UserEmail_Caption_label);
-            this.UserEmail_panel.Controls.Add(this.UserEmail_Login_button);
-            this.UserEmail_panel.Controls.Add(this.UserEmail_Receivecode_button);
-            this.UserEmail_panel.Controls.Add(this.UserEmail_Email_label);
-            this.UserEmail_panel.Controls.Add(this.UserEmail_Email_picturebox);
-            this.UserEmail_panel.Controls.Add(this.UserEmail_Email_textbox);
-            this.UserEmail_panel.Controls.Add(this.Login_Button);
-            this.UserEmail_panel.Controls.Add(this.Register_Button);
-            this.UserEmail_panel.Controls.Add(this.UserEmail_Title_label);
-            this.UserEmail_panel.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.UserEmail_panel.ForeColor = System.Drawing.Color.White;
-            this.UserEmail_panel.Location = new System.Drawing.Point(124, 191);
-            this.UserEmail_panel.Name = "UserEmail_panel";
-            this.UserEmail_panel.Size = new System.Drawing.Size(483, 345);
-            this.UserEmail_panel.TabIndex = 2;
+            this.panel_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(50)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.panel_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_panel.Controls.Add(this.emailError_label);
+            this.panel_panel.Controls.Add(this.caption_label);
+            this.panel_panel.Controls.Add(this.enter_button);
+            this.panel_panel.Controls.Add(this.getCode_button);
+            this.panel_panel.Controls.Add(this.email_picturebox);
+            this.panel_panel.Controls.Add(this.email_textbox);
+            this.panel_panel.Controls.Add(this.Login_Button);
+            this.panel_panel.Controls.Add(this.Register_Button);
+            this.panel_panel.Controls.Add(this.title_label);
+            this.panel_panel.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel_panel.ForeColor = System.Drawing.Color.White;
+            this.panel_panel.Location = new System.Drawing.Point(124, 191);
+            this.panel_panel.Name = "panel_panel";
+            this.panel_panel.Size = new System.Drawing.Size(483, 335);
+            this.panel_panel.TabIndex = 2;
             // 
-            // UserEmail_Caption_label
+            // emailError_label
             // 
-            this.UserEmail_Caption_label.BackColor = System.Drawing.Color.Transparent;
-            this.UserEmail_Caption_label.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.UserEmail_Caption_label.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.UserEmail_Caption_label.Location = new System.Drawing.Point(8, 69);
-            this.UserEmail_Caption_label.Name = "UserEmail_Caption_label";
-            this.UserEmail_Caption_label.Size = new System.Drawing.Size(461, 48);
-            this.UserEmail_Caption_label.TabIndex = 49;
-            this.UserEmail_Caption_label.Text = "Введите вашу почту, указанную при регистрации На нее придет код восстановления па" +
+            this.emailError_label.BackColor = System.Drawing.Color.Transparent;
+            this.emailError_label.Font = new System.Drawing.Font("Consolas", 13.25F);
+            this.emailError_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(107)))), ((int)(((byte)(93)))));
+            this.emailError_label.Location = new System.Drawing.Point(1, 180);
+            this.emailError_label.Name = "emailError_label";
+            this.emailError_label.Size = new System.Drawing.Size(483, 26);
+            this.emailError_label.TabIndex = 63;
+            this.emailError_label.Text = "label";
+            this.emailError_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.emailError_label.Visible = false;
+            // 
+            // caption_label
+            // 
+            this.caption_label.BackColor = System.Drawing.Color.Transparent;
+            this.caption_label.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.caption_label.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.caption_label.Location = new System.Drawing.Point(8, 69);
+            this.caption_label.Name = "caption_label";
+            this.caption_label.Size = new System.Drawing.Size(461, 48);
+            this.caption_label.TabIndex = 49;
+            this.caption_label.Text = "Введите вашу почту, указанную при регистрации На нее придет код восстановления па" +
     "роля";
-            this.UserEmail_Caption_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.caption_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // UserEmail_Login_button
+            // enter_button
             // 
-            this.UserEmail_Login_button.BackColor = System.Drawing.Color.Transparent;
-            this.UserEmail_Login_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.UserEmail_Login_button.FlatAppearance.BorderSize = 0;
-            this.UserEmail_Login_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
-            this.UserEmail_Login_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UserEmail_Login_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.UserEmail_Login_button.ForeColor = System.Drawing.Color.White;
-            this.UserEmail_Login_button.Location = new System.Drawing.Point(99, 302);
-            this.UserEmail_Login_button.Name = "UserEmail_Login_button";
-            this.UserEmail_Login_button.Size = new System.Drawing.Size(269, 37);
-            this.UserEmail_Login_button.TabIndex = 48;
-            this.UserEmail_Login_button.Text = "Войти в личный кабинет";
-            this.UserEmail_Login_button.UseVisualStyleBackColor = false;
-            this.UserEmail_Login_button.Click += new System.EventHandler(this.Enter_Account_Button);
+            this.enter_button.BackColor = System.Drawing.Color.Transparent;
+            this.enter_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.enter_button.FlatAppearance.BorderSize = 0;
+            this.enter_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
+            this.enter_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.enter_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.enter_button.ForeColor = System.Drawing.Color.White;
+            this.enter_button.Location = new System.Drawing.Point(101, 272);
+            this.enter_button.Name = "enter_button";
+            this.enter_button.Size = new System.Drawing.Size(269, 37);
+            this.enter_button.TabIndex = 48;
+            this.enter_button.Text = "Войти в личный кабинет";
+            this.enter_button.UseVisualStyleBackColor = false;
+            this.enter_button.Click += new System.EventHandler(this.Enter_Button);
             // 
-            // UserEmail_Receivecode_button
+            // getCode_button
             // 
-            this.UserEmail_Receivecode_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.UserEmail_Receivecode_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.UserEmail_Receivecode_button.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.UserEmail_Receivecode_button.FlatAppearance.BorderSize = 2;
-            this.UserEmail_Receivecode_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(79)))), ((int)(((byte)(100)))));
-            this.UserEmail_Receivecode_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UserEmail_Receivecode_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.UserEmail_Receivecode_button.ForeColor = System.Drawing.Color.White;
-            this.UserEmail_Receivecode_button.Location = new System.Drawing.Point(10, 239);
-            this.UserEmail_Receivecode_button.Name = "UserEmail_Receivecode_button";
-            this.UserEmail_Receivecode_button.Size = new System.Drawing.Size(459, 57);
-            this.UserEmail_Receivecode_button.TabIndex = 47;
-            this.UserEmail_Receivecode_button.Text = "Получить код";
-            this.UserEmail_Receivecode_button.UseVisualStyleBackColor = false;
-            this.UserEmail_Receivecode_button.Click += new System.EventHandler(this.Receive_Code_Button);
+            this.getCode_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.getCode_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.getCode_button.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.getCode_button.FlatAppearance.BorderSize = 2;
+            this.getCode_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(79)))), ((int)(((byte)(100)))));
+            this.getCode_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.getCode_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.getCode_button.ForeColor = System.Drawing.Color.White;
+            this.getCode_button.Location = new System.Drawing.Point(12, 209);
+            this.getCode_button.Name = "getCode_button";
+            this.getCode_button.Size = new System.Drawing.Size(459, 57);
+            this.getCode_button.TabIndex = 47;
+            this.getCode_button.Text = "Получить код";
+            this.getCode_button.UseVisualStyleBackColor = false;
+            this.getCode_button.Click += new System.EventHandler(this.ReceiveCode_Button);
             // 
-            // UserEmail_Email_label
+            // email_picturebox
             // 
-            this.UserEmail_Email_label.AutoSize = true;
-            this.UserEmail_Email_label.BackColor = System.Drawing.Color.Transparent;
-            this.UserEmail_Email_label.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.UserEmail_Email_label.Location = new System.Drawing.Point(53, 127);
-            this.UserEmail_Email_label.Name = "UserEmail_Email_label";
-            this.UserEmail_Email_label.Size = new System.Drawing.Size(95, 34);
-            this.UserEmail_Email_label.TabIndex = 45;
-            this.UserEmail_Email_label.Text = "Почта";
+            this.email_picturebox.BackColor = System.Drawing.Color.Transparent;
+            this.email_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.email;
+            this.email_picturebox.Location = new System.Drawing.Point(14, 134);
+            this.email_picturebox.Name = "email_picturebox";
+            this.email_picturebox.Size = new System.Drawing.Size(37, 37);
+            this.email_picturebox.TabIndex = 43;
+            this.email_picturebox.TabStop = false;
             // 
-            // UserEmail_Email_picturebox
+            // email_textbox
             // 
-            this.UserEmail_Email_picturebox.BackColor = System.Drawing.Color.Transparent;
-            this.UserEmail_Email_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.email;
-            this.UserEmail_Email_picturebox.Location = new System.Drawing.Point(12, 164);
-            this.UserEmail_Email_picturebox.Name = "UserEmail_Email_picturebox";
-            this.UserEmail_Email_picturebox.Size = new System.Drawing.Size(37, 37);
-            this.UserEmail_Email_picturebox.TabIndex = 43;
-            this.UserEmail_Email_picturebox.TabStop = false;
-            // 
-            // UserEmail_Email_textbox
-            // 
-            this.UserEmail_Email_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserEmail_Email_textbox.Location = new System.Drawing.Point(59, 164);
-            this.UserEmail_Email_textbox.MaxLength = 320;
-            this.UserEmail_Email_textbox.Multiline = true;
-            this.UserEmail_Email_textbox.Name = "UserEmail_Email_textbox";
-            this.UserEmail_Email_textbox.Size = new System.Drawing.Size(410, 35);
-            this.UserEmail_Email_textbox.TabIndex = 38;
-            this.UserEmail_Email_textbox.Enter += new System.EventHandler(this.UserEmail_Email_textbox_Enter);
-            this.UserEmail_Email_textbox.Leave += new System.EventHandler(this.UserEmail_Email_textbox_Leave);
+            this.email_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.email_textbox.Location = new System.Drawing.Point(61, 134);
+            this.email_textbox.MaxLength = 320;
+            this.email_textbox.Multiline = true;
+            this.email_textbox.Name = "email_textbox";
+            this.email_textbox.Size = new System.Drawing.Size(410, 35);
+            this.email_textbox.TabIndex = 38;
+            this.email_textbox.Enter += new System.EventHandler(this.Email_textbox_Enter);
+            this.email_textbox.Leave += new System.EventHandler(this.Email_textbox_Leave);
             // 
             // Login_Button
             // 
@@ -181,64 +181,50 @@ namespace MyWoggi
             this.Register_Button.Text = "Зарегистрироваться";
             this.Register_Button.UseVisualStyleBackColor = false;
             // 
-            // UserEmail_Title_label
+            // title_label
             // 
-            this.UserEmail_Title_label.BackColor = System.Drawing.Color.Transparent;
-            this.UserEmail_Title_label.Font = new System.Drawing.Font("Consolas", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.UserEmail_Title_label.ForeColor = System.Drawing.Color.White;
-            this.UserEmail_Title_label.Location = new System.Drawing.Point(14, 14);
-            this.UserEmail_Title_label.Name = "UserEmail_Title_label";
-            this.UserEmail_Title_label.Size = new System.Drawing.Size(457, 43);
-            this.UserEmail_Title_label.TabIndex = 0;
-            this.UserEmail_Title_label.Text = "Восстановление пароля";
-            this.UserEmail_Title_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.title_label.BackColor = System.Drawing.Color.Transparent;
+            this.title_label.Font = new System.Drawing.Font("Consolas", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.title_label.ForeColor = System.Drawing.Color.White;
+            this.title_label.Location = new System.Drawing.Point(14, 14);
+            this.title_label.Name = "title_label";
+            this.title_label.Size = new System.Drawing.Size(457, 43);
+            this.title_label.TabIndex = 0;
+            this.title_label.Text = "Восстановление пароля";
+            this.title_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // emailError_label
-            // 
-            this.emailError_label.BackColor = System.Drawing.Color.Transparent;
-            this.emailError_label.Font = new System.Drawing.Font("Consolas", 13.25F);
-            this.emailError_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(107)))), ((int)(((byte)(93)))));
-            this.emailError_label.Location = new System.Drawing.Point(-1, 210);
-            this.emailError_label.Name = "emailError_label";
-            this.emailError_label.Size = new System.Drawing.Size(483, 26);
-            this.emailError_label.TabIndex = 63;
-            this.emailError_label.Text = "label";
-            this.emailError_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.emailError_label.Visible = false;
-            // 
-            // UserEmail
+            // ForgotPwdEmail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MyWoggi.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(734, 711);
-            this.Controls.Add(this.UserEmail_panel);
+            this.Controls.Add(this.panel_panel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(750, 750);
             this.MinimumSize = new System.Drawing.Size(750, 750);
-            this.Name = "UserEmail";
+            this.Name = "ForgotPwdEmail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyWoggi";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ForgotPwd_Email_FormClosed);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ForgotPwdEmail_FormClosed);
             this.Load += new System.EventHandler(this.UserEmail_Load);
-            this.UserEmail_panel.ResumeLayout(false);
-            this.UserEmail_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UserEmail_Email_picturebox)).EndInit();
+            this.panel_panel.ResumeLayout(false);
+            this.panel_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.email_picturebox)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel UserEmail_panel;
-        private System.Windows.Forms.TextBox UserEmail_Email_textbox;
-        private System.Windows.Forms.Label UserEmail_Title_label;
-        private System.Windows.Forms.Label UserEmail_Email_label;
-        private System.Windows.Forms.Button UserEmail_Receivecode_button;
-        private System.Windows.Forms.Button UserEmail_Login_button;
-        private System.Windows.Forms.PictureBox UserEmail_Email_picturebox;
-        private System.Windows.Forms.Label UserEmail_Caption_label;
+        private System.Windows.Forms.Panel panel_panel;
+        private System.Windows.Forms.TextBox email_textbox;
+        private System.Windows.Forms.Label title_label;
+        private System.Windows.Forms.Button getCode_button;
+        private System.Windows.Forms.Button enter_button;
+        private System.Windows.Forms.PictureBox email_picturebox;
+        private System.Windows.Forms.Label caption_label;
         private System.Windows.Forms.Button Login_Button;
         private System.Windows.Forms.Button Register_Button;
         private System.Windows.Forms.Label emailError_label;

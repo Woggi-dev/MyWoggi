@@ -11,24 +11,29 @@ namespace MyWoggi
 {
     class Database
     {
+        // Установка соединение с удаленной базой данных
         MySqlConnection sqlConnection = new MySqlConnection("Server=sql7.freemysqlhosting.net;Port=3306;Database=sql7609259;Uid=sql7609259;Pwd=em89xPl4pT;Charset=utf8");
 
-        public void openConnection()
+        // Открыть связь с базой данных
+        public void OpenConnection()
         {
+            // Если состояние подключения - закрытое
             if (sqlConnection.State == System.Data.ConnectionState.Closed)
             {
                 sqlConnection.Open();
             }
         }
 
-        public bool isSuchUser(TextBox loginUser, TextBox passwordUser)
+        // Функция проверки "Есть ли такой пользователь в бд"
+        public bool IsSuchUser(string loginUser, string passwordUser)
         {
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             DataTable table = new DataTable();
 
-            string querystring = $"select id_user, login_user, password_user from Userdata where login_user = '{loginUser.Text}' and password_user = '{passwordUser.Text}'";
+            string querystring = $"select id_user, login_user, password_user from Userdata " +
+                $"where login_user = '{loginUser}' and password_user = '{passwordUser}'";
 
-            MySqlCommand command = new MySqlCommand(querystring, getConnection());
+            MySqlCommand command = new MySqlCommand(querystring, GetConnection());
 
             adapter.SelectCommand = command;
             adapter.Fill(table);
@@ -41,14 +46,15 @@ namespace MyWoggi
                 return false;
         }
 
-        public bool isSuchEmail(TextBox emailUser)
+        // Функция проверки "Есть ли такая почта в бд"
+        public bool IsSuchEmail(string emailUser)
         {
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             DataTable table = new DataTable();
 
-            string checkemail_querystring = $"select id_user, email_user from Userdata where email_user = '{emailUser.Text}'";
+            string checkemail_querystring = $"select id_user, email_user from Userdata where email_user = '{emailUser}'";
 
-            MySqlCommand command = new MySqlCommand(checkemail_querystring, getConnection());
+            MySqlCommand command = new MySqlCommand(checkemail_querystring, GetConnection());
 
             adapter.SelectCommand = command;
             adapter.Fill(table);
@@ -61,13 +67,15 @@ namespace MyWoggi
                 return false;
         }
 
-        public int registerUser(TextBox newnameUser, TextBox newsurnameUser, TextBox newloginUser, TextBox newemailUser, TextBox newpwdUser)
+        // Функция регистрации и проверки "Есть ли уже такой зарегистрированный пользователь"
+        public int RegisterUser(string newnameUser, string newsurnameUser, string newloginUser, string newemailUser, string newpwdUser)
         {
-            string checkuser_querystring = $"select id_user, login_user, email_user from Userdata where login_user = '{newloginUser.Text}' or email_user = '{newemailUser.Text}'";
+            string checkuser_querystring = $"select id_user, login_user, email_user from Userdata " +
+                $"where login_user = '{newloginUser}' or email_user = '{newemailUser}'";
             
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             DataTable table = new DataTable();
-            MySqlCommand checkuser_command = new MySqlCommand(checkuser_querystring, getConnection());
+            MySqlCommand checkuser_command = new MySqlCommand(checkuser_querystring, GetConnection());
             
             adapter.SelectCommand = checkuser_command;
             adapter.Fill(table);
@@ -76,50 +84,54 @@ namespace MyWoggi
                 return 0;
 
             string register_querystring = $"insert into Userdata(login_user, name_user, surname_user, email_user, password_user) " +
-                $"VALUES('{newloginUser.Text}', '{newnameUser.Text}', '{newsurnameUser.Text}', '{newemailUser.Text}', '{newpwdUser.Text}')";
+                $"VALUES('{newloginUser}', '{newnameUser}', '{newsurnameUser}', '{newemailUser}', '{newpwdUser}')";
             
-            MySqlCommand register_command = new MySqlCommand(register_querystring, getConnection());
-            openConnection();
+            MySqlCommand register_command = new MySqlCommand(register_querystring, GetConnection());
+            OpenConnection();
 
             if (register_command.ExecuteNonQuery() == 1)
             {
-                closeConnection();
+                CloseConnection();
                 return 1;
 
             }
             else
             {
-                closeConnection();
+                CloseConnection();
                 return -1;
             }
         }
 
-        public bool updatePwd(string NewPwdRestored, string userEmail)
+        // Функция восстановления пароля
+        public bool UpdatePwd(string NewPwdRestored, string userEmail)
         {
             string updatepwd_querystring = $" update Userdata set password_user = ( '{NewPwdRestored}') where email_user = '{userEmail}'";
-            MySqlCommand command = new MySqlCommand(updatepwd_querystring, getConnection());// связь таблицы и запроса
-            openConnection();
+            MySqlCommand command = new MySqlCommand(updatepwd_querystring, GetConnection());// связь таблицы и запроса
+            OpenConnection();
             if (command.ExecuteNonQuery() == 1)// при успешном вводе
             {
-                closeConnection();
+                CloseConnection();
                 return true;
             }
             else
             {
-                closeConnection();
+                CloseConnection();
                 return false;
             }
         }
 
-        public void closeConnection()
+        // Закрыть связь с базой данных
+        public void CloseConnection()
         {
-            if (sqlConnection.State == System.Data.ConnectionState.Open)
+            // Если состояние бд - открытое
+            if (sqlConnection.State == ConnectionState.Open)
             {
                 sqlConnection.Close();
             }
         }
 
-        public MySqlConnection getConnection()
+        // Вернуть соединение с базой данных
+        public MySqlConnection GetConnection()
         {
             return sqlConnection;
         }
