@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +15,8 @@ namespace MyWoggi
     public partial class RecoveryCode : Form
     {
         string recoverycode_placeholder = "Ваш код восстановления";
+        private int recoveryCode;
+        private string userEmail;
 
         private void Set_Placeholder(TextBox textBox, string placeholder)
         {
@@ -22,11 +26,13 @@ namespace MyWoggi
                 textBox.ForeColor = Color.Black;
             }
         }
-        public RecoveryCode()
+        public RecoveryCode(int recoveryCode, string userEmail)
         {
             InitializeComponent();
+            this.recoveryCode = recoveryCode;
+            this.userEmail = userEmail;
+            
         }
-
         private void RecoveryCode_Load(object sender, EventArgs e)
         {
             RecoveryCode_Recoverycode_textbox.Text = recoverycode_placeholder;
@@ -50,9 +56,19 @@ namespace MyWoggi
 
         private void Enter_Code_Button(object sender, EventArgs e)
         {
-            NewPwd forgotpwd_newpwd = new NewPwd();
-            forgotpwd_newpwd.Show();
-            this.Hide();
+            string userRecoveryCode = RecoveryCode_Recoverycode_textbox.Text;
+            if (recoveryCode.ToString() == userRecoveryCode)
+            {
+                NewPwd forgotpwd_newpwd = new NewPwd(userEmail);
+                forgotpwd_newpwd.Show();
+                this.Hide();
+            }
+            else
+            {
+                recoverycodeError_label.Visible = true;
+                recoverycodeError_label.Text = "Неверно введен код восстановления";
+                RecoveryCode_Recoverycode_textbox.BackColor = ColorTranslator.FromHtml("#E89696");
+            }
         }
 
         private void Enter_Account_Button(object sender, EventArgs e)

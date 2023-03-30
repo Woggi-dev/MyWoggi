@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-
+using System.Text.RegularExpressions;
 
 namespace MyWoggi
 {
@@ -23,6 +23,92 @@ namespace MyWoggi
         string pwd_placeholder = "Ваш пароль";
         string pwdretry_placeholder = "Ваш пароль повторно";
 
+        private bool Validate_TextBox(TextBox textBox, string fieldName, Label errorLabel, List<TextBox> invalidTextBoxes, string placeHolder)
+        {
+            bool isValid = true;
+            // Check if the textbox is empty or whitespace
+            if (string.IsNullOrEmpty(textBox.Text) || textBox.Text == placeHolder)
+            {
+                isValid = false;
+                invalidTextBoxes.Add(textBox);
+                errorLabel.Visible = true;
+                errorLabel.Text = "Поле пустое";
+
+            }
+            else if (textBox.Text.Contains(" "))
+            {
+                isValid = false;
+                invalidTextBoxes.Add(textBox);
+                errorLabel.Visible = true;
+                errorLabel.Text = "Поле содержит пробелы";
+            }
+
+            else if ((fieldName == "Name" || fieldName == "Surname") && Regex.IsMatch(textBox.Text, @"\d"))
+            {
+                isValid = false;
+                invalidTextBoxes.Add(textBox);
+                errorLabel.Visible = true;
+                if (fieldName == "Name")
+                    errorLabel.Text = "Имя содержит цифры";
+                else
+                    errorLabel.Text = "Фамилия содержит цифры";
+            }
+            // Check for special characters in name and surname
+            else if ((fieldName == "Name" || fieldName == "Surname") && !Regex.IsMatch(textBox.Text, "^[a-zA-Zа-яА-Я]+$"))
+            {
+                isValid = false;
+                invalidTextBoxes.Add(textBox);
+                errorLabel.Visible = true;
+                if (fieldName == "Name")
+                    errorLabel.Text = "Имя содержит спец символы";
+                else
+                    errorLabel.Text = "Фамилия содержит спец символы";
+            }
+
+            // Check for special characters in login
+            else if (fieldName == "Login" && !Regex.IsMatch(textBox.Text, "^[a-zA-Z0-9_]+$"))
+            {
+                isValid = false;
+                invalidTextBoxes.Add(textBox);
+                errorLabel.Visible = true;
+                errorLabel.Text = "Логин содержит спец символы";
+            }
+
+            else if (fieldName == "Login" && textBox.Text.Length < 3)
+            {
+                isValid = false;
+                invalidTextBoxes.Add(textBox);
+                errorLabel.Visible = true;
+                errorLabel.Text = "Логин содержит меньше 3 символов";
+            }
+
+            // Check for valid email format
+            else if (fieldName == "Email" && !Regex.IsMatch(textBox.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$") && (!textBox.Text.EndsWith("@gmail.com") && !textBox.Text.EndsWith("@mail.ru") && !textBox.Text.EndsWith("@inbox.ru") && !textBox.Text.EndsWith("@yandex.ru")))
+            {
+                isValid = false;
+                invalidTextBoxes.Add(textBox);
+                errorLabel.Visible = true;
+                errorLabel.Text = "Неверно введена почта";
+            }
+
+            else if (fieldName == "Pwd" && textBox.Text != Registration_Pwdretry_textbox.Text)
+            {
+                isValid = false;
+                invalidTextBoxes.Add(textBox);
+                invalidTextBoxes.Add(Registration_Pwdretry_textbox);
+                errorLabel.Visible = true;
+                errorLabel.Text = "Пароли не совпадают";
+            }
+            else
+            {
+                textBox.BackColor = SystemColors.Window;
+                errorLabel.Visible = false;
+                pwdretryError_label.Visible = false;
+
+            }
+
+            return isValid;
+        }
         private void Set_Placeholder(TextBox textBox, string placeholder)
         {
             if (textBox.Text == placeholder)
@@ -139,7 +225,7 @@ namespace MyWoggi
         {
             if (Registration_Showpwdretry_picturebox.Visible == false)
                 Registration_Pwdretry_textbox.PasswordChar = '•';
-            Set_Placeholder(Registration_Pwdretry_textbox, pwdretry_placeholder);        
+            Set_Placeholder(Registration_Pwdretry_textbox, pwdretry_placeholder);
         }
 
         private void Registration_Pwdretry_textbox_Leave(object sender, EventArgs e)
@@ -186,43 +272,53 @@ namespace MyWoggi
 
         private void Registration_Register_button_Click(object sender, EventArgs e)
         {
-            var newNameUser = Registration_Name_textbox.Text;
-            var newSurnameUser = Registration_Surname_textbox.Text;
-            var newLoginUser = Registration_Login_textbox.Text;
-            var newEmailUser = Registration_Email_textbox.Text;
-            var newPwdUser = Registration_Pwd_textbox.Text;
+            List<TextBox> invalidTextBoxes = new List<TextBox>();
+            var newNameUser = Registration_Name_textbox;
+            var newSurnameUser = Registration_Surname_textbox;
+            var newLoginUser = Registration_Login_textbox;
+            var newEmailUser = Registration_Email_textbox;
+            var newPwdUser = Registration_Pwd_textbox;
+            var newPwdRetryUser = Registration_Pwdretry_textbox;
             
-            string register_querystring = $"insert into Userdata(login_user, name_user, surname_user, email_user, password_user) VALUES('{newLoginUser}', '{newNameUser}', '{newSurnameUser}', '{newEmailUser}', '{newPwdUser}')";
-            string checkuser_querystring = $"select id_user, login_user, password_user from Userdata where login_user = '{newLoginUser}' and password_user = '{newPwdUser}'";
-            
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-            DataTable table = new DataTable();
+            bool allValid = Validate_TextBox(newNameUser, "Name", nameError_label, invalidTextBoxes, name_placeholder);
+            allValid &= Validate_TextBox(newSurnameUser, "Surname", surnameError_label, invalidTextBoxes, surname_placeholder);
+            allValid &= Validate_TextBox(newLoginUser, "Login", loginError_label, invalidTextBoxes, login_placeholder);
+            allValid &= Validate_TextBox(newEmailUser, "Email", emailError_label, invalidTextBoxes, email_placeholder);
+            allValid &= Validate_TextBox(newPwdUser, "Pwd", pwdError_label, invalidTextBoxes, pwd_placeholder);
+            allValid &= Validate_TextBox(newPwdRetryUser, "Pwdretry", pwdretryError_label, invalidTextBoxes, pwdretry_placeholder);
 
-
-            MySqlCommand checkuser_command = new MySqlCommand(checkuser_querystring, MyWoggi.getConnection());
-            adapter.SelectCommand = checkuser_command;
-            adapter.Fill(table);
-
-            if (table.Rows.Count > 0)
+            if (!allValid)
             {
-                MessageBox.Show("Пользователь уже существует!");
+                foreach (TextBox invalidTextBox in invalidTextBoxes)
+                {
+                    invalidTextBox.BackColor = ColorTranslator.FromHtml("#E89696");
+                }
                 return;
             }
+
+            int isregistered = MyWoggi.registerUser(newNameUser, newSurnameUser, newLoginUser, newEmailUser, newPwdUser);
+
+
+            if (isregistered == 0)
+            {
+                registrationError_label.Visible = true;
+                registrationError_label.Text = "Пользователь с такими данными уже существует";
+                return;
+            }
+            else if (isregistered == 1)
+            {
+                Registration registration = new Registration();
+                registration.Show();
+                this.Hide();
+            }
             
-            MySqlCommand register_command = new MySqlCommand(register_querystring, MyWoggi.getConnection());
-            MyWoggi.openConnection();
-
-
-            if (register_command.ExecuteNonQuery() == 1)
-            {
-                MessageBox.Show("Аккаунт успешно создан!", "Успех!");
-            }
             else
-            {
-                MessageBox.Show("Аккаунт не создан", "Провал");
-            }
+                MessageBox.Show("Произошла ошибка регистрации. Повторите попытку", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            MyWoggi.closeConnection();
+
+
+
+
         }
     }
 }

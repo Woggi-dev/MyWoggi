@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using MyWoggi.forms;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace MyWoggi
 {
@@ -23,6 +24,7 @@ namespace MyWoggi
         // Заполнители для текстовых полей
         string login_placeholder = "Ваш никнейм";
         string pwd_placeholder = "Ваш пароль";
+
 
         private void Set_Placeholder(TextBox textBox, string placeholder)
         {
@@ -115,28 +117,24 @@ namespace MyWoggi
 
         private void Authorization_Login_button_Click(object sender, EventArgs e)
         {
-            var loginUser = Authorization_Login_textbox.Text;
-            var pwdUser = Authorization_Pwd_textbox.Text;
+            var loginUser = Authorization_Login_textbox;
+            var pwdUser = Authorization_Pwd_textbox;
 
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-            DataTable table = new DataTable();
+            bool isSuchUser = MyWoggi.isSuchUser(Authorization_Login_textbox, Authorization_Pwd_textbox);
 
-            string querystring = $"select id_user, login_user, password_user from Userdata where login_user = '{loginUser}' and password_user = '{pwdUser}'";
-
-            MySqlCommand command = new MySqlCommand(querystring, MyWoggi.getConnection());
-
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
-
-            if (table.Rows.Count == 1)
+            if (isSuchUser)
             {
-                MessageBox.Show("Вы успешно вошли!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Main main = new Main();
-                this.Hide();
                 main.Show();
+                this.Hide();
             }
             else
-                MessageBox.Show("Такого аккаунта нет", "Провал", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            {
+                Authorization_Login_textbox.BackColor = ColorTranslator.FromHtml("#E89696");
+                Authorization_Pwd_textbox.BackColor = ColorTranslator.FromHtml("#E89696");
+                loginpasswordError_label.Visible = true;
+                loginpasswordError_label.Text = "Неверно введен логин или пароль";
+            }
 
 
 

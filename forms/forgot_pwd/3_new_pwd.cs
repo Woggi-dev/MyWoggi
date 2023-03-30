@@ -12,9 +12,49 @@ namespace MyWoggi
 {
     public partial class NewPwd : Form
     {
+        Database MyWoggi = new Database();
         string newpwd_placeholder = "Ваш новый пароль";
         string newpwdretry_placeholder = "Ваш новый пароль повторно";
+        private string userEmail;
 
+        private bool Validate_TextBox(TextBox textBox, string fieldName, Label errorLabel, List<TextBox> invalidTextBoxes, string placeHolder)
+        {
+            bool isValid = true;
+            // Check if the textbox is empty or whitespace
+            if (string.IsNullOrEmpty(textBox.Text) || textBox.Text == placeHolder)
+            {
+                isValid = false;
+                invalidTextBoxes.Add(textBox);
+                errorLabel.Visible = true;
+                errorLabel.Text = "Поле пустое";
+
+            }
+            else if (textBox.Text.Contains(" "))
+            {
+                isValid = false;
+                invalidTextBoxes.Add(textBox);
+                errorLabel.Visible = true;
+                errorLabel.Text = "Поле содержит пробелы";
+            }
+            // Check for special characters in name and surname
+
+            else if (fieldName == "Pwd" && textBox.Text != NewPwd_Newpwdretry_textbox.Text)
+            {
+                isValid = false;
+                invalidTextBoxes.Add(textBox);
+                invalidTextBoxes.Add(NewPwd_Newpwdretry_textbox);
+                errorLabel.Visible = true;
+                errorLabel.Text = "Пароли не совпадают";
+            }
+            else
+            {
+                textBox.BackColor = SystemColors.Window;
+                errorLabel.Visible = false;
+
+            }
+
+            return isValid;
+        }
         private void Set_Placeholder(TextBox textBox, string placeholder)
         {
             if (textBox.Text == placeholder)
@@ -29,9 +69,11 @@ namespace MyWoggi
                 textBox.ForeColor = Color.Gray;
             }
         }
-        public NewPwd()
+        public NewPwd(string userEmail)
         {
             InitializeComponent();
+            this.userEmail = userEmail;
+
         }
 
         private void NewPwd_Load(object sender, EventArgs e)
@@ -76,9 +118,36 @@ namespace MyWoggi
 
         private void Restore_Pwd_Button(object sender, EventArgs e)
         {
-            Authorization authorization = new Authorization();
-            authorization.Show();
-            this.Hide();
+            List<TextBox> invalidTextBoxes = new List<TextBox>();
+            var userNewRestorePwd = NewPwd_Newpwd_textbox;
+            var userNewRestorePwdRetry = NewPwd_Newpwdretry_textbox;
+
+            bool allValid = Validate_TextBox(userNewRestorePwd, "Pwd", pwdError_label, invalidTextBoxes, newpwd_placeholder);
+            allValid &= Validate_TextBox(userNewRestorePwdRetry, "Pwdretry", pwdretryError_label, invalidTextBoxes, newpwdretry_placeholder);
+
+            if (!allValid)
+            {
+                foreach (TextBox invalidTextBox in invalidTextBoxes)
+                {
+                    invalidTextBox.BackColor = ColorTranslator.FromHtml("#E89696");
+                }
+                return;
+            }
+
+
+            bool isrestored = MyWoggi.updatePwd(userNewRestorePwd.Text, userEmail);
+            if (isrestored)
+            {
+                Authorization authorization = new Authorization();
+                authorization.Show();
+                this.Hide();
+            }
+            else
+            {
+                recoverypwdError_label.Visible = true;
+                recoverypwdError_label.Text = "Произошла ошибка восстановления пароля";
+                NewPwd_Newpwdretry_textbox.BackColor = ColorTranslator.FromHtml("#E89696");
+            }
         }
 
         private void Enter_Account_Button(object sender, EventArgs e)
