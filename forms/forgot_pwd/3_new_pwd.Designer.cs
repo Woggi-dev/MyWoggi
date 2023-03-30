@@ -35,18 +35,19 @@ namespace MyWoggi
             this.NewPwd_Hidepwdretry_picturebox = new System.Windows.Forms.PictureBox();
             this.NewPwd_Showpwd_picturebox = new System.Windows.Forms.PictureBox();
             this.NewPwd_Hidepwd_picturebox = new System.Windows.Forms.PictureBox();
-            this.NewPwd_Newpwdretry_label = new System.Windows.Forms.Label();
             this.NewPwd_Newpwdretry_picturebox = new System.Windows.Forms.PictureBox();
             this.NewPwd_Newpwdretry_textbox = new System.Windows.Forms.TextBox();
             this.NewPwd_Caption_label = new System.Windows.Forms.Label();
             this.NewPwd_Login_button = new System.Windows.Forms.Button();
             this.NewPwd_Restorepwd_button = new System.Windows.Forms.Button();
-            this.NewPwd_Newpwd_label = new System.Windows.Forms.Label();
             this.NewPwd_Newpwd_picturebox = new System.Windows.Forms.PictureBox();
             this.NewPwd_Newpwd_textbox = new System.Windows.Forms.TextBox();
             this.Login_Button = new System.Windows.Forms.Button();
             this.Register_Button = new System.Windows.Forms.Button();
             this.NewPwd_Title_label = new System.Windows.Forms.Label();
+            this.recoverypwdError_label = new System.Windows.Forms.Label();
+            this.pwdError_label = new System.Windows.Forms.Label();
+            this.pwdretryError_label = new System.Windows.Forms.Label();
             this.NewPwd_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NewPwd_Showpwdretry_picturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NewPwd_Hidepwdretry_picturebox)).BeginInit();
@@ -61,17 +62,18 @@ namespace MyWoggi
             this.NewPwd_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(50)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.NewPwd_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.NewPwd_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NewPwd_panel.Controls.Add(this.pwdretryError_label);
+            this.NewPwd_panel.Controls.Add(this.pwdError_label);
+            this.NewPwd_panel.Controls.Add(this.recoverypwdError_label);
             this.NewPwd_panel.Controls.Add(this.NewPwd_Showpwdretry_picturebox);
             this.NewPwd_panel.Controls.Add(this.NewPwd_Hidepwdretry_picturebox);
             this.NewPwd_panel.Controls.Add(this.NewPwd_Showpwd_picturebox);
             this.NewPwd_panel.Controls.Add(this.NewPwd_Hidepwd_picturebox);
-            this.NewPwd_panel.Controls.Add(this.NewPwd_Newpwdretry_label);
             this.NewPwd_panel.Controls.Add(this.NewPwd_Newpwdretry_picturebox);
             this.NewPwd_panel.Controls.Add(this.NewPwd_Newpwdretry_textbox);
             this.NewPwd_panel.Controls.Add(this.NewPwd_Caption_label);
             this.NewPwd_panel.Controls.Add(this.NewPwd_Login_button);
             this.NewPwd_panel.Controls.Add(this.NewPwd_Restorepwd_button);
-            this.NewPwd_panel.Controls.Add(this.NewPwd_Newpwd_label);
             this.NewPwd_panel.Controls.Add(this.NewPwd_Newpwd_picturebox);
             this.NewPwd_panel.Controls.Add(this.NewPwd_Newpwd_textbox);
             this.NewPwd_panel.Controls.Add(this.Login_Button);
@@ -81,7 +83,7 @@ namespace MyWoggi
             this.NewPwd_panel.ForeColor = System.Drawing.Color.White;
             this.NewPwd_panel.Location = new System.Drawing.Point(101, 149);
             this.NewPwd_panel.Name = "NewPwd_panel";
-            this.NewPwd_panel.Size = new System.Drawing.Size(544, 435);
+            this.NewPwd_panel.Size = new System.Drawing.Size(544, 459);
             this.NewPwd_panel.TabIndex = 4;
             // 
             // NewPwd_Showpwdretry_picturebox
@@ -134,17 +136,6 @@ namespace MyWoggi
             this.NewPwd_Hidepwd_picturebox.TabStop = false;
             this.NewPwd_Hidepwd_picturebox.Click += new System.EventHandler(this.NewPwd_Hidepwd_picturebox_Click);
             // 
-            // NewPwd_Newpwdretry_label
-            // 
-            this.NewPwd_Newpwdretry_label.AutoSize = true;
-            this.NewPwd_Newpwdretry_label.BackColor = System.Drawing.Color.Transparent;
-            this.NewPwd_Newpwdretry_label.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NewPwd_Newpwdretry_label.Location = new System.Drawing.Point(73, 208);
-            this.NewPwd_Newpwdretry_label.Name = "NewPwd_Newpwdretry_label";
-            this.NewPwd_Newpwdretry_label.Size = new System.Drawing.Size(351, 34);
-            this.NewPwd_Newpwdretry_label.TabIndex = 52;
-            this.NewPwd_Newpwdretry_label.Text = "Новый пароль повторно";
-            // 
             // NewPwd_Newpwdretry_picturebox
             // 
             this.NewPwd_Newpwdretry_picturebox.BackColor = System.Drawing.Color.Transparent;
@@ -189,7 +180,7 @@ namespace MyWoggi
             this.NewPwd_Login_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NewPwd_Login_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NewPwd_Login_button.ForeColor = System.Drawing.Color.White;
-            this.NewPwd_Login_button.Location = new System.Drawing.Point(133, 369);
+            this.NewPwd_Login_button.Location = new System.Drawing.Point(143, 412);
             this.NewPwd_Login_button.Name = "NewPwd_Login_button";
             this.NewPwd_Login_button.Size = new System.Drawing.Size(267, 37);
             this.NewPwd_Login_button.TabIndex = 48;
@@ -207,24 +198,13 @@ namespace MyWoggi
             this.NewPwd_Restorepwd_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NewPwd_Restorepwd_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NewPwd_Restorepwd_button.ForeColor = System.Drawing.Color.White;
-            this.NewPwd_Restorepwd_button.Location = new System.Drawing.Point(32, 306);
+            this.NewPwd_Restorepwd_button.Location = new System.Drawing.Point(32, 349);
             this.NewPwd_Restorepwd_button.Name = "NewPwd_Restorepwd_button";
             this.NewPwd_Restorepwd_button.Size = new System.Drawing.Size(458, 57);
             this.NewPwd_Restorepwd_button.TabIndex = 47;
             this.NewPwd_Restorepwd_button.Text = "Восстановить пароль";
             this.NewPwd_Restorepwd_button.UseVisualStyleBackColor = false;
             this.NewPwd_Restorepwd_button.Click += new System.EventHandler(this.Restore_Pwd_Button);
-            // 
-            // NewPwd_Newpwd_label
-            // 
-            this.NewPwd_Newpwd_label.AutoSize = true;
-            this.NewPwd_Newpwd_label.BackColor = System.Drawing.Color.Transparent;
-            this.NewPwd_Newpwd_label.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NewPwd_Newpwd_label.Location = new System.Drawing.Point(73, 123);
-            this.NewPwd_Newpwd_label.Name = "NewPwd_Newpwd_label";
-            this.NewPwd_Newpwd_label.Size = new System.Drawing.Size(207, 34);
-            this.NewPwd_Newpwd_label.TabIndex = 45;
-            this.NewPwd_Newpwd_label.Text = "Новый пароль";
             // 
             // NewPwd_Newpwd_picturebox
             // 
@@ -293,6 +273,47 @@ namespace MyWoggi
             this.NewPwd_Title_label.Text = "Восстановление пароля";
             this.NewPwd_Title_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // recoverypwdError_label
+            // 
+            this.recoverypwdError_label.BackColor = System.Drawing.Color.Transparent;
+            this.recoverypwdError_label.Font = new System.Drawing.Font("Consolas", 14.25F);
+            this.recoverypwdError_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(107)))), ((int)(((byte)(93)))));
+            this.recoverypwdError_label.Location = new System.Drawing.Point(-1, 320);
+            this.recoverypwdError_label.Name = "recoverypwdError_label";
+            this.recoverypwdError_label.Size = new System.Drawing.Size(544, 26);
+            this.recoverypwdError_label.TabIndex = 64;
+            this.recoverypwdError_label.Text = "label";
+            this.recoverypwdError_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.recoverypwdError_label.Visible = false;
+            // 
+            // pwdError_label
+            // 
+            this.pwdError_label.AutoSize = true;
+            this.pwdError_label.BackColor = System.Drawing.Color.Transparent;
+            this.pwdError_label.Font = new System.Drawing.Font("Consolas", 14.25F);
+            this.pwdError_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(107)))), ((int)(((byte)(93)))));
+            this.pwdError_label.Location = new System.Drawing.Point(75, 198);
+            this.pwdError_label.Name = "pwdError_label";
+            this.pwdError_label.Size = new System.Drawing.Size(60, 22);
+            this.pwdError_label.TabIndex = 65;
+            this.pwdError_label.Text = "label";
+            this.pwdError_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.pwdError_label.Visible = false;
+            // 
+            // pwdretryError_label
+            // 
+            this.pwdretryError_label.AutoSize = true;
+            this.pwdretryError_label.BackColor = System.Drawing.Color.Transparent;
+            this.pwdretryError_label.Font = new System.Drawing.Font("Consolas", 14.25F);
+            this.pwdretryError_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(107)))), ((int)(((byte)(93)))));
+            this.pwdretryError_label.Location = new System.Drawing.Point(75, 283);
+            this.pwdretryError_label.Name = "pwdretryError_label";
+            this.pwdretryError_label.Size = new System.Drawing.Size(60, 22);
+            this.pwdretryError_label.TabIndex = 66;
+            this.pwdretryError_label.Text = "label";
+            this.pwdretryError_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.pwdretryError_label.Visible = false;
+            // 
             // NewPwd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -323,13 +344,11 @@ namespace MyWoggi
         #endregion
 
         private System.Windows.Forms.Panel NewPwd_panel;
-        private System.Windows.Forms.Label NewPwd_Newpwdretry_label;
         private System.Windows.Forms.PictureBox NewPwd_Newpwdretry_picturebox;
         private System.Windows.Forms.TextBox NewPwd_Newpwdretry_textbox;
         private System.Windows.Forms.Label NewPwd_Caption_label;
         private System.Windows.Forms.Button NewPwd_Login_button;
         private System.Windows.Forms.Button NewPwd_Restorepwd_button;
-        private System.Windows.Forms.Label NewPwd_Newpwd_label;
         private System.Windows.Forms.PictureBox NewPwd_Newpwd_picturebox;
         private System.Windows.Forms.TextBox NewPwd_Newpwd_textbox;
         private System.Windows.Forms.Button Login_Button;
@@ -339,5 +358,8 @@ namespace MyWoggi
         private System.Windows.Forms.PictureBox NewPwd_Showpwdretry_picturebox;
         private System.Windows.Forms.PictureBox NewPwd_Hidepwdretry_picturebox;
         private System.Windows.Forms.PictureBox NewPwd_Showpwd_picturebox;
+        private System.Windows.Forms.Label recoverypwdError_label;
+        private System.Windows.Forms.Label pwdretryError_label;
+        private System.Windows.Forms.Label pwdError_label;
     }
 }

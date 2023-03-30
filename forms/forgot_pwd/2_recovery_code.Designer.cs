@@ -40,6 +40,7 @@ namespace MyWoggi
             this.Login_Button = new System.Windows.Forms.Button();
             this.Register_Button = new System.Windows.Forms.Button();
             this.RecoveryCode_Title_label = new System.Windows.Forms.Label();
+            this.recoverycodeError_label = new System.Windows.Forms.Label();
             this.RecoveryCode_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RecoveryCode_Recoverycode_picturebox)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +50,7 @@ namespace MyWoggi
             this.RecoveryCode_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(50)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.RecoveryCode_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.RecoveryCode_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.RecoveryCode_Panel.Controls.Add(this.recoverycodeError_label);
             this.RecoveryCode_Panel.Controls.Add(this.RecoveryCode_Caption_label);
             this.RecoveryCode_Panel.Controls.Add(this.RecoveryCode_Login_button);
             this.RecoveryCode_Panel.Controls.Add(this.RecoveryCode_Entercode_button);
@@ -62,7 +64,7 @@ namespace MyWoggi
             this.RecoveryCode_Panel.ForeColor = System.Drawing.Color.White;
             this.RecoveryCode_Panel.Location = new System.Drawing.Point(99, 203);
             this.RecoveryCode_Panel.Name = "RecoveryCode_Panel";
-            this.RecoveryCode_Panel.Size = new System.Drawing.Size(529, 336);
+            this.RecoveryCode_Panel.Size = new System.Drawing.Size(529, 360);
             this.RecoveryCode_Panel.TabIndex = 3;
             // 
             // RecoveryCode_Caption_label
@@ -74,8 +76,8 @@ namespace MyWoggi
             this.RecoveryCode_Caption_label.Name = "RecoveryCode_Caption_label";
             this.RecoveryCode_Caption_label.Size = new System.Drawing.Size(510, 48);
             this.RecoveryCode_Caption_label.TabIndex = 49;
-            this.RecoveryCode_Caption_label.Text = "Введите код восстановления, пришедший вам на почту После этого вы сможете указать" +
-    " новый пароль";
+            this.RecoveryCode_Caption_label.Text = "Введите код восстановления, пришедший вам на почту Код может отправиться в спам, " +
+    "будьте внимательнее!";
             this.RecoveryCode_Caption_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // RecoveryCode_Login_button
@@ -87,9 +89,9 @@ namespace MyWoggi
             this.RecoveryCode_Login_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RecoveryCode_Login_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.RecoveryCode_Login_button.ForeColor = System.Drawing.Color.White;
-            this.RecoveryCode_Login_button.Location = new System.Drawing.Point(127, 294);
+            this.RecoveryCode_Login_button.Location = new System.Drawing.Point(127, 306);
             this.RecoveryCode_Login_button.Name = "RecoveryCode_Login_button";
-            this.RecoveryCode_Login_button.Size = new System.Drawing.Size(266, 37);
+            this.RecoveryCode_Login_button.Size = new System.Drawing.Size(266, 41);
             this.RecoveryCode_Login_button.TabIndex = 48;
             this.RecoveryCode_Login_button.Text = "Войти в личный кабинет";
             this.RecoveryCode_Login_button.UseVisualStyleBackColor = false;
@@ -105,9 +107,9 @@ namespace MyWoggi
             this.RecoveryCode_Entercode_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RecoveryCode_Entercode_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.RecoveryCode_Entercode_button.ForeColor = System.Drawing.Color.White;
-            this.RecoveryCode_Entercode_button.Location = new System.Drawing.Point(7, 231);
+            this.RecoveryCode_Entercode_button.Location = new System.Drawing.Point(7, 243);
             this.RecoveryCode_Entercode_button.Name = "RecoveryCode_Entercode_button";
-            this.RecoveryCode_Entercode_button.Size = new System.Drawing.Size(510, 57);
+            this.RecoveryCode_Entercode_button.Size = new System.Drawing.Size(510, 61);
             this.RecoveryCode_Entercode_button.TabIndex = 47;
             this.RecoveryCode_Entercode_button.Text = "Ввести код";
             this.RecoveryCode_Entercode_button.UseVisualStyleBackColor = false;
@@ -191,6 +193,19 @@ namespace MyWoggi
             this.RecoveryCode_Title_label.Text = "Восстановление пароля";
             this.RecoveryCode_Title_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // recoverycodeError_label
+            // 
+            this.recoverycodeError_label.BackColor = System.Drawing.Color.Transparent;
+            this.recoverycodeError_label.Font = new System.Drawing.Font("Consolas", 14.25F);
+            this.recoverycodeError_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(107)))), ((int)(((byte)(93)))));
+            this.recoverycodeError_label.Location = new System.Drawing.Point(-1, 214);
+            this.recoverycodeError_label.Name = "recoverycodeError_label";
+            this.recoverycodeError_label.Size = new System.Drawing.Size(529, 26);
+            this.recoverycodeError_label.TabIndex = 63;
+            this.recoverycodeError_label.Text = "label";
+            this.recoverycodeError_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.recoverycodeError_label.Visible = false;
+            // 
             // RecoveryCode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,5 +240,6 @@ namespace MyWoggi
         private System.Windows.Forms.Button Login_Button;
         private System.Windows.Forms.Button Register_Button;
         private System.Windows.Forms.Label RecoveryCode_Title_label;
+        private System.Windows.Forms.Label recoverycodeError_label;
     }
 }
