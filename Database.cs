@@ -24,15 +24,10 @@ namespace MyWoggi
             }
         }
 
-        // Функция проверки "Есть ли такой пользователь в бд"
-        public bool IsSuchUser(string loginUser, string passwordUser)
+        public bool SelectData(string querystring)
         {
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             DataTable table = new DataTable();
-
-            string querystring = $"select id_user, login_user, password_user from Userdata " +
-                $"where login_user = '{loginUser}' and password_user = '{passwordUser}'";
-
             MySqlCommand command = new MySqlCommand(querystring, GetConnection());
 
             adapter.SelectCommand = command;
@@ -46,72 +41,16 @@ namespace MyWoggi
                 return false;
         }
 
-        // Функция проверки "Есть ли такая почта в бд"
-        public bool IsSuchEmail(string emailUser)
+        public bool InsertUpdateData(string querystring)
         {
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-            DataTable table = new DataTable();
-
-            string checkemail_querystring = $"select id_user, email_user from Userdata where email_user = '{emailUser}'";
-
-            MySqlCommand command = new MySqlCommand(checkemail_querystring, GetConnection());
-
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
-
-            if (table.Rows.Count == 1)
-            {
-                return true;
-            }
-            else
-                return false;
-        }
-
-        // Функция регистрации и проверки "Есть ли уже такой зарегистрированный пользователь"
-        public int RegisterUser(string newnameUser, string newsurnameUser, string newloginUser, string newemailUser, string newpwdUser)
-        {
-            string checkuser_querystring = $"select id_user, login_user, email_user from Userdata " +
-                $"where login_user = '{newloginUser}' or email_user = '{newemailUser}'";
-            
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-            DataTable table = new DataTable();
-            MySqlCommand checkuser_command = new MySqlCommand(checkuser_querystring, GetConnection());
-            
-            adapter.SelectCommand = checkuser_command;
-            adapter.Fill(table);
-
-            if (table.Rows.Count > 0)
-                return 0;
-
-            string register_querystring = $"insert into Userdata(login_user, name_user, surname_user, email_user, password_user) " +
-                $"VALUES('{newloginUser}', '{newnameUser}', '{newsurnameUser}', '{newemailUser}', '{newpwdUser}')";
-            
-            MySqlCommand register_command = new MySqlCommand(register_querystring, GetConnection());
+            MySqlCommand command = new MySqlCommand(querystring, GetConnection());
             OpenConnection();
 
-            if (register_command.ExecuteNonQuery() == 1)
-            {
-                CloseConnection();
-                return 1;
-
-            }
-            else
-            {
-                CloseConnection();
-                return -1;
-            }
-        }
-
-        // Функция восстановления пароля
-        public bool UpdatePwd(string NewPwdRestored, string userEmail)
-        {
-            string updatepwd_querystring = $" update Userdata set password_user = ( '{NewPwdRestored}') where email_user = '{userEmail}'";
-            MySqlCommand command = new MySqlCommand(updatepwd_querystring, GetConnection());// связь таблицы и запроса
-            OpenConnection();
-            if (command.ExecuteNonQuery() == 1)// при успешном вводе
+            if (command.ExecuteNonQuery() == 1)
             {
                 CloseConnection();
                 return true;
+
             }
             else
             {

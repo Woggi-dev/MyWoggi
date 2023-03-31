@@ -292,21 +292,27 @@ namespace MyWoggi
                 return;
             }
 
-            // Регистрация нового пользователя в системе
-            int isregistered = MyWoggi.RegisterUser(newNameUser.Text, newSurnameUser.Text, newLoginUser.Text, newEmailUser.Text, newPwdUser.Text);
+
+            string registerUserQueryString = $"insert into Userdata(login_user, name_user, surname_user, email_user, password_user) " +
+            $"VALUES('{newLoginUser.Text}', '{newNameUser.Text}', '{newSurnameUser.Text}', '{newEmailUser.Text}', '{newPwdUser.Text}')";
+            
+            string checkUserQueryString = $"select id_user, login_user, email_user from Userdata where login_user = '{newLoginUser.Text}' or email_user = '{newEmailUser.Text}'";
+            
+            bool isRegistered = MyWoggi.InsertUpdateData(registerUserQueryString);
+            bool isSuchUser = MyWoggi.SelectData(checkUserQueryString);
 
             // Если пользователь уже зарегистрирован, то вывести сообщение и выйти из метода
-            if (isregistered == 0)
+            if (isSuchUser)
             {
                 registrationError_label.Visible = true;
                 registrationError_label.Text = "Пользователь с такими данными уже существует";
                 return;
             }
             // Если регистрация прошла успешно, то показать форму регистрации и скрыть текущую форму
-            else if (isregistered == 1)
+            else if (isRegistered)
             {
-                Registration registration = new Registration();
-                registration.Show();
+                MessageBox.Show("Регистрация прошла успешно...", "Успех", MessageBoxButtons.OK);
+                authorization.Show();
                 this.Hide();
             }
             // Если произошла ошибка регистрации, то вывести сообщение об ошибке

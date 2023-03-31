@@ -112,9 +112,11 @@ namespace MyWoggi
         private void ReceiveCode_Button(object sender, EventArgs e)
         {
             var userEmail = email_textbox;
+            string checkEmailQueryString = $"select id_user, email_user from Userdata " +
+                $"where email_user = '{userEmail.Text}'";
 
             // Проверяет, есть ли такой Email в базе данных
-            bool isSuchEmail = MyWoggi.IsSuchEmail(userEmail.Text);
+            bool isSuchEmail = MyWoggi.SelectData(checkEmailQueryString);
 
             // Если Email есть в базе данных, отправляет код восстановления и скрывает форму восстановления пароля
             if (isSuchEmail)

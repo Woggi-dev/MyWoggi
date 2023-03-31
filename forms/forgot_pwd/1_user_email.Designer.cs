@@ -60,9 +60,9 @@ namespace MyWoggi
             this.panel_panel.Controls.Add(this.title_label);
             this.panel_panel.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel_panel.ForeColor = System.Drawing.Color.White;
-            this.panel_panel.Location = new System.Drawing.Point(124, 191);
+            this.panel_panel.Location = new System.Drawing.Point(125, 199);
             this.panel_panel.Name = "panel_panel";
-            this.panel_panel.Size = new System.Drawing.Size(483, 335);
+            this.panel_panel.Size = new System.Drawing.Size(483, 320);
             this.panel_panel.TabIndex = 2;
             // 
             // emailError_label
@@ -70,7 +70,7 @@ namespace MyWoggi
             this.emailError_label.BackColor = System.Drawing.Color.Transparent;
             this.emailError_label.Font = new System.Drawing.Font("Consolas", 13.25F);
             this.emailError_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(107)))), ((int)(((byte)(93)))));
-            this.emailError_label.Location = new System.Drawing.Point(1, 180);
+            this.emailError_label.Location = new System.Drawing.Point(-2, 176);
             this.emailError_label.Name = "emailError_label";
             this.emailError_label.Size = new System.Drawing.Size(483, 26);
             this.emailError_label.TabIndex = 63;
@@ -83,7 +83,7 @@ namespace MyWoggi
             this.caption_label.BackColor = System.Drawing.Color.Transparent;
             this.caption_label.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.caption_label.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.caption_label.Location = new System.Drawing.Point(8, 69);
+            this.caption_label.Location = new System.Drawing.Point(5, 65);
             this.caption_label.Name = "caption_label";
             this.caption_label.Size = new System.Drawing.Size(461, 48);
             this.caption_label.TabIndex = 49;
@@ -100,7 +100,7 @@ namespace MyWoggi
             this.enter_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.enter_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.enter_button.ForeColor = System.Drawing.Color.White;
-            this.enter_button.Location = new System.Drawing.Point(101, 272);
+            this.enter_button.Location = new System.Drawing.Point(98, 268);
             this.enter_button.Name = "enter_button";
             this.enter_button.Size = new System.Drawing.Size(269, 37);
             this.enter_button.TabIndex = 48;
@@ -118,7 +118,7 @@ namespace MyWoggi
             this.getCode_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.getCode_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.getCode_button.ForeColor = System.Drawing.Color.White;
-            this.getCode_button.Location = new System.Drawing.Point(12, 209);
+            this.getCode_button.Location = new System.Drawing.Point(9, 205);
             this.getCode_button.Name = "getCode_button";
             this.getCode_button.Size = new System.Drawing.Size(459, 57);
             this.getCode_button.TabIndex = 47;
@@ -139,7 +139,7 @@ namespace MyWoggi
             // email_textbox
             // 
             this.email_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.email_textbox.Location = new System.Drawing.Point(61, 134);
+            this.email_textbox.Location = new System.Drawing.Point(58, 130);
             this.email_textbox.MaxLength = 320;
             this.email_textbox.Multiline = true;
             this.email_textbox.Name = "email_textbox";
@@ -186,7 +186,7 @@ namespace MyWoggi
             this.title_label.BackColor = System.Drawing.Color.Transparent;
             this.title_label.Font = new System.Drawing.Font("Consolas", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.title_label.ForeColor = System.Drawing.Color.White;
-            this.title_label.Location = new System.Drawing.Point(14, 14);
+            this.title_label.Location = new System.Drawing.Point(11, 10);
             this.title_label.Name = "title_label";
             this.title_label.Size = new System.Drawing.Size(457, 43);
             this.title_label.TabIndex = 0;

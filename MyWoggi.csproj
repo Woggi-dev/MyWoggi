@@ -147,6 +147,9 @@
     <EmbeddedResource Include="forms\forgot_pwd\3_new_pwd.resx">
       <DependentUpon>3_new_pwd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\registration.resx">
       <DependentUpon>registration.cs</DependentUpon>
     </EmbeddedResource>

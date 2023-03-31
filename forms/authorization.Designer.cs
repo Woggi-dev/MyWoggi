@@ -239,11 +239,11 @@ namespace MyWoggi
             this.title_label.AutoSize = true;
             this.title_label.BackColor = System.Drawing.Color.Transparent;
             this.title_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.title_label.Font = new System.Drawing.Font("Consolas", 39.75F);
+            this.title_label.Font = new System.Drawing.Font("Consolas", 45F);
             this.title_label.ForeColor = System.Drawing.Color.White;
-            this.title_label.Location = new System.Drawing.Point(244, 83);
+            this.title_label.Location = new System.Drawing.Point(230, 68);
             this.title_label.Name = "title_label";
-            this.title_label.Size = new System.Drawing.Size(230, 62);
+            this.title_label.Size = new System.Drawing.Size(261, 70);
             this.title_label.TabIndex = 1;
             this.title_label.Text = "MyWoggi";
             // 
