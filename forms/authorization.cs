@@ -134,11 +134,14 @@ namespace MyWoggi
             // Получаем данные из текстовых полей
             var loginUser = login_textbox;
             var pwdUser = pwd_textbox;
+            
+            string checkUserQueryString = $"select id_user, login_user, password_user from Userdata " +
+    $"where login_user = '{loginUser.Text}' and password_user = '{pwdUser.Text}'";
 
             // Проверяем, есть ли такой пользователь в базе данных
-            bool isSuchUser = MyWoggi.IsSuchUser(loginUser.Text, pwdUser.Text);
+            bool isLogged = MyWoggi.SelectData(checkUserQueryString);
 
-            if (isSuchUser)
+            if (isLogged)
             {
                 // Если пользователь найден, открываем главное окно
                 Main main = new Main();

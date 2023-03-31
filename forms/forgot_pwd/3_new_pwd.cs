@@ -18,12 +18,6 @@ namespace MyWoggi
         // Переменная для хранения адреса электронной почты пользователя
         private string userEmail;
 
-        // Метод для проверки корректности заполнения текстовых полей
-        // textBox - проверяемое текстовое поле
-        // fieldName - имя проверяемого поля
-        // errorLabel - метка, которая отображается при возникновении ошибки
-        // invalidTextBoxes - список текстовых полей, содержащих ошибки
-        // placeHolder - текстовое значение, которое является заполнителем поля ввода
         private bool ValidateTextbox(TextBox textBox, string fieldName, Label errorLabel, List<TextBox> invalidTextBoxes, string placeHolder)
         {
             bool isValid = true;
@@ -135,12 +129,14 @@ namespace MyWoggi
                 return;
             }
 
+            string updatePwdQueryString = $"update Userdata set password_user = ( '{userNewRestorePwd.Text}') where email_user = '{userEmail}'";
             // Восстановление пароля
-            bool isrestored = MyWoggi.UpdatePwd(userNewRestorePwd.Text, userEmail);
+            bool isRestored = MyWoggi.InsertUpdateData(updatePwdQueryString);
             
             // Когда восстановление пароля - успешно
-            if (isrestored)
+            if (isRestored)
             {
+                MessageBox.Show("Пароль был успешно восстановлен...", "Успех", MessageBoxButtons.OK);
                 Authorization authorization = new Authorization();
                 authorization.Show();
                 this.Hide();
