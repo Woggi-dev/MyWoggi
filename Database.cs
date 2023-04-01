@@ -18,12 +18,13 @@ namespace MyWoggi
         public void OpenConnection()
         {
             // Если состояние подключения - закрытое
-            if (sqlConnection.State == System.Data.ConnectionState.Closed)
+            if (sqlConnection.State == ConnectionState.Closed)
             {
                 sqlConnection.Open();
             }
         }
 
+        // Выбрать данные из базы данных
         public bool SelectData(string querystring)
         {
             MySqlDataAdapter adapter = new MySqlDataAdapter();
@@ -41,6 +42,7 @@ namespace MyWoggi
                 return false;
         }
 
+        // Вставить или обновить данные в базе данных
         public bool InsertUpdateData(string querystring)
         {
             MySqlCommand command = new MySqlCommand(querystring, GetConnection());

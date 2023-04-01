@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 
@@ -8,8 +9,13 @@ namespace MyWoggi
 {
     public partial class Registration : Form
     {
+        // Создание объекта авторизации
         Authorization authorization = new Authorization();
+
+        // Создание объекта базы данных
         Database MyWoggi = new Database();
+
+        // Создание строковых переменных для заполнения полей ввода
         string namePlaceholder = "Ваше имя";
         string surnamePlaceholder = "Ваша фамилия";
         string loginPlaceholder = "Ваш логин";
@@ -17,88 +23,101 @@ namespace MyWoggi
         string pwdPlaceholder = "Ваш пароль";
         string pwdRetryPlaceholder = "Ваш пароль повторно";
 
-        // Проверка текстовых полей на валидность
-        private bool ValidateTextbox(TextBox textBox, string fieldName, Label errorLabel, List<TextBox> invalidTextBoxes, string placeHolder)
+        // Метод для проверки длины текстового поля
+        public bool ValidateTextboxLength(TextBox textBox, Label errorLabel, List<TextBox> invalidTextBoxes, string placeHolder)
         {
-            bool isValid = true; // значение валидность по умолчанию
-            
-            // Когда текстовое поле пустое или содержит наполнитель
-            if (string.IsNullOrEmpty(textBox.Text) || textBox.Text == placeHolder) 
+            if (textBox.Text.Length < 3 || textBox.Text == placeHolder)
             {
-                isValid = false; // значение невалидное
-                invalidTextBoxes.Add(textBox); // добавить текстовое поле в невалидный список
-                errorLabel.Visible = true; // показать надпись ошибки
-                errorLabel.Text = "Поле пустое"; // показать текст ошибки
+                invalidTextBoxes.Add(textBox);
+                errorLabel.Visible = true;
+                errorLabel.Text = $"Поле содержит < 3 символов";
+                return false;
+            }
+            return true;
+        }
 
-            }
-            // Когда текстовое поле содержит пробел
-            else if (textBox.Text.Contains(" "))
+        // Метод для проверки наличия специальных символов в текстовом поле
+        public void ValidateTextboxSymbols(TextBox textBox, string fieldName, Label errorLabel, List<TextBox> invalidTextBoxes)
+        {
+            if (Regex.IsMatch(textBox.Text, @"[!@#$%^&*()]"))
             {
-                isValid = false;
                 invalidTextBoxes.Add(textBox);
                 errorLabel.Visible = true;
-                errorLabel.Text = "Поле содержит пробелы";
+                errorLabel.Text = $"{fieldName} содержит спец символы";
             }
-            // Когда текстовое поле "Имя" или "Фамилия" содержат цифры
-            else if ((fieldName == "Name" || fieldName == "Surname") && Regex.IsMatch(textBox.Text, @"\d"))
-            {
-                isValid = false;
-                invalidTextBoxes.Add(textBox);
-                errorLabel.Visible = true;
-                if (fieldName == "Name")
-                    errorLabel.Text = "Имя содержит цифры";
-                else
-                    errorLabel.Text = "Фамилия содержит цифры";
-            }
-            // Когда текстовое поле "Имя" или "Фамилия" содержат спец символы
-            else if ((fieldName == "Name" || fieldName == "Surname") && !Regex.IsMatch(textBox.Text, "^[a-zA-Zа-яА-Я]+$"))
-            {
-                isValid = false;
-                invalidTextBoxes.Add(textBox);
-                errorLabel.Visible = true;
-                if (fieldName == "Name")
-                    errorLabel.Text = "Имя содержит спец символы";
-                else
-                    errorLabel.Text = "Фамилия содержит спец символы";
-            }
+        }
 
-            // Когда текстовое поле "Логин" содержит спец символы
-            else if (fieldName == "Login" && !Regex.IsMatch(textBox.Text, "^[a-zA-Z0-9_]+$"))
+        // Метод для проверки наличия цифр в текстовом поле
+        public void ValidateTextboxDigits(TextBox textBox, string fieldName, Label errorLabel, List<TextBox> invalidTextBoxes)
+        {
+            if (Regex.IsMatch(textBox.Text, @"\d"))
             {
-                isValid = false;
                 invalidTextBoxes.Add(textBox);
                 errorLabel.Visible = true;
-                errorLabel.Text = "Логин содержит спец символы";
+                errorLabel.Text = $"{fieldName} содержит цифры";
             }
+        }
 
-            // Когда текстовое поле "Почта" имеет невалидный формат
-            else if (fieldName == "Email" && !Regex.IsMatch(textBox.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$") && (!textBox.Text.EndsWith("@gmail.com") && !textBox.Text.EndsWith("@mail.ru") && !textBox.Text.EndsWith("@inbox.ru") && !textBox.Text.EndsWith("@yandex.ru")))
+        // Метод для проверки правильности ввода почты
+        private void ValidateTextboxEmail(TextBox email, Label errorLabel, List<TextBox> invalidTextBoxes)
+        {
+            bool isSuchDomain = !Regex.IsMatch(email.Text, @"\b(gmail.com|mail.ru|inbox.ru|yandex.ru)$");
+            if (isSuchDomain)
             {
-                isValid = false;
-                invalidTextBoxes.Add(textBox);
+                invalidTextBoxes.Add(email);
                 errorLabel.Visible = true;
-                errorLabel.Text = "Неверно введена почта";
+                errorLabel.Text = $"Неверно введена почта";
             }
-            
-            // Когда текстовое поле "Пароль" не равно текстовому полю "Повторите пароль"
-            else if (fieldName == "Pwd" && textBox.Text != pwdretry_textbox.Text)
-            {
-                isValid = false;
-                invalidTextBoxes.Add(textBox);
-                invalidTextBoxes.Add(pwdretry_textbox);
-                errorLabel.Visible = true;
-                errorLabel.Text = "Пароли не совпадают";
-            }
-            // Иначе скрыть надписи ошибки и вернуть нормальное состояние текстовых полей
-            else
-            {
-                textBox.BackColor = SystemColors.Window;
-                errorLabel.Visible = false;
-                pwdretryError_label.Visible = false;
+        }
 
-            }
+        // Метод для проверки соответствия введенных паролей
+        public void ValidateTextboxPwd(TextBox pwd, TextBox pwdRetry, Label pwdErrorLabel, Label pwdRetryErrorLabel, List<TextBox> invalidTextBoxes, string pwdPlaceHolder, string pwdRetryPlaceHolder)
+        {
+            bool pwdLength = ValidateTextboxLength(pwd, pwdErrorLabel, invalidTextBoxes, pwdPlaceHolder);
+            bool pwdRetryLength = ValidateTextboxLength(pwdRetry, pwdRetryErrorLabel, invalidTextBoxes, pwdRetryPlaceHolder);
 
-            return isValid;
+            if ((pwd.Text != pwdRetry.Text) && (pwdLength && pwdRetryLength))
+            {
+                invalidTextBoxes.Add(pwd);
+                pwdErrorLabel.Visible = true;
+                pwdErrorLabel.Text = "Пароли не совпадают";
+                invalidTextBoxes.Add(pwdRetry);
+                pwdRetryErrorLabel.Visible = true;
+                pwdRetryErrorLabel.Text = "Пароли не совпадают";
+            }
+        }
+        // Проверка текстовых полей на валидность
+        private bool ValidateTextbox(TextBox [] textBoxes, string [] fieldNames, Label [] errorLabels, List<TextBox> invalidTextBoxes, string [] placeHolders)
+        {
+            for (int index = 0; index < textBoxes.Length; index++)
+            {
+                if (fieldNames[index] == "Имя" || fieldNames[index] == "Фамилия")
+                {
+                    ValidateTextboxSymbols(textBoxes[index], fieldNames[index], errorLabels[index], invalidTextBoxes);
+                    ValidateTextboxDigits(textBoxes[index], fieldNames[index], errorLabels[index], invalidTextBoxes);
+                }
+                else if (fieldNames[index] == "Логин")
+                {
+                    ValidateTextboxSymbols(textBoxes[index], fieldNames[index], errorLabels[index], invalidTextBoxes);
+                }
+                else if (fieldNames[index] == "Почта")
+                {
+                    ValidateTextboxEmail(textBoxes[index], errorLabels[index], invalidTextBoxes);
+                }
+                ValidateTextboxLength(textBoxes[index], errorLabels[index], invalidTextBoxes, placeHolders[index]);
+
+                if (!invalidTextBoxes.Contains(textBoxes[index]))
+                {
+                    textBoxes[index].BackColor = SystemColors.Window;
+                    errorLabels[index].Visible = false;
+                }
+            }
+            ValidateTextboxPwd(pwd_textbox, pwdretry_textbox, pwdError_label, pwdRetryError_label, invalidTextBoxes, pwdPlaceholder, pwdRetryPlaceholder);    
+
+            if (invalidTextBoxes.Count > 0)
+                return false;
+
+            return true;
         }
         public Registration()
         {
@@ -264,23 +283,15 @@ namespace MyWoggi
         // Обработчик события клика по кнопке "Зарегистрироваться"
         private void Register_button_Click(object sender, EventArgs e)
         {
-            // Создание списка невалидных полей
+            // Хранение данных пользователя в массивах
             List<TextBox> invalidTextBoxes = new List<TextBox>();
-            // Получение значений полей ввода
-            var newNameUser = name_textbox;
-            var newSurnameUser = surname_textbox;
-            var newLoginUser = login_textbox;
-            var newEmailUser = email_textbox;
-            var newPwdUser = pwd_textbox;
-            var newPwdRetryUser = pwdretry_textbox;
+            TextBox[] newDataUser = {name_textbox, surname_textbox, login_textbox, email_textbox, pwd_textbox, pwdretry_textbox };
+            string[] fieldNames = { "Имя", "Фамилия", "Логин", "Почта", "Пароль", "Пароль повторно" };
+            Label[] errorLabels = { nameError_label, surnameError_label, loginError_label, emailError_label, pwdError_label, pwdRetryError_label };
+            string[] placeHolders = { namePlaceholder, surnamePlaceholder, loginPlaceholder, emailPlaceholder, pwdPlaceholder, pwdRetryPlaceholder };
 
             // Проверка валидности каждого поля
-            bool allValid = ValidateTextbox(newNameUser, "Name", nameError_label, invalidTextBoxes, namePlaceholder);
-            allValid &= ValidateTextbox(newSurnameUser, "Surname", surnameError_label, invalidTextBoxes, surnamePlaceholder);
-            allValid &= ValidateTextbox(newLoginUser, "Login", loginError_label, invalidTextBoxes, loginPlaceholder);
-            allValid &= ValidateTextbox(newEmailUser, "Email", emailError_label, invalidTextBoxes, emailPlaceholder);
-            allValid &= ValidateTextbox(newPwdUser, "Pwd", pwdError_label, invalidTextBoxes, pwdPlaceholder);
-            allValid &= ValidateTextbox(newPwdRetryUser, "Pwdretry", pwdretryError_label, invalidTextBoxes, pwdRetryPlaceholder);
+            bool allValid = ValidateTextbox(newDataUser, fieldNames, errorLabels, invalidTextBoxes, placeHolders);
 
             // Если есть невалидные поля, то изменить их цвет на красный и выйти из метода
             if (!allValid)
@@ -292,13 +303,18 @@ namespace MyWoggi
                 return;
             }
 
-
+            // newDataUser[0] - имя
+            // newDataUser[1] - фамилия
+            // newDataUser[2] - почта
+            // newDataUser[3] - пароль
             string registerUserQueryString = $"insert into Userdata(login_user, name_user, surname_user, email_user, password_user) " +
-            $"VALUES('{newLoginUser.Text}', '{newNameUser.Text}', '{newSurnameUser.Text}', '{newEmailUser.Text}', '{newPwdUser.Text}')";
+            $"VALUES('{newDataUser[0].Text}', '{newDataUser[1].Text}', '{newDataUser[2].Text}', '{newDataUser[3].Text}', '{newDataUser[4].Text}')";
             
-            string checkUserQueryString = $"select id_user, login_user, email_user from Userdata where login_user = '{newLoginUser.Text}' or email_user = '{newEmailUser.Text}'";
+            string checkUserQueryString = $"select id_user, login_user, email_user from Userdata where login_user = '{newDataUser[2].Text}' or email_user = '{newDataUser[3].Text}'";
             
+            // Успешная ли регистрация
             bool isRegistered = MyWoggi.InsertUpdateData(registerUserQueryString);
+            // Есть ли такой пользователь в бд
             bool isSuchUser = MyWoggi.SelectData(checkUserQueryString);
 
             // Если пользователь уже зарегистрирован, то вывести сообщение и выйти из метода
