@@ -18,7 +18,7 @@ namespace MyWoggi
         public void OpenConnection()
         {
             // Если состояние подключения - закрытое
-            if (sqlConnection.State == System.Data.ConnectionState.Closed)
+            if (sqlConnection.State == ConnectionState.Closed)
             {
                 sqlConnection.Open();
             }
