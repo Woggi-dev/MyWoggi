@@ -18,39 +18,49 @@ namespace MyWoggi
         string pwdPlaceholder = "Ваш пароль";
 
         private string authTokenFilePath;
+        // Путь к файлу, в котором будет храниться логин пользователя
         private string userLoginFilePath;
+
+        // Токен авторизации
         private string authToken;
 
 
         public Authorization()
         {
             InitializeComponent();
+
+            // Собираем путь к файлу токена авторизации
             authTokenFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "authtoken.txt");
+
+            // Собираем путь к файлу логина пользователя
             userLoginFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "login.txt");
         }
 
+        // Генерирует новый токен авторизации и сохраняет его в файл, вместе с логином пользователя
         private void GenerateAuthTokenLogin(string userLogin)
         {
+            // Если файлы с токеном и логином пользователя не существуют
             if (!File.Exists(authTokenFilePath) && !File.Exists(userLoginFilePath))
             {
                 try
                 {
+                    // Генерируем новый токен авторизации
                     Guid authToken = Guid.NewGuid();
                     string loginUser = userLogin;
 
+                    // Записываем токен авторизации в файл
                     FileStream filestream = new FileStream(authTokenFilePath, FileMode.Create);
                     StreamWriter streamwriter = new StreamWriter(filestream);
                     streamwriter.WriteLine(authToken);
                     streamwriter.Close();
                     filestream.Close();
 
+                    // Записываем логин пользователя в файл
                     FileStream filestream1 = new FileStream(userLoginFilePath, FileMode.Create);
                     StreamWriter streamwriter1 = new StreamWriter(filestream1);
                     streamwriter1.WriteLine(loginUser);
                     streamwriter1.Close();
                     filestream1.Close();
-
-
                 }
                 catch (Exception ex)
                 {
@@ -59,7 +69,7 @@ namespace MyWoggi
             }
         }
 
-
+        // Считывает токен авторизации из файла
         private string ReadAuthToken()
         {
             FileStream fileStream = new FileStream(authTokenFilePath, FileMode.Open);
@@ -70,6 +80,7 @@ namespace MyWoggi
             return authToken;
         }
 
+        // Считывает логин пользователя из файла
         private string ReadUserLogin()
         {
             FileStream fileStream = new FileStream(userLoginFilePath, FileMode.Open);
@@ -213,21 +224,25 @@ namespace MyWoggi
             var loginUser = login_textbox;
             var pwdUser = pwd_textbox;
 
+            // Формируем запрос для проверки наличия пользователя в БД
             string checkUserQueryString = $"select id_user, login_user, password_user from Userdata " +
-    $"where login_user = '{loginUser.Text}' and password_user = '{pwdUser.Text}'";
+            $"where login_user = '{loginUser.Text}' and password_user = '{pwdUser.Text}'";
 
-            // Проверяем, есть ли такой пользователь в базе данных
+            // Проверяем, есть ли такой пользователь в БД
             bool isLogged = MyWoggi.SelectData(checkUserQueryString);
 
-
+            // Если пользователь найден и пользователь выбрал запомнить меня
             if (isLogged && rememberme_checkbox.Checked)
             {
+                // Генерируем токен авторизации и записываем в файл
                 GenerateAuthTokenLogin(loginUser.Text);
-
+                // Получаем токен авторизации из файла
                 authToken = ReadAuthToken();
 
+                // Формируем запрос на обновление токена авторизации и отметки запомнить меня в БД
                 string insertAuthTokenQueryString = $"update Userdata set rememberme_user = '1', authtoken_user = '{authToken}' " +
-                    $"where login_user = '{loginUser.Text}'";
+                $"where login_user = '{loginUser.Text}'";
+                // Обновляем токен авторизации и отметку запомнить меня в БД
                 bool tokenIsUpdated = MyWoggi.InsertUpdateData(insertAuthTokenQueryString);
 
                 if (tokenIsUpdated)
@@ -239,12 +254,15 @@ namespace MyWoggi
                     Console.WriteLine("Auth Token failed to update");
                 }
 
+                // Переходим на главную страницу приложения
                 Main main = new Main();
                 main.Show();
                 this.Hide();
             }
+            // Если пользователь найден и пользователь не выбрал запомнить меня
             else if (isLogged)
             {
+                // Переходим на главную страницу приложения
                 Main main = new Main();
                 main.Show();
                 this.Hide();
@@ -257,6 +275,7 @@ namespace MyWoggi
                 loginpwdError_label.Visible = true;
                 loginpwdError_label.Text = "Неверно введен логин или пароль";
             }
+
         }
 
         // Когда пользователь нажимает кнопку Зарегистрироваться

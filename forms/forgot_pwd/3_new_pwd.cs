@@ -22,6 +22,7 @@ namespace MyWoggi
         // Переменная для хранения адреса электронной почты пользователя
         private string userEmail;
 
+        // Метод для проверки соответствия введенных логинов
         private void ValidateTextboxLogin(TextBox login, TextBox loginRetry, Label loginErrorLabel, Label loginRetryErrorLabel, List<TextBox> invalidTextBoxes)
         {
             bool areLoginsEqual = login.Text != loginRetry.Text;
@@ -38,7 +39,7 @@ namespace MyWoggi
                 loginRetryError_label.Text = "Логины не совпадают";
             }
         }
-
+        // Проверка текстовых полей на валидность
         private bool ValidateTextbox(TextBox[] textBoxes, string[] fieldNames, Label[] errorLabels, List<TextBox> invalidTextBoxes, string[] placeHolders)
         {
             for (int index = 0; index < textBoxes.Length; index++)
@@ -89,25 +90,26 @@ namespace MyWoggi
         {
             Application.Exit();
         }
+        // Обработчик входа в текстовое поле логина 
 
         private void newLogin_textbox_Enter(object sender, EventArgs e)
         {
             authorization.SetPlaceholder(newLogin_textbox, newLoginPlaceholder);
 
         }
-
+        // Обработчик выхода в текстовое поле логина
         private void newLogin_textbox_Leave(object sender, EventArgs e)
         {
             authorization.SetPlaceholder(newLogin_textbox, newLoginPlaceholder);
 
         }
-
+        // Обработчик входа в текстовое поле повторного логина
         private void newLoginRetry_textbox_Enter(object sender, EventArgs e)
         {
             authorization.SetPlaceholder(newLoginRetry_textbox, newLoginRetryPlaceholder);
 
         }
-
+        // Обработчик выхода из текстового поля повторного логина
         private void newLoginRetry_textbox_Leave(object sender, EventArgs e)
         {
             authorization.SetPlaceholder(newLoginRetry_textbox, newLoginRetryPlaceholder);

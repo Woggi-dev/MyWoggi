@@ -9,8 +9,13 @@ namespace MyWoggi
 {
     public partial class Registration : Form
     {
+        // Создание объекта авторизации
         Authorization authorization = new Authorization();
+
+        // Создание объекта базы данных
         Database MyWoggi = new Database();
+
+        // Создание строковых переменных для заполнения полей ввода
         string namePlaceholder = "Ваше имя";
         string surnamePlaceholder = "Ваша фамилия";
         string loginPlaceholder = "Ваш логин";
@@ -18,8 +23,7 @@ namespace MyWoggi
         string pwdPlaceholder = "Ваш пароль";
         string pwdRetryPlaceholder = "Ваш пароль повторно";
 
-
-
+        // Метод для проверки длины текстового поля
         public bool ValidateTextboxLength(TextBox textBox, Label errorLabel, List<TextBox> invalidTextBoxes, string placeHolder)
         {
             if (textBox.Text.Length < 3 || textBox.Text == placeHolder)
@@ -32,6 +36,7 @@ namespace MyWoggi
             return true;
         }
 
+        // Метод для проверки наличия специальных символов в текстовом поле
         public void ValidateTextboxSymbols(TextBox textBox, string fieldName, Label errorLabel, List<TextBox> invalidTextBoxes)
         {
             if (Regex.IsMatch(textBox.Text, @"[!@#$%^&*()]"))
@@ -42,6 +47,7 @@ namespace MyWoggi
             }
         }
 
+        // Метод для проверки наличия цифр в текстовом поле
         public void ValidateTextboxDigits(TextBox textBox, string fieldName, Label errorLabel, List<TextBox> invalidTextBoxes)
         {
             if (Regex.IsMatch(textBox.Text, @"\d"))
@@ -52,9 +58,10 @@ namespace MyWoggi
             }
         }
 
+        // Метод для проверки правильности ввода почты
         private void ValidateTextboxEmail(TextBox email, Label errorLabel, List<TextBox> invalidTextBoxes)
         {
-            bool isSuchDomain = !Regex.IsMatch(email.Text, @"\b(gmail\.com|mail\.ru|inbox\.ru|yandex\.ru)$");
+            bool isSuchDomain = !Regex.IsMatch(email.Text, @"\b(gmail.com|mail.ru|inbox.ru|yandex.ru)$");
             if (isSuchDomain)
             {
                 invalidTextBoxes.Add(email);
@@ -62,11 +69,13 @@ namespace MyWoggi
                 errorLabel.Text = $"Неверно введена почта";
             }
         }
+
+        // Метод для проверки соответствия введенных паролей
         public void ValidateTextboxPwd(TextBox pwd, TextBox pwdRetry, Label pwdErrorLabel, Label pwdRetryErrorLabel, List<TextBox> invalidTextBoxes, string pwdPlaceHolder, string pwdRetryPlaceHolder)
         {
             bool pwdLength = ValidateTextboxLength(pwd, pwdErrorLabel, invalidTextBoxes, pwdPlaceHolder);
             bool pwdRetryLength = ValidateTextboxLength(pwdRetry, pwdRetryErrorLabel, invalidTextBoxes, pwdRetryPlaceHolder);
-            
+
             if ((pwd.Text != pwdRetry.Text) && (pwdLength && pwdRetryLength))
             {
                 invalidTextBoxes.Add(pwd);
@@ -274,9 +283,8 @@ namespace MyWoggi
         // Обработчик события клика по кнопке "Зарегистрироваться"
         private void Register_button_Click(object sender, EventArgs e)
         {
-            // Создание списка невалидных полей
+            // Хранение данных пользователя в массивах
             List<TextBox> invalidTextBoxes = new List<TextBox>();
-            // Получение значений полей ввода
             TextBox[] newDataUser = {name_textbox, surname_textbox, login_textbox, email_textbox, pwd_textbox, pwdretry_textbox };
             string[] fieldNames = { "Имя", "Фамилия", "Логин", "Почта", "Пароль", "Пароль повторно" };
             Label[] errorLabels = { nameError_label, surnameError_label, loginError_label, emailError_label, pwdError_label, pwdRetryError_label };
@@ -295,13 +303,18 @@ namespace MyWoggi
                 return;
             }
 
-
+            // newDataUser[0] - имя
+            // newDataUser[1] - фамилия
+            // newDataUser[2] - почта
+            // newDataUser[3] - пароль
             string registerUserQueryString = $"insert into Userdata(login_user, name_user, surname_user, email_user, password_user) " +
             $"VALUES('{newDataUser[0].Text}', '{newDataUser[1].Text}', '{newDataUser[2].Text}', '{newDataUser[3].Text}', '{newDataUser[4].Text}')";
             
             string checkUserQueryString = $"select id_user, login_user, email_user from Userdata where login_user = '{newDataUser[2].Text}' or email_user = '{newDataUser[3].Text}'";
             
+            // Успешная ли регистрация
             bool isRegistered = MyWoggi.InsertUpdateData(registerUserQueryString);
+            // Есть ли такой пользователь в бд
             bool isSuchUser = MyWoggi.SelectData(checkUserQueryString);
 
             // Если пользователь уже зарегистрирован, то вывести сообщение и выйти из метода

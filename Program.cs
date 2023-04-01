@@ -19,18 +19,18 @@ namespace MyWoggi
             Application.SetCompatibleTextRenderingDefault(false);
             Authorization authorization = new Authorization();
 
-            // Check if the user is already authorized
+            // Проверить если пользователь уже авторизован
             if (authorization.isUserRemembered())
             {
-                // Close the Authorization form
+                // Закрыть форму авторизации
                 authorization.Close();
 
-                // Create and show the Main form
+                // Создать и показать основную форму
                 Application.Run(new Main());
             }
             else
             {
-                // Show the Authorization form
+                // Показать форму авторизации
                 Application.Run(authorization);
             }
             Application.Run(new Authorization());
