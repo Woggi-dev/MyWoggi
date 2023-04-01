@@ -69,9 +69,9 @@ namespace MyWoggi
             this.panel_panel.Controls.Add(this.forgotPwd_button);
             this.panel_panel.Controls.Add(this.subtitle_label);
             this.panel_panel.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.panel_panel.Location = new System.Drawing.Point(107, 185);
+            this.panel_panel.Location = new System.Drawing.Point(102, 210);
             this.panel_panel.Name = "panel_panel";
-            this.panel_panel.Size = new System.Drawing.Size(504, 373);
+            this.panel_panel.Size = new System.Drawing.Size(539, 388);
             this.panel_panel.TabIndex = 0;
             // 
             // loginpwdError_label
@@ -79,9 +79,9 @@ namespace MyWoggi
             this.loginpwdError_label.BackColor = System.Drawing.Color.Transparent;
             this.loginpwdError_label.Font = new System.Drawing.Font("Consolas", 14.25F);
             this.loginpwdError_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(107)))), ((int)(((byte)(93)))));
-            this.loginpwdError_label.Location = new System.Drawing.Point(-1, 235);
+            this.loginpwdError_label.Location = new System.Drawing.Point(-1, 246);
             this.loginpwdError_label.Name = "loginpwdError_label";
-            this.loginpwdError_label.Size = new System.Drawing.Size(504, 26);
+            this.loginpwdError_label.Size = new System.Drawing.Size(546, 26);
             this.loginpwdError_label.TabIndex = 62;
             this.loginpwdError_label.Text = "label";
             this.loginpwdError_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -92,7 +92,7 @@ namespace MyWoggi
             this.showPwd_picturebox.BackColor = System.Drawing.Color.Transparent;
             this.showPwd_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.view;
             this.showPwd_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.showPwd_picturebox.Location = new System.Drawing.Point(450, 161);
+            this.showPwd_picturebox.Location = new System.Drawing.Point(489, 164);
             this.showPwd_picturebox.Name = "showPwd_picturebox";
             this.showPwd_picturebox.Size = new System.Drawing.Size(37, 37);
             this.showPwd_picturebox.TabIndex = 57;
@@ -105,7 +105,7 @@ namespace MyWoggi
             this.hidePwd_picturebox.BackColor = System.Drawing.Color.Transparent;
             this.hidePwd_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.hide;
             this.hidePwd_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.hidePwd_picturebox.Location = new System.Drawing.Point(450, 161);
+            this.hidePwd_picturebox.Location = new System.Drawing.Point(489, 164);
             this.hidePwd_picturebox.Name = "hidePwd_picturebox";
             this.hidePwd_picturebox.Size = new System.Drawing.Size(37, 37);
             this.hidePwd_picturebox.TabIndex = 56;
@@ -116,7 +116,7 @@ namespace MyWoggi
             // 
             this.pwd_picturebox.BackColor = System.Drawing.Color.Transparent;
             this.pwd_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources._lock;
-            this.pwd_picturebox.Location = new System.Drawing.Point(15, 161);
+            this.pwd_picturebox.Location = new System.Drawing.Point(15, 164);
             this.pwd_picturebox.Name = "pwd_picturebox";
             this.pwd_picturebox.Size = new System.Drawing.Size(37, 37);
             this.pwd_picturebox.TabIndex = 55;
@@ -126,7 +126,7 @@ namespace MyWoggi
             // 
             this.login_picturebox.BackColor = System.Drawing.Color.Transparent;
             this.login_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.user;
-            this.login_picturebox.Location = new System.Drawing.Point(15, 76);
+            this.login_picturebox.Location = new System.Drawing.Point(15, 79);
             this.login_picturebox.Name = "login_picturebox";
             this.login_picturebox.Size = new System.Drawing.Size(37, 37);
             this.login_picturebox.TabIndex = 54;
@@ -135,11 +135,11 @@ namespace MyWoggi
             // pwd_textbox
             // 
             this.pwd_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pwd_textbox.Location = new System.Drawing.Point(62, 161);
+            this.pwd_textbox.Location = new System.Drawing.Point(58, 166);
             this.pwd_textbox.MaxLength = 50;
             this.pwd_textbox.Multiline = true;
             this.pwd_textbox.Name = "pwd_textbox";
-            this.pwd_textbox.Size = new System.Drawing.Size(382, 35);
+            this.pwd_textbox.Size = new System.Drawing.Size(425, 35);
             this.pwd_textbox.TabIndex = 52;
             this.pwd_textbox.Enter += new System.EventHandler(this.Pwd_textbox_Enter);
             this.pwd_textbox.Leave += new System.EventHandler(this.Pwd_textbox_Leave);
@@ -147,11 +147,11 @@ namespace MyWoggi
             // login_textbox
             // 
             this.login_textbox.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login_textbox.Location = new System.Drawing.Point(62, 76);
+            this.login_textbox.Location = new System.Drawing.Point(58, 81);
             this.login_textbox.MaxLength = 20;
             this.login_textbox.Multiline = true;
             this.login_textbox.Name = "login_textbox";
-            this.login_textbox.Size = new System.Drawing.Size(382, 35);
+            this.login_textbox.Size = new System.Drawing.Size(425, 35);
             this.login_textbox.TabIndex = 49;
             this.login_textbox.Enter += new System.EventHandler(this.Login_textbox_Enter);
             this.login_textbox.Leave += new System.EventHandler(this.Login_textbox_Leave);
@@ -166,9 +166,9 @@ namespace MyWoggi
             this.login_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.login_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F);
             this.login_button.ForeColor = System.Drawing.Color.White;
-            this.login_button.Location = new System.Drawing.Point(15, 264);
+            this.login_button.Location = new System.Drawing.Point(11, 275);
             this.login_button.Name = "login_button";
-            this.login_button.Size = new System.Drawing.Size(472, 57);
+            this.login_button.Size = new System.Drawing.Size(515, 57);
             this.login_button.TabIndex = 37;
             this.login_button.Text = "Войти";
             this.login_button.UseVisualStyleBackColor = false;
@@ -180,7 +180,7 @@ namespace MyWoggi
             this.rememberme_checkbox.BackColor = System.Drawing.Color.Transparent;
             this.rememberme_checkbox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rememberme_checkbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.rememberme_checkbox.Location = new System.Drawing.Point(62, 207);
+            this.rememberme_checkbox.Location = new System.Drawing.Point(58, 210);
             this.rememberme_checkbox.Name = "rememberme_checkbox";
             this.rememberme_checkbox.Size = new System.Drawing.Size(155, 24);
             this.rememberme_checkbox.TabIndex = 14;
@@ -197,7 +197,7 @@ namespace MyWoggi
             this.register_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.register_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline);
             this.register_button.ForeColor = System.Drawing.Color.White;
-            this.register_button.Location = new System.Drawing.Point(114, 327);
+            this.register_button.Location = new System.Drawing.Point(134, 338);
             this.register_button.Name = "register_button";
             this.register_button.Size = new System.Drawing.Size(269, 35);
             this.register_button.TabIndex = 9;
@@ -215,11 +215,11 @@ namespace MyWoggi
             this.forgotPwd_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.forgotPwd_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.forgotPwd_button.ForeColor = System.Drawing.Color.White;
-            this.forgotPwd_button.Location = new System.Drawing.Point(298, 201);
+            this.forgotPwd_button.Location = new System.Drawing.Point(257, 207);
             this.forgotPwd_button.Name = "forgotPwd_button";
-            this.forgotPwd_button.Size = new System.Drawing.Size(146, 30);
+            this.forgotPwd_button.Size = new System.Drawing.Size(226, 30);
             this.forgotPwd_button.TabIndex = 6;
-            this.forgotPwd_button.Text = "Забыли пароль?";
+            this.forgotPwd_button.Text = "Забыли логин или пароль?";
             this.forgotPwd_button.UseVisualStyleBackColor = false;
             this.forgotPwd_button.Click += new System.EventHandler(this.ForgotPwd_button_Click);
             // 
@@ -227,25 +227,25 @@ namespace MyWoggi
             // 
             this.subtitle_label.BackColor = System.Drawing.Color.Transparent;
             this.subtitle_label.Font = new System.Drawing.Font("Consolas", 30.25F);
-            this.subtitle_label.Location = new System.Drawing.Point(-1, 11);
+            this.subtitle_label.Location = new System.Drawing.Point(-5, 5);
             this.subtitle_label.Name = "subtitle_label";
-            this.subtitle_label.Size = new System.Drawing.Size(504, 47);
+            this.subtitle_label.Size = new System.Drawing.Size(540, 47);
             this.subtitle_label.TabIndex = 0;
             this.subtitle_label.Text = "Вход";
             this.subtitle_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // title_label
             // 
-            this.title_label.AutoSize = true;
             this.title_label.BackColor = System.Drawing.Color.Transparent;
             this.title_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.title_label.Font = new System.Drawing.Font("Consolas", 45F);
             this.title_label.ForeColor = System.Drawing.Color.White;
-            this.title_label.Location = new System.Drawing.Point(230, 68);
+            this.title_label.Location = new System.Drawing.Point(102, 79);
             this.title_label.Name = "title_label";
-            this.title_label.Size = new System.Drawing.Size(261, 70);
+            this.title_label.Size = new System.Drawing.Size(539, 70);
             this.title_label.TabIndex = 1;
             this.title_label.Text = "MyWoggi";
+            this.title_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Authorization
             // 
@@ -272,7 +272,6 @@ namespace MyWoggi
             ((System.ComponentModel.ISupportInitialize)(this.pwd_picturebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.login_picturebox)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

@@ -34,7 +34,6 @@ namespace MyWoggi
             this.registrationError_label = new System.Windows.Forms.Label();
             this.emailError_label = new System.Windows.Forms.Label();
             this.pwdError_label = new System.Windows.Forms.Label();
-            this.pwdretryError_label = new System.Windows.Forms.Label();
             this.loginError_label = new System.Windows.Forms.Label();
             this.surnameError_label = new System.Windows.Forms.Label();
             this.nameError_label = new System.Windows.Forms.Label();
@@ -56,6 +55,7 @@ namespace MyWoggi
             this.register_button = new System.Windows.Forms.Button();
             this.name_textbox = new System.Windows.Forms.TextBox();
             this.title_label = new System.Windows.Forms.Label();
+            this.pwdRetryError_label = new System.Windows.Forms.Label();
             this.panel_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ShowPwdRetry_picturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HidePwdRetry_picturebox)).BeginInit();
@@ -73,10 +73,10 @@ namespace MyWoggi
             this.panel_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(50)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.panel_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_panel.Controls.Add(this.pwdRetryError_label);
             this.panel_panel.Controls.Add(this.registrationError_label);
             this.panel_panel.Controls.Add(this.emailError_label);
             this.panel_panel.Controls.Add(this.pwdError_label);
-            this.panel_panel.Controls.Add(this.pwdretryError_label);
             this.panel_panel.Controls.Add(this.loginError_label);
             this.panel_panel.Controls.Add(this.surnameError_label);
             this.panel_panel.Controls.Add(this.nameError_label);
@@ -143,19 +143,6 @@ namespace MyWoggi
             this.pwdError_label.TabIndex = 65;
             this.pwdError_label.Text = "label";
             this.pwdError_label.Visible = false;
-            // 
-            // pwdretryError_label
-            // 
-            this.pwdretryError_label.AutoSize = true;
-            this.pwdretryError_label.BackColor = System.Drawing.Color.Transparent;
-            this.pwdretryError_label.Font = new System.Drawing.Font("Consolas", 12.25F);
-            this.pwdretryError_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(107)))), ((int)(((byte)(93)))));
-            this.pwdretryError_label.Location = new System.Drawing.Point(58, 460);
-            this.pwdretryError_label.Name = "pwdretryError_label";
-            this.pwdretryError_label.Size = new System.Drawing.Size(54, 20);
-            this.pwdretryError_label.TabIndex = 64;
-            this.pwdretryError_label.Text = "label";
-            this.pwdretryError_label.Visible = false;
             // 
             // loginError_label
             // 
@@ -416,6 +403,19 @@ namespace MyWoggi
             this.title_label.Text = "Регистрация";
             this.title_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // pwdRetryError_label
+            // 
+            this.pwdRetryError_label.AutoSize = true;
+            this.pwdRetryError_label.BackColor = System.Drawing.Color.Transparent;
+            this.pwdRetryError_label.Font = new System.Drawing.Font("Consolas", 12.25F);
+            this.pwdRetryError_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(107)))), ((int)(((byte)(93)))));
+            this.pwdRetryError_label.Location = new System.Drawing.Point(58, 460);
+            this.pwdRetryError_label.Name = "pwdRetryError_label";
+            this.pwdRetryError_label.Size = new System.Drawing.Size(54, 20);
+            this.pwdRetryError_label.TabIndex = 68;
+            this.pwdRetryError_label.Text = "label";
+            this.pwdRetryError_label.Visible = false;
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -470,9 +470,9 @@ namespace MyWoggi
         private System.Windows.Forms.Label nameError_label;
         private System.Windows.Forms.Label emailError_label;
         private System.Windows.Forms.Label pwdError_label;
-        private System.Windows.Forms.Label pwdretryError_label;
         private System.Windows.Forms.Label loginError_label;
         private System.Windows.Forms.Label surnameError_label;
         private System.Windows.Forms.Label registrationError_label;
+        private System.Windows.Forms.Label pwdRetryError_label;
     }
 }
