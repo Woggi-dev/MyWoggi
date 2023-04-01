@@ -96,6 +96,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="forms\about_the_project.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\about_the_project.Designer.cs">
+      <DependentUpon>about_the_project.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database.cs" />
     <Compile Include="forms\authorization.cs">
       <SubType>Form</SubType>
@@ -135,6 +141,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Table.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Table.Designer.cs">
+      <DependentUpon>Table.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="forms\about_the_project.resx">
+      <DependentUpon>about_the_project.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\authorization.resx">
       <DependentUpon>authorization.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +181,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Table.resx">
+      <DependentUpon>Table.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -179,6 +197,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\cells %281%29.png" />
     <None Include="images\view.png" />
     <None Include="images\background.png" />
     <None Include="images\main.png" />
@@ -187,6 +206,14 @@
     <None Include="images\hide.png" />
     <None Include="images\recovery_code.png" />
     <None Include="images\background_panel.png" />
+    <None Include="images\cells.png" />
+    <None Include="images\settings.png" />
+    <None Include="images\imgonline-com-ua-Resize-lkVnNDSeGzJl.png" />
+    <None Include="images\information.png" />
+    <None Include="images\main_2 .png" />
+    <None Include="images\left.png" />
+    <None Include="images\log-out.png" />
+    <None Include="images\home.png" />
     <Content Include="images\user.png" />
     <Content Include="images\lock.png" />
     <Content Include="images\window_icon.ico" />
