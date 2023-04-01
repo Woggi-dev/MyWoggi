@@ -24,6 +24,7 @@ namespace MyWoggi
             }
         }
 
+        // Выбрать данные из базы данных
         public bool SelectData(string querystring)
         {
             MySqlDataAdapter adapter = new MySqlDataAdapter();
@@ -41,6 +42,7 @@ namespace MyWoggi
                 return false;
         }
 
+        // Вставить или обновить данные в базе данных
         public bool InsertUpdateData(string querystring)
         {
             MySqlCommand command = new MySqlCommand(querystring, GetConnection());

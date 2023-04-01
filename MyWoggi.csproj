@@ -150,6 +150,9 @@
     <EmbeddedResource Include="forms\main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\registration.agq-CM.resx">
+      <DependentUpon>registration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\registration.resx">
       <DependentUpon>registration.cs</DependentUpon>
     </EmbeddedResource>
