@@ -62,7 +62,7 @@ namespace MyWoggi
             this.panel_panel.ForeColor = System.Drawing.Color.White;
             this.panel_panel.Location = new System.Drawing.Point(99, 203);
             this.panel_panel.Name = "panel_panel";
-            this.panel_panel.Size = new System.Drawing.Size(529, 334);
+            this.panel_panel.Size = new System.Drawing.Size(535, 334);
             this.panel_panel.TabIndex = 3;
             // 
             // recoverycodeError_label
@@ -83,9 +83,9 @@ namespace MyWoggi
             this.caption_label.BackColor = System.Drawing.Color.Transparent;
             this.caption_label.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.caption_label.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.caption_label.Location = new System.Drawing.Point(11, 73);
+            this.caption_label.Location = new System.Drawing.Point(-1, 73);
             this.caption_label.Name = "caption_label";
-            this.caption_label.Size = new System.Drawing.Size(510, 48);
+            this.caption_label.Size = new System.Drawing.Size(535, 48);
             this.caption_label.TabIndex = 49;
             this.caption_label.Text = "Введите код восстановления, пришедший вам на почту Код может отправиться в спам, " +
     "будьте внимательнее!";
@@ -100,7 +100,7 @@ namespace MyWoggi
             this.enter_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.enter_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.enter_button.ForeColor = System.Drawing.Color.White;
-            this.enter_button.Location = new System.Drawing.Point(126, 282);
+            this.enter_button.Location = new System.Drawing.Point(131, 282);
             this.enter_button.Name = "enter_button";
             this.enter_button.Size = new System.Drawing.Size(266, 41);
             this.enter_button.TabIndex = 48;
@@ -188,9 +188,9 @@ namespace MyWoggi
             this.title_label.ForeColor = System.Drawing.Color.White;
             this.title_label.Location = new System.Drawing.Point(-1, 14);
             this.title_label.Name = "title_label";
-            this.title_label.Size = new System.Drawing.Size(529, 43);
+            this.title_label.Size = new System.Drawing.Size(535, 43);
             this.title_label.TabIndex = 0;
-            this.title_label.Text = "Восстановление пароля";
+            this.title_label.Text = "Восстановление аккаунта";
             this.title_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // ForgotPwdCode
