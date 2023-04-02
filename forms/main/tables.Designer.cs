@@ -40,6 +40,9 @@ namespace MyWoggi
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Search_texBox = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.update_picturebox = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -48,8 +51,8 @@ namespace MyWoggi
             this.deleteWrite1_button = new System.Windows.Forms.Button();
             this.newWrite1_button = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.idEnclosure_textbox = new System.Windows.Forms.TextBox();
-            this.typeSpecies_textbox = new System.Windows.Forms.TextBox();
+            this.animalAge_textbox = new System.Windows.Forms.TextBox();
+            this.animalWeight_textbox = new System.Windows.Forms.TextBox();
             this.nameAnimal_textbox = new System.Windows.Forms.TextBox();
             this.idAnimal_textbox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -124,6 +127,8 @@ namespace MyWoggi
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.update_picturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -181,23 +186,22 @@ namespace MyWoggi
             // 
             // logout_buttonb
             // 
-            this.logout_buttonb.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.logout_buttonb.FlatAppearance.BorderSize = 0;
-            this.logout_buttonb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logout_buttonb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.logout_buttonb.ForeColor = System.Drawing.Color.Gainsboro;
-            this.logout_buttonb.Image = global::MyWoggi.Properties.Resources.log_out;
-            this.logout_buttonb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logout_buttonb.Location = new System.Drawing.Point(0, 639);
-            this.logout_buttonb.Name = "logout_buttonb";
-            this.logout_buttonb.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.logout_buttonb.Size = new System.Drawing.Size(220, 56);
-            this.logout_buttonb.TabIndex = 5;
-            this.logout_buttonb.Text = "  Выйти из аккаунта";
-            this.logout_buttonb.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logout_buttonb.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.logout_buttonb.UseVisualStyleBackColor = true;
-            this.logout_buttonb.Click += new System.EventHandler(this.LogOut_button);
+            this.button3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button3.Image = global::MyWoggi.Properties.Resources.log_out;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(0, 639);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(220, 56);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "  Выйти из аккаунта";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -304,11 +308,14 @@ namespace MyWoggi
             // 
             this.tabPage1.AccessibleRole = System.Windows.Forms.AccessibleRole.Alert;
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(46)))), ((int)(((byte)(54)))));
+            this.tabPage1.Controls.Add(this.Search_texBox);
+            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Controls.Add(this.update_picturebox);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.panel3);
             this.tabPage1.Controls.Add(this.panel2);
-            this.tabPage1.ForeColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -316,12 +323,46 @@ namespace MyWoggi
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Таблица_1";
             // 
+            // Search_texBox
+            // 
+            this.Search_texBox.Location = new System.Drawing.Point(729, 339);
+            this.Search_texBox.Multiline = true;
+            this.Search_texBox.Name = "Search_texBox";
+            this.Search_texBox.Size = new System.Drawing.Size(136, 34);
+            this.Search_texBox.TabIndex = 57;
+            this.Search_texBox.TextChanged += new System.EventHandler(this.Search_textbox);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::MyWoggi.Properties.Resources.search;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Location = new System.Drawing.Point(686, 339);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 37);
+            this.pictureBox1.TabIndex = 56;
+            this.pictureBox1.TabStop = false;
+            // 
+            // update_picturebox
+            // 
+            this.update_picturebox.BackColor = System.Drawing.Color.Transparent;
+            this.update_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.loop;
+            this.update_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.update_picturebox.Location = new System.Drawing.Point(686, 394);
+            this.update_picturebox.Name = "update_picturebox";
+            this.update_picturebox.Size = new System.Drawing.Size(37, 37);
+            this.update_picturebox.TabIndex = 55;
+            this.update_picturebox.TabStop = false;
+            this.update_picturebox.Click += new System.EventHandler(this.update_picturebox_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -418,8 +459,8 @@ namespace MyWoggi
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.idEnclosure_textbox);
-            this.panel2.Controls.Add(this.typeSpecies_textbox);
+            this.panel2.Controls.Add(this.animalAge_textbox);
+            this.panel2.Controls.Add(this.animalWeight_textbox);
             this.panel2.Controls.Add(this.nameAnimal_textbox);
             this.panel2.Controls.Add(this.idAnimal_textbox);
             this.panel2.Controls.Add(this.label7);
@@ -430,35 +471,39 @@ namespace MyWoggi
             this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.Location = new System.Drawing.Point(96, 361);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(344, 207);
+            this.panel2.Size = new System.Drawing.Size(368, 207);
             this.panel2.TabIndex = 1;
             // 
-            // idEnclosure_textbox
+            // animalAge_textbox
             // 
-            this.idEnclosure_textbox.Location = new System.Drawing.Point(155, 173);
-            this.idEnclosure_textbox.Name = "idEnclosure_textbox";
-            this.idEnclosure_textbox.Size = new System.Drawing.Size(178, 20);
-            this.idEnclosure_textbox.TabIndex = 8;
+            this.animalAge_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.animalAge_textbox.Location = new System.Drawing.Point(172, 173);
+            this.animalAge_textbox.Name = "animalAge_textbox";
+            this.animalAge_textbox.Size = new System.Drawing.Size(178, 26);
+            this.animalAge_textbox.TabIndex = 8;
             // 
-            // typeSpecies_textbox
+            // animalWeight_textbox
             // 
-            this.typeSpecies_textbox.Location = new System.Drawing.Point(155, 138);
-            this.typeSpecies_textbox.Name = "typeSpecies_textbox";
-            this.typeSpecies_textbox.Size = new System.Drawing.Size(178, 20);
-            this.typeSpecies_textbox.TabIndex = 7;
+            this.animalWeight_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.animalWeight_textbox.Location = new System.Drawing.Point(172, 138);
+            this.animalWeight_textbox.Name = "animalWeight_textbox";
+            this.animalWeight_textbox.Size = new System.Drawing.Size(178, 26);
+            this.animalWeight_textbox.TabIndex = 7;
             // 
             // nameAnimal_textbox
             // 
-            this.nameAnimal_textbox.Location = new System.Drawing.Point(155, 101);
+            this.nameAnimal_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameAnimal_textbox.Location = new System.Drawing.Point(172, 101);
             this.nameAnimal_textbox.Name = "nameAnimal_textbox";
-            this.nameAnimal_textbox.Size = new System.Drawing.Size(178, 20);
+            this.nameAnimal_textbox.Size = new System.Drawing.Size(178, 26);
             this.nameAnimal_textbox.TabIndex = 6;
             // 
             // idAnimal_textbox
             // 
-            this.idAnimal_textbox.Location = new System.Drawing.Point(155, 64);
+            this.idAnimal_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.idAnimal_textbox.Location = new System.Drawing.Point(172, 64);
             this.idAnimal_textbox.Name = "idAnimal_textbox";
-            this.idAnimal_textbox.Size = new System.Drawing.Size(178, 20);
+            this.idAnimal_textbox.Size = new System.Drawing.Size(178, 26);
             this.idAnimal_textbox.TabIndex = 5;
             // 
             // label7
@@ -468,9 +513,9 @@ namespace MyWoggi
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(3, 173);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 20);
+            this.label7.Size = new System.Drawing.Size(157, 20);
             this.label7.TabIndex = 4;
-            this.label7.Text = "ID вольера";
+            this.label7.Text = "Возраст животного";
             // 
             // label6
             // 
@@ -479,9 +524,9 @@ namespace MyWoggi
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(3, 136);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 20);
+            this.label6.Size = new System.Drawing.Size(122, 20);
             this.label6.TabIndex = 3;
-            this.label6.Text = "ID вида";
+            this.label6.Text = "Вес животного";
             // 
             // label5
             // 
@@ -609,7 +654,6 @@ namespace MyWoggi
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(862, 307);
             this.dataGridView2.TabIndex = 10;
-            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // label9
             // 
@@ -649,7 +693,6 @@ namespace MyWoggi
             this.saveWrite2_button.TabIndex = 9;
             this.saveWrite2_button.Text = "Сохранить";
             this.saveWrite2_button.UseVisualStyleBackColor = false;
-            this.saveWrite2_button.Click += new System.EventHandler(this.saveWrite2_button_Click);
             // 
             // changeWrite2_button
             // 
@@ -664,7 +707,6 @@ namespace MyWoggi
             this.changeWrite2_button.TabIndex = 8;
             this.changeWrite2_button.Text = "Изменить";
             this.changeWrite2_button.UseVisualStyleBackColor = false;
-            this.changeWrite2_button.Click += new System.EventHandler(this.changeWrite2_button_Click);
             // 
             // deleteWrite2_button
             // 
@@ -679,7 +721,6 @@ namespace MyWoggi
             this.deleteWrite2_button.TabIndex = 7;
             this.deleteWrite2_button.Text = "Удалить";
             this.deleteWrite2_button.UseVisualStyleBackColor = false;
-            this.deleteWrite2_button.Click += new System.EventHandler(this.deleteWrite2_button_Click);
             // 
             // newWrite2_button
             // 
@@ -694,7 +735,6 @@ namespace MyWoggi
             this.newWrite2_button.TabIndex = 6;
             this.newWrite2_button.Text = "Новая запись";
             this.newWrite2_button.UseVisualStyleBackColor = false;
-            this.newWrite2_button.Click += new System.EventHandler(this.newWrite2_button_Click);
             // 
             // tabPage3
             // 
@@ -805,7 +845,6 @@ namespace MyWoggi
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.Size = new System.Drawing.Size(868, 307);
             this.dataGridView3.TabIndex = 10;
-            this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
             // 
             // label15
             // 
@@ -845,7 +884,6 @@ namespace MyWoggi
             this.saveWrite3_button.TabIndex = 9;
             this.saveWrite3_button.Text = "Сохранить";
             this.saveWrite3_button.UseVisualStyleBackColor = false;
-            this.saveWrite3_button.Click += new System.EventHandler(this.saveWrite3_button_Click);
             // 
             // changeWrite3_button
             // 
@@ -860,7 +898,6 @@ namespace MyWoggi
             this.changeWrite3_button.TabIndex = 8;
             this.changeWrite3_button.Text = "Изменить";
             this.changeWrite3_button.UseVisualStyleBackColor = false;
-            this.changeWrite3_button.Click += new System.EventHandler(this.changeWrite3_button_Click);
             // 
             // deleteWrite3_button
             // 
@@ -875,7 +912,6 @@ namespace MyWoggi
             this.deleteWrite3_button.TabIndex = 7;
             this.deleteWrite3_button.Text = "Удалить";
             this.deleteWrite3_button.UseVisualStyleBackColor = false;
-            this.deleteWrite3_button.Click += new System.EventHandler(this.deleteWrite3_button_Click);
             // 
             // newWrite3_button
             // 
@@ -890,7 +926,6 @@ namespace MyWoggi
             this.newWrite3_button.TabIndex = 6;
             this.newWrite3_button.Text = "Новая запись";
             this.newWrite3_button.UseVisualStyleBackColor = false;
-            this.newWrite3_button.Click += new System.EventHandler(this.newWrite3_button_Click);
             // 
             // tabPage4
             // 
@@ -1001,7 +1036,6 @@ namespace MyWoggi
             this.dataGridView4.ReadOnly = true;
             this.dataGridView4.Size = new System.Drawing.Size(868, 307);
             this.dataGridView4.TabIndex = 10;
-            this.dataGridView4.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellClick);
             // 
             // label21
             // 
@@ -1041,7 +1075,6 @@ namespace MyWoggi
             this.saveWrite4_button.TabIndex = 9;
             this.saveWrite4_button.Text = "Сохранить";
             this.saveWrite4_button.UseVisualStyleBackColor = false;
-            this.saveWrite4_button.Click += new System.EventHandler(this.saveWrite4_button_Click);
             // 
             // changeWrite4_button
             // 
@@ -1056,7 +1089,6 @@ namespace MyWoggi
             this.changeWrite4_button.TabIndex = 8;
             this.changeWrite4_button.Text = "Изменить";
             this.changeWrite4_button.UseVisualStyleBackColor = false;
-            this.changeWrite4_button.Click += new System.EventHandler(this.changeWrite4_button_Click);
             // 
             // deleteWrite4_button
             // 
@@ -1071,7 +1103,6 @@ namespace MyWoggi
             this.deleteWrite4_button.TabIndex = 7;
             this.deleteWrite4_button.Text = "Удалить";
             this.deleteWrite4_button.UseVisualStyleBackColor = false;
-            this.deleteWrite4_button.Click += new System.EventHandler(this.deleteWrite4_button_Click);
             // 
             // newWrite4_button
             // 
@@ -1086,7 +1117,6 @@ namespace MyWoggi
             this.newWrite4_button.TabIndex = 6;
             this.newWrite4_button.Text = "Новая запись";
             this.newWrite4_button.UseVisualStyleBackColor = false;
-            this.newWrite4_button.Click += new System.EventHandler(this.newWrite4_button_Click);
             // 
             // tabPage5
             // 
@@ -1197,7 +1227,6 @@ namespace MyWoggi
             this.dataGridView5.ReadOnly = true;
             this.dataGridView5.Size = new System.Drawing.Size(868, 307);
             this.dataGridView5.TabIndex = 10;
-            this.dataGridView5.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellClick);
             // 
             // label27
             // 
@@ -1237,7 +1266,6 @@ namespace MyWoggi
             this.saveWrite5_button.TabIndex = 9;
             this.saveWrite5_button.Text = "Сохранить";
             this.saveWrite5_button.UseVisualStyleBackColor = false;
-            this.saveWrite5_button.Click += new System.EventHandler(this.saveWrite5_button_Click);
             // 
             // changeWrite5_button
             // 
@@ -1252,7 +1280,6 @@ namespace MyWoggi
             this.changeWrite5_button.TabIndex = 8;
             this.changeWrite5_button.Text = "Изменить";
             this.changeWrite5_button.UseVisualStyleBackColor = false;
-            this.changeWrite5_button.Click += new System.EventHandler(this.changeWrite5_button_Click);
             // 
             // deleteWrite5_button
             // 
@@ -1267,7 +1294,6 @@ namespace MyWoggi
             this.deleteWrite5_button.TabIndex = 7;
             this.deleteWrite5_button.Text = "Удалить";
             this.deleteWrite5_button.UseVisualStyleBackColor = false;
-            this.deleteWrite5_button.Click += new System.EventHandler(this.deleteWrite5_button_Click);
             // 
             // newWrite5_button
             // 
@@ -1282,7 +1308,6 @@ namespace MyWoggi
             this.newWrite5_button.TabIndex = 6;
             this.newWrite5_button.Text = "Новая запись";
             this.newWrite5_button.UseVisualStyleBackColor = false;
-            this.newWrite5_button.Click += new System.EventHandler(this.newWrite5_button_Click);
             // 
             // tables
             // 
@@ -1305,6 +1330,8 @@ namespace MyWoggi
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.update_picturebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -1414,8 +1441,8 @@ namespace MyWoggi
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox idEnclosure_textbox;
-        private System.Windows.Forms.TextBox typeSpecies_textbox;
+        private System.Windows.Forms.TextBox animalAge_textbox;
+        private System.Windows.Forms.TextBox animalWeight_textbox;
         private System.Windows.Forms.TextBox nameAnimal_textbox;
         private System.Windows.Forms.TextBox idAnimal_textbox;
         private System.Windows.Forms.Label label7;
@@ -1429,5 +1456,8 @@ namespace MyWoggi
         private System.Windows.Forms.Button changeWrite2_button;
         private System.Windows.Forms.Button deleteWrite2_button;
         private System.Windows.Forms.Button newWrite2_button;
+        private System.Windows.Forms.PictureBox update_picturebox;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox Search_texBox;
     }
 }
