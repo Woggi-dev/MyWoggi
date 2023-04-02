@@ -11,14 +11,20 @@ using MyWoggi.forms;
 
 namespace MyWoggi
 {
-    public partial class About_the_project : Form
+    public partial class About : Form
     {
-        public About_the_project()
+        tables tables = new tables();
+        Homepage homepage = new Homepage();
+        ToolTip tooltip = new ToolTip();
+        public About()
         {
             InitializeComponent();
+            tooltip.SetToolTip(tables_button, "Таблицы");
+            tooltip.SetToolTip(homepage_button, "На главный экран");
+            tooltip.SetToolTip(logout_button, "Выйти из аккаунта");
         }
         // текст о для label_About_the_project
-        private void About_the_project_Load(object sender, EventArgs e)
+        private void About_Load(object sender, EventArgs e)
         {
             label_About_the_project.Text = "Название проекта: MyWoggi" +
                 "\nОписание: Наш проект представляет собой приложения на С# , позволяющее " +
@@ -34,15 +40,25 @@ namespace MyWoggi
                 "\nХотим поблагодарить Николая Александровича за помощь в проекте";
         }
         
-        private void About_the_project_FormClosed(object sender, FormClosedEventArgs e)
+        private void About_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
         //Переход в Home
-        private void button2_Click(object sender, EventArgs e)
+        private void HomePage_Click(object sender, EventArgs e)
         {
-            Main main = new Main();
-            main.Show();
+            homepage.Show();
+            this.Hide();
+        }
+
+        private void Logout_button(object sender, EventArgs e)
+        {
+            homepage.LogOut();
+        }
+
+        private void Tables_button(object sender, EventArgs e)
+        {
+            tables.Show();
             this.Hide();
         }
     }
