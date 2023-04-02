@@ -122,6 +122,7 @@ namespace MyWoggi
             this.changeWrite5_button = new System.Windows.Forms.Button();
             this.deleteWrite5_button = new System.Windows.Forms.Button();
             this.newWrite5_button = new System.Windows.Forms.Button();
+            this.logout_button = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -153,6 +154,7 @@ namespace MyWoggi
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(46)))), ((int)(((byte)(54)))));
+            this.panelMenu.Controls.Add(this.logout_button);
             this.panelMenu.Controls.Add(this.button4);
             this.panelMenu.Controls.Add(this.logout_buttonb);
             this.panelMenu.Controls.Add(this.button2);
@@ -186,22 +188,10 @@ namespace MyWoggi
             // 
             // logout_buttonb
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button3.Image = global::MyWoggi.Properties.Resources.log_out;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 639);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(220, 56);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "  Выйти из аккаунта";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
+            this.logout_buttonb.Location = new System.Drawing.Point(0, 0);
+            this.logout_buttonb.Name = "logout_buttonb";
+            this.logout_buttonb.Size = new System.Drawing.Size(75, 23);
+            this.logout_buttonb.TabIndex = 7;
             // 
             // button2
             // 
@@ -1309,6 +1299,26 @@ namespace MyWoggi
             this.newWrite5_button.Text = "Новая запись";
             this.newWrite5_button.UseVisualStyleBackColor = false;
             // 
+            // logout_button
+            // 
+            this.logout_button.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.logout_button.FlatAppearance.BorderSize = 0;
+            this.logout_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logout_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.logout_button.ForeColor = System.Drawing.Color.Gainsboro;
+            this.logout_button.Image = global::MyWoggi.Properties.Resources.log_out;
+            this.logout_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logout_button.Location = new System.Drawing.Point(0, 639);
+            this.logout_button.Name = "logout_button";
+            this.logout_button.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.logout_button.Size = new System.Drawing.Size(220, 56);
+            this.logout_button.TabIndex = 8;
+            this.logout_button.Text = "  Выйти из аккаунта";
+            this.logout_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logout_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.logout_button.UseVisualStyleBackColor = true;
+            this.logout_button.Click += new System.EventHandler(this.logout_button_Click);
+            // 
             // tables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1459,5 +1469,6 @@ namespace MyWoggi
         private System.Windows.Forms.PictureBox update_picturebox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox Search_texBox;
+        private System.Windows.Forms.Button logout_button;
     }
 }

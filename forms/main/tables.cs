@@ -25,10 +25,9 @@ namespace MyWoggi
     public partial class tables : Form
     {
         Authorization authorization = new Authorization();
+        Homepage homepage = new Homepage();
         Database MyWoggi = new Database();
         int selectedRow;
-        private string authTokenFilePath;
-        private string authToken;
 
         private void CreateColumns()
         {
@@ -75,7 +74,6 @@ namespace MyWoggi
         {
             InitializeComponent();
             tabControl1.DrawMode = TabDrawMode.OwnerDrawFixed;
-            authTokenFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "authtoken.txt");
 
             // Set the height of the tab page switch
             tabControl1.ItemSize = new Size(tabControl1.ItemSize.Width, 33);
@@ -219,7 +217,7 @@ namespace MyWoggi
             deleteRow();
         }
 
-        private void Update()
+        private new void Update()
         {
             MyWoggi.OpenConnection();
             for(int index = 0; index < dataGridView1.Rows.Count; index++)
@@ -287,6 +285,11 @@ namespace MyWoggi
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void logout_button_Click(object sender, EventArgs e)
+        {
+            homepage.LogOut();
         }
     }
 }

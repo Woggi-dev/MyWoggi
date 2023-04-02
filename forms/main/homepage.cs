@@ -9,7 +9,6 @@ namespace MyWoggi.forms
         Authorization authorization = new Authorization();
         Database MyWoggi = new Database();
         tables tables = new tables();
-        About about = new About();
         ToolTip tooltip = new ToolTip();
         // Токен входа в аккаунт
         private string authToken;
@@ -62,7 +61,6 @@ namespace MyWoggi.forms
         // Переход на форму о проекте
         private void About_button(object sender, EventArgs e)
         {
-            about.Show();
             this.Hide();
         }
 
