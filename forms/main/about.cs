@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MyWoggi.forms;
 
@@ -22,7 +15,7 @@ namespace MyWoggi
             tooltip.SetToolTip(homepage_button, "На главный экран");
             tooltip.SetToolTip(logout_button, "Выйти из аккаунта");
         }
-        // текст о для label_About_the_project
+        // Обработчик события загрузки формы
         private void About_Load(object sender, EventArgs e)
         {
             label_About_the_project.Text = "Название проекта: MyWoggi" +
@@ -38,20 +31,22 @@ namespace MyWoggi
                 "\nСоциальные сети: tg: @obl_lak; vk: https://vk.com/kolyashap" +
                 "\nХотим поблагодарить Николая Александровича за помощь в проекте";
         }
-        
+
+        // Когда пользователь нажимает X, приложение закрывается
         private void About_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
-        //Переход в Home
-        private void HomePage_Click(object sender, EventArgs e)
+
+        // Перейти на главный экран
+        private void HomePage_button(object sender, EventArgs e)
         {
             Homepage homepage = new Homepage();
 
             homepage.Show();
             this.Hide();
         }
-
+        // Выход из аккаунта
         private void Logout_button(object sender, EventArgs e)
         {
             Homepage homepage = new Homepage();
@@ -59,6 +54,7 @@ namespace MyWoggi
             homepage.LogOut();
         }
 
+        // Перейти к таблицам
         private void Tables_button(object sender, EventArgs e)
         {
             tables.Show();

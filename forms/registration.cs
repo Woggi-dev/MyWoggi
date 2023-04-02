@@ -12,6 +12,8 @@ namespace MyWoggi
         // Создание объекта авторизации
         Authorization authorization = new Authorization();
 
+        ToolTip tooltip = new ToolTip();
+
         // Создание объекта базы данных
         Database MyWoggi = new Database();
 
@@ -22,6 +24,20 @@ namespace MyWoggi
         string emailPlaceholder = "Ваша почта";
         string pwdPlaceholder = "Ваш пароль";
         string pwdRetryPlaceholder = "Ваш пароль повторно";
+
+        public Registration()
+        {
+
+            InitializeComponent();
+
+            tooltip.SetToolTip(register_button, "Зарегистрироваться");
+            tooltip.SetToolTip(Registration_Login_button, "Вернуться в окно авторизации");
+            tooltip.SetToolTip(ShowPwd_picturebox, "Скрыть пароль");
+            tooltip.SetToolTip(HidePwd_picturebox, "Показать пароль");
+            tooltip.SetToolTip(ShowPwdRetry_picturebox, "Скрыть пароль");
+            tooltip.SetToolTip(HidePwdRetry_picturebox, "Показать пароль");
+
+        }
 
         // Метод для проверки длины текстового поля
         public bool ValidateTextboxLength(TextBox textBox, Label errorLabel, List<TextBox> invalidTextBoxes, string placeHolder)
@@ -118,10 +134,6 @@ namespace MyWoggi
                 return false;
 
             return true;
-        }
-        public Registration()
-        {
-            InitializeComponent();
         }
 
         private void Registration_Load(object sender, EventArgs e)
@@ -302,7 +314,6 @@ namespace MyWoggi
                 }
                 return;
             }
-
             // newDataUser[0] - имя
             // newDataUser[1] - фамилия
             // newDataUser[2] - почта

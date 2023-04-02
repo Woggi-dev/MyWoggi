@@ -706,16 +706,16 @@
     <value>Microsoft Sans Serif, 15.75pt, style=Underline</value>
   </data>
   <data name="Registration_Login_button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 578</value>
+    <value>134, 578</value>
   </data>
   <data name="Registration_Login_button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>283, 37</value>
+    <value>329, 37</value>
   </data>
   <data name="Registration_Login_button.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
   </data>
   <data name="Registration_Login_button.Text" xml:space="preserve">
-    <value>Вернуться в авторизацию</value>
+    <value>Вернуться в окно авторизации</value>
   </data>
   <data name="&gt;&gt;Registration_Login_button.Name" xml:space="preserve">
     <value>Registration_Login_button</value>
@@ -793,10 +793,10 @@
     <value>Consolas, 27.75pt</value>
   </data>
   <data name="title_label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-1, -1</value>
+    <value>-1, 0</value>
   </data>
   <data name="title_label.Size" type="System.Drawing.Size, System.Drawing">
-    <value>591, 43</value>
+    <value>587, 43</value>
   </data>
   <data name="title_label.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>

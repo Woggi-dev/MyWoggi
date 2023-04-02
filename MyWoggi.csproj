@@ -215,6 +215,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Ta Da-SoundBible.com-1884170640.wav" />
     <None Include="images\writing.png" />
     <None Include="Resources\cells %281%29.png" />
     <None Include="images\view.png" />
@@ -251,5 +252,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -118,7 +118,7 @@ namespace MyWoggi
             this.homepage_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.homepage_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.homepage_button.UseVisualStyleBackColor = true;
-            this.homepage_button.Click += new System.EventHandler(this.HomePage_Click);
+            this.homepage_button.Click += new System.EventHandler(this.HomePage_button);
             // 
             // tables_button
             // 
@@ -194,7 +194,7 @@ namespace MyWoggi
             this.label_About_the_project.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.label_About_the_project.Size = new System.Drawing.Size(793, 430);
             this.label_About_the_project.TabIndex = 3;
-            this.label_About_the_project.Text = "label3";
+            this.label_About_the_project.Text = "О проекте";
             this.label_About_the_project.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label_About_the_project.UseCompatibleTextRendering = true;
             // 

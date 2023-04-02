@@ -3,6 +3,7 @@ using System.Drawing;
 using MyWoggi.forms;
 using System.Windows.Forms;
 using System.IO;
+using System.Media;
 
 namespace MyWoggi
 {
@@ -11,7 +12,8 @@ namespace MyWoggi
 
         // Подключение базы данных
         Database MyWoggi = new Database();
-
+        // Подсказки для кнопок
+        ToolTip tooltip = new ToolTip();
 
         // Заполнители для текстовых полей
         string loginPlaceholder = "Ваш никнейм";
@@ -25,6 +27,14 @@ namespace MyWoggi
         private string authToken;
 
 
+        public static void MessageBoxSuccess(string message)
+        {
+            SoundPlayer player = new SoundPlayer();
+            player.Stream = Properties.Resources.success;
+            player.Play();
+            MessageBox.Show(message, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         public Authorization()
         {
             InitializeComponent();
@@ -34,6 +44,13 @@ namespace MyWoggi
 
             // Собираем путь к файлу логина пользователя
             userLoginFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "login.txt");
+
+            tooltip.SetToolTip(login_button, "Войти в аккаунт");
+            tooltip.SetToolTip(register_button, "Зарегистрировать аккаунт");
+            tooltip.SetToolTip(forgotPwd_button, "Восстановить аккаунт");
+            tooltip.SetToolTip(rememberme_checkbox, "Сохранить сессию входа");
+            tooltip.SetToolTip(showPwd_picturebox, "Скрыть пароль");
+            tooltip.SetToolTip(hidePwd_picturebox, "Показать пароль");
         }
 
         // Генерирует новый токен авторизации и сохраняет его в файл, вместе с логином пользователя
@@ -254,6 +271,7 @@ namespace MyWoggi
                     Console.WriteLine("Auth Token failed to update");
                 }
 
+                MessageBoxSuccess("Вы успешно вошли в аккаунт");
                 // Переходим на главную страницу приложения
                 Homepage main = new Homepage();
                 main.Show();
@@ -263,6 +281,7 @@ namespace MyWoggi
             else if (isLogged)
             {
                 // Переходим на главную страницу приложения
+                MessageBoxSuccess("Вы успешно вошли в аккаунт");
                 Homepage main = new Homepage();
                 main.Show();
                 this.Hide();

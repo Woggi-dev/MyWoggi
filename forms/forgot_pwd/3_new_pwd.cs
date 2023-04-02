@@ -12,6 +12,9 @@ namespace MyWoggi
         Authorization authorization = new Authorization();
         Registration registration = new Registration();
         Database MyWoggi = new Database();
+        // Экземпляр класса подсказок
+        ToolTip toolTip = new ToolTip();
+
 
         // Установка значений по умолчанию для полей ввода нового пароля
         string newLoginPlaceholder = "Ваш новый логин";
@@ -22,6 +25,20 @@ namespace MyWoggi
         // Переменная для хранения адреса электронной почты пользователя
         private string userEmail;
 
+
+        // Конструктор формы
+        public ForgotPwdNewPwd(string userEmail)
+        {
+            // Подсказки при наведении на кнопку
+            toolTip.SetToolTip(restoreAccount_button, "Восстановить аккаунт");
+            toolTip.SetToolTip(login_button, "Вернуться в окно авторизации");
+            toolTip.SetToolTip(hidePwd_picturebox, "Показать пароль");
+            toolTip.SetToolTip(hidePwdRetry_picturebox, "Показать пароль");
+            toolTip.SetToolTip(showPwd_picturebox, "Скрыть пароль");
+            toolTip.SetToolTip(showPwdRetry_picturebox, "Скрыть пароль");
+            InitializeComponent();
+            this.userEmail = userEmail;
+        }
         // Метод для проверки соответствия введенных логинов
         private void ValidateTextboxLogin(TextBox login, TextBox loginRetry, Label loginErrorLabel, Label loginRetryErrorLabel, List<TextBox> invalidTextBoxes)
         {
@@ -65,12 +82,6 @@ namespace MyWoggi
             return true;
         }
 
-        // Конструктор формы
-        public ForgotPwdNewPwd(string userEmail)
-        {
-            InitializeComponent();
-            this.userEmail = userEmail;
-        }
 
         // Обработчик события загрузки формы
         private void ForgotPwdNewPwd_Load(object sender, EventArgs e)
@@ -119,7 +130,7 @@ namespace MyWoggi
         // Обработчики событий ввода и вывода фокуса текстовых полей нового пароля
         private void Newpwd_textbox_Enter(object sender, EventArgs e)
         {
-            if (NewPwd_Showpwd_picturebox.Visible == false)
+            if (showPwd_picturebox.Visible == false)
                 newPwd_textbox.PasswordChar = '•';
             authorization.SetPlaceholder(newPwd_textbox, newPwdPlaceholder);
         }
@@ -133,7 +144,7 @@ namespace MyWoggi
         // Обработчик события Enter для текстового поля подтверждения нового пароля
         private void NewPwdRetry_textbox_Enter(object sender, EventArgs e)
         {
-            if (NewPwd_Showpwdretry_picturebox.Visible == false)
+            if (showPwdRetry_picturebox.Visible == false)
                 newPwdRetry_textbox.PasswordChar = '•';
             authorization.SetPlaceholder(newPwdRetry_textbox, newPwdRetryPlaceholder);
         }
@@ -200,8 +211,8 @@ namespace MyWoggi
         // Обработчик события Click для изображения отображения пароля
         private void ShowPwd_picturebox_Click(object sender, EventArgs e)
         {
-            NewPwd_Hidepwd_picturebox.Visible = true;
-            NewPwd_Showpwd_picturebox.Visible = false;
+            hidePwd_picturebox.Visible = true;
+            showPwd_picturebox.Visible = false;
             newPwd_textbox.PasswordChar = '•';
             if (newPwd_textbox.Text == newPwdPlaceholder)
                 newPwd_textbox.PasswordChar = '\0';
@@ -210,8 +221,8 @@ namespace MyWoggi
         // Обработчик события Click для изображения скрытия пароля
         private void HidePwd_picturebox_Click(object sender, EventArgs e)
         {
-            NewPwd_Hidepwd_picturebox.Visible = false;
-            NewPwd_Showpwd_picturebox.Visible = true;
+            hidePwd_picturebox.Visible = false;
+            showPwd_picturebox.Visible = true;
             newPwd_textbox.PasswordChar = '\0';
             if (newPwd_textbox.Text == newPwdPlaceholder)
                 newPwd_textbox.PasswordChar = '•';
@@ -220,8 +231,8 @@ namespace MyWoggi
         // Обработчик события Click для изображения отображения пароля
         private void ShowPwdRetry_picturebox_Click(object sender, EventArgs e)
         {
-            NewPwd_Hidepwdretry_picturebox.Visible = true;
-            NewPwd_Showpwdretry_picturebox.Visible = false;
+            hidePwdRetry_picturebox.Visible = true;
+            showPwdRetry_picturebox.Visible = false;
             newPwdRetry_textbox.PasswordChar = '•';
             if (newPwdRetry_textbox.Text == newPwdRetryPlaceholder)
                 newPwdRetry_textbox.PasswordChar = '\0';
@@ -230,8 +241,8 @@ namespace MyWoggi
         // Обработчик события Click для изображения скрытия пароля
         private void HidePwdRetry_picturebox_Click(object sender, EventArgs e)
         {
-            NewPwd_Hidepwdretry_picturebox.Visible = false;
-            NewPwd_Showpwdretry_picturebox.Visible = true;
+            hidePwdRetry_picturebox.Visible = false;
+            showPwdRetry_picturebox.Visible = true;
             newPwdRetry_textbox.PasswordChar = '\0';
             if (newPwdRetry_textbox.Text == newPwdRetryPlaceholder)
                 newPwdRetry_textbox.PasswordChar = '•';
