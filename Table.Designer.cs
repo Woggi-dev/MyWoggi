@@ -44,10 +44,13 @@ namespace MyWoggi
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -61,7 +64,7 @@ namespace MyWoggi
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 650);
+            this.panelMenu.Size = new System.Drawing.Size(220, 759);
             this.panelMenu.TabIndex = 1;
             // 
             // button4
@@ -93,7 +96,7 @@ namespace MyWoggi
             this.button3.ForeColor = System.Drawing.Color.Gainsboro;
             this.button3.Image = global::MyWoggi.Properties.Resources.log_out;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 594);
+            this.button3.Location = new System.Drawing.Point(0, 703);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
             this.button3.Size = new System.Drawing.Size(220, 56);
@@ -102,6 +105,7 @@ namespace MyWoggi
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -170,7 +174,7 @@ namespace MyWoggi
             this.panel1.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.panel1.Location = new System.Drawing.Point(220, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(744, 80);
+            this.panel1.Size = new System.Drawing.Size(876, 80);
             this.panel1.TabIndex = 2;
             // 
             // label1
@@ -192,13 +196,14 @@ namespace MyWoggi
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tabControl1.ItemSize = new System.Drawing.Size(100, 21);
             this.tabControl1.Location = new System.Drawing.Point(220, 80);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(30, 3);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(745, 570);
+            this.tabControl1.Size = new System.Drawing.Size(876, 679);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 3;
             this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
@@ -207,11 +212,12 @@ namespace MyWoggi
             // 
             this.tabPage1.AccessibleRole = System.Windows.Forms.AccessibleRole.Alert;
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(171)))), ((int)(((byte)(220)))));
+            this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.ForeColor = System.Drawing.SystemColors.Control;
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(737, 541);
+            this.tabPage1.Size = new System.Drawing.Size(868, 650);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Таблица_1";
             // 
@@ -221,7 +227,7 @@ namespace MyWoggi
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(736, 541);
+            this.tabPage2.Size = new System.Drawing.Size(737, 541);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Таблица_2";
             // 
@@ -230,7 +236,7 @@ namespace MyWoggi
             this.tabPage3.BackColor = System.Drawing.Color.White;
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(736, 541);
+            this.tabPage3.Size = new System.Drawing.Size(737, 541);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Таблица_3";
             // 
@@ -239,7 +245,7 @@ namespace MyWoggi
             this.tabPage4.BackColor = System.Drawing.Color.White;
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(736, 541);
+            this.tabPage4.Size = new System.Drawing.Size(737, 541);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Таблица_4";
             // 
@@ -248,16 +254,25 @@ namespace MyWoggi
             this.tabPage5.BackColor = System.Drawing.Color.White;
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(736, 541);
+            this.tabPage5.Size = new System.Drawing.Size(737, 541);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Таблица_5";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(862, 341);
+            this.dataGridView1.TabIndex = 0;
             // 
             // Table
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(964, 650);
+            this.ClientSize = new System.Drawing.Size(1096, 759);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenu);
@@ -271,6 +286,8 @@ namespace MyWoggi
             this.panelLogo.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -292,5 +309,6 @@ namespace MyWoggi
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
