@@ -81,7 +81,7 @@ namespace MyWoggi
             this.loginpwdError_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(107)))), ((int)(((byte)(93)))));
             this.loginpwdError_label.Location = new System.Drawing.Point(-1, 246);
             this.loginpwdError_label.Name = "loginpwdError_label";
-            this.loginpwdError_label.Size = new System.Drawing.Size(546, 26);
+            this.loginpwdError_label.Size = new System.Drawing.Size(539, 26);
             this.loginpwdError_label.TabIndex = 62;
             this.loginpwdError_label.Text = "label";
             this.loginpwdError_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -227,9 +227,9 @@ namespace MyWoggi
             // 
             this.subtitle_label.BackColor = System.Drawing.Color.Transparent;
             this.subtitle_label.Font = new System.Drawing.Font("Consolas", 30.25F);
-            this.subtitle_label.Location = new System.Drawing.Point(-5, 5);
+            this.subtitle_label.Location = new System.Drawing.Point(-1, 5);
             this.subtitle_label.Name = "subtitle_label";
-            this.subtitle_label.Size = new System.Drawing.Size(540, 47);
+            this.subtitle_label.Size = new System.Drawing.Size(536, 47);
             this.subtitle_label.TabIndex = 0;
             this.subtitle_label.Text = "Вход";
             this.subtitle_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;

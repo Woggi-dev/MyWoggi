@@ -15,6 +15,9 @@ namespace MyWoggi
         // Создание объекта базы данных MyWoggi
         Database MyWoggi = new Database();
 
+        // Экземпляр класса подсказок
+        ToolTip toolTip = new ToolTip();
+
         // Создание строки для заполнения плейсхолдера электронной почты
         string emailPlaceholder = "Ваша почта";
 
@@ -29,6 +32,11 @@ namespace MyWoggi
         public ForgotPwdEmail()
         {
             InitializeComponent();
+
+            // Подсказки при наведении на кнопку
+            toolTip.SetToolTip(getCode_button, "Получить код восстановления на почту");
+            toolTip.SetToolTip(Login_Button, "Вернуться в окно авторизации");
+
             // Генерация кода восстановления пароля
             recoveryCode = rand.Next(10000, 99999);
         }

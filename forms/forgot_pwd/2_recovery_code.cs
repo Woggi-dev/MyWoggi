@@ -11,6 +11,9 @@ namespace MyWoggi
 
         // Задание текста-заполнителя для кода восстановления
         string recoveryCodePlaceholder = "Ваш код восстановления";
+        // Экземпляр класса подсказок
+
+        ToolTip toolTip = new ToolTip();
 
         // Переменные для кода восстановления и адреса электронной почты пользователя
         private int recoveryCode;
@@ -20,6 +23,10 @@ namespace MyWoggi
         public ForgotPwdCode(int recoveryCode, string userEmail)
         {
             InitializeComponent();
+            // Подсказки при наведении на кнопку
+            toolTip.SetToolTip(enterCode_button, "Перейти к восстановлению аккаунта");
+            toolTip.SetToolTip(Login_Button, "Вернуться в окно авторизации");
+            
             this.recoveryCode = recoveryCode;
             this.userEmail = userEmail;
         }

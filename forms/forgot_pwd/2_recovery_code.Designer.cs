@@ -130,7 +130,7 @@ namespace MyWoggi
             // 
             this.recoveryCode_picturebox.BackColor = System.Drawing.Color.Transparent;
             this.recoveryCode_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.recovery_code;
-            this.recoveryCode_picturebox.Location = new System.Drawing.Point(7, 133);
+            this.recoveryCode_picturebox.Location = new System.Drawing.Point(11, 135);
             this.recoveryCode_picturebox.Name = "recoveryCode_picturebox";
             this.recoveryCode_picturebox.Size = new System.Drawing.Size(37, 37);
             this.recoveryCode_picturebox.TabIndex = 43;
