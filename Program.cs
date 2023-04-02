@@ -31,7 +31,7 @@ namespace MyWoggi
             else
             {
                 // Показать форму авторизации
-                Application.Run(authorization);
+                Application.Run(new Authorization());
             }
         }
     }
