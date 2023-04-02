@@ -70,7 +70,7 @@ namespace MyWoggi
         }
 
         // Считывает токен авторизации из файла
-            private string ReadAuthToken()
+            public string ReadAuthToken()
             {
                 FileStream fileStream = new FileStream(authTokenFilePath, FileMode.Open);
                 StreamReader streamReader = new StreamReader(fileStream);
@@ -255,7 +255,7 @@ namespace MyWoggi
                 }
 
                 // Переходим на главную страницу приложения
-                Main main = new Main();
+                Homepage main = new Homepage();
                 main.Show();
                 this.Hide();
             }
@@ -263,7 +263,7 @@ namespace MyWoggi
             else if (isLogged)
             {
                 // Переходим на главную страницу приложения
-                Main main = new Main();
+                Homepage main = new Homepage();
                 main.Show();
                 this.Hide();
             }

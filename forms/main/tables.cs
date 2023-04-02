@@ -22,7 +22,7 @@ namespace MyWoggi
         ModifiedNew,
         Deleted
     }
-    public partial class Table : Form
+    public partial class tables : Form
     {
         Authorization authorization = new Authorization();
         Database MyWoggi = new Database();
@@ -197,7 +197,7 @@ namespace MyWoggi
             RefreshDataGrid(dataGridView4, speciesQueryString);
             RefreshDataGrid(dataGridView5, visitorsQueryString);
         }
-        public Table()
+        public tables()
         {
             InitializeComponent();
             tabControl1.DrawMode = TabDrawMode.OwnerDrawFixed;
@@ -215,7 +215,7 @@ namespace MyWoggi
         //переход в Home
         private void button4_Click(object sender, EventArgs e)
         {
-            Main main = new Main();
+            Homepage main = new Homepage();
             main.Show();
             this.Hide();
         }
@@ -446,6 +446,11 @@ namespace MyWoggi
         private void saveWrite5_button_Click(object sender, EventArgs e)
         {
             Update(dataGridView1, "visitors", "visitor_id");
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
 
         }
     }
