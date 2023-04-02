@@ -14,7 +14,6 @@ namespace MyWoggi
     public partial class About : Form
     {
         tables tables = new tables();
-        Homepage homepage = new Homepage();
         ToolTip tooltip = new ToolTip();
         public About()
         {
@@ -47,12 +46,16 @@ namespace MyWoggi
         //Переход в Home
         private void HomePage_Click(object sender, EventArgs e)
         {
+            Homepage homepage = new Homepage();
+
             homepage.Show();
             this.Hide();
         }
 
         private void Logout_button(object sender, EventArgs e)
         {
+            Homepage homepage = new Homepage();
+
             homepage.LogOut();
         }
 
