@@ -1,7 +1,7 @@
 ﻿
 namespace MyWoggi
 {
-    partial class Table
+    partial class tables
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@ namespace MyWoggi
         {
             this.panelMenu = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.logout_buttonb = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
@@ -154,7 +154,7 @@ namespace MyWoggi
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(46)))), ((int)(((byte)(54)))));
             this.panelMenu.Controls.Add(this.button4);
-            this.panelMenu.Controls.Add(this.button3);
+            this.panelMenu.Controls.Add(this.logout_buttonb);
             this.panelMenu.Controls.Add(this.button2);
             this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.panelLogo);
@@ -184,7 +184,7 @@ namespace MyWoggi
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // logout_buttonb
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button3.FlatAppearance.BorderSize = 0;
@@ -240,6 +240,7 @@ namespace MyWoggi
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panelLogo
             // 
@@ -1308,7 +1309,7 @@ namespace MyWoggi
             this.newWrite5_button.Text = "Новая запись";
             this.newWrite5_button.UseVisualStyleBackColor = false;
             // 
-            // Table
+            // tables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1317,7 +1318,7 @@ namespace MyWoggi
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenu);
-            this.Name = "Table";
+            this.Name = "tables";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Table";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Table_FormClosed);
@@ -1366,7 +1367,7 @@ namespace MyWoggi
         #endregion
 
         private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button logout_buttonb;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panelLogo;

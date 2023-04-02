@@ -26,14 +26,13 @@ namespace MyWoggi
                 authorization.Close();
 
                 // Создать и показать основную форму
-                Application.Run(new Table());
+                Application.Run(new Homepage());
             }
             else
             {
                 // Показать форму авторизации
-                Application.Run(authorization);
+                Application.Run(new Authorization());
             }
-            Application.Run(new Authorization());
         }
     }
 }

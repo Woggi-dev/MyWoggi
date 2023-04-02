@@ -10,6 +10,7 @@ using MySql.Data.MySqlClient;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MyWoggi.forms;
+using System.IO;
 
 namespace MyWoggi
 {
@@ -21,10 +22,13 @@ namespace MyWoggi
         ModifiedNew,
         Deleted
     }
-    public partial class Table : Form
+    public partial class tables : Form
     {
+        Authorization authorization = new Authorization();
         Database MyWoggi = new Database();
         int selectedRow;
+        private string authTokenFilePath;
+        private string authToken;
 
         private void CreateColumns()
         {
@@ -67,10 +71,11 @@ namespace MyWoggi
             RefreshDataGrid(dataGridView1, animalsQueryString);
             
         }
-        public Table()
+        public tables()
         {
             InitializeComponent();
             tabControl1.DrawMode = TabDrawMode.OwnerDrawFixed;
+            authTokenFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "authtoken.txt");
 
             // Set the height of the tab page switch
             tabControl1.ItemSize = new Size(tabControl1.ItemSize.Width, 33);
@@ -84,7 +89,7 @@ namespace MyWoggi
         //переход в Home
         private void button4_Click(object sender, EventArgs e)
         {
-            Main main = new Main();
+            Homepage main = new Homepage();
             main.Show();
             this.Hide();
         }
@@ -277,6 +282,11 @@ namespace MyWoggi
         private void changeWrite1_button_Click(object sender, EventArgs e)
         {
             Change();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
