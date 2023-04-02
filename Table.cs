@@ -10,6 +10,7 @@ using MySql.Data.MySqlClient;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MyWoggi.forms;
+using System.IO;
 
 namespace MyWoggi
 {
@@ -23,8 +24,11 @@ namespace MyWoggi
     }
     public partial class Table : Form
     {
+        Authorization authorization = new Authorization();
         Database MyWoggi = new Database();
         int selectedRow;
+        private string authTokenFilePath;
+        private string authToken;
 
         private void CreateColumns()
         {
@@ -54,6 +58,15 @@ namespace MyWoggi
             dataGridView5.Columns.Add("IsNew", String.Empty);
         }
 
+        private string ReadAuthToken()
+        {
+            FileStream fileStream = new FileStream(authTokenFilePath, FileMode.Open);
+            StreamReader streamReader = new StreamReader(fileStream);
+            string authToken = streamReader.ReadLine();
+            streamReader.Close();
+            fileStream.Close();
+            return authToken;
+        } 
         private void DeleteRow(DataGridView dataGridView)
         {
             int index = dataGridView.CurrentCell.RowIndex;
@@ -188,6 +201,7 @@ namespace MyWoggi
         {
             InitializeComponent();
             tabControl1.DrawMode = TabDrawMode.OwnerDrawFixed;
+            authTokenFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "authtoken.txt");
 
             // Set the height of the tab page switch
             tabControl1.ItemSize = new Size(tabControl1.ItemSize.Width, 33);
@@ -251,8 +265,20 @@ namespace MyWoggi
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void LogOut_button(object sender, EventArgs e)
         {
+            authToken = ReadAuthToken();
+            string rememberMeDisabledQueryString = $"update Userdata set rememberme_user = '0' where authtoken_user = '{authToken}'";
+            bool isRememberDisabled = MyWoggi.InsertUpdateData(rememberMeDisabledQueryString);
+            if (isRememberDisabled)
+            {
+                authorization.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Произошла ошибка выхода из аккаунта...", "Ошибка", MessageBoxButtons.OK);
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

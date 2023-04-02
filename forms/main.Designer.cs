@@ -32,16 +32,16 @@ namespace MyWoggi.forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonTable = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -69,56 +69,6 @@ namespace MyWoggi.forms
             this.panelMenu.Size = new System.Drawing.Size(220, 565);
             this.panelMenu.TabIndex = 0;
             // 
-            // panelLogo
-            // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(32)))), ((int)(((byte)(38)))));
-            this.panelLogo.Controls.Add(this.label2);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(220, 80);
-            this.panelLogo.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(55, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "MyWoggi";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(162)))), ((int)(((byte)(248)))));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(220, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(799, 80);
-            this.panel1.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Consolas", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(162)))), ((int)(((byte)(248)))));
-            this.label3.Location = new System.Drawing.Point(607, 281);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(206, 56);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "MyWoggi";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::MyWoggi.Properties.Resources.main_2_;
-            this.pictureBox3.Location = new System.Drawing.Point(501, 249);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            // 
             // button3
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -137,6 +87,7 @@ namespace MyWoggi.forms
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.LogOut_button);
             // 
             // button2
             // 
@@ -195,6 +146,36 @@ namespace MyWoggi.forms
             this.buttonTable.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonTable.UseVisualStyleBackColor = true;
             // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(32)))), ((int)(((byte)(38)))));
+            this.panelLogo.Controls.Add(this.label2);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(220, 80);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(55, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "MyWoggi";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(162)))), ((int)(((byte)(248)))));
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(220, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(799, 80);
+            this.panel1.TabIndex = 1;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -205,6 +186,26 @@ namespace MyWoggi.forms
             this.label1.Size = new System.Drawing.Size(181, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "ГЛАВНЫЙ ЭКРАН";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Consolas", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(162)))), ((int)(((byte)(248)))));
+            this.label3.Location = new System.Drawing.Point(607, 281);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(206, 56);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "MyWoggi";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::MyWoggi.Properties.Resources.main_2_;
+            this.pictureBox3.Location = new System.Drawing.Point(501, 249);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
             // 
             // Main
             // 
