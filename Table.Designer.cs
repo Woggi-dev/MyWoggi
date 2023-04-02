@@ -30,6 +30,10 @@ namespace MyWoggi
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -37,122 +41,108 @@ namespace MyWoggi
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.saveWrite1_button = new System.Windows.Forms.Button();
+            this.changeWrite1_button = new System.Windows.Forms.Button();
+            this.deleteWrite1_button = new System.Windows.Forms.Button();
+            this.newWrite1_button = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.idEnclosure_textbox = new System.Windows.Forms.TextBox();
+            this.typeSpecies_textbox = new System.Windows.Forms.TextBox();
+            this.nameAnimal_textbox = new System.Windows.Forms.TextBox();
+            this.idAnimal_textbox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel = new System.Windows.Forms.Panel();
+            this.nameCategory_textbox = new System.Windows.Forms.TextBox();
+            this.idCategory_textbox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label15 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.saveWrite2_button = new System.Windows.Forms.Button();
+            this.changeWrite2_button = new System.Windows.Forms.Button();
+            this.deleteWrite2_button = new System.Windows.Forms.Button();
+            this.newWrite2_button = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
+            this.sizeEnclosure_textbox = new System.Windows.Forms.TextBox();
+            this.nameEnclosure_textbox = new System.Windows.Forms.TextBox();
+            this.idEnclosure1_textbox = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.label21 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.saveWrite3_button = new System.Windows.Forms.Button();
+            this.changeWrite3_button = new System.Windows.Forms.Button();
+            this.deleteWrite3_button = new System.Windows.Forms.Button();
+            this.newWrite3_button = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
+            this.idCategory1_textbox = new System.Windows.Forms.TextBox();
+            this.nameSpecies_textbox = new System.Windows.Forms.TextBox();
+            this.idSpecies_textbox = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.label27 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
+            this.label21 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.saveWrite4_button = new System.Windows.Forms.Button();
+            this.changeWrite4_button = new System.Windows.Forms.Button();
+            this.deleteWrite4_button = new System.Windows.Forms.Button();
+            this.newWrite4_button = new System.Windows.Forms.Button();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
+            this.idTicket_textbox = new System.Windows.Forms.TextBox();
+            this.nameVisitor_textbox = new System.Windows.Forms.TextBox();
+            this.idVisitor_textbox = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.label27 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.saveWrite5_button = new System.Windows.Forms.Button();
+            this.changeWrite5_button = new System.Windows.Forms.Button();
+            this.deleteWrite5_button = new System.Windows.Forms.Button();
+            this.newWrite5_button = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.panel6.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.panel8.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            this.panel10.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -168,195 +158,6 @@ namespace MyWoggi
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(220, 695);
             this.panelMenu.TabIndex = 1;
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(32)))), ((int)(((byte)(38)))));
-            this.panelLogo.Controls.Add(this.label2);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(220, 80);
-            this.panelLogo.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(55, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "MyWoggi";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(162)))), ((int)(((byte)(248)))));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.panel1.Location = new System.Drawing.Point(220, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(876, 80);
-            this.panel1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(77, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(744, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ТАБЛИЦЫ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tabControl1.ItemSize = new System.Drawing.Size(100, 21);
-            this.tabControl1.Location = new System.Drawing.Point(220, 80);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.Padding = new System.Drawing.Point(30, 3);
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(876, 615);
-            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
-            this.tabControl1.TabIndex = 3;
-            this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.AccessibleRole = System.Windows.Forms.AccessibleRole.Alert;
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(46)))), ((int)(((byte)(54)))));
-            this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.panel3);
-            this.tabPage1.Controls.Add(this.panel2);
-            this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.ForeColor = System.Drawing.SystemColors.Control;
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(868, 586);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Таблица_1";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(862, 341);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(46)))), ((int)(((byte)(54)))));
-            this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.panel4);
-            this.tabPage2.Controls.Add(this.panel5);
-            this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(868, 586);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Таблица_2";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(46)))), ((int)(((byte)(54)))));
-            this.tabPage3.Controls.Add(this.label15);
-            this.tabPage3.Controls.Add(this.panel6);
-            this.tabPage3.Controls.Add(this.panel7);
-            this.tabPage3.Controls.Add(this.dataGridView3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(868, 586);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Таблица_3";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(46)))), ((int)(((byte)(54)))));
-            this.tabPage4.Controls.Add(this.label21);
-            this.tabPage4.Controls.Add(this.panel8);
-            this.tabPage4.Controls.Add(this.panel9);
-            this.tabPage4.Controls.Add(this.dataGridView4);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(868, 586);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Таблица_4";
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(46)))), ((int)(((byte)(54)))));
-            this.tabPage5.Controls.Add(this.label27);
-            this.tabPage5.Controls.Add(this.panel10);
-            this.tabPage5.Controls.Add(this.panel11);
-            this.tabPage5.Controls.Add(this.dataGridView5);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(868, 586);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Таблица_5";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Location = new System.Drawing.Point(143, 361);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(291, 207);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.button8);
-            this.panel3.Controls.Add(this.button7);
-            this.panel3.Controls.Add(this.button6);
-            this.panel3.Controls.Add(this.button5);
-            this.panel3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel3.Location = new System.Drawing.Point(488, 384);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(189, 189);
-            this.panel3.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Image = global::MyWoggi.Properties.Resources.writing;
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(7, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 47);
-            this.label3.TabIndex = 0;
-            this.label3.Text = " Запись";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.UseCompatibleTextRendering = true;
             // 
             // button4
             // 
@@ -436,49 +237,96 @@ namespace MyWoggi
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // panelLogo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(3, 62);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 20);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "label4";
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(32)))), ((int)(((byte)(38)))));
+            this.panelLogo.Controls.Add(this.label2);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(220, 80);
+            this.panelLogo.TabIndex = 0;
             // 
-            // label5
+            // label2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(3, 99);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 20);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "label5";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(55, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "MyWoggi";
             // 
-            // label6
+            // panel1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(3, 136);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 20);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "label6";
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(162)))), ((int)(((byte)(248)))));
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.panel1.Location = new System.Drawing.Point(220, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(876, 80);
+            this.panel1.TabIndex = 2;
             // 
-            // label7
+            // label1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(3, 173);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 20);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "label7";
+            this.label1.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(77, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(744, 28);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ТАБЛИЦЫ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.tabControl1.ItemSize = new System.Drawing.Size(100, 21);
+            this.tabControl1.Location = new System.Drawing.Point(220, 80);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.Padding = new System.Drawing.Point(30, 3);
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(876, 612);
+            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
+            this.tabControl1.TabIndex = 3;
+            this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.AccessibleRole = System.Windows.Forms.AccessibleRole.Alert;
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(46)))), ((int)(((byte)(54)))));
+            this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Controls.Add(this.panel3);
+            this.tabPage1.Controls.Add(this.panel2);
+            this.tabPage1.ForeColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(868, 583);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Таблица_1";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(862, 330);
+            this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label8
             // 
@@ -491,239 +339,227 @@ namespace MyWoggi
             this.label8.TabIndex = 5;
             this.label8.Text = "Управление записями";
             // 
-            // textBox1
+            // panel3
             // 
-            this.textBox1.Location = new System.Drawing.Point(75, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(178, 20);
-            this.textBox1.TabIndex = 5;
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.saveWrite1_button);
+            this.panel3.Controls.Add(this.changeWrite1_button);
+            this.panel3.Controls.Add(this.deleteWrite1_button);
+            this.panel3.Controls.Add(this.newWrite1_button);
+            this.panel3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel3.Location = new System.Drawing.Point(488, 384);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(189, 189);
+            this.panel3.TabIndex = 2;
             // 
-            // textBox2
+            // saveWrite1_button
             // 
-            this.textBox2.Location = new System.Drawing.Point(75, 101);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(178, 20);
-            this.textBox2.TabIndex = 6;
+            this.saveWrite1_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.saveWrite1_button.FlatAppearance.BorderSize = 0;
+            this.saveWrite1_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveWrite1_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.saveWrite1_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.saveWrite1_button.Location = new System.Drawing.Point(18, 132);
+            this.saveWrite1_button.Name = "saveWrite1_button";
+            this.saveWrite1_button.Size = new System.Drawing.Size(145, 34);
+            this.saveWrite1_button.TabIndex = 9;
+            this.saveWrite1_button.Text = "Сохранить";
+            this.saveWrite1_button.UseVisualStyleBackColor = false;
+            this.saveWrite1_button.Click += new System.EventHandler(this.saveWrite1_button_Click);
             // 
-            // textBox3
+            // changeWrite1_button
             // 
-            this.textBox3.Location = new System.Drawing.Point(75, 138);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(178, 20);
-            this.textBox3.TabIndex = 7;
+            this.changeWrite1_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.changeWrite1_button.FlatAppearance.BorderSize = 0;
+            this.changeWrite1_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changeWrite1_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.changeWrite1_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.changeWrite1_button.Location = new System.Drawing.Point(18, 92);
+            this.changeWrite1_button.Name = "changeWrite1_button";
+            this.changeWrite1_button.Size = new System.Drawing.Size(145, 34);
+            this.changeWrite1_button.TabIndex = 8;
+            this.changeWrite1_button.Text = "Изменить";
+            this.changeWrite1_button.UseVisualStyleBackColor = false;
+            this.changeWrite1_button.Click += new System.EventHandler(this.changeWrite1_button_Click);
             // 
-            // textBox4
+            // deleteWrite1_button
             // 
-            this.textBox4.Location = new System.Drawing.Point(75, 173);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(178, 20);
-            this.textBox4.TabIndex = 8;
+            this.deleteWrite1_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.deleteWrite1_button.FlatAppearance.BorderSize = 0;
+            this.deleteWrite1_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteWrite1_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.deleteWrite1_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.deleteWrite1_button.Location = new System.Drawing.Point(18, 52);
+            this.deleteWrite1_button.Name = "deleteWrite1_button";
+            this.deleteWrite1_button.Size = new System.Drawing.Size(145, 34);
+            this.deleteWrite1_button.TabIndex = 7;
+            this.deleteWrite1_button.Text = "Удалить";
+            this.deleteWrite1_button.UseVisualStyleBackColor = false;
+            this.deleteWrite1_button.Click += new System.EventHandler(this.deleteWrite1_button_Click);
             // 
-            // button5
+            // newWrite1_button
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Location = new System.Drawing.Point(18, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(145, 34);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Новая запись";
-            this.button5.UseVisualStyleBackColor = false;
+            this.newWrite1_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.newWrite1_button.FlatAppearance.BorderSize = 0;
+            this.newWrite1_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newWrite1_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.newWrite1_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.newWrite1_button.Location = new System.Drawing.Point(18, 12);
+            this.newWrite1_button.Name = "newWrite1_button";
+            this.newWrite1_button.Size = new System.Drawing.Size(145, 34);
+            this.newWrite1_button.TabIndex = 6;
+            this.newWrite1_button.Text = "Новая запись";
+            this.newWrite1_button.UseVisualStyleBackColor = false;
+            this.newWrite1_button.Click += new System.EventHandler(this.newWrite1_button_Click);
             // 
-            // button7
+            // panel2
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Location = new System.Drawing.Point(18, 92);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(145, 34);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "Изменить";
-            this.button7.UseVisualStyleBackColor = false;
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.idEnclosure_textbox);
+            this.panel2.Controls.Add(this.typeSpecies_textbox);
+            this.panel2.Controls.Add(this.nameAnimal_textbox);
+            this.panel2.Controls.Add(this.idAnimal_textbox);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel2.Location = new System.Drawing.Point(96, 361);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(344, 207);
+            this.panel2.TabIndex = 1;
             // 
-            // button8
+            // idEnclosure_textbox
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button8.Location = new System.Drawing.Point(18, 132);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(145, 34);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "Сохранить";
-            this.button8.UseVisualStyleBackColor = false;
+            this.idEnclosure_textbox.Location = new System.Drawing.Point(155, 173);
+            this.idEnclosure_textbox.Name = "idEnclosure_textbox";
+            this.idEnclosure_textbox.Size = new System.Drawing.Size(178, 20);
+            this.idEnclosure_textbox.TabIndex = 8;
             // 
-            // button6
+            // typeSpecies_textbox
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Location = new System.Drawing.Point(18, 52);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(145, 34);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "Удалить";
-            this.button6.UseVisualStyleBackColor = false;
+            this.typeSpecies_textbox.Location = new System.Drawing.Point(155, 138);
+            this.typeSpecies_textbox.Name = "typeSpecies_textbox";
+            this.typeSpecies_textbox.Size = new System.Drawing.Size(178, 20);
+            this.typeSpecies_textbox.TabIndex = 7;
             // 
-            // label9
+            // nameAnimal_textbox
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(492, 366);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(177, 20);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Управление записями";
+            this.nameAnimal_textbox.Location = new System.Drawing.Point(155, 101);
+            this.nameAnimal_textbox.Name = "nameAnimal_textbox";
+            this.nameAnimal_textbox.Size = new System.Drawing.Size(178, 20);
+            this.nameAnimal_textbox.TabIndex = 6;
             // 
-            // panel4
+            // idAnimal_textbox
             // 
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.button9);
-            this.panel4.Controls.Add(this.button10);
-            this.panel4.Controls.Add(this.button11);
-            this.panel4.Controls.Add(this.button12);
-            this.panel4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel4.Location = new System.Drawing.Point(488, 389);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(189, 189);
-            this.panel4.TabIndex = 8;
+            this.idAnimal_textbox.Location = new System.Drawing.Point(155, 64);
+            this.idAnimal_textbox.Name = "idAnimal_textbox";
+            this.idAnimal_textbox.Size = new System.Drawing.Size(178, 20);
+            this.idAnimal_textbox.TabIndex = 5;
             // 
-            // button9
+            // label7
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button9.Location = new System.Drawing.Point(18, 132);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(145, 34);
-            this.button9.TabIndex = 9;
-            this.button9.Text = "Сохранить";
-            this.button9.UseVisualStyleBackColor = false;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(3, 173);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(94, 20);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "ID вольера";
             // 
-            // button10
+            // label6
             // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button10.Location = new System.Drawing.Point(18, 92);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(145, 34);
-            this.button10.TabIndex = 8;
-            this.button10.Text = "Изменить";
-            this.button10.UseVisualStyleBackColor = false;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(3, 136);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 20);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "ID вида";
             // 
-            // button11
+            // label5
             // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button11.Location = new System.Drawing.Point(18, 52);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(145, 34);
-            this.button11.TabIndex = 7;
-            this.button11.Text = "Удалить";
-            this.button11.UseVisualStyleBackColor = false;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(3, 99);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(125, 20);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Имя животного";
             // 
-            // button12
+            // label4
             // 
-            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button12.Location = new System.Drawing.Point(18, 12);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(145, 34);
-            this.button12.TabIndex = 6;
-            this.button12.Text = "Новая запись";
-            this.button12.UseVisualStyleBackColor = false;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(3, 62);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(111, 20);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "ID животного";
             // 
-            // panel5
+            // label3
             // 
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.textBox5);
-            this.panel5.Controls.Add(this.textBox6);
-            this.panel5.Controls.Add(this.textBox7);
-            this.panel5.Controls.Add(this.textBox8);
-            this.panel5.Controls.Add(this.label10);
-            this.panel5.Controls.Add(this.label11);
-            this.panel5.Controls.Add(this.label12);
-            this.panel5.Controls.Add(this.label13);
-            this.panel5.Controls.Add(this.label14);
-            this.panel5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel5.Location = new System.Drawing.Point(143, 366);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(291, 207);
-            this.panel5.TabIndex = 7;
+            this.label3.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Image = global::MyWoggi.Properties.Resources.writing;
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.Location = new System.Drawing.Point(7, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(154, 47);
+            this.label3.TabIndex = 0;
+            this.label3.Text = " Запись";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.UseCompatibleTextRendering = true;
             // 
-            // textBox5
+            // tabPage2
             // 
-            this.textBox5.Location = new System.Drawing.Point(75, 173);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(178, 20);
-            this.textBox5.TabIndex = 8;
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(46)))), ((int)(((byte)(54)))));
+            this.tabPage2.Controls.Add(this.panel);
+            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Controls.Add(this.label9);
+            this.tabPage2.Controls.Add(this.panel4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(868, 583);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Таблица_2";
             // 
-            // textBox6
+            // panel
             // 
-            this.textBox6.Location = new System.Drawing.Point(75, 138);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(178, 20);
-            this.textBox6.TabIndex = 7;
+            this.panel.BackColor = System.Drawing.Color.Transparent;
+            this.panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel.Controls.Add(this.nameCategory_textbox);
+            this.panel.Controls.Add(this.idCategory_textbox);
+            this.panel.Controls.Add(this.label12);
+            this.panel.Controls.Add(this.label13);
+            this.panel.Controls.Add(this.label14);
+            this.panel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel.Location = new System.Drawing.Point(59, 366);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(344, 150);
+            this.panel.TabIndex = 11;
             // 
-            // textBox7
+            // nameCategory_textbox
             // 
-            this.textBox7.Location = new System.Drawing.Point(75, 101);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(178, 20);
-            this.textBox7.TabIndex = 6;
+            this.nameCategory_textbox.Location = new System.Drawing.Point(155, 101);
+            this.nameCategory_textbox.Name = "nameCategory_textbox";
+            this.nameCategory_textbox.Size = new System.Drawing.Size(178, 20);
+            this.nameCategory_textbox.TabIndex = 6;
             // 
-            // textBox8
+            // idCategory_textbox
             // 
-            this.textBox8.Location = new System.Drawing.Point(75, 64);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(178, 20);
-            this.textBox8.TabIndex = 5;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(3, 173);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 20);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "label10";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(3, 136);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 20);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "label11";
+            this.idCategory_textbox.Location = new System.Drawing.Point(155, 64);
+            this.idCategory_textbox.Name = "idCategory_textbox";
+            this.idCategory_textbox.Size = new System.Drawing.Size(178, 20);
+            this.idCategory_textbox.TabIndex = 5;
             // 
             // label12
             // 
@@ -732,9 +568,9 @@ namespace MyWoggi
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(3, 99);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 20);
+            this.label12.Size = new System.Drawing.Size(122, 20);
             this.label12.TabIndex = 2;
-            this.label12.Text = "label12";
+            this.label12.Text = "Имя категории";
             // 
             // label13
             // 
@@ -743,9 +579,9 @@ namespace MyWoggi
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(3, 62);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(60, 20);
+            this.label13.Size = new System.Drawing.Size(108, 20);
             this.label13.TabIndex = 1;
-            this.label13.Text = "label13";
+            this.label13.Text = "ID категории";
             // 
             // label14
             // 
@@ -763,152 +599,152 @@ namespace MyWoggi
             // 
             // dataGridView2
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView2.Location = new System.Drawing.Point(3, 3);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(862, 341);
-            this.dataGridView2.TabIndex = 6;
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(862, 307);
+            this.dataGridView2.TabIndex = 10;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
-            // label15
+            // label9
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(492, 368);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(177, 20);
-            this.label15.TabIndex = 9;
-            this.label15.Text = "Управление записями";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(492, 366);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(177, 20);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Управление записями";
             // 
-            // panel6
+            // panel4
             // 
-            this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.button13);
-            this.panel6.Controls.Add(this.button14);
-            this.panel6.Controls.Add(this.button15);
-            this.panel6.Controls.Add(this.button16);
-            this.panel6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel6.Location = new System.Drawing.Point(488, 391);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(189, 189);
-            this.panel6.TabIndex = 8;
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.saveWrite2_button);
+            this.panel4.Controls.Add(this.changeWrite2_button);
+            this.panel4.Controls.Add(this.deleteWrite2_button);
+            this.panel4.Controls.Add(this.newWrite2_button);
+            this.panel4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel4.Location = new System.Drawing.Point(488, 389);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(189, 189);
+            this.panel4.TabIndex = 8;
             // 
-            // button13
+            // saveWrite2_button
             // 
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button13.Location = new System.Drawing.Point(18, 132);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(145, 34);
-            this.button13.TabIndex = 9;
-            this.button13.Text = "Сохранить";
-            this.button13.UseVisualStyleBackColor = false;
+            this.saveWrite2_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.saveWrite2_button.FlatAppearance.BorderSize = 0;
+            this.saveWrite2_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveWrite2_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.saveWrite2_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.saveWrite2_button.Location = new System.Drawing.Point(18, 132);
+            this.saveWrite2_button.Name = "saveWrite2_button";
+            this.saveWrite2_button.Size = new System.Drawing.Size(145, 34);
+            this.saveWrite2_button.TabIndex = 9;
+            this.saveWrite2_button.Text = "Сохранить";
+            this.saveWrite2_button.UseVisualStyleBackColor = false;
+            this.saveWrite2_button.Click += new System.EventHandler(this.saveWrite2_button_Click);
             // 
-            // button14
+            // changeWrite2_button
             // 
-            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.button14.FlatAppearance.BorderSize = 0;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button14.Location = new System.Drawing.Point(18, 92);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(145, 34);
-            this.button14.TabIndex = 8;
-            this.button14.Text = "Изменить";
-            this.button14.UseVisualStyleBackColor = false;
+            this.changeWrite2_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.changeWrite2_button.FlatAppearance.BorderSize = 0;
+            this.changeWrite2_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changeWrite2_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.changeWrite2_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.changeWrite2_button.Location = new System.Drawing.Point(18, 92);
+            this.changeWrite2_button.Name = "changeWrite2_button";
+            this.changeWrite2_button.Size = new System.Drawing.Size(145, 34);
+            this.changeWrite2_button.TabIndex = 8;
+            this.changeWrite2_button.Text = "Изменить";
+            this.changeWrite2_button.UseVisualStyleBackColor = false;
+            this.changeWrite2_button.Click += new System.EventHandler(this.changeWrite2_button_Click);
             // 
-            // button15
+            // deleteWrite2_button
             // 
-            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button15.Location = new System.Drawing.Point(18, 52);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(145, 34);
-            this.button15.TabIndex = 7;
-            this.button15.Text = "Удалить";
-            this.button15.UseVisualStyleBackColor = false;
+            this.deleteWrite2_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.deleteWrite2_button.FlatAppearance.BorderSize = 0;
+            this.deleteWrite2_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteWrite2_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.deleteWrite2_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.deleteWrite2_button.Location = new System.Drawing.Point(18, 52);
+            this.deleteWrite2_button.Name = "deleteWrite2_button";
+            this.deleteWrite2_button.Size = new System.Drawing.Size(145, 34);
+            this.deleteWrite2_button.TabIndex = 7;
+            this.deleteWrite2_button.Text = "Удалить";
+            this.deleteWrite2_button.UseVisualStyleBackColor = false;
+            this.deleteWrite2_button.Click += new System.EventHandler(this.deleteWrite2_button_Click);
             // 
-            // button16
+            // newWrite2_button
             // 
-            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.button16.FlatAppearance.BorderSize = 0;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button16.Location = new System.Drawing.Point(18, 12);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(145, 34);
-            this.button16.TabIndex = 6;
-            this.button16.Text = "Новая запись";
-            this.button16.UseVisualStyleBackColor = false;
+            this.newWrite2_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.newWrite2_button.FlatAppearance.BorderSize = 0;
+            this.newWrite2_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newWrite2_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.newWrite2_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.newWrite2_button.Location = new System.Drawing.Point(18, 12);
+            this.newWrite2_button.Name = "newWrite2_button";
+            this.newWrite2_button.Size = new System.Drawing.Size(145, 34);
+            this.newWrite2_button.TabIndex = 6;
+            this.newWrite2_button.Text = "Новая запись";
+            this.newWrite2_button.UseVisualStyleBackColor = false;
+            this.newWrite2_button.Click += new System.EventHandler(this.newWrite2_button_Click);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(46)))), ((int)(((byte)(54)))));
+            this.tabPage3.Controls.Add(this.panel7);
+            this.tabPage3.Controls.Add(this.dataGridView3);
+            this.tabPage3.Controls.Add(this.label15);
+            this.tabPage3.Controls.Add(this.panel6);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(868, 583);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Таблица_3";
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Transparent;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.textBox9);
-            this.panel7.Controls.Add(this.textBox10);
-            this.panel7.Controls.Add(this.textBox11);
-            this.panel7.Controls.Add(this.textBox12);
-            this.panel7.Controls.Add(this.label16);
+            this.panel7.Controls.Add(this.sizeEnclosure_textbox);
+            this.panel7.Controls.Add(this.nameEnclosure_textbox);
+            this.panel7.Controls.Add(this.idEnclosure1_textbox);
             this.panel7.Controls.Add(this.label17);
             this.panel7.Controls.Add(this.label18);
             this.panel7.Controls.Add(this.label19);
             this.panel7.Controls.Add(this.label20);
             this.panel7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel7.Location = new System.Drawing.Point(143, 368);
+            this.panel7.Location = new System.Drawing.Point(55, 368);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(291, 207);
-            this.panel7.TabIndex = 7;
+            this.panel7.Size = new System.Drawing.Size(344, 180);
+            this.panel7.TabIndex = 11;
             // 
-            // textBox9
+            // sizeEnclosure_textbox
             // 
-            this.textBox9.Location = new System.Drawing.Point(75, 173);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(178, 20);
-            this.textBox9.TabIndex = 8;
+            this.sizeEnclosure_textbox.Location = new System.Drawing.Point(155, 138);
+            this.sizeEnclosure_textbox.Name = "sizeEnclosure_textbox";
+            this.sizeEnclosure_textbox.Size = new System.Drawing.Size(178, 20);
+            this.sizeEnclosure_textbox.TabIndex = 7;
             // 
-            // textBox10
+            // nameEnclosure_textbox
             // 
-            this.textBox10.Location = new System.Drawing.Point(75, 138);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(178, 20);
-            this.textBox10.TabIndex = 7;
+            this.nameEnclosure_textbox.Location = new System.Drawing.Point(155, 101);
+            this.nameEnclosure_textbox.Name = "nameEnclosure_textbox";
+            this.nameEnclosure_textbox.Size = new System.Drawing.Size(178, 20);
+            this.nameEnclosure_textbox.TabIndex = 6;
             // 
-            // textBox11
+            // idEnclosure1_textbox
             // 
-            this.textBox11.Location = new System.Drawing.Point(75, 101);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(178, 20);
-            this.textBox11.TabIndex = 6;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(75, 64);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(178, 20);
-            this.textBox12.TabIndex = 5;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(3, 173);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(60, 20);
-            this.label16.TabIndex = 4;
-            this.label16.Text = "label16";
+            this.idEnclosure1_textbox.Location = new System.Drawing.Point(155, 64);
+            this.idEnclosure1_textbox.Name = "idEnclosure1_textbox";
+            this.idEnclosure1_textbox.Size = new System.Drawing.Size(178, 20);
+            this.idEnclosure1_textbox.TabIndex = 5;
             // 
             // label17
             // 
@@ -917,9 +753,9 @@ namespace MyWoggi
             this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Location = new System.Drawing.Point(3, 136);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(60, 20);
+            this.label17.Size = new System.Drawing.Size(133, 20);
             this.label17.TabIndex = 3;
-            this.label17.Text = "label17";
+            this.label17.Text = "Размер вольера";
             // 
             // label18
             // 
@@ -928,9 +764,9 @@ namespace MyWoggi
             this.label18.ForeColor = System.Drawing.Color.White;
             this.label18.Location = new System.Drawing.Point(3, 99);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(60, 20);
+            this.label18.Size = new System.Drawing.Size(108, 20);
             this.label18.TabIndex = 2;
-            this.label18.Text = "label18";
+            this.label18.Text = "Имя вольера";
             // 
             // label19
             // 
@@ -939,9 +775,9 @@ namespace MyWoggi
             this.label19.ForeColor = System.Drawing.Color.White;
             this.label19.Location = new System.Drawing.Point(3, 62);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(60, 20);
+            this.label19.Size = new System.Drawing.Size(94, 20);
             this.label19.TabIndex = 1;
-            this.label19.Text = "label19";
+            this.label19.Text = "ID вольера";
             // 
             // label20
             // 
@@ -959,152 +795,152 @@ namespace MyWoggi
             // 
             // dataGridView3
             // 
-            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView3.Location = new System.Drawing.Point(0, 0);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(868, 341);
-            this.dataGridView3.TabIndex = 6;
+            this.dataGridView3.ReadOnly = true;
+            this.dataGridView3.Size = new System.Drawing.Size(868, 307);
+            this.dataGridView3.TabIndex = 10;
+            this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
             // 
-            // label21
+            // label15
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(492, 368);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(177, 20);
-            this.label21.TabIndex = 9;
-            this.label21.Text = "Управление записями";
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(492, 368);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(177, 20);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "Управление записями";
             // 
-            // panel8
+            // panel6
             // 
-            this.panel8.BackColor = System.Drawing.Color.Transparent;
-            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Controls.Add(this.button17);
-            this.panel8.Controls.Add(this.button18);
-            this.panel8.Controls.Add(this.button19);
-            this.panel8.Controls.Add(this.button20);
-            this.panel8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel8.Location = new System.Drawing.Point(488, 391);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(189, 189);
-            this.panel8.TabIndex = 8;
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.saveWrite3_button);
+            this.panel6.Controls.Add(this.changeWrite3_button);
+            this.panel6.Controls.Add(this.deleteWrite3_button);
+            this.panel6.Controls.Add(this.newWrite3_button);
+            this.panel6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel6.Location = new System.Drawing.Point(488, 391);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(189, 189);
+            this.panel6.TabIndex = 8;
             // 
-            // button17
+            // saveWrite3_button
             // 
-            this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.button17.FlatAppearance.BorderSize = 0;
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button17.Location = new System.Drawing.Point(18, 132);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(145, 34);
-            this.button17.TabIndex = 9;
-            this.button17.Text = "Сохранить";
-            this.button17.UseVisualStyleBackColor = false;
+            this.saveWrite3_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.saveWrite3_button.FlatAppearance.BorderSize = 0;
+            this.saveWrite3_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveWrite3_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.saveWrite3_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.saveWrite3_button.Location = new System.Drawing.Point(18, 132);
+            this.saveWrite3_button.Name = "saveWrite3_button";
+            this.saveWrite3_button.Size = new System.Drawing.Size(145, 34);
+            this.saveWrite3_button.TabIndex = 9;
+            this.saveWrite3_button.Text = "Сохранить";
+            this.saveWrite3_button.UseVisualStyleBackColor = false;
+            this.saveWrite3_button.Click += new System.EventHandler(this.saveWrite3_button_Click);
             // 
-            // button18
+            // changeWrite3_button
             // 
-            this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.button18.FlatAppearance.BorderSize = 0;
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button18.Location = new System.Drawing.Point(18, 92);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(145, 34);
-            this.button18.TabIndex = 8;
-            this.button18.Text = "Изменить";
-            this.button18.UseVisualStyleBackColor = false;
+            this.changeWrite3_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.changeWrite3_button.FlatAppearance.BorderSize = 0;
+            this.changeWrite3_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changeWrite3_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.changeWrite3_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.changeWrite3_button.Location = new System.Drawing.Point(18, 92);
+            this.changeWrite3_button.Name = "changeWrite3_button";
+            this.changeWrite3_button.Size = new System.Drawing.Size(145, 34);
+            this.changeWrite3_button.TabIndex = 8;
+            this.changeWrite3_button.Text = "Изменить";
+            this.changeWrite3_button.UseVisualStyleBackColor = false;
+            this.changeWrite3_button.Click += new System.EventHandler(this.changeWrite3_button_Click);
             // 
-            // button19
+            // deleteWrite3_button
             // 
-            this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.button19.FlatAppearance.BorderSize = 0;
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button19.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button19.Location = new System.Drawing.Point(18, 52);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(145, 34);
-            this.button19.TabIndex = 7;
-            this.button19.Text = "Удалить";
-            this.button19.UseVisualStyleBackColor = false;
+            this.deleteWrite3_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.deleteWrite3_button.FlatAppearance.BorderSize = 0;
+            this.deleteWrite3_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteWrite3_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.deleteWrite3_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.deleteWrite3_button.Location = new System.Drawing.Point(18, 52);
+            this.deleteWrite3_button.Name = "deleteWrite3_button";
+            this.deleteWrite3_button.Size = new System.Drawing.Size(145, 34);
+            this.deleteWrite3_button.TabIndex = 7;
+            this.deleteWrite3_button.Text = "Удалить";
+            this.deleteWrite3_button.UseVisualStyleBackColor = false;
+            this.deleteWrite3_button.Click += new System.EventHandler(this.deleteWrite3_button_Click);
             // 
-            // button20
+            // newWrite3_button
             // 
-            this.button20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.button20.FlatAppearance.BorderSize = 0;
-            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button20.Location = new System.Drawing.Point(18, 12);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(145, 34);
-            this.button20.TabIndex = 6;
-            this.button20.Text = "Новая запись";
-            this.button20.UseVisualStyleBackColor = false;
+            this.newWrite3_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.newWrite3_button.FlatAppearance.BorderSize = 0;
+            this.newWrite3_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newWrite3_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.newWrite3_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.newWrite3_button.Location = new System.Drawing.Point(18, 12);
+            this.newWrite3_button.Name = "newWrite3_button";
+            this.newWrite3_button.Size = new System.Drawing.Size(145, 34);
+            this.newWrite3_button.TabIndex = 6;
+            this.newWrite3_button.Text = "Новая запись";
+            this.newWrite3_button.UseVisualStyleBackColor = false;
+            this.newWrite3_button.Click += new System.EventHandler(this.newWrite3_button_Click);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(46)))), ((int)(((byte)(54)))));
+            this.tabPage4.Controls.Add(this.panel9);
+            this.tabPage4.Controls.Add(this.dataGridView4);
+            this.tabPage4.Controls.Add(this.label21);
+            this.tabPage4.Controls.Add(this.panel8);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(868, 583);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Таблица_4";
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.Transparent;
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.textBox13);
-            this.panel9.Controls.Add(this.textBox14);
-            this.panel9.Controls.Add(this.textBox15);
-            this.panel9.Controls.Add(this.textBox16);
-            this.panel9.Controls.Add(this.label22);
+            this.panel9.Controls.Add(this.idCategory1_textbox);
+            this.panel9.Controls.Add(this.nameSpecies_textbox);
+            this.panel9.Controls.Add(this.idSpecies_textbox);
             this.panel9.Controls.Add(this.label23);
             this.panel9.Controls.Add(this.label24);
             this.panel9.Controls.Add(this.label25);
             this.panel9.Controls.Add(this.label26);
             this.panel9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel9.Location = new System.Drawing.Point(143, 368);
+            this.panel9.Location = new System.Drawing.Point(65, 368);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(291, 207);
-            this.panel9.TabIndex = 7;
+            this.panel9.Size = new System.Drawing.Size(344, 175);
+            this.panel9.TabIndex = 11;
             // 
-            // textBox13
+            // idCategory1_textbox
             // 
-            this.textBox13.Location = new System.Drawing.Point(75, 173);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(178, 20);
-            this.textBox13.TabIndex = 8;
+            this.idCategory1_textbox.Location = new System.Drawing.Point(155, 138);
+            this.idCategory1_textbox.Name = "idCategory1_textbox";
+            this.idCategory1_textbox.Size = new System.Drawing.Size(178, 20);
+            this.idCategory1_textbox.TabIndex = 7;
             // 
-            // textBox14
+            // nameSpecies_textbox
             // 
-            this.textBox14.Location = new System.Drawing.Point(75, 138);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(178, 20);
-            this.textBox14.TabIndex = 7;
+            this.nameSpecies_textbox.Location = new System.Drawing.Point(155, 101);
+            this.nameSpecies_textbox.Name = "nameSpecies_textbox";
+            this.nameSpecies_textbox.Size = new System.Drawing.Size(178, 20);
+            this.nameSpecies_textbox.TabIndex = 6;
             // 
-            // textBox15
+            // idSpecies_textbox
             // 
-            this.textBox15.Location = new System.Drawing.Point(75, 101);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(178, 20);
-            this.textBox15.TabIndex = 6;
-            // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(75, 64);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(178, 20);
-            this.textBox16.TabIndex = 5;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(3, 173);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(60, 20);
-            this.label22.TabIndex = 4;
-            this.label22.Text = "label22";
+            this.idSpecies_textbox.Location = new System.Drawing.Point(155, 64);
+            this.idSpecies_textbox.Name = "idSpecies_textbox";
+            this.idSpecies_textbox.Size = new System.Drawing.Size(178, 20);
+            this.idSpecies_textbox.TabIndex = 5;
             // 
             // label23
             // 
@@ -1113,9 +949,9 @@ namespace MyWoggi
             this.label23.ForeColor = System.Drawing.Color.White;
             this.label23.Location = new System.Drawing.Point(3, 136);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(60, 20);
+            this.label23.Size = new System.Drawing.Size(141, 20);
             this.label23.TabIndex = 3;
-            this.label23.Text = "label23";
+            this.label23.Text = "Номер категории";
             // 
             // label24
             // 
@@ -1124,9 +960,9 @@ namespace MyWoggi
             this.label24.ForeColor = System.Drawing.Color.White;
             this.label24.Location = new System.Drawing.Point(3, 99);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(60, 20);
+            this.label24.Size = new System.Drawing.Size(82, 20);
             this.label24.TabIndex = 2;
-            this.label24.Text = "label24";
+            this.label24.Text = "Имя вида";
             // 
             // label25
             // 
@@ -1135,9 +971,9 @@ namespace MyWoggi
             this.label25.ForeColor = System.Drawing.Color.White;
             this.label25.Location = new System.Drawing.Point(3, 62);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(60, 20);
+            this.label25.Size = new System.Drawing.Size(68, 20);
             this.label25.TabIndex = 1;
-            this.label25.Text = "label25";
+            this.label25.Text = "ID вида";
             // 
             // label26
             // 
@@ -1155,152 +991,152 @@ namespace MyWoggi
             // 
             // dataGridView4
             // 
-            this.dataGridView4.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dataGridView4.AllowUserToAddRows = false;
+            this.dataGridView4.AllowUserToDeleteRows = false;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView4.Location = new System.Drawing.Point(0, 0);
             this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(868, 341);
-            this.dataGridView4.TabIndex = 6;
+            this.dataGridView4.ReadOnly = true;
+            this.dataGridView4.Size = new System.Drawing.Size(868, 307);
+            this.dataGridView4.TabIndex = 10;
+            this.dataGridView4.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellClick);
             // 
-            // label27
+            // label21
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(492, 368);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(177, 20);
-            this.label27.TabIndex = 9;
-            this.label27.Text = "Управление записями";
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(492, 368);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(177, 20);
+            this.label21.TabIndex = 9;
+            this.label21.Text = "Управление записями";
             // 
-            // panel10
+            // panel8
             // 
-            this.panel10.BackColor = System.Drawing.Color.Transparent;
-            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel10.Controls.Add(this.button21);
-            this.panel10.Controls.Add(this.button22);
-            this.panel10.Controls.Add(this.button23);
-            this.panel10.Controls.Add(this.button24);
-            this.panel10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel10.Location = new System.Drawing.Point(488, 391);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(189, 189);
-            this.panel10.TabIndex = 8;
+            this.panel8.BackColor = System.Drawing.Color.Transparent;
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.saveWrite4_button);
+            this.panel8.Controls.Add(this.changeWrite4_button);
+            this.panel8.Controls.Add(this.deleteWrite4_button);
+            this.panel8.Controls.Add(this.newWrite4_button);
+            this.panel8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel8.Location = new System.Drawing.Point(488, 391);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(189, 189);
+            this.panel8.TabIndex = 8;
             // 
-            // button21
+            // saveWrite4_button
             // 
-            this.button21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.button21.FlatAppearance.BorderSize = 0;
-            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button21.Location = new System.Drawing.Point(18, 132);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(145, 34);
-            this.button21.TabIndex = 9;
-            this.button21.Text = "Сохранить";
-            this.button21.UseVisualStyleBackColor = false;
+            this.saveWrite4_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.saveWrite4_button.FlatAppearance.BorderSize = 0;
+            this.saveWrite4_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveWrite4_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.saveWrite4_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.saveWrite4_button.Location = new System.Drawing.Point(18, 132);
+            this.saveWrite4_button.Name = "saveWrite4_button";
+            this.saveWrite4_button.Size = new System.Drawing.Size(145, 34);
+            this.saveWrite4_button.TabIndex = 9;
+            this.saveWrite4_button.Text = "Сохранить";
+            this.saveWrite4_button.UseVisualStyleBackColor = false;
+            this.saveWrite4_button.Click += new System.EventHandler(this.saveWrite4_button_Click);
             // 
-            // button22
+            // changeWrite4_button
             // 
-            this.button22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.button22.FlatAppearance.BorderSize = 0;
-            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button22.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button22.Location = new System.Drawing.Point(18, 92);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(145, 34);
-            this.button22.TabIndex = 8;
-            this.button22.Text = "Изменить";
-            this.button22.UseVisualStyleBackColor = false;
+            this.changeWrite4_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.changeWrite4_button.FlatAppearance.BorderSize = 0;
+            this.changeWrite4_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changeWrite4_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.changeWrite4_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.changeWrite4_button.Location = new System.Drawing.Point(18, 92);
+            this.changeWrite4_button.Name = "changeWrite4_button";
+            this.changeWrite4_button.Size = new System.Drawing.Size(145, 34);
+            this.changeWrite4_button.TabIndex = 8;
+            this.changeWrite4_button.Text = "Изменить";
+            this.changeWrite4_button.UseVisualStyleBackColor = false;
+            this.changeWrite4_button.Click += new System.EventHandler(this.changeWrite4_button_Click);
             // 
-            // button23
+            // deleteWrite4_button
             // 
-            this.button23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.button23.FlatAppearance.BorderSize = 0;
-            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button23.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button23.Location = new System.Drawing.Point(18, 52);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(145, 34);
-            this.button23.TabIndex = 7;
-            this.button23.Text = "Удалить";
-            this.button23.UseVisualStyleBackColor = false;
+            this.deleteWrite4_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.deleteWrite4_button.FlatAppearance.BorderSize = 0;
+            this.deleteWrite4_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteWrite4_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.deleteWrite4_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.deleteWrite4_button.Location = new System.Drawing.Point(18, 52);
+            this.deleteWrite4_button.Name = "deleteWrite4_button";
+            this.deleteWrite4_button.Size = new System.Drawing.Size(145, 34);
+            this.deleteWrite4_button.TabIndex = 7;
+            this.deleteWrite4_button.Text = "Удалить";
+            this.deleteWrite4_button.UseVisualStyleBackColor = false;
+            this.deleteWrite4_button.Click += new System.EventHandler(this.deleteWrite4_button_Click);
             // 
-            // button24
+            // newWrite4_button
             // 
-            this.button24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.button24.FlatAppearance.BorderSize = 0;
-            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button24.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button24.Location = new System.Drawing.Point(18, 12);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(145, 34);
-            this.button24.TabIndex = 6;
-            this.button24.Text = "Новая запись";
-            this.button24.UseVisualStyleBackColor = false;
+            this.newWrite4_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.newWrite4_button.FlatAppearance.BorderSize = 0;
+            this.newWrite4_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newWrite4_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.newWrite4_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.newWrite4_button.Location = new System.Drawing.Point(18, 12);
+            this.newWrite4_button.Name = "newWrite4_button";
+            this.newWrite4_button.Size = new System.Drawing.Size(145, 34);
+            this.newWrite4_button.TabIndex = 6;
+            this.newWrite4_button.Text = "Новая запись";
+            this.newWrite4_button.UseVisualStyleBackColor = false;
+            this.newWrite4_button.Click += new System.EventHandler(this.newWrite4_button_Click);
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(46)))), ((int)(((byte)(54)))));
+            this.tabPage5.Controls.Add(this.panel11);
+            this.tabPage5.Controls.Add(this.dataGridView5);
+            this.tabPage5.Controls.Add(this.label27);
+            this.tabPage5.Controls.Add(this.panel10);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(868, 583);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Таблица_5";
             // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.Transparent;
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel11.Controls.Add(this.textBox17);
-            this.panel11.Controls.Add(this.textBox18);
-            this.panel11.Controls.Add(this.textBox19);
-            this.panel11.Controls.Add(this.textBox20);
-            this.panel11.Controls.Add(this.label28);
+            this.panel11.Controls.Add(this.idTicket_textbox);
+            this.panel11.Controls.Add(this.nameVisitor_textbox);
+            this.panel11.Controls.Add(this.idVisitor_textbox);
             this.panel11.Controls.Add(this.label29);
             this.panel11.Controls.Add(this.label30);
             this.panel11.Controls.Add(this.label31);
             this.panel11.Controls.Add(this.label32);
             this.panel11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel11.Location = new System.Drawing.Point(143, 368);
+            this.panel11.Location = new System.Drawing.Point(54, 368);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(291, 207);
-            this.panel11.TabIndex = 7;
+            this.panel11.Size = new System.Drawing.Size(344, 175);
+            this.panel11.TabIndex = 11;
             // 
-            // textBox17
+            // idTicket_textbox
             // 
-            this.textBox17.Location = new System.Drawing.Point(75, 173);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(178, 20);
-            this.textBox17.TabIndex = 8;
+            this.idTicket_textbox.Location = new System.Drawing.Point(155, 138);
+            this.idTicket_textbox.Name = "idTicket_textbox";
+            this.idTicket_textbox.Size = new System.Drawing.Size(178, 20);
+            this.idTicket_textbox.TabIndex = 7;
             // 
-            // textBox18
+            // nameVisitor_textbox
             // 
-            this.textBox18.Location = new System.Drawing.Point(75, 138);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(178, 20);
-            this.textBox18.TabIndex = 7;
+            this.nameVisitor_textbox.Location = new System.Drawing.Point(155, 101);
+            this.nameVisitor_textbox.Name = "nameVisitor_textbox";
+            this.nameVisitor_textbox.Size = new System.Drawing.Size(178, 20);
+            this.nameVisitor_textbox.TabIndex = 6;
             // 
-            // textBox19
+            // idVisitor_textbox
             // 
-            this.textBox19.Location = new System.Drawing.Point(75, 101);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(178, 20);
-            this.textBox19.TabIndex = 6;
-            // 
-            // textBox20
-            // 
-            this.textBox20.Location = new System.Drawing.Point(75, 64);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(178, 20);
-            this.textBox20.TabIndex = 5;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label28.ForeColor = System.Drawing.Color.White;
-            this.label28.Location = new System.Drawing.Point(3, 173);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(60, 20);
-            this.label28.TabIndex = 4;
-            this.label28.Text = "label28";
+            this.idVisitor_textbox.Location = new System.Drawing.Point(155, 64);
+            this.idVisitor_textbox.Name = "idVisitor_textbox";
+            this.idVisitor_textbox.Size = new System.Drawing.Size(178, 20);
+            this.idVisitor_textbox.TabIndex = 5;
             // 
             // label29
             // 
@@ -1309,9 +1145,9 @@ namespace MyWoggi
             this.label29.ForeColor = System.Drawing.Color.White;
             this.label29.Location = new System.Drawing.Point(3, 136);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(60, 20);
+            this.label29.Size = new System.Drawing.Size(85, 20);
             this.label29.TabIndex = 3;
-            this.label29.Text = "label29";
+            this.label29.Text = "ID билета";
             // 
             // label30
             // 
@@ -1320,9 +1156,9 @@ namespace MyWoggi
             this.label30.ForeColor = System.Drawing.Color.White;
             this.label30.Location = new System.Drawing.Point(3, 99);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(60, 20);
+            this.label30.Size = new System.Drawing.Size(134, 20);
             this.label30.TabIndex = 2;
-            this.label30.Text = "label30";
+            this.label30.Text = "Имя посетителя";
             // 
             // label31
             // 
@@ -1331,9 +1167,9 @@ namespace MyWoggi
             this.label31.ForeColor = System.Drawing.Color.White;
             this.label31.Location = new System.Drawing.Point(3, 62);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(60, 20);
+            this.label31.Size = new System.Drawing.Size(120, 20);
             this.label31.TabIndex = 1;
-            this.label31.Text = "label31";
+            this.label31.Text = "ID посетителя";
             // 
             // label32
             // 
@@ -1351,13 +1187,101 @@ namespace MyWoggi
             // 
             // dataGridView5
             // 
-            this.dataGridView5.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dataGridView5.AllowUserToAddRows = false;
+            this.dataGridView5.AllowUserToDeleteRows = false;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView5.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView5.Location = new System.Drawing.Point(0, 0);
             this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.Size = new System.Drawing.Size(868, 341);
-            this.dataGridView5.TabIndex = 6;
+            this.dataGridView5.ReadOnly = true;
+            this.dataGridView5.Size = new System.Drawing.Size(868, 307);
+            this.dataGridView5.TabIndex = 10;
+            this.dataGridView5.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellClick);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label27.ForeColor = System.Drawing.Color.White;
+            this.label27.Location = new System.Drawing.Point(513, 344);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(177, 20);
+            this.label27.TabIndex = 9;
+            this.label27.Text = "Управление записями";
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Transparent;
+            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.saveWrite5_button);
+            this.panel10.Controls.Add(this.changeWrite5_button);
+            this.panel10.Controls.Add(this.deleteWrite5_button);
+            this.panel10.Controls.Add(this.newWrite5_button);
+            this.panel10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel10.Location = new System.Drawing.Point(509, 367);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(189, 189);
+            this.panel10.TabIndex = 8;
+            // 
+            // saveWrite5_button
+            // 
+            this.saveWrite5_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.saveWrite5_button.FlatAppearance.BorderSize = 0;
+            this.saveWrite5_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveWrite5_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.saveWrite5_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.saveWrite5_button.Location = new System.Drawing.Point(18, 132);
+            this.saveWrite5_button.Name = "saveWrite5_button";
+            this.saveWrite5_button.Size = new System.Drawing.Size(145, 34);
+            this.saveWrite5_button.TabIndex = 9;
+            this.saveWrite5_button.Text = "Сохранить";
+            this.saveWrite5_button.UseVisualStyleBackColor = false;
+            this.saveWrite5_button.Click += new System.EventHandler(this.saveWrite5_button_Click);
+            // 
+            // changeWrite5_button
+            // 
+            this.changeWrite5_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.changeWrite5_button.FlatAppearance.BorderSize = 0;
+            this.changeWrite5_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changeWrite5_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.changeWrite5_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.changeWrite5_button.Location = new System.Drawing.Point(18, 92);
+            this.changeWrite5_button.Name = "changeWrite5_button";
+            this.changeWrite5_button.Size = new System.Drawing.Size(145, 34);
+            this.changeWrite5_button.TabIndex = 8;
+            this.changeWrite5_button.Text = "Изменить";
+            this.changeWrite5_button.UseVisualStyleBackColor = false;
+            this.changeWrite5_button.Click += new System.EventHandler(this.changeWrite5_button_Click);
+            // 
+            // deleteWrite5_button
+            // 
+            this.deleteWrite5_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.deleteWrite5_button.FlatAppearance.BorderSize = 0;
+            this.deleteWrite5_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteWrite5_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.deleteWrite5_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.deleteWrite5_button.Location = new System.Drawing.Point(18, 52);
+            this.deleteWrite5_button.Name = "deleteWrite5_button";
+            this.deleteWrite5_button.Size = new System.Drawing.Size(145, 34);
+            this.deleteWrite5_button.TabIndex = 7;
+            this.deleteWrite5_button.Text = "Удалить";
+            this.deleteWrite5_button.UseVisualStyleBackColor = false;
+            this.deleteWrite5_button.Click += new System.EventHandler(this.deleteWrite5_button_Click);
+            // 
+            // newWrite5_button
+            // 
+            this.newWrite5_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.newWrite5_button.FlatAppearance.BorderSize = 0;
+            this.newWrite5_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newWrite5_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.newWrite5_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.newWrite5_button.Location = new System.Drawing.Point(18, 12);
+            this.newWrite5_button.Name = "newWrite5_button";
+            this.newWrite5_button.Size = new System.Drawing.Size(145, 34);
+            this.newWrite5_button.TabIndex = 6;
+            this.newWrite5_button.Text = "Новая запись";
+            this.newWrite5_button.UseVisualStyleBackColor = false;
+            this.newWrite5_button.Click += new System.EventHandler(this.newWrite5_button_Click);
             // 
             // Table
             // 
@@ -1381,33 +1305,33 @@ namespace MyWoggi
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.panel6.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.panel8.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            this.panel10.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            this.panel10.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1429,90 +1353,80 @@ namespace MyWoggi
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button saveWrite1_button;
+        private System.Windows.Forms.Button changeWrite1_button;
+        private System.Windows.Forms.Button newWrite1_button;
+        private System.Windows.Forms.Button deleteWrite1_button;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button saveWrite3_button;
+        private System.Windows.Forms.Button changeWrite3_button;
+        private System.Windows.Forms.Button deleteWrite3_button;
+        private System.Windows.Forms.Button newWrite3_button;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button saveWrite4_button;
+        private System.Windows.Forms.Button changeWrite4_button;
+        private System.Windows.Forms.Button deleteWrite4_button;
+        private System.Windows.Forms.Button newWrite4_button;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Button saveWrite5_button;
+        private System.Windows.Forms.Button changeWrite5_button;
+        private System.Windows.Forms.Button deleteWrite5_button;
+        private System.Windows.Forms.Button newWrite5_button;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.TextBox nameCategory_textbox;
+        private System.Windows.Forms.TextBox idCategory_textbox;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox sizeEnclosure_textbox;
+        private System.Windows.Forms.TextBox nameEnclosure_textbox;
+        private System.Windows.Forms.TextBox idEnclosure1_textbox;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox idCategory1_textbox;
+        private System.Windows.Forms.TextBox nameSpecies_textbox;
+        private System.Windows.Forms.TextBox idSpecies_textbox;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox idTicket_textbox;
+        private System.Windows.Forms.TextBox nameVisitor_textbox;
+        private System.Windows.Forms.TextBox idVisitor_textbox;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox idEnclosure_textbox;
+        private System.Windows.Forms.TextBox typeSpecies_textbox;
+        private System.Windows.Forms.TextBox nameAnimal_textbox;
+        private System.Windows.Forms.TextBox idAnimal_textbox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button saveWrite2_button;
+        private System.Windows.Forms.Button changeWrite2_button;
+        private System.Windows.Forms.Button deleteWrite2_button;
+        private System.Windows.Forms.Button newWrite2_button;
     }
 }
