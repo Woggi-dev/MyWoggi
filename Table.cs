@@ -6,15 +6,55 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
+using MySql.Data.MySqlClient;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MyWoggi.forms;
 
 namespace MyWoggi
 {
+    enum RowState
+    {
+        Existed,
+        New,
+        Modified, 
+        ModifiedNew,
+        Deleted
+    }
     public partial class Table : Form
     {
+        Database MyWoggi = new Database();
+        int selectedRow;
 
+        private void CreateColumns()
+        {
+            dataGridView1.Columns.Add("animal_id", "ИД животного");
+            dataGridView1.Columns.Add("animal_name", "Имя животного");
+            dataGridView1.Columns.Add("species_id", "Номер вида");
+            dataGridView1.Columns.Add("enclosure_id", "Номер вольера");
+            dataGridView1.Columns.Add("IsNew", String.Empty);
+        }
+        private void ReadSingleRow(DataGridView dgw, IDataRecord record)
+        {
+            dgw.Rows.Add(record.GetInt32(0), record.GetString(1), record.GetInt32(2), record.GetInt32(3), RowState.ModifiedNew);
+        }
+
+        private void RefreshDataGrid(DataGridView dgw)
+        {
+            dgw.Rows.Clear();
+            string queryString = $"select * from animals";
+
+            MySqlCommand command = new MySqlCommand(queryString, MyWoggi.GetConnection());
+            MyWoggi.OpenConnection();
+
+            MySqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                ReadSingleRow(dgw, reader);
+            }
+            reader.Close();
+        }
         public Table()
         {
             InitializeComponent();
@@ -39,6 +79,8 @@ namespace MyWoggi
 
         private void Table_Load(object sender, EventArgs e)
         {
+            CreateColumns();
+            RefreshDataGrid(dataGridView1);
         }
 
         private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
@@ -84,6 +126,9 @@ namespace MyWoggi
             }
 
         }
-        
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
