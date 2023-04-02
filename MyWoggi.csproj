@@ -197,6 +197,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="images\writing.png" />
     <None Include="Resources\cells %281%29.png" />
     <None Include="images\view.png" />
     <None Include="images\background.png" />
