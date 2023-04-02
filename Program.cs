@@ -26,7 +26,7 @@ namespace MyWoggi
                 authorization.Close();
 
                 // Создать и показать основную форму
-                Application.Run(new Main());
+                Application.Run(new Table());
             }
             else
             {
