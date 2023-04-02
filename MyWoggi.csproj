@@ -99,7 +99,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="forms\main\about.cs">
+    <Compile Include="add_new_data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_new_data.Designer.cs">
+      <DependentUpon>add_new_data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\about_the_project.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\main\about.Designer.cs">
@@ -156,8 +162,11 @@
     <Compile Include="forms\main\tables.Designer.cs">
       <DependentUpon>tables.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="forms\main\about.resx">
-      <DependentUpon>about.cs</DependentUpon>
+    <EmbeddedResource Include="add_new_data.resx">
+      <DependentUpon>add_new_data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\about_the_project.resx">
+      <DependentUpon>about_the_project.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\authorization.resx">
       <DependentUpon>authorization.cs</DependentUpon>
@@ -225,6 +234,8 @@
     <None Include="images\left.png" />
     <None Include="images\log-out.png" />
     <None Include="images\home.png" />
+    <None Include="images\loop.png" />
+    <None Include="images\search.png" />
     <Content Include="images\user.png" />
     <Content Include="images\lock.png" />
     <Content Include="images\window_icon.ico" />
