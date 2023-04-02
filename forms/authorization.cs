@@ -70,15 +70,15 @@ namespace MyWoggi
         }
 
         // Считывает токен авторизации из файла
-        private string ReadAuthToken()
-        {
-            FileStream fileStream = new FileStream(authTokenFilePath, FileMode.Open);
-            StreamReader streamReader = new StreamReader(fileStream);
-            string authToken = streamReader.ReadLine();
-            streamReader.Close();
-            fileStream.Close();
-            return authToken;
-        }
+            private string ReadAuthToken()
+            {
+                FileStream fileStream = new FileStream(authTokenFilePath, FileMode.Open);
+                StreamReader streamReader = new StreamReader(fileStream);
+                string authToken = streamReader.ReadLine();
+                streamReader.Close();
+                fileStream.Close();
+                return authToken;
+            }
 
         // Считывает логин пользователя из файла
         private string ReadUserLogin()
