@@ -211,7 +211,7 @@ namespace MyWoggi
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1004, 80);
             this.label1.TabIndex = 0;
-            this.label1.Text = "ТАБЛИЦЫ";
+            this.label1.Text = "ЖИВОТНЫЕ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // animalAge_textbox
@@ -457,7 +457,7 @@ namespace MyWoggi
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -466,6 +466,7 @@ namespace MyWoggi
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1004, 741);
             this.dataGridView1.TabIndex = 68;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // panel2
             // 

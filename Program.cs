@@ -22,7 +22,7 @@ namespace MyWoggi
                 authorization.Close();
 
                 // Создать и показать основную форму
-                Application.Run(new Homepage());
+                Application.Run(new visitor_table());
             }
             else
             {

@@ -11,41 +11,36 @@ using System.Windows.Forms;
 
 namespace MyWoggi
 {
-    public partial class add_new_data : Form
+    public partial class visitor_new : Form
     {
-        Database database = new Database();
-        public add_new_data()
+        Database MyWoggi = new Database();
+        public visitor_new()
         {
             InitializeComponent();
-            StartPosition = FormStartPosition.CenterParent;
-            ToolTip tooltip = new ToolTip();
-
-            tooltip.SetToolTip(saveWrite1_button, "Сохранить запись");
         }
 
-
-
-        private void saveWrite1_button_Click_1(object sender, EventArgs e)
+        private void saveWrite1_button_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Вы уверены, что хотите это сохранить?", "Предупреждение", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
+            visitor_table visitor = new visitor_table();
             if (result == DialogResult.Yes)
             {
-                database.OpenConnection();
+                MyWoggi.OpenConnection();
 
-                var name_animal = nameAnimal_textbox.Text;
-                var weight_animal = animalWeight_textbox.Text;
-                var age_animal = animalAge_textbox.Text;
+                var name_animal = nameVisitor_textbox.Text;
+                var weight_animal = surnameVisitor_textbox.Text;
+                var age_animal = patronymicVisitor_textbox.Text;
 
-                var addQuery = $"insert into animals (animal_name, animal_weight, animal_age)" +
+                var addQuery = $"insert into visitors (visitor_name, visitor_surname, visitor_patronymic)" +
                     $"values ('{name_animal}', '{weight_animal}', '{age_animal}')";
 
-                var command = new MySqlCommand(addQuery, database.GetConnection());
+                var command = new MySqlCommand(addQuery, MyWoggi.GetConnection());
                 command.ExecuteNonQuery();
 
                 MessageBox.Show("Запись успешно создана", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                database.CloseConnection();
+                MyWoggi.CloseConnection();
             }
+            visitor.Show();
             this.Hide();
         }
     }
