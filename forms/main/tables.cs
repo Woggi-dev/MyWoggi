@@ -9,7 +9,6 @@ using System.Text;
 using MySql.Data.MySqlClient;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MyWoggi.forms;
 using System.IO;
 
 namespace MyWoggi
@@ -18,16 +17,19 @@ namespace MyWoggi
     {
         Existed,
         New,
-        Modified, 
+        Modified,
         ModifiedNew,
         Deleted
     }
     public partial class tables : Form
     {
         Authorization authorization = new Authorization();
-        Homepage homepage = new Homepage();
         Database MyWoggi = new Database();
         int selectedRow;
+        string searchPlaceHolder = "Поиск данных";
+        private string authToken;
+
+
 
         private void CreateColumns()
         {
@@ -38,10 +40,10 @@ namespace MyWoggi
             dataGridView1.Columns.Add("IsNew", String.Empty);
         }
 
-        
+
         private void ReadSingleRow(DataGridView dgw, IDataRecord record)
         {
-                dgw.Rows.Add(record.GetInt32(0), record.GetString(1), record.GetString(2), record.GetString(3), RowState.ModifiedNew);
+            dgw.Rows.Add(record.GetInt32(0), record.GetString(1), record.GetString(2), record.GetString(3), RowState.ModifiedNew);
         }
 
 
@@ -63,20 +65,32 @@ namespace MyWoggi
 
         private void Table_Load(object sender, EventArgs e)
         {
+
+            Search_texBox.Text = searchPlaceHolder;
+            Search_texBox.ForeColor = Color.Gray;
+
+
+
+            Label label1 = new Label() { Text = "Животные" };
+            label1.Dock = DockStyle.Fill;
+
             string animalsQueryString = $"select * from animals";
-            
+
 
             CreateColumns();
             RefreshDataGrid(dataGridView1, animalsQueryString);
-            
+
         }
         public tables()
         {
             InitializeComponent();
-            tabControl1.DrawMode = TabDrawMode.OwnerDrawFixed;
-
+            ToolTip tooltip = new ToolTip();
+            tooltip.SetToolTip(newWrite1_button, "Новая запись");
+            tooltip.SetToolTip(deleteWrite1_button, "Удалить запись");
+            tooltip.SetToolTip(changeWrite1_button, "Изменить запись");
+            tooltip.SetToolTip(saveWrite1_button, "Сохранить запись");
+            tooltip.SetToolTip(update_picturebox, "Обновить данные");
             // Set the height of the tab page switch
-            tabControl1.ItemSize = new Size(tabControl1.ItemSize.Width, 33);
 
         }
         //закрытие формы
@@ -92,6 +106,26 @@ namespace MyWoggi
             this.Hide();
         }
 
+        private void LogOut()
+        {
+            Authorization authorization = new Authorization();
+            // Получить токен авторизации
+            authToken = authorization.ReadAuthToken();
+            // Отключить функцию "запомнить меня"
+            string rememberMeDisabledQueryString = $"update Userdata set rememberme_user = '0' where authtoken_user = '{authToken}'";
+            bool isRememberDisabled = MyWoggi.InsertUpdateData(rememberMeDisabledQueryString);
+            // Если отключено успешно
+            if (isRememberDisabled)
+            {
+                authorization.Show();
+                this.Hide();
+            }
+            // Если нет
+            else
+            {
+                MessageBox.Show("Произошла ошибка выхода из аккаунта...", "Ошибка", MessageBoxButtons.OK);
+            }
+        }
 
         private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
         {
@@ -111,7 +145,7 @@ namespace MyWoggi
             path.CloseFigure();
 
             // Fill the background of the tab item
-            using (SolidBrush brush = new SolidBrush(selected ? ColorTranslator.FromHtml("#A9A9A9") : Color.LightGray))
+            using (SolidBrush brush = new SolidBrush(selected ? ColorTranslator.FromHtml("#282e36") : Color.Gray))
             {
                 g.FillPath(brush, path);
             }
@@ -123,7 +157,7 @@ namespace MyWoggi
                 SizeF size = g.MeasureString(text, font);
                 float x = r.Left + (r.Width - size.Width) / 2;
                 float y = r.Top + (r.Height - size.Height) / 2;
-                using (SolidBrush brush = new SolidBrush(selected ? Color.Black : Color.Gray))
+                using (SolidBrush brush = new SolidBrush(selected ? Color.White : Color.Gray))
                 {
                     g.DrawString(text, font, brush, x, y);
                 }
@@ -137,7 +171,7 @@ namespace MyWoggi
 
         }
 
-        
+
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -150,15 +184,6 @@ namespace MyWoggi
                 animalWeight_textbox.Text = row.Cells[2].Value.ToString();
                 animalAge_textbox.Text = row.Cells[3].Value.ToString();
             }
-        }
-
-        
-
-        private void newWrite1_button_Click(object sender, EventArgs e)
-        {
-            add_new_data add_New_Data = new add_new_data();
-            add_New_Data.Show();
-            
         }
 
         private void update_picturebox_Click(object sender, EventArgs e)
@@ -190,12 +215,6 @@ namespace MyWoggi
         }
 
 
-        private void Search_textbox(object sender, EventArgs e)
-        {
-            Search(dataGridView1);
-        }
-
-
 
         private void deleteRow()
         {
@@ -212,15 +231,10 @@ namespace MyWoggi
         }
 
 
-        private void deleteWrite1_button_Click(object sender, EventArgs e)
-        {
-            deleteRow();
-        }
-
         private new void Update()
         {
             MyWoggi.OpenConnection();
-            for(int index = 0; index < dataGridView1.Rows.Count; index++)
+            for (int index = 0; index < dataGridView1.Rows.Count; index++)
             {
                 var rowState = (RowState)dataGridView1.Rows[index].Cells[4].Value;
 
@@ -254,12 +268,6 @@ namespace MyWoggi
             MyWoggi.CloseConnection();
         }
 
-        private void saveWrite1_button_Click(object sender, EventArgs e)
-        {
-            Update(); 
-        }
-
-
 
         private void Change()
         {
@@ -270,26 +278,76 @@ namespace MyWoggi
             var weight_animal = animalWeight_textbox.Text;
             var age_animal = animalAge_textbox.Text;
 
-            if(dataGridView1.Rows[selectRowIndex].Cells[0].Value.ToString() != string.Empty)
+            if (dataGridView1.Rows[selectRowIndex].Cells[0].Value.ToString() != string.Empty)
             {
                 dataGridView1.Rows[selectRowIndex].SetValues(id_animal, name_animal, weight_animal, age_animal);
                 dataGridView1.Rows[selectRowIndex].Cells[4].Value = RowState.Modified;
             }
         }
 
-        private void changeWrite1_button_Click(object sender, EventArgs e)
-        {
-            Change();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void logout_button_Click(object sender, EventArgs e)
         {
-            homepage.LogOut();
+            LogOut();
+        }
+
+        private void newWrite1_button_Click_1(object sender, EventArgs e)
+        {
+            add_new_data add_New_Data = new add_new_data();
+            add_New_Data.Show();
+        }
+
+        private void deleteWrite1_button_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Вы уверены, что хотите удалить это?", "Предупреждение", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                deleteRow();
+
+            }
+        }
+
+        private void changeWrite1_button_Click_1(object sender, EventArgs e)
+        {
+            Change();
+
+        }
+
+        private void saveWrite1_button_Click_1(object sender, EventArgs e)
+        {
+            Update();
+
+        }
+
+        private void update_picturebox_Click_1(object sender, EventArgs e)
+        {
+            string animalsQueryString = $"select * from animals";
+            RefreshDataGrid(dataGridView1, animalsQueryString);
+        }
+
+        private void Search_texBox_TextChanged(object sender, EventArgs e)
+        {
+            Search(dataGridView1);
+
+        }
+
+        private void Search_texBox_Enter_1(object sender, EventArgs e)
+        {
+            authorization.SetPlaceholder(Search_texBox, searchPlaceHolder);
+
+        }
+
+        private void Search_texBox_Leave_1(object sender, EventArgs e)
+        {
+            authorization.SetPlaceholder(Search_texBox, searchPlaceHolder);
+
+        }
+
+        private void About_Button(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.Show();
+            this.Hide();
         }
     }
 }

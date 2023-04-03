@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace MyWoggi.forms
+namespace MyWoggi
 {
     public partial class Homepage : Form
     {
         // Экземпляры классов форм
-        Authorization authorization = new Authorization();
         Database MyWoggi = new Database();
-        tables tables = new tables();
         ToolTip tooltip = new ToolTip();
-        // Токен входа в аккаунт
         private string authToken;
         
         public Homepage()
@@ -33,6 +30,7 @@ namespace MyWoggi.forms
         // Функция выхода из аккаунта
         public void LogOut()
         {
+            Authorization authorization = new Authorization(); 
             // Получить токен авторизации
             authToken = authorization.ReadAuthToken();
             // Отключить функцию "запомнить меня"
@@ -54,13 +52,8 @@ namespace MyWoggi.forms
         // Переход на форму таблиц
         private void TablesShow_button(object sender, EventArgs e)
         {
+            tables tables = new tables();
             tables.Show();
-            this.Hide();
-        }
-
-        // Переход на форму о проекте
-        private void About_button(object sender, EventArgs e)
-        {
             this.Hide();
         }
 
@@ -68,6 +61,13 @@ namespace MyWoggi.forms
         private void LogOut_button(object sender, EventArgs e)
         {
             LogOut();
+        }
+
+        private void About_Button(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.Show();
+            this.Hide();
         }
     }
 }

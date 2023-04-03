@@ -99,11 +99,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="add_new_data.cs">
+    <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="add_new_data.Designer.cs">
-      <DependentUpon>add_new_data.cs</DependentUpon>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\main\about.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\main\about.Designer.cs">
+      <DependentUpon>about.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\main\new_data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\main\new_data.Designer.cs">
+      <DependentUpon>new_data.cs</DependentUpon>
     </Compile>
     <Compile Include="Database.cs" />
     <Compile Include="forms\authorization.cs">
@@ -142,12 +154,6 @@
     <Compile Include="forms\registration.Designer.cs">
       <DependentUpon>registration.cs</DependentUpon>
     </Compile>
-    <Compile Include="new_write.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="new_write.Designer.cs">
-      <DependentUpon>new_write.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="forms\main\tables.cs">
@@ -156,8 +162,14 @@
     <Compile Include="forms\main\tables.Designer.cs">
       <DependentUpon>tables.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="add_new_data.resx">
-      <DependentUpon>add_new_data.cs</DependentUpon>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\main\about.resx">
+      <DependentUpon>about.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\main\new_data.resx">
+      <DependentUpon>new_data.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\authorization.resx">
       <DependentUpon>authorization.cs</DependentUpon>
@@ -227,6 +239,7 @@
     <None Include="images\home.png" />
     <None Include="images\loop.png" />
     <None Include="images\search.png" />
+    <Content Include="images\plus.png" />
     <Content Include="images\user.png" />
     <Content Include="images\lock.png" />
     <Content Include="images\window_icon.ico" />

@@ -209,51 +209,51 @@ namespace MyWoggi
             this.recoveryPwdError_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.recoveryPwdError_label.Visible = false;
             // 
-            // NewPwd_Showpwdretry_picturebox
+            // showPwdRetry_picturebox
             // 
             this.showPwdRetry_picturebox.BackColor = System.Drawing.Color.Transparent;
             this.showPwdRetry_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.view;
             this.showPwdRetry_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showPwdRetry_picturebox.Location = new System.Drawing.Point(479, 365);
-            this.showPwdRetry_picturebox.Name = "NewPwd_Showpwdretry_picturebox";
+            this.showPwdRetry_picturebox.Name = "showPwdRetry_picturebox";
             this.showPwdRetry_picturebox.Size = new System.Drawing.Size(37, 37);
             this.showPwdRetry_picturebox.TabIndex = 61;
             this.showPwdRetry_picturebox.TabStop = false;
             this.showPwdRetry_picturebox.Visible = false;
             this.showPwdRetry_picturebox.Click += new System.EventHandler(this.ShowPwdRetry_picturebox_Click);
             // 
-            // NewPwd_Hidepwdretry_picturebox
+            // hidePwdRetry_picturebox
             // 
             this.hidePwdRetry_picturebox.BackColor = System.Drawing.Color.Transparent;
             this.hidePwdRetry_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.hide;
             this.hidePwdRetry_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.hidePwdRetry_picturebox.Location = new System.Drawing.Point(479, 365);
-            this.hidePwdRetry_picturebox.Name = "NewPwd_Hidepwdretry_picturebox";
+            this.hidePwdRetry_picturebox.Name = "hidePwdRetry_picturebox";
             this.hidePwdRetry_picturebox.Size = new System.Drawing.Size(37, 37);
             this.hidePwdRetry_picturebox.TabIndex = 60;
             this.hidePwdRetry_picturebox.TabStop = false;
             this.hidePwdRetry_picturebox.Click += new System.EventHandler(this.HidePwdRetry_picturebox_Click);
             // 
-            // NewPwd_Showpwd_picturebox
+            // showPwd_picturebox
             // 
             this.showPwd_picturebox.BackColor = System.Drawing.Color.Transparent;
             this.showPwd_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.view;
             this.showPwd_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showPwd_picturebox.Location = new System.Drawing.Point(479, 285);
-            this.showPwd_picturebox.Name = "NewPwd_Showpwd_picturebox";
+            this.showPwd_picturebox.Name = "showPwd_picturebox";
             this.showPwd_picturebox.Size = new System.Drawing.Size(37, 37);
             this.showPwd_picturebox.TabIndex = 59;
             this.showPwd_picturebox.TabStop = false;
             this.showPwd_picturebox.Visible = false;
             this.showPwd_picturebox.Click += new System.EventHandler(this.ShowPwd_picturebox_Click);
             // 
-            // NewPwd_Hidepwd_picturebox
+            // hidePwd_picturebox
             // 
             this.hidePwd_picturebox.BackColor = System.Drawing.Color.Transparent;
             this.hidePwd_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.hide;
             this.hidePwd_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.hidePwd_picturebox.Location = new System.Drawing.Point(479, 285);
-            this.hidePwd_picturebox.Name = "NewPwd_Hidepwd_picturebox";
+            this.hidePwd_picturebox.Name = "hidePwd_picturebox";
             this.hidePwd_picturebox.Size = new System.Drawing.Size(37, 37);
             this.hidePwd_picturebox.TabIndex = 58;
             this.hidePwd_picturebox.TabStop = false;
@@ -375,7 +375,7 @@ namespace MyWoggi
             this.MinimumSize = new System.Drawing.Size(750, 750);
             this.Name = "ForgotPwdNewPwd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MyWoggi";
+            this.Text = "Восстановление аккаунта";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ForgotPwdNewPwd_FormClosed);
             this.Load += new System.EventHandler(this.ForgotPwdNewPwd_Load);
             this.panel_panel.ResumeLayout(false);

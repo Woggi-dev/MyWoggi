@@ -205,7 +205,7 @@ namespace MyWoggi
             this.MinimumSize = new System.Drawing.Size(750, 750);
             this.Name = "ForgotPwdCode";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MyWoggi";
+            this.Text = "Восстановление аккаунта";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ForgotPwdCode_FormClosed);
             this.Load += new System.EventHandler(this.ForgotPwdCode_Load);
             this.panel_panel.ResumeLayout(false);

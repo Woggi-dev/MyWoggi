@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MyWoggi
 {
-    public partial class new_write : Form
+    public partial class Form2 : Form
     {
-        public new_write()
+        public Form2()
         {
             InitializeComponent();
         }

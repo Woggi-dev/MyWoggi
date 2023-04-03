@@ -262,7 +262,7 @@ namespace MyWoggi
             this.MinimumSize = new System.Drawing.Size(750, 750);
             this.Name = "Authorization";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MyWoggi";
+            this.Text = "Авторизация";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Authorization_FormClosed);
             this.Load += new System.EventHandler(this.Authorization_Load);
             this.panel_panel.ResumeLayout(false);
