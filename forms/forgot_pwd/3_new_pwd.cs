@@ -186,7 +186,7 @@ namespace MyWoggi
             // Когда восстановление аккаунта - успешно
             if (isAccountRestored)
             {
-                MessageBox.Show("Пароль был успешно восстановлен...", "Успех", MessageBoxButtons.OK);
+                MessageBox.Show("Пароль был успешно восстановлен", "Успех", MessageBoxButtons.OK);
                 Authorization authorization = new Authorization();
                 authorization.Show();
                 this.Hide();

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using MyWoggi.forms;
 
 namespace MyWoggi
 {

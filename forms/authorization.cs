@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Drawing;
-using MyWoggi.forms;
 using System.Windows.Forms;
 using System.IO;
 using System.Media;
@@ -26,14 +25,6 @@ namespace MyWoggi
         // Токен авторизации
         private string authToken;
 
-
-        public static void MessageBoxSuccess(string message)
-        {
-            SoundPlayer player = new SoundPlayer();
-            player.Stream = Properties.Resources.success;
-            player.Play();
-            MessageBox.Show(message, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
 
         public Authorization()
         {
@@ -271,7 +262,7 @@ namespace MyWoggi
                     Console.WriteLine("Auth Token failed to update");
                 }
 
-                MessageBoxSuccess("Вы успешно вошли в аккаунт");
+                MessageBox.Show("Вы успешно вошли в аккаунт", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);   
                 // Переходим на главную страницу приложения
                 Homepage main = new Homepage();
                 main.Show();
@@ -281,7 +272,7 @@ namespace MyWoggi
             else if (isLogged)
             {
                 // Переходим на главную страницу приложения
-                MessageBoxSuccess("Вы успешно вошли в аккаунт");
+                MessageBox.Show("Вы успешно вошли в аккаунт", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Homepage main = new Homepage();
                 main.Show();
                 this.Hide();

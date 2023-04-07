@@ -61,6 +61,22 @@ namespace MyWoggi
             }
         }
 
+
+        public bool DeleteData(string queryString)
+        {
+            var command = new MySqlCommand(queryString, GetConnection());
+            OpenConnection();
+
+            if (command.ExecuteNonQuery() == 1)
+            {
+                CloseConnection();
+                return true;
+            }
+            CloseConnection();
+            return false;
+
+        }
+
         // Закрыть связь с базой данных
         public void CloseConnection()
         {
