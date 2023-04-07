@@ -111,11 +111,11 @@
     <Compile Include="forms\main\about.Designer.cs">
       <DependentUpon>about.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\main\animal_new.cs">
+    <Compile Include="forms\main\animals\new_animal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\main\animal_new.Designer.cs">
-      <DependentUpon>animal_new.cs</DependentUpon>
+    <Compile Include="forms\main\animals\new_animal.Designer.cs">
+      <DependentUpon>new_animal.cs</DependentUpon>
     </Compile>
     <Compile Include="Database.cs" />
     <Compile Include="forms\authorization.cs">
@@ -156,22 +156,22 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="forms\main\animal_table.cs">
+    <Compile Include="forms\main\animals\animal_table.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\main\animal_table.Designer.cs">
+    <Compile Include="forms\main\animals\animal_table.Designer.cs">
       <DependentUpon>animal_table.cs</DependentUpon>
     </Compile>
-    <Compile Include="visitor_new.cs">
+    <Compile Include="forms\main\visitors\new_visitor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="visitor_new.Designer.cs">
-      <DependentUpon>visitor_new.cs</DependentUpon>
+    <Compile Include="forms\main\visitors\new_visitor.Designer.cs">
+      <DependentUpon>new_visitor.cs</DependentUpon>
     </Compile>
-    <Compile Include="visitor_table.cs">
+    <Compile Include="forms\main\visitors\visitor_table.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="visitor_table.Designer.cs">
+    <Compile Include="forms\main\visitors\visitor_table.Designer.cs">
       <DependentUpon>visitor_table.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form2.resx">
@@ -180,8 +180,8 @@
     <EmbeddedResource Include="forms\main\about.resx">
       <DependentUpon>about.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\main\animal_new.resx">
-      <DependentUpon>animal_new.cs</DependentUpon>
+    <EmbeddedResource Include="forms\main\animals\new_animal.resx">
+      <DependentUpon>new_animal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\authorization.resx">
       <DependentUpon>authorization.cs</DependentUpon>
@@ -214,13 +214,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="forms\main\animal_table.resx">
+    <EmbeddedResource Include="forms\main\animals\animal_table.resx">
       <DependentUpon>animal_table.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="visitor_new.resx">
-      <DependentUpon>visitor_new.cs</DependentUpon>
+    <EmbeddedResource Include="forms\main\visitors\new_visitor.resx">
+      <DependentUpon>new_visitor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="visitor_table.resx">
+    <EmbeddedResource Include="forms\main\visitors\visitor_table.resx">
       <DependentUpon>visitor_table.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
@@ -258,6 +258,7 @@
     <None Include="images\loop.png" />
     <None Include="images\search.png" />
     <Content Include="images\plus.png" />
+    <None Include="images\right.png" />
     <Content Include="images\user.png" />
     <Content Include="images\lock.png" />
     <Content Include="images\window_icon.ico" />

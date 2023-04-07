@@ -1,7 +1,7 @@
 ﻿
 namespace MyWoggi
 {
-    partial class add_new_data
+    partial class NewAnimal
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace MyWoggi
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(add_new_data));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewAnimal));
             this.saveWrite1_button = new System.Windows.Forms.Button();
             this.animalAge_textbox = new System.Windows.Forms.TextBox();
             this.animalWeight_textbox = new System.Windows.Forms.TextBox();
@@ -55,7 +55,7 @@ namespace MyWoggi
             this.saveWrite1_button.TabIndex = 18;
             this.saveWrite1_button.Text = "Сохранить";
             this.saveWrite1_button.UseVisualStyleBackColor = false;
-            this.saveWrite1_button.Click += new System.EventHandler(this.saveWrite1_button_Click_1);
+            this.saveWrite1_button.Click += new System.EventHandler(this.SaveWrite_button_Click);
             // 
             // animalAge_textbox
             // 
@@ -63,7 +63,7 @@ namespace MyWoggi
             this.animalAge_textbox.Location = new System.Drawing.Point(298, 233);
             this.animalAge_textbox.Multiline = true;
             this.animalAge_textbox.Name = "animalAge_textbox";
-            this.animalAge_textbox.Size = new System.Drawing.Size(178, 33);
+            this.animalAge_textbox.Size = new System.Drawing.Size(200, 33);
             this.animalAge_textbox.TabIndex = 17;
             // 
             // animalWeight_textbox
@@ -72,7 +72,7 @@ namespace MyWoggi
             this.animalWeight_textbox.Location = new System.Drawing.Point(246, 173);
             this.animalWeight_textbox.Multiline = true;
             this.animalWeight_textbox.Name = "animalWeight_textbox";
-            this.animalWeight_textbox.Size = new System.Drawing.Size(230, 33);
+            this.animalWeight_textbox.Size = new System.Drawing.Size(252, 33);
             this.animalWeight_textbox.TabIndex = 16;
             // 
             // nameAnimal_textbox
@@ -81,7 +81,7 @@ namespace MyWoggi
             this.nameAnimal_textbox.Location = new System.Drawing.Point(246, 102);
             this.nameAnimal_textbox.Multiline = true;
             this.nameAnimal_textbox.Name = "nameAnimal_textbox";
-            this.nameAnimal_textbox.Size = new System.Drawing.Size(230, 33);
+            this.nameAnimal_textbox.Size = new System.Drawing.Size(252, 33);
             this.nameAnimal_textbox.TabIndex = 15;
             // 
             // label7
@@ -131,7 +131,7 @@ namespace MyWoggi
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label3.UseCompatibleTextRendering = true;
             // 
-            // add_new_data
+            // NewAnimal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -146,7 +146,8 @@ namespace MyWoggi
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "add_new_data";
+            this.Name = "NewAnimal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Добавить запись";
             this.ResumeLayout(false);
             this.PerformLayout();

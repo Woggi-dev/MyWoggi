@@ -1,7 +1,7 @@
 ﻿
 namespace MyWoggi
 {
-    partial class tables
+    partial class AnimalTable
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace MyWoggi
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tables));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnimalTable));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.logout_button = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -47,30 +47,30 @@ namespace MyWoggi
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.saveWrite1_button = new System.Windows.Forms.Button();
             this.changeWrite1_button = new System.Windows.Forms.Button();
             this.deleteWrite1_button = new System.Windows.Forms.Button();
             this.newWrite1_button = new System.Windows.Forms.Button();
-            this.update_picturebox = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.Search_texBox = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.animals_DataGridView = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.update_picturebox = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.update_picturebox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.animals_DataGridView)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.update_picturebox)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -106,7 +106,7 @@ namespace MyWoggi
             this.logout_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.logout_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.logout_button.UseVisualStyleBackColor = true;
-            this.logout_button.Click += new System.EventHandler(this.logout_button_Click);
+            this.logout_button.Click += new System.EventHandler(this.Logout_button_Click);
             // 
             // button4
             // 
@@ -126,7 +126,7 @@ namespace MyWoggi
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.Homepage_button_Click);
             // 
             // button2
             // 
@@ -135,18 +135,18 @@ namespace MyWoggi
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button2.Image = global::MyWoggi.Properties.Resources.cells__1_;
+            this.button2.Image = global::MyWoggi.Properties.Resources.cells;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(0, 151);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
             this.button2.Size = new System.Drawing.Size(218, 65);
             this.button2.TabIndex = 3;
-            this.button2.Text = "  Настройки";
+            this.button2.Text = "  Посетители";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.Visitors_button_Click);
             // 
             // button1
             // 
@@ -306,34 +306,6 @@ namespace MyWoggi
             this.label4.TabIndex = 10;
             this.label4.Text = "ID животного:";
             // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Consolas", 21F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Image = global::MyWoggi.Properties.Resources.writing;
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(19, 10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(195, 46);
-            this.label3.TabIndex = 9;
-            this.label3.Text = " Записи:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.UseCompatibleTextRendering = true;
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Consolas", 21F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(228)))), ((int)(((byte)(232)))));
-            this.label10.Image = global::MyWoggi.Properties.Resources.cells;
-            this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label10.Location = new System.Drawing.Point(14, 10);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(251, 46);
-            this.label10.TabIndex = 63;
-            this.label10.Text = " Управление:";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label10.UseCompatibleTextRendering = true;
-            // 
             // saveWrite1_button
             // 
             this.saveWrite1_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
@@ -349,7 +321,7 @@ namespace MyWoggi
             this.saveWrite1_button.TabIndex = 62;
             this.saveWrite1_button.Text = "Сохранить";
             this.saveWrite1_button.UseVisualStyleBackColor = false;
-            this.saveWrite1_button.Click += new System.EventHandler(this.saveWrite1_button_Click_1);
+            this.saveWrite1_button.Click += new System.EventHandler(this.SaveWrite_button_Click);
             // 
             // changeWrite1_button
             // 
@@ -366,7 +338,7 @@ namespace MyWoggi
             this.changeWrite1_button.TabIndex = 61;
             this.changeWrite1_button.Text = "Изменить";
             this.changeWrite1_button.UseVisualStyleBackColor = false;
-            this.changeWrite1_button.Click += new System.EventHandler(this.changeWrite1_button_Click_1);
+            this.changeWrite1_button.Click += new System.EventHandler(this.ChangeWrite_button_Click);
             // 
             // deleteWrite1_button
             // 
@@ -383,7 +355,7 @@ namespace MyWoggi
             this.deleteWrite1_button.TabIndex = 60;
             this.deleteWrite1_button.Text = "Удалить";
             this.deleteWrite1_button.UseVisualStyleBackColor = false;
-            this.deleteWrite1_button.Click += new System.EventHandler(this.deleteWrite1_button_Click_1);
+            this.deleteWrite1_button.Click += new System.EventHandler(this.DeleteWrite_button_Click);
             // 
             // newWrite1_button
             // 
@@ -400,20 +372,7 @@ namespace MyWoggi
             this.newWrite1_button.TabIndex = 59;
             this.newWrite1_button.Text = "Новая запись";
             this.newWrite1_button.UseVisualStyleBackColor = false;
-            this.newWrite1_button.Click += new System.EventHandler(this.newWrite1_button_Click_1);
-            // 
-            // update_picturebox
-            // 
-            this.update_picturebox.BackColor = System.Drawing.Color.Transparent;
-            this.update_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.loop;
-            this.update_picturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.update_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.update_picturebox.Location = new System.Drawing.Point(326, 24);
-            this.update_picturebox.Name = "update_picturebox";
-            this.update_picturebox.Size = new System.Drawing.Size(37, 37);
-            this.update_picturebox.TabIndex = 64;
-            this.update_picturebox.TabStop = false;
-            this.update_picturebox.Click += new System.EventHandler(this.update_picturebox_Click_1);
+            this.newWrite1_button.Click += new System.EventHandler(this.NewWrite_button_Click);
             // 
             // label8
             // 
@@ -435,38 +394,22 @@ namespace MyWoggi
             this.Search_texBox.Name = "Search_texBox";
             this.Search_texBox.Size = new System.Drawing.Size(306, 32);
             this.Search_texBox.TabIndex = 66;
-            this.Search_texBox.TextChanged += new System.EventHandler(this.Search_texBox_TextChanged);
-            this.Search_texBox.Enter += new System.EventHandler(this.Search_texBox_Enter_1);
-            this.Search_texBox.Leave += new System.EventHandler(this.Search_texBox_Leave_1);
+            this.Search_texBox.TextChanged += new System.EventHandler(this.SearchTextbox_TextChanged);
             // 
-            // label11
+            // animals_DataGridView
             // 
-            this.label11.Font = new System.Drawing.Font("Consolas", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(228)))), ((int)(((byte)(232)))));
-            this.label11.Image = global::MyWoggi.Properties.Resources.search;
-            this.label11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label11.Location = new System.Drawing.Point(6, 24);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(171, 44);
-            this.label11.TabIndex = 67;
-            this.label11.Text = "  Поиск:";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label11.UseCompatibleTextRendering = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridView1.Location = new System.Drawing.Point(220, 80);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1004, 741);
-            this.dataGridView1.TabIndex = 68;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.animals_DataGridView.AllowUserToAddRows = false;
+            this.animals_DataGridView.AllowUserToDeleteRows = false;
+            this.animals_DataGridView.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.animals_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.animals_DataGridView.Dock = System.Windows.Forms.DockStyle.Top;
+            this.animals_DataGridView.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.animals_DataGridView.Location = new System.Drawing.Point(220, 80);
+            this.animals_DataGridView.Name = "animals_DataGridView";
+            this.animals_DataGridView.ReadOnly = true;
+            this.animals_DataGridView.Size = new System.Drawing.Size(1004, 741);
+            this.animals_DataGridView.TabIndex = 68;
+            this.animals_DataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DatagridView_CellClick);
             // 
             // panel2
             // 
@@ -487,6 +430,20 @@ namespace MyWoggi
             this.panel2.Size = new System.Drawing.Size(1004, 307);
             this.panel2.TabIndex = 69;
             // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Consolas", 21F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label3.Image = global::MyWoggi.Properties.Resources.writing;
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.Location = new System.Drawing.Point(19, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(195, 46);
+            this.label3.TabIndex = 9;
+            this.label3.Text = " Записи:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.UseCompatibleTextRendering = true;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label10);
@@ -499,6 +456,20 @@ namespace MyWoggi
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(369, 305);
             this.panel3.TabIndex = 70;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Consolas", 21F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(228)))), ((int)(((byte)(232)))));
+            this.label10.Image = global::MyWoggi.Properties.Resources.cells__1_;
+            this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label10.Location = new System.Drawing.Point(14, 10);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(251, 46);
+            this.label10.TabIndex = 63;
+            this.label10.Text = " Управление:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label10.UseCompatibleTextRendering = true;
             // 
             // panel4
             // 
@@ -522,7 +493,34 @@ namespace MyWoggi
             this.panel5.Size = new System.Drawing.Size(369, 96);
             this.panel5.TabIndex = 72;
             // 
-            // tables
+            // update_picturebox
+            // 
+            this.update_picturebox.BackColor = System.Drawing.Color.Transparent;
+            this.update_picturebox.BackgroundImage = global::MyWoggi.Properties.Resources.loop;
+            this.update_picturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.update_picturebox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.update_picturebox.Location = new System.Drawing.Point(326, 24);
+            this.update_picturebox.Name = "update_picturebox";
+            this.update_picturebox.Size = new System.Drawing.Size(37, 37);
+            this.update_picturebox.TabIndex = 64;
+            this.update_picturebox.TabStop = false;
+            this.update_picturebox.Click += new System.EventHandler(this.update_picturebox_Click);
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Consolas", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(228)))), ((int)(((byte)(232)))));
+            this.label11.Image = global::MyWoggi.Properties.Resources.search;
+            this.label11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label11.Location = new System.Drawing.Point(6, 24);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(171, 44);
+            this.label11.TabIndex = 67;
+            this.label11.Text = "  Поиск:";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label11.UseCompatibleTextRendering = true;
+            // 
+            // AnimalTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -530,21 +528,21 @@ namespace MyWoggi
             this.ClientSize = new System.Drawing.Size(1224, 821);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.animals_DataGridView);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "tables";
+            this.MinimumSize = new System.Drawing.Size(879, 80);
+            this.Name = "AnimalTable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Таблицы";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Table_FormClosed);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AnimalTable_FormClosed);
             this.Load += new System.EventHandler(this.Table_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.update_picturebox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.animals_DataGridView)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -552,6 +550,7 @@ namespace MyWoggi
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.update_picturebox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -585,7 +584,7 @@ namespace MyWoggi
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox Search_texBox;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView animals_DataGridView;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;

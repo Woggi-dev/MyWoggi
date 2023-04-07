@@ -52,7 +52,7 @@ namespace MyWoggi
         // Переход на форму таблиц
         private void TablesShow_button(object sender, EventArgs e)
         {
-            tables tables = new tables();
+            AnimalTable tables = new AnimalTable();
             tables.Show();
             this.Hide();
         }

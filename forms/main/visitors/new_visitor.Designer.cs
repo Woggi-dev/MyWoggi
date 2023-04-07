@@ -1,7 +1,7 @@
 ﻿
 namespace MyWoggi
 {
-    partial class visitor_new
+    partial class NewVisitor
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace MyWoggi
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewVisitor));
             this.saveWrite_button = new System.Windows.Forms.Button();
             this.patronymicVisitor_textbox = new System.Windows.Forms.TextBox();
             this.surnameVisitor_textbox = new System.Windows.Forms.TextBox();
@@ -54,7 +55,7 @@ namespace MyWoggi
             this.saveWrite_button.TabIndex = 26;
             this.saveWrite_button.Text = "Сохранить";
             this.saveWrite_button.UseVisualStyleBackColor = false;
-            this.saveWrite_button.Click += new System.EventHandler(this.saveWrite1_button_Click);
+            this.saveWrite_button.Click += new System.EventHandler(this.SaveWrite_button_Click);
             // 
             // patronymicVisitor_textbox
             // 
@@ -62,7 +63,7 @@ namespace MyWoggi
             this.patronymicVisitor_textbox.Location = new System.Drawing.Point(330, 238);
             this.patronymicVisitor_textbox.Multiline = true;
             this.patronymicVisitor_textbox.Name = "patronymicVisitor_textbox";
-            this.patronymicVisitor_textbox.Size = new System.Drawing.Size(178, 33);
+            this.patronymicVisitor_textbox.Size = new System.Drawing.Size(230, 33);
             this.patronymicVisitor_textbox.TabIndex = 25;
             // 
             // surnameVisitor_textbox
@@ -80,7 +81,7 @@ namespace MyWoggi
             this.nameVisitor_textbox.Location = new System.Drawing.Point(261, 106);
             this.nameVisitor_textbox.Multiline = true;
             this.nameVisitor_textbox.Name = "nameVisitor_textbox";
-            this.nameVisitor_textbox.Size = new System.Drawing.Size(230, 33);
+            this.nameVisitor_textbox.Size = new System.Drawing.Size(299, 33);
             this.nameVisitor_textbox.TabIndex = 23;
             // 
             // label7
@@ -130,7 +131,7 @@ namespace MyWoggi
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label3.UseCompatibleTextRendering = true;
             // 
-            // visitor_new
+            // NewVisitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -145,8 +146,10 @@ namespace MyWoggi
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Name = "visitor_new";
-            this.Text = "visitor_new";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "NewVisitor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Добавить запись";
             this.ResumeLayout(false);
             this.PerformLayout();
 

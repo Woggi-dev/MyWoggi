@@ -47,7 +47,7 @@ namespace MyWoggi
 
         private void tables_button_Click(object sender, EventArgs e)
         {
-            tables tables = new tables();
+            AnimalTable tables = new AnimalTable();
             tables.Show();
             this.Hide();
 

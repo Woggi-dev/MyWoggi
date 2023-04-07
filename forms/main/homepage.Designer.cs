@@ -153,7 +153,6 @@ namespace MyWoggi
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(32)))), ((int)(((byte)(38)))));
-            this.panelLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelLogo.Controls.Add(this.label2);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
@@ -163,14 +162,15 @@ namespace MyWoggi
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.75F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(55, 27);
+            this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 25);
+            this.label2.Size = new System.Drawing.Size(218, 80);
             this.label2.TabIndex = 0;
             this.label2.Text = "MyWoggi";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // about_button
             // 
@@ -204,13 +204,13 @@ namespace MyWoggi
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1004, 80);
+            this.label1.Size = new System.Drawing.Size(1004, 81);
             this.label1.TabIndex = 0;
             this.label1.Text = "ГЛАВНЫЙ ЭКРАН";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -219,7 +219,7 @@ namespace MyWoggi
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
             this.label3.Font = new System.Drawing.Font("Consolas", 30.25F);
-            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label3.ForeColor = System.Drawing.Color.LightGray;
             this.label3.Location = new System.Drawing.Point(220, 80);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(1004, 485);
@@ -232,7 +232,7 @@ namespace MyWoggi
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label4.Font = new System.Drawing.Font("Consolas", 20.25F);
-            this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label4.ForeColor = System.Drawing.Color.LightGray;
             this.label4.Location = new System.Drawing.Point(220, 765);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(1004, 56);
@@ -257,7 +257,6 @@ namespace MyWoggi
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Homepage_FormClosed);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
-            this.panelLogo.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

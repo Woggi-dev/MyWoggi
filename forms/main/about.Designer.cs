@@ -31,14 +31,14 @@ namespace MyWoggi
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(About));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.logout_button = new System.Windows.Forms.Button();
+            this.settings_button = new System.Windows.Forms.Button();
+            this.tables_button = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.about_label = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.logout_button = new System.Windows.Forms.Button();
-            this.settings_button = new System.Windows.Forms.Button();
-            this.tables_button = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.SuspendLayout();
@@ -56,66 +56,6 @@ namespace MyWoggi
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(220, 821);
             this.panelMenu.TabIndex = 2;
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(32)))), ((int)(((byte)(38)))));
-            this.panelLogo.Controls.Add(this.label2);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(218, 80);
-            this.panelLogo.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(55, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "MyWoggi";
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(220, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1004, 80);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "О ПРОЕКТЕ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // about_label
-            // 
-            this.about_label.Dock = System.Windows.Forms.DockStyle.Top;
-            this.about_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F);
-            this.about_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(228)))), ((int)(((byte)(232)))));
-            this.about_label.Location = new System.Drawing.Point(220, 80);
-            this.about_label.Name = "about_label";
-            this.about_label.Padding = new System.Windows.Forms.Padding(0, 50, 0, 50);
-            this.about_label.Size = new System.Drawing.Size(1004, 686);
-            this.about_label.TabIndex = 4;
-            this.about_label.Text = "label3";
-            this.about_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(228)))), ((int)(((byte)(232)))));
-            this.label4.Location = new System.Drawing.Point(220, 766);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(1004, 55);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "(c) Все права защищены, 2023";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // logout_button
             // 
@@ -176,6 +116,66 @@ namespace MyWoggi
             this.tables_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.tables_button.UseVisualStyleBackColor = true;
             this.tables_button.Click += new System.EventHandler(this.tables_button_Click);
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(32)))), ((int)(((byte)(38)))));
+            this.panelLogo.Controls.Add(this.label2);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(218, 80);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(55, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "MyWoggi";
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(103)))), ((int)(((byte)(179)))));
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(220, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1004, 80);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "О ПРОЕКТЕ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // about_label
+            // 
+            this.about_label.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.about_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F);
+            this.about_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(228)))), ((int)(((byte)(232)))));
+            this.about_label.Location = new System.Drawing.Point(220, 80);
+            this.about_label.Name = "about_label";
+            this.about_label.Padding = new System.Windows.Forms.Padding(0, 50, 0, 50);
+            this.about_label.Size = new System.Drawing.Size(1004, 741);
+            this.about_label.TabIndex = 4;
+            this.about_label.Text = "label3";
+            this.about_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(228)))), ((int)(((byte)(232)))));
+            this.label4.Location = new System.Drawing.Point(220, 766);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(1004, 55);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "(c) Все права защищены, 2023";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // About
             // 
